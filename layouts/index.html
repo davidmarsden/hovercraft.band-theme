@@ -1,27 +1,23 @@
 {{ define "main" }}
 {{ partial "hc-site-header.html" . }}
 <main class="hc-home">
-  {{ $releaseLive := false }}
-  {{ with .Site.Params.hovercraft_release_live }}{{ $releaseLive = . }}{{ end }}
-
-  {{ if $releaseLive }}
-    {{ partial "hc-release-hero.html" . }}
-  {{ else }}
+  {{/* Public pre-release front door. The finished December launch can be built
+       separately without exposing album titles, track lists or routes here. */}}
   <section class="hc-hero hc-hero--teaser" aria-labelledby="hc-hero-title">
     <div class="hc-hero__copy">
-      <p class="hc-kicker">New Hovercraft</p>
-      <h1 id="hc-hero-title">Coming in<br>time for Xmas</h1>
-      <p class="hc-deck">Two records. Thirty years in the making.</p>
+      <p class="hc-kicker">New Hovercraft · Coming in time for Xmas</p>
+      <h1 id="hc-hero-title">Two<br>Records.</h1>
+      <p class="hc-deck">Thirty years in the making. Probably far too many songs.</p>
       <div class="hc-actions">
-        <a class="hc-button hc-button--primary" href="/story/">How we got here</a>
+        <a class="hc-button hc-button--primary" href="/music/">Hear Hovercraft</a>
+        <a class="hc-button" href="/story/">How we got here</a>
       </div>
     </div>
-    <div class="hc-hero__art hc-hero__art--teaser" aria-hidden="true">
-      <div class="hc-mystery-sleeve hc-mystery-sleeve--one"><span>01</span></div>
-      <div class="hc-mystery-sleeve hc-mystery-sleeve--two"><span>02</span></div>
+    <div class="hc-hero__art hc-teaser-art" aria-hidden="true">
+      <div class="hc-teaser-sleeve hc-teaser-sleeve--one"><span>?</span></div>
+      <div class="hc-teaser-sleeve hc-teaser-sleeve--two"><span>!</span></div>
     </div>
   </section>
-  {{ end }}
 
   <section class="hc-manifesto" aria-label="About Hovercraft">
     <p class="hc-section-label">01 / The band</p>
@@ -34,7 +30,7 @@
 
   <section class="hc-home-grid" aria-label="Explore Hovercraft">
     <a class="hc-panel hc-panel--signal" href="/music/">
-      <span>02 / Listen</span><strong>Music</strong><em>Releases, originals and reconstructions.</em>
+      <span>02 / Listen</span><strong>Music</strong><em>What we've already let out into the world.</em>
     </a>
     <a class="hc-panel" href="/lyrics/">
       <span>03 / Read</span><strong>Songs</strong><em>Words, recordings and the stories behind them.</em>

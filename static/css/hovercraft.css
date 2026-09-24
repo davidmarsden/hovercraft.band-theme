@@ -10,7 +10,7 @@
   --hc-signal: #ef5b32;
   --hc-electric: #f1c84b;
   --hc-night: #17191d;
-  --hc-muted: #777267;
+  --hc-muted: #5f5a52;
   --hc-rule: rgba(17, 16, 14, .2);
   --hc-max: 76rem;
   --hc-reading: 47rem;
@@ -60,6 +60,8 @@ a {
 a:hover, a:focus-visible { color: var(--hc-signal); }
 
 img, video, iframe { max-width: 100%; }
+
+img, video { height: auto; }
 
 iframe {
   border: 0;
@@ -308,12 +310,6 @@ body.hc-ready footer {
   .content,
   .page-content {
     position: relative;
-  }
-
-  article img,
-  .post img,
-  .h-entry img {
-    height: auto;
   }
 }
 

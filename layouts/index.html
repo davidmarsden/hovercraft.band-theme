@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "hc-site-header.html" . }}
 <main class="hc-home">
   <section class="hc-hero" aria-labelledby="hc-hero-title">
     <div class="hc-hero__copy">
@@ -22,25 +23,21 @@
   <section class="hc-manifesto" aria-label="About Hovercraft">
     <p class="hc-section-label">01 / The band</p>
     <p class="hc-manifesto__big">Lost songs. Vanished songwriter. Resurrected band.</p>
-    <p>Hovercraft formed in Grimsby in 1995, disappeared in 1996, and came back three decades later to finish the songs left behind.</p>
-    <a class="hc-text-link" href="/story/">Read the improbable story →</a>
+    <div>
+      <p>Hovercraft formed in Grimsby in 1995, disappeared in 1996, and came back three decades later to finish the songs left behind.</p>
+      <a class="hc-text-link" href="/story/">Read the improbable story →</a>
+    </div>
   </section>
 
   <section class="hc-home-grid" aria-label="Explore Hovercraft">
     <a class="hc-panel hc-panel--signal" href="/music/">
-      <span>02 / Listen</span>
-      <strong>Music</strong>
-      <em>Releases, originals and reconstructions.</em>
+      <span>02 / Listen</span><strong>Music</strong><em>Releases, originals and reconstructions.</em>
     </a>
     <a class="hc-panel" href="/lyrics/">
-      <span>03 / Read</span>
-      <strong>Songs</strong>
-      <em>Words, recordings and the stories behind them.</em>
+      <span>03 / Read</span><strong>Songs</strong><em>Words, recordings and the stories behind them.</em>
     </a>
     <a class="hc-panel hc-panel--dark" href="/press/">
-      <span>04 / Noise</span>
-      <strong>Press</strong>
-      <em>Reviews, interviews and dispatches from outside.</em>
+      <span>04 / Noise</span><strong>Press</strong><em>Reviews, interviews and dispatches from outside.</em>
     </a>
   </section>
 
@@ -61,4 +58,5 @@
     </div>
   </section>
 </main>
+{{ partial "hc-site-footer.html" . }}
 {{ end }}

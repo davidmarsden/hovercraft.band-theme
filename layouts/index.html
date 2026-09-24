@@ -1,24 +1,27 @@
 {{ define "main" }}
 {{ partial "hc-site-header.html" . }}
 <main class="hc-home">
-  <section class="hc-hero" aria-labelledby="hc-hero-title">
+  {{ $releaseLive := false }}
+  {{ with .Site.Params.hovercraft_release_live }}{{ $releaseLive = . }}{{ end }}
+
+  {{ if $releaseLive }}
+    {{ partial "hc-release-hero.html" . }}
+  {{ else }}
+  <section class="hc-hero hc-hero--teaser" aria-labelledby="hc-hero-title">
     <div class="hc-hero__copy">
-      <p class="hc-kicker">New album · 5 December 2026</p>
-      <h1 id="hc-hero-title">Doomed<br>To Live</h1>
-      <p class="hc-deck">Nineteen songs dragged out of old tapes, old memories and new machinery. Hovercraft, thirty years late and right on time.</p>
+      <p class="hc-kicker">New Hovercraft</p>
+      <h1 id="hc-hero-title">Coming in<br>time for Xmas</h1>
+      <p class="hc-deck">Two records. Thirty years in the making.</p>
       <div class="hc-actions">
-        <a class="hc-button hc-button--primary" href="/music/">Hear the music</a>
-        <a class="hc-button" href="/story/">How we got here</a>
+        <a class="hc-button hc-button--primary" href="/story/">How we got here</a>
       </div>
     </div>
-    <div class="hc-hero__art" aria-hidden="true">
-      <div class="hc-record">
-        <span>HOVERCRAFT</span>
-        <strong>DOOMED<br>TO LIVE</strong>
-        <small>HC · 2026 · 19 TRACKS</small>
-      </div>
+    <div class="hc-hero__art hc-hero__art--teaser" aria-hidden="true">
+      <div class="hc-mystery-sleeve hc-mystery-sleeve--one"><span>01</span></div>
+      <div class="hc-mystery-sleeve hc-mystery-sleeve--two"><span>02</span></div>
     </div>
   </section>
+  {{ end }}
 
   <section class="hc-manifesto" aria-label="About Hovercraft">
     <p class="hc-section-label">01 / The band</p>

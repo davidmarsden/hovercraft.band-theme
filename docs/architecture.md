@@ -60,3 +60,28 @@ The homepage is release-led rather than a chronological blog index. It introduce
 The managed Hovercraft header/footer are supplied as dedicated partials. The legacy theme chrome is suppressed only when the managed chrome is present, preserving fallback behaviour while this override layer coexists with the underlying Micro.blog theme.
 
 The *Doomed To Live* hero deliberately uses a graphic placeholder built in CSS for this structural pass. Canonical album artwork replaces it in the release/player pass rather than baking an uncertain media URL into the layout.
+
+
+## Release gate
+
+The December 2026 release is built behind an explicit opt-in flag. Production defaults to the spoiler-free state.
+
+- Default: `params.hovercraft_release_live` is absent/false, so the homepage reveals neither album title nor track count.
+- Launch: set `params.hovercraft_release_live = true` in site configuration and rebuild.
+- The launch state introduces **Doomed To Live** and **Oh Yeah** together; neither is treated as a secondary release.
+- Album-specific pages and assets must not be linked, emitted into public navigation, feeds or sitemaps before launch. Finished release content should remain in Git/version-control or non-production previews until the flag is enabled.
+- Do not use a date comparison as the gate. An explicit switch avoids an accidental reveal caused by timezone/build timing and lets the band choose the actual launch moment on 5 December 2026.
+
+The public teaser copy is intentionally non-specific: **New Hovercraft / Coming in time for Xmas / Two records. Thirty years in the making.**
+
+
+## Release gating
+
+The production homepage has two intentional states:
+
+1. **Pre-release:** public copy teases two new records with “Coming in time for Xmas” but does not name the albums, expose track counts, or link unreleased album routes.
+2. **Launch:** the finished two-album treatment for *Doomed To Live* and *Oh Yeah* replaces the teaser when the release is ready to go live.
+
+Finished release pages, players, artwork, credits and song metadata may be developed in GitHub before launch. They should not be linked from production navigation, feeds or sitemaps until the launch state is enabled. This is a practical spoiler barrier, not a secrecy/security boundary: minor leakage is acceptable.
+
+The working target is 5 December 2026. Treat the date as a release target until the launch is confirmed; the public pre-release copy deliberately says “Coming in time for Xmas”.

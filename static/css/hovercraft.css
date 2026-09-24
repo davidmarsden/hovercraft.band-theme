@@ -686,3 +686,142 @@ body.hc-ready footer {
 
   .hc-footer { grid-template-columns: 1fr; align-items: start; }
 }
+
+
+/* === Pre-release gate v0.4 === */
+
+.hc-hero--teaser h1 {
+  max-width: 9ch;
+  font-size: clamp(4.6rem, 12vw, 10.5rem);
+}
+
+.hc-hero__art--teaser {
+  position: relative;
+  display: block;
+  background:
+    repeating-linear-gradient(135deg, rgba(238,232,217,.07) 0 .12rem, transparent .12rem 1.1rem),
+    var(--hc-night);
+}
+
+.hc-mystery-sleeve {
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 1;
+  border: .15rem solid var(--hc-ink);
+  box-shadow: .5rem .5rem 0 var(--hc-ink);
+}
+
+.hc-mystery-sleeve span {
+  position: absolute;
+  right: .8rem;
+  bottom: .5rem;
+  font: 900 clamp(3rem, 7vw, 6rem)/1 var(--hc-display);
+}
+
+.hc-mystery-sleeve--one {
+  top: 12%;
+  left: 9%;
+  background:
+    repeating-radial-gradient(circle at 40% 45%, transparent 0 1.1rem, rgba(17,16,14,.18) 1.15rem 1.3rem),
+    var(--hc-signal);
+  transform: rotate(-7deg);
+}
+
+.hc-mystery-sleeve--two {
+  right: 8%;
+  bottom: 9%;
+  background:
+    repeating-linear-gradient(90deg, var(--hc-electric) 0 1.3rem, var(--hc-paper) 1.3rem 2.6rem);
+  transform: rotate(8deg);
+}
+
+.hc-hero__art--release {
+  position: relative;
+  display: block;
+}
+
+.hc-release-title {
+  position: absolute;
+  width: 58%;
+  aspect-ratio: 1;
+  padding: 8%;
+  border: .15rem solid var(--hc-ink);
+  font: 900 clamp(2rem, 4.7vw, 4.5rem)/.78 var(--hc-display);
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+}
+
+.hc-release-title--one {
+  top: 8%;
+  left: 5%;
+  background: var(--hc-signal);
+  transform: rotate(-6deg);
+}
+
+.hc-release-title--two {
+  right: 5%;
+  bottom: 8%;
+  background: var(--hc-electric);
+  transform: rotate(7deg);
+}
+
+@media (max-width: 50rem) {
+  .hc-hero--teaser h1 { font-size: clamp(4rem, 18vw, 7.2rem); }
+}
+
+
+/* === Pre-release two-record teaser === */
+
+.hc-hero--teaser .hc-hero__art {
+  background:
+    radial-gradient(circle at 72% 24%, rgba(241,200,75,.22), transparent 23%),
+    radial-gradient(circle at 22% 78%, rgba(239,91,50,.24), transparent 25%),
+    var(--hc-night);
+}
+
+.hc-teaser-art {
+  position: relative;
+  min-height: 28rem;
+}
+
+.hc-teaser-sleeve {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 59%;
+  aspect-ratio: 1;
+  border: .18rem solid var(--hc-ink);
+  box-shadow: .55rem .55rem 0 var(--hc-ink);
+  overflow: hidden;
+}
+
+.hc-teaser-sleeve::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(125deg, transparent 0 1.1rem, rgba(17,16,14,.12) 1.1rem 1.25rem);
+}
+
+.hc-teaser-sleeve span {
+  position: relative;
+  font: 900 clamp(5rem, 12vw, 10rem)/1 var(--hc-display);
+}
+
+.hc-teaser-sleeve--one {
+  left: 9%;
+  top: 11%;
+  background: var(--hc-signal);
+  transform: rotate(-8deg);
+}
+
+.hc-teaser-sleeve--two {
+  right: 8%;
+  bottom: 9%;
+  background: var(--hc-electric);
+  transform: rotate(7deg);
+}
+
+@media (max-width: 50rem) {
+  .hc-teaser-art { min-height: 22rem; }
+  .hc-teaser-sleeve { width: 57%; }
+}

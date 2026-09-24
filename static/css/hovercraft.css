@@ -926,3 +926,16 @@ body::before {
   .hc-art-collage { min-height: 25rem; }
   .hc-art { border-width: .22rem; }
 }
+
+
+/* Keep interactive text legible on the near-black Press panel. */
+.hc-panel--dark:hover,
+.hc-panel--dark:focus-visible,
+.hc-panel--dark:hover strong,
+.hc-panel--dark:focus-visible strong {
+  color: var(--hc-paper);
+}
+
+.hc-panel--dark:focus-visible {
+  outline-color: var(--hc-paper);
+}

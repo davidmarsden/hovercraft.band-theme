@@ -14,6 +14,14 @@ The site deliberately separates presentation from publishing.
 
 ## Theme strategy
 
+Micro.blog plug-in assets are loaded through `plugin.json` `includes`; CSS and JavaScript paths refer to files under `static/`. This avoids replacing head hooks merely to load assets.
+
+### Shell v0.2
+
+The first visible shell is deliberately CSS-first. It restyles the semantic structure supplied by the active Micro.blog theme rather than replacing core rendering templates. This keeps posts, feeds, pages and Micro.blog features intact while we establish the visual language. JavaScript is progressive enhancement only; the site remains navigable and readable without it.
+
+
+
 Start with the smallest possible override surface. Do not import the old generated theme wholesale.
 
 The first installation should prove that Micro.blog can load this repository cleanly without changing public presentation. Do not ship empty same-named Micro.blog hook partials as placeholders: they can shadow hooks supplied by the active theme or other plugins. Visual overrides are introduced deliberately after installation is verified.

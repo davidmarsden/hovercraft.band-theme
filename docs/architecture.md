@@ -16,7 +16,7 @@ The site deliberately separates presentation from publishing.
 
 Start with the smallest possible override surface. Do not import the old generated theme wholesale.
 
-The first installation should prove that Micro.blog can load this repository cleanly without changing public presentation. Visual overrides are introduced deliberately after installation is verified.
+The first installation should prove that Micro.blog can load this repository cleanly without changing public presentation. Do not ship empty same-named Micro.blog hook partials as placeholders: they can shadow hooks supplied by the active theme or other plugins. Visual overrides are introduced deliberately after installation is verified.
 
 ## Content model
 

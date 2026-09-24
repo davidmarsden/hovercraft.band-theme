@@ -73,3 +73,15 @@ The December 2026 release is built behind an explicit opt-in flag. Production de
 - Do not use a date comparison as the gate. An explicit switch avoids an accidental reveal caused by timezone/build timing and lets the band choose the actual launch moment on 5 December 2026.
 
 The public teaser copy is intentionally non-specific: **New Hovercraft / Coming in time for Xmas / Two records. Thirty years in the making.**
+
+
+## Release gating
+
+The production homepage has two intentional states:
+
+1. **Pre-release:** public copy teases two new records with “Coming in time for Xmas” but does not name the albums, expose track counts, or link unreleased album routes.
+2. **Launch:** the finished two-album treatment for *Doomed To Live* and *Oh Yeah* replaces the teaser when the release is ready to go live.
+
+Finished release pages, players, artwork, credits and song metadata may be developed in GitHub before launch. They should not be linked from production navigation, feeds or sitemaps until the launch state is enabled. This is a practical spoiler barrier, not a secrecy/security boundary: minor leakage is acceptable.
+
+The working target is 5 December 2026. Treat the date as a release target until the launch is confirmed; the public pre-release copy deliberately says “Coming in time for Xmas”.

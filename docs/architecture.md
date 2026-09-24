@@ -51,3 +51,12 @@ Existing useful URLs should normally be retained. If content moves, prefer a red
 ## Deployment discipline
 
 Changes should be developed on branches and reviewed through pull requests. Micro.blog should consume the stable/default branch once the installation workflow is confirmed.
+
+
+## Homepage v0.3
+
+The homepage is release-led rather than a chronological blog index. It introduces the current release, band story, primary music/song/press routes and a deliberately small latest-transmissions section.
+
+The managed Hovercraft header/footer are supplied as dedicated partials. The legacy theme chrome is suppressed only when the managed chrome is present, preserving fallback behaviour while this override layer coexists with the underlying Micro.blog theme.
+
+The *Doomed To Live* hero deliberately uses a graphic placeholder built in CSS for this structural pass. Canonical album artwork replaces it in the release/player pass rather than baking an uncertain media URL into the layout.

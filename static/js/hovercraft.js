@@ -3,6 +3,17 @@
   const ready = () => {
     document.body.classList.add("hc-ready");
 
+    // Replace the legacy theme chrome with the GitHub-managed Hovercraft
+    // header/footer while leaving Micro.blog's content rendering intact.
+    const legacyHeader = document.querySelector("body > header, .site-header");
+    const legacyNav = document.querySelector("body > nav.site-nav, body > nav");
+    const legacyFooter = document.querySelector("body > footer, .site-footer");
+    const hcHeader = document.querySelector(".hc-header");
+    const hcFooter = document.querySelector(".hc-footer");
+    if (hcHeader && legacyHeader && legacyHeader !== hcHeader) legacyHeader.hidden = true;
+    if (hcHeader && legacyNav && !hcHeader.contains(legacyNav)) legacyNav.hidden = true;
+    if (hcFooter && legacyFooter && legacyFooter !== hcFooter) legacyFooter.hidden = true;
+
     // Give the current-page navigation item an accessible state when the
     // active theme does not already provide one.
     const currentPath = window.location.pathname.replace(/\/$/, "") || "/";

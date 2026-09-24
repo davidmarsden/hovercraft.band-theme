@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{ partial "hc-site-header.html" . }}
+<main class="hc-home">
+  <section class="hc-hero" aria-labelledby="hc-hero-title">
+    <div class="hc-hero__copy">
+      <p class="hc-kicker">New album · 5 December 2026</p>
+      <h1 id="hc-hero-title">Doomed<br>To Live</h1>
+      <p class="hc-deck">Nineteen songs dragged out of old tapes, old memories and new machinery. Hovercraft, thirty years late and right on time.</p>
+      <div class="hc-actions">
+        <a class="hc-button hc-button--primary" href="/music/">Hear the music</a>
+        <a class="hc-button" href="/story/">How we got here</a>
+      </div>
+    </div>
+    <div class="hc-hero__art" aria-hidden="true">
+      <div class="hc-record">
+        <span>HOVERCRAFT</span>
+        <strong>DOOMED<br>TO LIVE</strong>
+        <small>HC · 2026 · 19 TRACKS</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="hc-manifesto" aria-label="About Hovercraft">
+    <p class="hc-section-label">01 / The band</p>
+    <p class="hc-manifesto__big">Lost songs. Vanished songwriter. Resurrected band.</p>
+    <div>
+      <p>Hovercraft formed in Grimsby in 1995, disappeared in 1996, and came back three decades later to finish the songs left behind.</p>
+      <a class="hc-text-link" href="/story/">Read the improbable story →</a>
+    </div>
+  </section>
+
+  <section class="hc-home-grid" aria-label="Explore Hovercraft">
+    <a class="hc-panel hc-panel--signal" href="/music/">
+      <span>02 / Listen</span><strong>Music</strong><em>Releases, originals and reconstructions.</em>
+    </a>
+    <a class="hc-panel" href="/lyrics/">
+      <span>03 / Read</span><strong>Songs</strong><em>Words, recordings and the stories behind them.</em>
+    </a>
+    <a class="hc-panel hc-panel--dark" href="/press/">
+      <span>04 / Noise</span><strong>Press</strong><em>Reviews, interviews and dispatches from outside.</em>
+    </a>
+  </section>
+
+  <section class="hc-news" aria-labelledby="hc-news-title">
+    <div class="hc-section-heading">
+      <p class="hc-section-label">05 / Transmission</p>
+      <h2 id="hc-news-title">Latest</h2>
+    </div>
+    <div class="hc-news__list">
+      {{ range first 3 (where .Site.RegularPages "Type" "post") }}
+      <article class="hc-news-card">
+        <p class="hc-news-card__date">{{ .Date.Format "02 Jan 2006" }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Summary }}<div class="hc-news-card__summary">{{ . | plainify | truncate 170 }}</div>{{ end }}
+        <a class="hc-text-link" href="{{ .RelPermalink }}">Read →</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ partial "hc-site-footer.html" . }}
+{{ end }}

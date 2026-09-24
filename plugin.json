@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0",
+  "title": "Hovercraft.band",
+  "description": "Custom Micro.blog presentation layer for Hovercraft.",
+  "includes": ["layouts", "static"]
+}

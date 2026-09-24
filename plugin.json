@@ -1,6 +1,9 @@
 {
-  "version": "0.1.0",
-  "title": "Hovercraft.band",
-  "description": "Custom Micro.blog presentation layer for Hovercraft.",
-  "includes": ["layouts", "static"]
+  "version": "0.2.0",
+  "title": "Hovercraft site overrides",
+  "description": "GitHub-managed presentation layer for hovercraft.band.",
+  "includes": [
+    "/css/hovercraft.css",
+    "/js/hovercraft.js"
+  ]
 }

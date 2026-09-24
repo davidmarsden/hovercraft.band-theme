@@ -768,3 +768,60 @@ body.hc-ready footer {
 @media (max-width: 50rem) {
   .hc-hero--teaser h1 { font-size: clamp(4rem, 18vw, 7.2rem); }
 }
+
+
+/* === Pre-release two-record teaser === */
+
+.hc-hero--teaser .hc-hero__art {
+  background:
+    radial-gradient(circle at 72% 24%, rgba(241,200,75,.22), transparent 23%),
+    radial-gradient(circle at 22% 78%, rgba(239,91,50,.24), transparent 25%),
+    var(--hc-night);
+}
+
+.hc-teaser-art {
+  position: relative;
+  min-height: 28rem;
+}
+
+.hc-teaser-sleeve {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 59%;
+  aspect-ratio: 1;
+  border: .18rem solid var(--hc-ink);
+  box-shadow: .55rem .55rem 0 var(--hc-ink);
+  overflow: hidden;
+}
+
+.hc-teaser-sleeve::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(125deg, transparent 0 1.1rem, rgba(17,16,14,.12) 1.1rem 1.25rem);
+}
+
+.hc-teaser-sleeve span {
+  position: relative;
+  font: 900 clamp(5rem, 12vw, 10rem)/1 var(--hc-display);
+}
+
+.hc-teaser-sleeve--one {
+  left: 9%;
+  top: 11%;
+  background: var(--hc-signal);
+  transform: rotate(-8deg);
+}
+
+.hc-teaser-sleeve--two {
+  right: 8%;
+  bottom: 9%;
+  background: var(--hc-electric);
+  transform: rotate(7deg);
+}
+
+@media (max-width: 50rem) {
+  .hc-teaser-art { min-height: 22rem; }
+  .hc-teaser-sleeve { width: 57%; }
+}

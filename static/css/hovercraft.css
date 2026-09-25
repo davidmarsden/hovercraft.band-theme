@@ -1409,3 +1409,40 @@ body::before {
     font-size:clamp(1rem,1.35vw,1.16rem);
   }
 }
+
+
+/* Song pages still contain legacy prose metadata in Micro.blog .Content.
+   Keep the lyrics, but let the publication manifest own credits/releases. */
+.hc-song-page__source-meta {
+  margin:0 0 .35rem;
+  font-size:.9rem;
+  line-height:1.4;
+  color:var(--hc-muted);
+}
+.hc-song-page__source-meta + .hc-song-page__source-meta { margin-bottom:1.5rem; }
+.hc-song-page__legacy-content > p:first-child,
+.hc-song-page__legacy-content > p:nth-child(2) {
+  display:none;
+}
+
+/* The locked-recording stamp must never paint outside the evidence rail. */
+.hc-song-page__rail { overflow:hidden; }
+.hc-song-page__locked {
+  width:calc(100% - .5rem);
+  max-width:100%;
+  min-width:0;
+}
+.hc-song-page__locked strong {
+  max-width:100%;
+  overflow-wrap:normal;
+  word-break:normal;
+  font-size:clamp(2.15rem,3.5vw,4.15rem);
+}
+@media (min-width:48.01rem) and (max-width:90rem) {
+  .hc-song-page__body {
+    grid-template-columns:minmax(0,1.38fr) minmax(20rem,.62fr);
+  }
+  .hc-song-page__locked strong {
+    font-size:clamp(2.35rem,3.7vw,3.8rem);
+  }
+}

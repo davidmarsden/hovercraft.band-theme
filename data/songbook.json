@@ -3,151 +3,377 @@
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "The album opener: mournful, accusatory and affectionate at once. Roads, departure and mortality establish Hovercraft’s recurring escape vocabulary immediately.",
-    "archive": "A substantially longer 1996 demo survives, with two additional verses and a final chorus. Some musical DNA can also be traced to a pre-Piers Hovercraft jam."
+    "archive": "A substantially longer 1996 demo survives, with two additional verses and a final chorus. Some musical DNA can also be traced to a pre-Piers Hovercraft jam.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 1,
+      "side": "A",
+      "audio": "https://hovercraft.band/uploads/2026/1.-to-the-grave.m4a",
+      "visibility": "release"
+    },
+    "versions": [
+      {
+        "label": "1996 demo · remixed/remastered",
+        "album": "Oh Yeah",
+        "track": 10,
+        "audio": "https://hovercraft.band/uploads/2026/10.-to-the-grave-1996-demo-remastered.m4a",
+        "visibility": "release"
+      },
+      {
+        "label": "Original · remixed",
+        "audio": "https://hovercraft.band/uploads/2026/to-the-grave-original-remixed.m4a",
+        "visibility": "release"
+      }
+    ]
   },
   "mr-tooting-brown": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "An affectionate and grotesque portrait of a faded rock ’n’ roll fantasist: absurd, self-mythologising and still somehow loved.",
-    "archive": "The 2026 recording was reconstructed from the original 1995 studio demo. A later solo acoustic performance by Gol led to a separate 2025 reconstruction."
+    "archive": "The 2026 recording was reconstructed from the original 1995 studio demo. A later solo acoustic performance by Gol led to a separate 2025 reconstruction.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 2,
+      "side": "A",
+      "audio": "https://hovercraft.band/uploads/2026/2.-mr-tooting-brown.m4a",
+      "visibility": "release"
+    }
   },
   "white-limousine": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "A compact cinematic escape fantasy, moving from bruised morning-after imagery towards an extravagant promise of departure. The limousine can suggest rescue, luxury, wedding, funeral or simple excess."
+    "about": "A compact cinematic escape fantasy, moving from bruised morning-after imagery towards an extravagant promise of departure. The limousine can suggest rescue, luxury, wedding, funeral or simple excess.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 3,
+      "side": "A",
+      "audio": "https://hovercraft.band/uploads/2026/3.-white-limousine.m4a",
+      "visibility": "release"
+    }
   },
   "crazy": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "An accusation that keeps collapsing into obsession. The song tries to turn desire into conquest and possession, only to discover that contempt is no cure for attraction."
+    "about": "An accusation that keeps collapsing into obsession. The song tries to turn desire into conquest and possession, only to discover that contempt is no cure for attraction.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 4,
+      "side": "A",
+      "audio": "https://hovercraft.band/uploads/2026/4.-crazy.m4a",
+      "visibility": "release"
+    }
   },
   "concrete-hill": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "One of Hovercraft’s clearest social landscapes: estate life, buses, fighting, weekends, bodily comedy and aspiration collide with the desire to escape place, class and self.",
-    "archive": "The surviving 1996 demo is longer, darker and more exploratory."
+    "archive": "The surviving 1996 demo is longer, darker and more exploratory.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 5,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/5.-concrete-hill.m4a",
+      "visibility": "release"
+    },
+    "versions": [
+      {
+        "label": "1996 demo · remixed/remastered",
+        "album": "Oh Yeah",
+        "track": 8,
+        "audio": "https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a",
+        "visibility": "release"
+      }
+    ]
   },
   "superman": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "A tiny rush of work, intoxication and comic-book escape. The narrator rejects the burden of being a hero while keeping the fantasy of power and flight."
+    "about": "A tiny rush of work, intoxication and comic-book escape. The narrator rejects the burden of being a hero while keeping the fantasy of power and flight.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 6,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/6.-superman.m4a",
+      "visibility": "advance"
+    },
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg"
   },
   "these-days": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "A satire of revolutionary certainty ageing into cars, holidays, domestic comfort and postponed revolution. Its saving move is self-implication: the singer has changed too.",
-    "archive": "The source tape was difficult to decipher. The current transcription deliberately preserves its awkwardness."
+    "archive": "The source tape was difficult to decipher. The current transcription deliberately preserves its awkwardness.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 7,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/7.-these-days.m4a",
+      "visibility": "release"
+    }
   },
   "killer-blues": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "Short, nasty and funny garage/pub blues. Riff and attitude do as much work as conventional structure."
+    "about": "Short, nasty and funny garage/pub blues. Riff and attitude do as much work as conventional structure.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 8,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/8.-killer-blues.m4a",
+      "visibility": "release"
+    }
   },
   "pass-the-night-nurse": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "A chemical comedown that opens outward into an anti-authoritarian rant. Its strangest imagery imagines humanity as a single damaged organism."
+    "about": "A chemical comedown that opens outward into an anti-authoritarian rant. Its strangest imagery imagines humanity as a single damaged organism.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 9,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/9.-pass-the-night-nurse.m4a",
+      "visibility": "release"
+    }
   },
   "new-pine-overcoat": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "A hopeful road song with a black-joke reveal: the title points towards a coffin, retrospectively poisoning much of the optimism that precedes it.",
-    "archive": "The 1996 demo is slower, barer and more psychologically exposed. The song was also reworked in 2025 as The Promised Land."
+    "archive": "The 1996 demo is slower, barer and more psychologically exposed. The song was also reworked in 2025 as The Promised Land.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 10,
+      "side": "B",
+      "audio": "https://hovercraft.band/uploads/2026/10.-new-pine-overcoat.m4a",
+      "visibility": "release"
+    },
+    "versions": [
+      {
+        "label": "1996 demo · remixed/remastered",
+        "album": "Oh Yeah",
+        "track": 9,
+        "audio": "https://hovercraft.band/uploads/2026/9.-new-pine-overcoat-1996-demo-remastered.m4a",
+        "visibility": "release"
+      },
+      {
+        "label": "2025 reworking",
+        "title": "The Promised Land",
+        "href": "/lyrics/the-promised-land/",
+        "visibility": "public"
+      }
+    ]
   },
   "ill-make-love-to-you-anytime": {
     "writer": "J.J. Cale",
     "type": "Cover",
-    "about": "Hovercraft takes J.J. Cale’s laconic composition and pushes it towards something more urgent and garage-like. The interest here is arrangement and performance."
+    "about": "Hovercraft takes J.J. Cale’s laconic composition and pushes it towards something more urgent and garage-like. The interest here is arrangement and performance.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 11,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a",
+      "visibility": "release"
+    }
   },
   "cool-jerk": {
     "writer": "Donald Storball",
     "type": "Cover",
     "about": "Hovercraft’s route into the song runs from The Capitols through The Creation. The band leans into The Creation’s British freakbeat and mod aggression and turns it into damaged pub-band electricity.",
-    "archive": "Lineage: The Capitols → The Creation → Hovercraft."
+    "archive": "Lineage: The Capitols → The Creation → Hovercraft.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 12,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a",
+      "visibility": "advance"
+    },
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png"
   },
   "sweet-thing": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "Gentle reassurance with unease underneath it. Patience, time and distance make it a quiet reset after the covers, while its road imagery echoes New Pine Overcoat."
+    "about": "Gentle reassurance with unease underneath it. Patience, time and distance make it a quiet reset after the covers, while its road imagery echoes New Pine Overcoat.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 13,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/13.-sweet-thing.m4a",
+      "visibility": "release"
+    }
   },
   "keep-it-together": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "An exposed apology that refuses to become a model apology. Remorse, self-pity, evasion and damage remain tangled together, and the song denies itself a neat resolution."
+    "about": "An exposed apology that refuses to become a model apology. Remorse, self-pity, evasion and damage remain tangled together, and the song denies itself a neat resolution.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 14,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/14.-keep-it-together.m4a",
+      "visibility": "release"
+    }
   },
   "i-love-you-and-i": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "A blunt plea built from love, dependence and fear. By the end, presence matters more than rescue.",
-    "archive": "The final performance makes a small but emotionally significant conjunction change in its closing refrain."
+    "archive": "The final performance makes a small but emotionally significant conjunction change in its closing refrain.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 15,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/15.-i-love-you-and-i-dont-want-you-to-die.m4a",
+      "visibility": "release"
+    }
   },
   "indie-kid": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "It starts as scene satire — clothes, magazines, parties and poses — then curdles into something closer to elegy, pulling the caricature back into English weather, place and loss."
+    "about": "It starts as scene satire — clothes, magazines, parties and poses — then curdles into something closer to elegy, pulling the caricature back into English weather, place and loss.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 16,
+      "side": "D",
+      "audio": "https://hovercraft.band/uploads/2026/16.-indie-kid.m4a",
+      "visibility": "release"
+    }
   },
   "now-youre-god-dying-comes": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "The album’s largest set-piece: public worship, stardom and unstable godhood collapse into private mortality.",
-    "archive": "The 2026 recording is a stitched construction assembled from three reconstructed parts."
+    "archive": "The 2026 recording is a stitched construction assembled from three reconstructed parts.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 17,
+      "side": "D",
+      "audio": "https://hovercraft.band/uploads/2026/17.-dying-comes-so-easy.m4a",
+      "visibility": "release"
+    }
   },
   "take-it-or-leave-it": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "Hovercraft’s nearest thing to a manifesto: anti-violence, anti-persecution, suspicious of grand ideology and reaching towards solidarity. Its awkward slogans remain part of the historical song."
+    "about": "Hovercraft’s nearest thing to a manifesto: anti-violence, anti-persecution, suspicious of grand ideology and reaching towards solidarity. Its awkward slogans remain part of the historical song.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 18,
+      "side": "D",
+      "audio": "https://hovercraft.band/uploads/2026/18.-take-it-or-leave-it.m4a",
+      "visibility": "release"
+    }
   },
   "here-now": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original · written 2009",
     "about": "The emotional ending of Doomed To Live. After an album full of roads and escape, it turns towards presence and repair instead.",
-    "archive": "Piers wrote the song in 2009 as an act of amends. It was revisited in 2013–14 before returning to Hovercraft in 2026."
+    "archive": "Piers wrote the song in 2009 as an act of amends. It was revisited in 2013–14 before returning to Hovercraft in 2026.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 19,
+      "side": "D",
+      "audio": "https://hovercraft.band/uploads/2026/19.-here-now.m4a",
+      "visibility": "release"
+    }
   },
   "oh-yeah": {
     "writer": "Piers Wildman",
     "type": "Original song incorporating a borrowed refrain",
     "about": "It enters through a familiar blues and R&B doorway and then becomes another song: borrowed bravado gives way to failed potency and increasingly manic self-exposure.",
-    "archive": "The borrowed refrain is omitted from the published song text."
+    "archive": "The borrowed refrain is omitted from the published song text.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 1,
+      "audio": "https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a",
+      "visibility": "advance"
+    },
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png"
   },
   "bring-my-baby-back": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "A rockabilly/pub-rock sprint with a sideways gait. Comic romantic panic, speed and factory-life texture give it a distinctly Hovercraft form of vulnerability.",
-    "archive": "The band’s 1995–96 listening world included The Clash’s Jimmy Jazz — useful context for the feel, without making the song an imitation."
+    "archive": "The band’s 1995–96 listening world included The Clash’s Jimmy Jazz — useful context for the feel, without making the song an imitation.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 2,
+      "audio": "https://hovercraft.band/uploads/2026/2.-bring-my-baby-back.m4a",
+      "visibility": "release"
+    }
   },
   "low": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "Exile, failed stardom, gear, disappointment and the need for guidance gather around the image of a bottle and a suitcase — the phrase that supplied the companion album’s former working title.",
-    "archive": "A known older web transcription contains one corrected word."
+    "archive": "A known older web transcription contains one corrected word.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 3,
+      "audio": "https://hovercraft.band/uploads/2026/3.-low.m4a",
+      "visibility": "release"
+    }
   },
   "my-own-little-world": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
-    "about": "Gentle folk-rock with a cyclical feel and a faint Bo Diddley undertow. Warmth and mutual shelter coexist with a slight possessive anxiety."
+    "about": "Gentle folk-rock with a cyclical feel and a faint Bo Diddley undertow. Warmth and mutual shelter coexist with a slight possessive anxiety.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 4,
+      "audio": "https://hovercraft.band/uploads/2026/4.-my-own-little-world.m4a",
+      "visibility": "release"
+    }
   },
   "bob-bob-bob": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "An elegy whose force comes from tiny human detail rather than grand tragedy. Grief eventually narrows to an absurdly small unpaid debt, funny and brutal at the same time.",
-    "archive": "A genuine 1995–96 Hovercraft song for which no complete original band performance has yet surfaced. The reconstruction grew from Piers’ circa-2012 solo acoustic rendition."
+    "archive": "A genuine 1995–96 Hovercraft song for which no complete original band performance has yet surfaced. The reconstruction grew from Piers’ circa-2012 solo acoustic rendition.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 5,
+      "audio": "https://hovercraft.band/uploads/2026/5.-bob-bob-bob.m4a",
+      "visibility": "release"
+    }
   },
   "season-of-the-witch": {
     "writer": "Donovan Leitch",
     "type": "Cover",
     "about": "Hovercraft approaches Donovan’s composition through the Julie Driscoll, Brian Auger & The Trinity interpretation, roughening its jazz-psych tension into something heavier and warier.",
-    "archive": "The retained studio comment at the end returns the listener to musicians in a room rather than polishing away the evidence."
+    "archive": "The retained studio comment at the end returns the listener to musicians in a room rather than polishing away the evidence.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 6,
+      "audio": "https://hovercraft.band/uploads/2026/6.-season-of-the-witch.m4a",
+      "visibility": "release"
+    }
   },
   "angel": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "One of the companion album’s emotional peaks: grief, defiance, attempted rebirth and petty revenge are allowed to remain messy rather than resolving cleanly.",
-    "archive": "The finished recording joins two different reconstructed versions. The audible seam and room remarks remain deliberately as part of its material history."
+    "archive": "The finished recording joins two different reconstructed versions. The audible seam and room remarks remain deliberately as part of its material history.",
+    "release": {
+      "album": "Oh Yeah",
+      "track": 7,
+      "audio": "https://hovercraft.band/uploads/2026/7.-angel.m4a",
+      "visibility": "release"
+    }
   },
   "the-promised-land": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original · 2025 reworking",
     "about": "A 2025 reworking of New Pine Overcoat: the same underlying song viewed through a different recording and arrangement, preserving its road-song momentum and dark destination.",
-    "archive": "Related composition: New Pine Overcoat. Kept as a distinct published song page because the 2025 reworking has its own recording history."
+    "archive": "Related composition: New Pine Overcoat. Kept as a distinct published song page because the 2025 reworking has its own recording history.",
+    "release": {
+      "label": "Released 2025",
+      "visibility": "public"
+    },
+    "related": [
+      {
+        "title": "New Pine Overcoat",
+        "href": "/lyrics/new-pine-overcoat/"
+      }
+    ]
   }
 }

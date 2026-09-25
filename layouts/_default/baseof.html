@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-  <link rel="stylesheet" href="/css/hovercraft.css">
   {{ partial "microblog_head.html" . }}
 </head>
 <body class="hc-site">
   {{ block "main" . }}{{ end }}
-  <script src="/js/hovercraft.js" defer></script>
+  {{ partial "microblog_footer.html" . }}
 </body>
 </html>

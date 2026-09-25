@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{ partial "hc-site-header.html" . }}
+<main class="hc-music">
+  <header class="hc-page-head">
+    <p class="hc-kicker">Records, tapes &amp; things we found in boxes</p>
+    <h1>Music.</h1>
+    <p class="hc-page-deck">Hovercraft disappeared in 1996. The songs didn't. Here is what has escaped so far.</p>
+  </header>
+
+  <section class="hc-release-tease" aria-labelledby="hc-coming-title">
+    <div>
+      <p class="hc-section-label">Coming in time for Xmas</p>
+      <h2 id="hc-coming-title">Two records.</h2>
+      <p>Thirty years in the making. Probably far too many songs.</p>
+    </div>
+    <div class="hc-release-tease__marks" aria-hidden="true"><span>?</span><span>?</span></div>
+  </section>
+
+  <section class="hc-music-section" aria-labelledby="hc-hear-now">
+    <p class="hc-section-label">01 / Hear now</p>
+    <h2 id="hc-hear-now">Songs already<br>out in the world.</h2>
+
+    <div class="hc-record-grid">
+      <article class="hc-record">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000345081f487b493542e570855.png" alt="White Limousine artwork">
+        <div class="hc-record__copy"><p class="hc-record__type">Hovercraft</p><h3>White Limousine</h3><p>Cinematic, bruised and back from the dead.</p></div>
+      </article>
+      <article class="hc-record">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000adc081f49746de457bab59d9.png" alt="Mr Tooting Brown artwork">
+        <div class="hc-record__copy"><p class="hc-record__type">Hovercraft</p><h3>Mr Tooting Brown</h3><p>Urgent guitars, old trouble, new noise.</p></div>
+      </article>
+      <article class="hc-record">
+        <img src="https://hovercraft.band/uploads/2026/file-000000000c6081f4b618b65f4aa3dcbe4.jpg" alt="These Days artwork">
+        <div class="hc-record__copy"><p class="hc-record__type">Hovercraft</p><h3>These Days</h3><p>One of the songs that refused to stay in 1996.</p></div>
+      </article>
+      <article class="hc-record">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg" alt="Killer Blues artwork">
+        <div class="hc-record__copy"><p class="hc-record__type">Hovercraft</p><h3>Killer Blues</h3><p>Whiskey, guitar and bad intentions.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="hc-music-section hc-music-section--archive" aria-labelledby="hc-originals">
+    <p class="hc-section-label">02 / The evidence</p>
+    <h2 id="hc-originals">1996 originals.</h2>
+    <p class="hc-page-deck">Before the resurrection there were tapes, gigs and the original versions.</p>
+    <div class="hc-original-strip">
+      <figure><img src="https://hovercraft.band/uploads/2026/file-00000000b7d081f49e096c9027218f372.jpg" alt="Concrete Hill 1996 Original artwork"><figcaption>Concrete Hill</figcaption></figure>
+      <figure><img src="https://hovercraft.band/uploads/2026/file-0000000058a881f494664c4f57edcabe4.jpg" alt="New Pine Overcoat 1996 Original artwork"><figcaption>New Pine Overcoat</figcaption></figure>
+      <figure><img src="https://hovercraft.band/uploads/2026/file-0000000055e881f4a1d4bd7e65feb199.png" alt="To The Grave 1996 Original artwork"><figcaption>To The Grave</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="hc-music-next">
+    <p class="hc-section-label">03 / Words</p>
+    <h2>Know what<br>we're shouting?</h2>
+    <p>Lyrics, recordings and the stories behind the songs live in the songbook.</p>
+    <a class="hc-button hc-button--primary" href="/lyrics/">Read the songs</a>
+  </section>
+</main>
+{{ partial "hc-site-footer.html" . }}
+{{ end }}

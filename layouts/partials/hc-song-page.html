@@ -28,7 +28,15 @@
             <p>The words are not reproduced here.</p>
           </div>
         {{ else }}
-          <div class="hc-song-page__content">{{ .Content }}</div>
+          <div class="hc-song-page__content">
+            {{ with $song }}
+              {{ with .writer }}<p class="hc-song-page__source-meta">Written by {{ . }}</p>{{ end }}
+              {{ with .release }}
+                {{ with .album }}<p class="hc-song-page__source-meta">Current recording: <em>{{ . }}</em></p>{{ end }}
+              {{ end }}
+            {{ end }}
+            <div class="hc-song-page__legacy-content">{{ .Content }}</div>
+          </div>
           {{ if eq .RelPermalink "/lyrics/oh-yeah/" }}
             <div class="hc-song-page__rights-note">
               <strong>TEXT NOTE.</strong>

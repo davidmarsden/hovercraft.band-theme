@@ -6,8 +6,10 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ partial "microblog_head.html" . }}
+  <link rel="stylesheet" href="/css/hovercraft.css">
 </head>
 <body class="hc-site">
   {{ block "main" . }}{{ end }}
+  <script src="/js/hovercraft.js" defer></script>
 </body>
 </html>

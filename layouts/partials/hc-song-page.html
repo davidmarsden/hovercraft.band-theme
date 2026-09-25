@@ -17,7 +17,20 @@
     <div class="hc-song-page__body">
       <div class="hc-song-page__words">
         <p class="hc-section-label">01 / The words</p>
-        <div class="hc-song-page__content">{{ .Content }}</div>
+        {{ if eq .RelPermalink "/lyrics/cool-jerk/" }}
+          <div class="hc-song-page__rights-note">
+            <strong>COVER VERSION.</strong>
+            <p>Lyrics are not reproduced here.</p>
+          </div>
+        {{ else }}
+          <div class="hc-song-page__content">{{ .Content }}</div>
+          {{ if eq .RelPermalink "/lyrics/oh-yeah/" }}
+            <div class="hc-song-page__rights-note">
+              <strong>LYRIC NOTE.</strong>
+              <p>Piers&rsquo; original lyrics are reproduced here. The borrowed refrain is intentionally omitted.</p>
+            </div>
+          {{ end }}
+        {{ end }}
       </div>
       <aside class="hc-song-page__rail">
         <p class="hc-section-label">02 / The evidence</p>

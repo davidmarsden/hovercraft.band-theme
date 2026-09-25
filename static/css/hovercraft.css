@@ -1379,3 +1379,33 @@ body::before {
   .hc-song-page__evidence-archive,.hc-song-page__evidence-grid { grid-template-columns:1fr; }
   .hc-song-page__evidence-archive h2 { max-width:none; }
 }
+
+
+/* Keep lyric lines readable inside the two-column Songbook layout.
+   Micro.blog lyric pages often arrive as preformatted/plain line blocks, so
+   preserve their line breaks but wrap long lines instead of letting them run
+   underneath the evidence rail. */
+.hc-song-page__content {
+  max-width:none;
+  overflow-wrap:anywhere;
+}
+.hc-song-page__content pre {
+  max-width:100%;
+  margin:0 0 1.35rem;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  font:inherit;
+  line-height:inherit;
+}
+.hc-song-page__content p {
+  max-width:100%;
+  white-space:normal;
+}
+@media (min-width:48.01rem) and (max-width:90rem) {
+  .hc-song-page__body {
+    grid-template-columns:minmax(0,1.5fr) minmax(18rem,.5fr);
+  }
+  .hc-song-page__content {
+    font-size:clamp(1rem,1.35vw,1.16rem);
+  }
+}

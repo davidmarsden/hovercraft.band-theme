@@ -3,7 +3,7 @@
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "The album opener: mournful, accusatory and affectionate at once. Roads, departure and mortality establish Hovercraft’s recurring escape vocabulary immediately.",
-    "archive": "A substantially longer 1996 demo survives, with two additional verses and a final chorus. Some musical DNA can also be traced to a pre-Piers Hovercraft jam.",
+    "archive": "The surviving 1996 original is an extended form of the song, with two additional verses and a final chorus. The 2026 reconstruction condenses that longer structure; some musical DNA can also be traced to a pre-Piers Hovercraft jam.",
     "release": {
       "album": "Doomed To Live",
       "track": 1,
@@ -13,7 +13,7 @@
     },
     "versions": [
       {
-        "label": "1996 demo · remixed/remastered",
+        "label": "1996 original · extended version · remixed/remastered",
         "album": "Oh Yeah",
         "track": 10,
         "audio": "https://hovercraft.band/uploads/2026/10.-to-the-grave-1996-demo-remastered.m4a",
@@ -363,7 +363,7 @@
   "the-promised-land": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original · 2025 reworking",
-    "about": "A 2025 reworking of New Pine Overcoat: the same underlying song viewed through a different recording and arrangement, preserving its road-song momentum and dark destination.",
+    "about": "A 2025 reworking of New Pine Overcoat: the same underlying song viewed through a different recording and arrangement. It keeps the road-song momentum but inverts the original song’s dark destination.",
     "archive": "Related composition: New Pine Overcoat. Kept as a distinct published song page because the 2025 reworking has its own recording history.",
     "release": {
       "label": "Released 2025",

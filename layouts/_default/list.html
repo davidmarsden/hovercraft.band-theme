@@ -9,8 +9,13 @@
     {{ range .Pages }}
       <article class="hc-list-item">
         <p class="hc-section-label">{{ .Date.Format "02 Jan 2006" }}</p>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Summary }}<div>{{ . }}</div>{{ end }}
+        {{ if .Title }}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Summary }}<div>{{ . }}</div>{{ end }}
+        {{ else }}
+          <div class="hc-list-item__untitled">{{ with .Summary }}{{ . }}{{ else }}{{ .Content }}{{ end }}</div>
+          <p><a class="hc-text-link" href="{{ .RelPermalink }}">Read post →</a></p>
+        {{ end }}
       </article>
     {{ end }}
   </div>

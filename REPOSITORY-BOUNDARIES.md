@@ -1,34 +1,30 @@
 # Repository Boundaries
 
-This repository is the **presentation and theme layer for hovercraft.band**.
+This repository is the **presentation and Micro.blog/Hugo publishing layer for hovercraft.band**.
 
-It controls how published content is rendered in Micro.blog/Hugo.
+It controls how published content is rendered and may contain small, generated publication manifests that Hugo needs at build time.
 
 ## What belongs here
 
 - Hugo/Micro.blog layouts;
-- CSS;
-- JavaScript;
+- CSS and JavaScript;
 - reusable components;
 - album/player presentation;
-- navigation and page chrome;
-- responsive behaviour;
-- visual design system;
-- theme-specific documentation;
-- `plugin.json` and related theme configuration.
+- navigation, responsive behaviour and visual design;
+- theme-specific documentation and configuration;
+- **generated, publication-safe Hugo data** required by the theme, such as `data/songbook.json`.
 
-This repository represents **how hovercraft.band looks and behaves**.
+A generated publication manifest is an output of editorial review, not a new source of truth. It should contain only material approved for the public site and should be reproducible from the private release repository.
 
 ## What does not belong here
 
 - canonical lyrics;
-- release metadata;
-- album provenance;
-- historical research;
+- canonical release metadata;
+- working album provenance or historical research;
 - private correspondence;
-- rights decisions;
+- unresolved rights or credit decisions;
 - booklet or press drafts;
-- song analysis;
+- full working song analysis;
 - source-of-truth release documentation.
 
 ## Relationship to the other repositories
@@ -36,34 +32,41 @@ This repository represents **how hovercraft.band looks and behaves**.
 ### davidmarsden/hovercraft-release-2026
 Private documentary and release-control source of truth.
 
-It answers:
-**What do we know, what did we decide, and why?**
+It answers: **What do we know, what did we decide, and why?**
+
+Approved material can be harvested from here into a deliberately smaller public manifest used by the theme.
+
+### Micro.blog / hovercraft.band
+The live publishing system and canonical home of public Pages, posts, lyrics, uploads and site content.
+
+It answers: **What is actually published?**
 
 ### davidmarsden/hovercraft.band
-Public content/data repository.
+An **automated backup of the live Micro.blog site**. It is downstream output, not a publishing input and not a repository to maintain manually.
 
-It answers:
-**What are we publishing?**
+### davidmarsden/hovercraft.band-theme
+The GitHub-managed presentation layer and home of generated build-time manifests consumed by Micro.blog/Hugo.
 
-This theme repository then answers:
-**How should that published material be rendered?**
+It answers: **How should the published material be rendered, and what approved structured data does Hugo need to render it?**
 
 ## Working flow
 
 ```
 hovercraft-release-2026
-        ↓ review / approve
-hovercraft.band
-        ↓ rendered by
+        ↓ review / approve / harvest
 hovercraft.band-theme
-        ↓
-hovercraft.band
+  layouts + generated publication manifests
+        ↓ Micro.blog/Hugo build
+hovercraft.band (live Micro.blog site)
+        ↓ automatic backup
+davidmarsden/hovercraft.band
 ```
 
 ## Rule of thumb
 
 **hovercraft-release-2026 = what we know and why**  
-**hovercraft.band = what we publish**  
-**hovercraft.band-theme = how it looks and behaves**
+**Micro.blog = public content and uploads**  
+**hovercraft.band-theme = presentation + generated public build data**  
+**davidmarsden/hovercraft.band = downstream backup**
 
-Avoid duplicating canonical content here unless a theme fixture/example genuinely requires it.
+Never hand-maintain publishing inputs in the backup repository. Never promote unresolved/private release material into a public manifest.

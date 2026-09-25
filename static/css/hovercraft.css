@@ -1055,3 +1055,51 @@ body::before {
     padding-top: 0;
   }
 }
+
+
+/* Landscape tablets can be >70rem in CSS pixels. Keep the native audio
+   controls out of the three-column collision zone until there is genuinely
+   enough room for three cards. */
+@media (min-width: 48.01rem) and (max-width: 90rem) {
+  .hc-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hc-preview {
+    min-width: 0;
+  }
+
+  .hc-preview h3 {
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hc-preview audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hc-preview:nth-child(3) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(15rem, .72fr) minmax(18rem, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+  }
+
+  .hc-preview:nth-child(3) .hc-preview__copy {
+    min-width: 0;
+    padding-top: 0;
+  }
+}
+
+/* Only return to the three-up record-rack treatment when each native player
+   has enough real width to remain inside its card. */
+@media (min-width: 90.01rem) {
+  .hc-preview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

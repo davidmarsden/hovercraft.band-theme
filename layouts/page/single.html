@@ -3,6 +3,8 @@
   {{ partial "hc-music-page.html" . }}
 {{ else if eq .RelPermalink "/lyrics/" }}
   {{ partial "hc-songbook.html" . }}
+{{ else if hasPrefix .RelPermalink "/lyrics/" }}
+  {{ partial "hc-song-page.html" . }}
 {{ else }}
   {{ partial "hc-site-header.html" . }}
   <main class="hc-content">

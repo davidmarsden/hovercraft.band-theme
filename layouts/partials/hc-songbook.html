@@ -24,6 +24,7 @@
       <p>Song pages are the permanent home for the words. A song can have more than one recording; the song survives the record it happens to be on.</p>
     </div>
     <div class="hc-songbook-links">
+      {{ if .Site.Params.hovercraft_release_live }}
       <section class="hc-songbook-release">
         <h3>Doomed To Live</h3>
         <div class="hc-songbook-tracklist">
@@ -69,6 +70,17 @@
           </div>
         </div>
       </section>
+
+      {{ else }}
+      <section class="hc-songbook-release">
+        <h3>Available now</h3>
+        <div class="hc-songbook-tracklist">
+          <a href="/lyrics/superman/">Superman</a>
+          <a href="/lyrics/cool-jerk/">Cool Jerk</a>
+          <a href="/lyrics/oh-yeah/">Oh Yeah</a>
+        </div>
+      </section>
+      {{ end }}
 
       <section class="hc-songbook-release">
         <h3>Singles</h3>

@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "hc-site-header.html" . }}
+<main class="hc-content">
+  <article class="hc-prose">
+    <header class="hc-content-head">
+      <p class="hc-section-label">{{ with .Type }}{{ . }}{{ else }}Hovercraft{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="hc-entry">{{ .Content }}</div>
+  </article>
+</main>
+{{ partial "hc-site-footer.html" . }}
+{{ end }}

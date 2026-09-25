@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ if eq .RelPermalink "/music/" }}
   {{ partial "hc-music-page.html" . }}
+{{ else if eq .RelPermalink "/lyrics/" }}
+  {{ partial "hc-songbook.html" . }}
 {{ else }}
   {{ partial "hc-site-header.html" . }}
   <main class="hc-content">

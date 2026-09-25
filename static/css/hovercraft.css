@@ -1118,7 +1118,8 @@ body::before {
 .hc-song-card { min-width:0; color:var(--hc-ink); text-decoration:none; border-top:.15rem solid var(--hc-ink); padding-top:1rem; }
 .hc-song-card img { display:block; width:100%; aspect-ratio:1; object-fit:cover; box-shadow:.35rem .35rem 0 var(--hc-signal); filter:saturate(.86) contrast(1.03); }
 .hc-song-card span,.hc-song-card em { display:block; font:700 .76rem/1.35 "Courier New",monospace; text-transform:uppercase; letter-spacing:.08em; font-style:normal; }
-.hc-song-card span { margin-top:1.4rem; }
+.hc-song-card__copy { display:block; min-width:0; padding-top:1.4rem; }
+.hc-song-card__copy > span { margin-top:0; }
 .hc-song-card strong { display:block; margin:.35rem 0 .8rem; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(2.4rem,4.5vw,4.5rem); line-height:.88; text-transform:uppercase; }
 .hc-song-card em { color:var(--hc-signal); }
 .hc-songbook-links { max-width:70rem; }
@@ -1134,11 +1135,11 @@ body::before {
 @media (max-width:64rem) {
   .hc-songbook-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .hc-song-card:nth-child(3) { grid-column:1 / -1; display:grid; grid-template-columns:minmax(12rem,.65fr) 1fr; gap:2rem; align-items:center; }
-  .hc-song-card:nth-child(3) span { margin-top:0; }
+  .hc-song-card:nth-child(3) .hc-song-card__copy { padding-top:0; }
 }
 @media (max-width:48rem) {
   .hc-songbook-sectionhead,.hc-songbook-grid { grid-template-columns:1fr; }
   .hc-song-card:nth-child(3) { grid-column:auto; display:block; }
-  .hc-song-card:nth-child(3) span { margin-top:1.4rem; }
+  .hc-song-card:nth-child(3) .hc-song-card__copy { padding-top:1.4rem; }
   .hc-songbook-links ul { grid-template-columns:1fr; }
 }

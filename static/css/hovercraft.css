@@ -1257,3 +1257,25 @@ body::before {
 .hc-song-page__rights-note { max-width:42rem; margin:1.5rem 0 2.5rem; padding:1.25rem 1.4rem; border:.14rem solid var(--hc-ink); background:var(--hc-paper-2); box-shadow:.3rem .3rem 0 var(--hc-signal); }
 .hc-song-page__rights-note strong { font:900 clamp(1.8rem,3vw,2.8rem)/.9 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
 .hc-song-page__rights-note p { margin:.75rem 0 0; font:700 .82rem/1.55 "Courier New",monospace; text-transform:uppercase; letter-spacing:.045em; }
+
+
+/* === Song dossier === */
+.hc-song-page__dossier { display:grid; grid-template-columns:minmax(14rem,.55fr) minmax(0,1.45fr); gap:clamp(2rem,7vw,7rem); padding:clamp(3rem,7vw,7rem) 0; border-top:.2rem solid var(--hc-ink); }
+.hc-song-page__dossier-head,.hc-song-page__dossier-copy { min-width:0; }
+.hc-song-page__dossier h2 { max-width:7ch; margin:.5rem 0 0; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(3.8rem,7vw,7rem); line-height:.78; text-transform:uppercase; }
+.hc-song-page__credits { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin:0 0 2rem; }
+.hc-song-page__credits div { border-top:.14rem solid var(--hc-ink); padding-top:.75rem; }
+.hc-song-page__credits dt { font:700 .68rem/1.35 "Courier New",monospace; text-transform:uppercase; letter-spacing:.1em; color:var(--hc-muted); }
+.hc-song-page__credits dd { margin:.35rem 0 0; font:900 clamp(1.4rem,2.2vw,2rem)/1 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; text-transform:uppercase; }
+.hc-song-page__about { max-width:48rem; margin:0; font-size:clamp(1.15rem,1.8vw,1.45rem); line-height:1.55; }
+.hc-song-page__archive { max-width:48rem; margin-top:2rem; padding:1.25rem 0 0; border-top:1px solid var(--hc-ink); }
+.hc-song-page__archive strong { display:block; margin-bottom:.6rem; font:700 .72rem/1.35 "Courier New",monospace; text-transform:uppercase; letter-spacing:.09em; color:var(--hc-signal); }
+.hc-song-page__archive p { margin:0; line-height:1.6; }
+@media (min-width:48.01rem) and (max-width:90rem) {
+  .hc-song-page__dossier { grid-template-columns:minmax(13rem,.65fr) minmax(0,1.35fr); gap:clamp(2rem,4vw,4rem); }
+  .hc-song-page__dossier h2 { font-size:clamp(3.5rem,6vw,5.5rem); }
+}
+@media (max-width:48rem) {
+  .hc-song-page__dossier,.hc-song-page__credits { grid-template-columns:1fr; }
+  .hc-song-page__dossier h2 { max-width:none; }
+}

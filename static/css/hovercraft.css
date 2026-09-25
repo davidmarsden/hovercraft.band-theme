@@ -1252,3 +1252,8 @@ body::before {
 .hc-song-page__released { display:flex; flex-direction:column; justify-content:space-between; min-height:18rem; margin-top:1.5rem; padding:1.5rem; border:.16rem solid var(--hc-ink); background:var(--hc-paper-2); box-shadow:.4rem .4rem 0 var(--hc-signal); }
 .hc-song-page__released strong { font:900 clamp(2.8rem,5vw,5rem)/.78 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
 .hc-song-page__released span { font:700 .75rem/1.4 "Courier New",monospace; text-transform:uppercase; letter-spacing:.08em; }
+
+
+.hc-song-page__rights-note { max-width:42rem; margin:1.5rem 0 2.5rem; padding:1.25rem 1.4rem; border:.14rem solid var(--hc-ink); background:var(--hc-paper-2); box-shadow:.3rem .3rem 0 var(--hc-signal); }
+.hc-song-page__rights-note strong { font:900 clamp(1.8rem,3vw,2.8rem)/.9 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
+.hc-song-page__rights-note p { margin:.75rem 0 0; font:700 .82rem/1.55 "Courier New",monospace; text-transform:uppercase; letter-spacing:.045em; }

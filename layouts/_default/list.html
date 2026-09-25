@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ partial "hc-site-header.html" . }}
+<main class="hc-content">
+  <header class="hc-content-head">
+    <p class="hc-section-label">Hovercraft archive</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="hc-list">
+    {{ range .Pages }}
+      <article class="hc-list-item">
+        <p class="hc-section-label">{{ .Date.Format "02 Jan 2006" }}</p>
+        {{ if .Title }}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Summary }}<div>{{ . }}</div>{{ end }}
+        {{ else }}
+          <div class="hc-list-item__untitled">{{ with .Summary }}{{ . }}{{ else }}{{ .Content }}{{ end }}</div>
+          <p><a class="hc-text-link" href="{{ .RelPermalink }}">Read post →</a></p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</main>
+{{ partial "hc-site-footer.html" . }}
+{{ end }}

@@ -1,5 +1,5 @@
 {
-  "version": "0.12.0",
+  "version": "0.12.1",
   "title": "Hovercraft site overrides",
   "description": "GitHub-managed presentation layer for hovercraft.band.",
   "includes": [

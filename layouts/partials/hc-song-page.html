@@ -67,16 +67,31 @@
           {{ end }}
 
           {{ with $song.versions }}
-            <div class="hc-song-page__versions">
-              <strong>Other versions</strong>
-              {{ range . }}
-                {{ $showVersion := or (eq .visibility "public") (and $releaseLive (eq .visibility "release")) }}
-                {{ if $showVersion }}
+            {{ $visibleVersions := slice }}
+            {{ range . }}
+              {{ $showVersion := or (eq .visibility "public") (and $releaseLive (eq .visibility "release")) }}
+              {{ if $showVersion }}{{ $visibleVersions = $visibleVersions | append . }}{{ end }}
+            {{ end }}
+            {{ if gt (len $visibleVersions) 0 }}
+              <div class="hc-song-page__versions">
+                <strong>Other versions</strong>
+                {{ range $visibleVersions }}
                   <div class="hc-song-page__version">
                     {{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }} · {{ end }}{{ .label }}{{ with .href }}</a>{{ end }}
                     {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
                   </div>
                 {{ end }}
+              </div>
+            {{ end }}
+          {{ end }}
+
+          {{ with $song.related }}
+            <div class="hc-song-page__versions">
+              <strong>Related songs</strong>
+              {{ range . }}
+                <div class="hc-song-page__version">
+                  <a href="{{ .href }}">{{ .title }}</a>
+                </div>
               {{ end }}
             </div>
           {{ end }}

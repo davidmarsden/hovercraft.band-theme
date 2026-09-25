@@ -1202,3 +1202,49 @@ body::before {
     padding-top:0;
   }
 }
+
+
+/* === Individual Songbook pages v0.10 === */
+.hc-song-page { max-width:92rem; margin:0 auto; padding:clamp(2.5rem,6vw,6rem) clamp(1.25rem,4vw,4rem) 7rem; }
+.hc-song-page > * { max-width:none; }
+.hc-song-page__article { max-width:none; margin:0; }
+.hc-song-page__head { display:grid; grid-template-columns:minmax(0,1fr) minmax(12rem,.26fr); gap:clamp(2rem,5vw,5rem); align-items:end; padding:1rem 0 clamp(3rem,6vw,6rem); border-bottom:.2rem solid var(--hc-ink); }
+.hc-song-page__title { min-width:0; }
+.hc-song-page__head h1 { max-width:11ch; margin:.5rem 0 1.25rem; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(5rem,13vw,12rem); line-height:.72; letter-spacing:-.035em; text-transform:uppercase; overflow-wrap:normal; word-break:normal; }
+.hc-song-page__route { margin:0; font:700 .72rem/1.5 "Courier New",monospace; letter-spacing:.07em; text-transform:uppercase; color:var(--hc-muted); }
+.hc-song-page__stamp { aspect-ratio:1; display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem; background:var(--hc-ink); color:var(--hc-paper); box-shadow:.45rem .45rem 0 var(--hc-signal); transform:rotate(1.5deg); }
+.hc-song-page__stamp span,.hc-song-page__stamp small { font:700 .7rem/1.2 "Courier New",monospace; letter-spacing:.1em; }
+.hc-song-page__stamp strong { font:900 clamp(2.2rem,4vw,4.5rem)/.72 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
+.hc-song-page__body { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(18rem,.65fr); gap:clamp(3rem,7vw,7rem); align-items:start; padding:clamp(3rem,7vw,7rem) 0; }
+.hc-song-page__words,.hc-song-page__rail { min-width:0; }
+.hc-song-page__content { max-width:52rem; font-size:clamp(1.08rem,1.6vw,1.3rem); line-height:1.72; }
+.hc-song-page__content > :first-child { margin-top:0; }
+.hc-song-page__content h2,.hc-song-page__content h3 { margin-top:2.5rem; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; text-transform:uppercase; }
+.hc-song-page__content p { margin:0 0 1.35rem; }
+.hc-song-page__rail { position:sticky; top:2rem; border-top:.16rem solid var(--hc-ink); padding-top:1.25rem; }
+.hc-song-page__rail > p:not(.hc-section-label):not(.hc-record__type) { line-height:1.5; }
+.hc-song-page__rail img { display:block; width:100%; aspect-ratio:1; object-fit:cover; margin:1.5rem 0; box-shadow:.35rem .35rem 0 var(--hc-signal); filter:saturate(.86) contrast(1.03); }
+.hc-song-page__rail audio { display:block; width:100%; min-width:0; }
+.hc-song-page__locked { display:flex; flex-direction:column; justify-content:space-between; min-height:18rem; margin-top:1.5rem; padding:1.5rem; background:var(--hc-night); color:var(--hc-paper); box-shadow:.4rem .4rem 0 var(--hc-signal); }
+.hc-song-page__locked strong { font:900 clamp(2.8rem,5vw,5rem)/.78 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
+.hc-song-page__locked span { font:700 .75rem/1.4 "Courier New",monospace; text-transform:uppercase; letter-spacing:.08em; }
+.hc-song-page__back { width:100%; display:flex; justify-content:space-between; gap:2rem; padding:1.5rem 0; border-top:.2rem solid var(--hc-ink); border-bottom:0; }
+.hc-song-page__back a { font:700 .78rem/1.4 "Courier New",monospace; text-transform:uppercase; letter-spacing:.06em; }
+
+/* Use the proven /music + Songbook tablet strategy: two real columns,
+   constrained display type and no sticky rail in landscape widths. */
+@media (min-width:48.01rem) and (max-width:90rem) {
+  .hc-song-page__head { grid-template-columns:minmax(0,1.55fr) minmax(11rem,.45fr); gap:clamp(2rem,4vw,4rem); }
+  .hc-song-page__head h1 { max-width:100%; font-size:clamp(4.5rem,8vw,7.5rem); }
+  .hc-song-page__body { grid-template-columns:minmax(0,1.25fr) minmax(16rem,.75fr); gap:clamp(2rem,4vw,4rem); }
+  .hc-song-page__rail { position:static; }
+}
+
+@media (max-width:48rem) {
+  .hc-song-page { padding-top:2rem; }
+  .hc-song-page__head,.hc-song-page__body { grid-template-columns:1fr; }
+  .hc-song-page__head h1 { max-width:100%; font-size:clamp(4.3rem,18vw,7rem); }
+  .hc-song-page__stamp { width:min(13rem,55vw); }
+  .hc-song-page__rail { position:static; }
+  .hc-song-page__back { flex-direction:column; }
+}

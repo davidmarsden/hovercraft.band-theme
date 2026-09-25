@@ -973,3 +973,18 @@ body::before {
   .hc-record { grid-template-columns:1fr; }
   .hc-original-strip { grid-template-columns:1fr 1fr; }
 }
+
+
+/* === Site-wide shell v0.7 === */
+.hc-content { max-width:92rem; margin:0 auto; padding:clamp(2rem,5vw,5rem) clamp(1.25rem,4vw,4rem) 7rem; }
+.hc-content-head { padding:2rem 0 3rem; border-bottom:.18rem solid var(--hc-ink); margin-bottom:3rem; }
+.hc-content-head h1 { margin:.4rem 0 0; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(4.5rem,12vw,10rem); line-height:.82; letter-spacing:-.025em; text-transform:uppercase; }
+.hc-prose { max-width:70rem; }
+.hc-entry { font-size:clamp(1rem,1.5vw,1.2rem); line-height:1.65; }
+.hc-entry img { max-width:100%; height:auto; }
+.hc-entry h2,.hc-entry h3 { font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; text-transform:uppercase; line-height:.95; }
+.hc-entry h2 { font-size:clamp(2.5rem,6vw,5rem); }
+.hc-list { border-top:.12rem solid var(--hc-ink); }
+.hc-list-item { padding:2rem 0 2.5rem; border-bottom:1px solid var(--hc-rule); }
+.hc-list-item h2 { margin:.35rem 0 .8rem; font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(2.2rem,5vw,4.5rem); line-height:.9; text-transform:uppercase; }
+.hc-list-item h2 a { color:inherit; text-decoration:none; }

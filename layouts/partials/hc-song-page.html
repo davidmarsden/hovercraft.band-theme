@@ -1,0 +1,52 @@
+{{ partial "hc-site-header.html" . }}
+<main class="hc-song-page">
+  <article class="hc-song-page__article">
+    <header class="hc-song-page__head">
+      <div class="hc-song-page__title">
+        <p class="hc-kicker">Songbook / words &amp; recordings</p>
+        <h1>{{ .Title }}</h1>
+        <p class="hc-song-page__route">Hovercraft song file · {{ .RelPermalink }}</p>
+      </div>
+      <aside class="hc-song-page__stamp" aria-label="Songbook">
+        <span>HOVERCRAFT</span>
+        <strong>SONG<br>BOOK</strong>
+        <small>1996 → 2026</small>
+      </aside>
+    </header>
+
+    <div class="hc-song-page__body">
+      <div class="hc-song-page__words">
+        <p class="hc-section-label">01 / The words</p>
+        <div class="hc-song-page__content">{{ .Content }}</div>
+      </div>
+      <aside class="hc-song-page__rail">
+        <p class="hc-section-label">02 / The evidence</p>
+        <p>The song is the permanent record. Recordings, artwork and versions can change around it.</p>
+        {{ if eq .RelPermalink "/lyrics/superman/" }}
+          <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
+          <p class="hc-record__type">Advance listen · lightweight stream</p>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
+        {{ else if eq .RelPermalink "/lyrics/cool-jerk/" }}
+          <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
+          <p class="hc-record__type">Advance listen · lightweight stream</p>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
+        {{ else if eq .RelPermalink "/lyrics/oh-yeah/" }}
+          <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
+          <p class="hc-record__type">Advance listen · lightweight stream</p>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
+        {{ else }}
+          <div class="hc-song-page__locked">
+            <strong>RECORDING<br>UNDER WRAPS.</strong>
+            <span>More noise arrives in December.</span>
+          </div>
+        {{ end }}
+      </aside>
+    </div>
+
+    <nav class="hc-song-page__back" aria-label="Songbook navigation">
+      <a href="/lyrics/">← Back to the Songbook</a>
+      <a href="/music/">Hear what escaped early →</a>
+    </nav>
+  </article>
+</main>
+{{ partial "hc-site-footer.html" . }}

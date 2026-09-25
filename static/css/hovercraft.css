@@ -999,3 +999,6 @@ body::before {
 .hc-preview audio { width:100%; min-height:3rem; }
 .hc-preview-note { margin:2.5rem 0 0; max-width:48rem; font:700 .82rem/1.6 "Courier New",monospace; text-transform:uppercase; letter-spacing:.06em; }
 @media (max-width:48rem) { .hc-preview-grid { grid-template-columns:1fr; } }
+
+.hc-preview__sleeve { display:grid; place-content:center; width:100%; aspect-ratio:1; background:var(--hc-ink); color:var(--hc-paper); box-shadow:.35rem .35rem 0 var(--hc-signal); font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(4rem,10vw,8rem); line-height:.72; text-align:center; text-transform:uppercase; transform:rotate(-1deg); }
+.hc-preview__sleeve span:last-child { color:var(--hc-signal); }

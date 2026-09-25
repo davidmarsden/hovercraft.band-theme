@@ -1,0 +1,37 @@
+{{ partial "hc-site-header.html" . }}
+<main class="hc-songbook">
+  <header class="hc-songbook-hero">
+    <p class="hc-kicker"><span></span> Words, noise &amp; evidence</p>
+    <h1>SONG<br>BOOK.</h1>
+    <p class="hc-songbook-deck">The words Charlie Pepper left behind. The recordings Hovercraft dragged back into the light.</p>
+  </header>
+
+  <section class="hc-songbook-preview">
+    <div class="hc-songbook-sectionhead">
+      <div><p class="hc-section-label">01 / Escaped early</p><h2>Three you can<br>hear now.</h2></div>
+      <p>Full tracks from the two records arriving in December. The rest stay under wraps for a little longer.</p>
+    </div>
+    <div class="hc-songbook-grid hc-songbook-grid--featured">
+      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Superman</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
+    </div>
+  </section>
+
+  <section class="hc-songbook-index">
+    <div class="hc-songbook-sectionhead">
+      <div><p class="hc-section-label">02 / The songbook</p><h2>Everything<br>we've admitted to.</h2></div>
+      <p>Song pages are the permanent home for the words. A song can have more than one recording; the song survives the record it happens to be on.</p>
+    </div>
+    <div class="hc-songbook-links">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <aside class="hc-songbook-note">
+    <p class="hc-section-label">December transmission</p>
+    <p><strong>Two records are coming.</strong> Their final running orders and release artwork stay behind the curtain until launch day. For now: three songs escaped.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear them</a>
+  </aside>
+</main>
+{{ partial "hc-site-footer.html" . }}

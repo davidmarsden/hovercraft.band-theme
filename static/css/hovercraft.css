@@ -825,3 +825,117 @@ body.hc-ready footer {
   .hc-teaser-art { min-height: 22rem; }
   .hc-teaser-sleeve { width: 57%; }
 }
+
+
+/* === Authentic Hovercraft artwork system v0.5 === */
+
+:root {
+  --hc-ink: #151311;
+  --hc-paper: #e9e0cc;
+  --hc-paper-2: #d8ccb4;
+  --hc-signal: #a9362b;
+  --hc-electric: #c8ad6b;
+  --hc-night: #171513;
+  --hc-muted: #665d50;
+  --hc-rule: rgba(21,19,17,.24);
+}
+
+body {
+  background:
+    linear-gradient(rgba(233,224,204,.94), rgba(233,224,204,.94)),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(21,19,17,.035) 3px 4px);
+}
+
+body::before {
+  background:
+    linear-gradient(90deg,
+      var(--hc-signal) 0 18%,
+      var(--hc-paper-2) 18% 31%,
+      var(--hc-ink) 31% 55%,
+      var(--hc-signal) 55% 73%,
+      var(--hc-paper-2) 73% 84%,
+      var(--hc-ink) 84% 100%);
+  height: .38rem;
+}
+
+.hc-wordmark span { color: var(--hc-signal); }
+
+.hc-kicker::before {
+  background: var(--hc-signal);
+  transform: rotate(-1deg);
+}
+
+.hc-button--primary,
+.hc-panel--signal {
+  background: var(--hc-paper-2);
+}
+
+.hc-button {
+  box-shadow: .18rem .18rem 0 var(--hc-ink);
+}
+
+.hc-art-collage {
+  position: relative;
+  display: block;
+  min-height: 34rem;
+  background:
+    linear-gradient(rgba(21,19,17,.88), rgba(21,19,17,.88)),
+    repeating-linear-gradient(135deg, var(--hc-paper) 0 1px, transparent 1px 9px);
+  border: .14rem solid var(--hc-ink);
+  box-shadow: .6rem .6rem 0 var(--hc-signal);
+  overflow: hidden;
+}
+
+.hc-art {
+  position: absolute;
+  margin: 0;
+  width: 43%;
+  aspect-ratio: 1;
+  border: .32rem solid var(--hc-paper);
+  background: var(--hc-paper);
+  box-shadow: .35rem .35rem .05rem rgba(0,0,0,.55);
+  overflow: hidden;
+  filter: saturate(.72) contrast(1.05);
+}
+
+.hc-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hc-art--one { width: 50%; left: -4%; top: 5%; transform: rotate(-8deg); }
+.hc-art--two { width: 44%; right: 3%; top: -3%; transform: rotate(7deg); }
+.hc-art--three { width: 46%; left: 9%; bottom: -6%; transform: rotate(5deg); }
+.hc-art--four { width: 42%; right: -4%; bottom: 5%; transform: rotate(-6deg); }
+.hc-art--five { width: 36%; left: 34%; top: 31%; transform: rotate(-2deg); z-index: 3; }
+
+.hc-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(233,224,204,.035) 0 1px, transparent 1px 3px);
+  mix-blend-mode: screen;
+}
+
+.hc-panel--dark { background: var(--hc-night); }
+.hc-panel:hover strong { color: var(--hc-signal); }
+
+@media (max-width: 50rem) {
+  .hc-art-collage { min-height: 25rem; }
+  .hc-art { border-width: .22rem; }
+}
+
+
+/* Keep interactive text legible on the near-black Press panel. */
+.hc-panel--dark:hover,
+.hc-panel--dark:focus-visible,
+.hc-panel--dark:hover strong,
+.hc-panel--dark:focus-visible strong {
+  color: var(--hc-paper);
+}
+
+.hc-panel--dark:focus-visible {
+  outline-color: var(--hc-paper);
+}

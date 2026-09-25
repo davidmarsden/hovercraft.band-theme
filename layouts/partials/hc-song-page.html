@@ -1,6 +1,9 @@
 {{ partial "hc-site-header.html" . }}
 {{ $songSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/lyrics/" .RelPermalink) }}
 {{ $song := index .Site.Data.songbook $songSlug }}
+{{ $releaseLive := default false .Site.Params.hovercraft_release_live }}
+{{ $knownCover := or (eq .RelPermalink "/lyrics/cool-jerk/") (eq .RelPermalink "/lyrics/ill-make-love-to-you-anytime/") (eq .RelPermalink "/lyrics/season-of-the-witch/") }}
+{{ $isCover := or $knownCover (and $song (eq $song.type "Cover")) }}
 <main class="hc-song-page">
   <article class="hc-song-page__article">
     <header class="hc-song-page__head">
@@ -19,7 +22,7 @@
     <div class="hc-song-page__body">
       <div class="hc-song-page__words">
         <p class="hc-section-label">01 / The words</p>
-        {{ if and $song (eq $song.type "Cover") }}
+        {{ if $isCover }}
           <div class="hc-song-page__rights-note">
             <strong>COVER VERSION.</strong>
             <p>The words are not reproduced here.</p>
@@ -37,27 +40,65 @@
       <aside class="hc-song-page__rail">
         <p class="hc-section-label">02 / The evidence</p>
         <p>The song is the permanent record. Recordings, artwork and versions can change around it.</p>
-        {{ if eq .RelPermalink "/lyrics/superman/" }}
-          <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
-          <p class="hc-record__type">Advance listen · lightweight stream</p>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
-        {{ else if eq .RelPermalink "/lyrics/cool-jerk/" }}
-          <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
-          <p class="hc-record__type">Advance listen · lightweight stream</p>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
-        {{ else if eq .RelPermalink "/lyrics/oh-yeah/" }}
-          <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
-          <p class="hc-record__type">Advance listen · lightweight stream</p>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
-        {{ else if eq .RelPermalink "/lyrics/the-promised-land/" }}
-          <div class="hc-song-page__released">
-            <strong>RELEASED<br>2025.</strong>
-            <span>A reworking of New Pine Overcoat · already out in the world.</span>
-          </div>
+        {{ if $song }}
+          {{ $visibility := "" }}
+          {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
+          {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (and $releaseLive (eq $visibility "release")) }}
+          {{ if and $song.artwork $canHear }}
+            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ end }}
+          {{ if and $song.release $canHear }}
+            {{ with $song.release.audio }}
+              <p class="hc-record__type">{{ if eq $visibility "advance" }}Advance listen{{ else }}Recording{{ end }} · lightweight stream</p>
+              <audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>
+            {{ else }}
+              {{ with $song.release.label }}
+                <div class="hc-song-page__released"><strong>{{ . }}</strong></div>
+              {{ end }}
+            {{ end }}
+            {{ if and $releaseLive $song.release.album }}
+              <p class="hc-record__meta">{{ $song.release.album }} · track {{ $song.release.track }}{{ with $song.release.side }} · side {{ . }}{{ end }}</p>
+            {{ end }}
+          {{ else if eq $visibility "release" }}
+            <div class="hc-song-page__locked">
+              <strong>RECORDING<br>UNDER WRAPS.</strong>
+              <span>More noise arrives in December.</span>
+            </div>
+          {{ end }}
+
+          {{ with $song.versions }}
+            {{ $visibleVersions := slice }}
+            {{ range . }}
+              {{ $showVersion := or (eq .visibility "public") (and $releaseLive (eq .visibility "release")) }}
+              {{ if $showVersion }}{{ $visibleVersions = $visibleVersions | append . }}{{ end }}
+            {{ end }}
+            {{ if gt (len $visibleVersions) 0 }}
+              <div class="hc-song-page__versions">
+                <strong>Other versions</strong>
+                {{ range $visibleVersions }}
+                  <div class="hc-song-page__version">
+                    {{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }} · {{ end }}{{ .label }}{{ with .href }}</a>{{ end }}
+                    {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          {{ end }}
+
+          {{ with $song.related }}
+            <div class="hc-song-page__versions">
+              <strong>Related songs</strong>
+              {{ range . }}
+                <div class="hc-song-page__version">
+                  <a href="{{ .href }}">{{ .title }}</a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
         {{ else }}
           <div class="hc-song-page__locked">
-            <strong>RECORDING<br>UNDER WRAPS.</strong>
-            <span>More noise arrives in December.</span>
+            <strong>ARCHIVE<br>ENTRY.</strong>
+            <span>Recording evidence will be added as it is catalogued.</span>
           </div>
         {{ end }}
       </aside>

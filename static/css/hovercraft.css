@@ -1279,3 +1279,38 @@ body::before {
   .hc-song-page__dossier,.hc-song-page__credits { grid-template-columns:1fr; }
   .hc-song-page__dossier h2 { max-width:none; }
 }
+
+
+/* Data-driven Songbook evidence and version relationships */
+.hc-record__meta {
+  margin:.8rem 0 0;
+  font:700 .7rem/1.45 "Courier New",monospace;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--hc-muted);
+}
+.hc-song-page__versions {
+  margin-top:2rem;
+  padding-top:1rem;
+  border-top:1px solid var(--hc-ink);
+}
+.hc-song-page__versions > strong {
+  display:block;
+  margin-bottom:.8rem;
+  font:700 .7rem/1.35 "Courier New",monospace;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  color:var(--hc-signal);
+}
+.hc-song-page__version {
+  display:grid;
+  gap:.55rem;
+  margin:.75rem 0;
+}
+.hc-song-page__version a {
+  color:inherit;
+  font-weight:800;
+}
+.hc-song-page__version audio {
+  width:100%;
+}

@@ -24,6 +24,15 @@
         "audio": "https://hovercraft.band/uploads/2026/to-the-grave-original-remixed.m4a",
         "visibility": "release"
       }
+    ],
+    "evidence": [
+      {
+        "label": "Master-tape note",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-091200853-m.jpg",
+        "caption": "Handwritten tape details dated 29 May 1996: part of the surviving source-recording trail.",
+        "era": "1996",
+        "status": "confirmed"
+      }
     ]
   },
   "mr-tooting-brown": {
@@ -37,7 +46,16 @@
       "side": "A",
       "audio": "https://hovercraft.band/uploads/2026/2.-mr-tooting-brown.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten song sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-0918131342-m.jpg",
+        "caption": "Original chord and structure sheet for Mr Tooting Brown.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "white-limousine": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -49,7 +67,16 @@
       "side": "A",
       "audio": "https://hovercraft.band/uploads/2026/3.-white-limousine.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Original set list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-090906255-m.jpg",
+        "caption": "Period set list naming White Limousine alongside Cool Jerk, Oh Yeah, New Pine Overcoat, Crazy and others.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "crazy": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -61,7 +88,16 @@
       "side": "A",
       "audio": "https://hovercraft.band/uploads/2026/4.-crazy.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten lyric draft",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092159974-m.jpg",
+        "caption": "Early lyric draft showing Crazy taking shape, including revisions and discarded material.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "concrete-hill": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -83,6 +119,15 @@
         "audio": "https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a",
         "visibility": "release"
       }
+    ],
+    "evidence": [
+      {
+        "label": "Archive track list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092709828-m.jpg",
+        "caption": "Handwritten archive list naming Concrete Hill among the original repertoire.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
     ]
   },
   "superman": {
@@ -96,7 +141,16 @@
       "audio": "https://hovercraft.band/uploads/2026/6.-superman.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg"
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg",
+    "evidence": [
+      {
+        "label": "Handwritten song sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-091844136-m.jpg",
+        "caption": "Original Superman music and chord sheet.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "these-days": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -121,7 +175,23 @@
       "side": "B",
       "audio": "https://hovercraft.band/uploads/2026/8.-killer-blues.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten structure sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092107949-m.jpg",
+        "caption": "Original Killer Blues chord and arrangement sheet.",
+        "era": "1995–96",
+        "status": "confirmed"
+      },
+      {
+        "label": "Handwritten lyric draft",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092048224-m.jpg",
+        "caption": "Original lyric draft with corrections and crossed-out material.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "pass-the-night-nurse": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -187,7 +257,16 @@
       "audio": "https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png"
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png",
+    "evidence": [
+      {
+        "label": "Original set list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-090936410-m.jpg",
+        "caption": "Period set list with Cool Jerk crossed out — a small surviving trace of the live repertoire changing in real time.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "sweet-thing": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -236,7 +315,16 @@
       "side": "D",
       "audio": "https://hovercraft.band/uploads/2026/16.-indie-kid.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Original set list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-090936410-m.jpg",
+        "caption": "Period set list grouping Indie Kid with Killer Blues and Superman.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "now-youre-god-dying-comes": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -261,7 +349,16 @@
       "side": "D",
       "audio": "https://hovercraft.band/uploads/2026/18.-take-it-or-leave-it.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten song sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092030615-m.jpg",
+        "caption": "Original music and structure sheet for Take It Or Leave It.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "here-now": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -287,7 +384,16 @@
       "audio": "https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png"
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png",
+    "evidence": [
+      {
+        "label": "Original set list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-090906255-m.jpg",
+        "caption": "Period set list documenting Oh Yeah in the original Hovercraft repertoire.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "bring-my-baby-back": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -311,7 +417,16 @@
       "track": 3,
       "audio": "https://hovercraft.band/uploads/2026/3.-low.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten structure sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-091802774-m.jpg",
+        "caption": "Original structure/chord chart, identified with high confidence as Low.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "my-own-little-world": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -334,7 +449,16 @@
       "track": 5,
       "audio": "https://hovercraft.band/uploads/2026/5.-bob-bob-bob.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Original working page",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092613302-m.jpg",
+        "caption": "Chord and arrangement notes with repeated HOVERCRAFT logo sketches; identified by Gol as Bob Bob Bob.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "season-of-the-witch": {
     "writer": "Donovan Leitch",
@@ -346,7 +470,16 @@
       "track": 6,
       "audio": "https://hovercraft.band/uploads/2026/6.-season-of-the-witch.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Original set list",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-090926688-m.jpg",
+        "caption": "Period set list documenting Season Of The Witch in Hovercraft’s live repertoire.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "angel": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -358,7 +491,16 @@
       "track": 7,
       "audio": "https://hovercraft.band/uploads/2026/7.-angel.m4a",
       "visibility": "release"
-    }
+    },
+    "evidence": [
+      {
+        "label": "Handwritten song sheet",
+        "image": "https://hovercraft.band/uploads/2025/pxl-20241008-092003621-m.jpg",
+        "caption": "Original Angel chord and structure sheet.",
+        "era": "1995–96",
+        "status": "confirmed"
+      }
+    ]
   },
   "the-promised-land": {
     "writer": "Piers \"Charlie Pepper\" Wildman",

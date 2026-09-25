@@ -1314,3 +1314,68 @@ body::before {
 .hc-song-page__version audio {
   width:100%;
 }
+
+
+/* Songbook visual archive */
+.hc-song-page__evidence-archive {
+  display:grid;
+  grid-template-columns:minmax(14rem,.55fr) minmax(0,1.45fr);
+  gap:clamp(2rem,7vw,7rem);
+  padding:clamp(3rem,7vw,7rem) 0;
+  border-top:.2rem solid var(--hc-ink);
+}
+.hc-song-page__evidence-archive h2 {
+  max-width:7ch;
+  margin:.5rem 0 0;
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;
+  font-size:clamp(3.8rem,7vw,7rem);
+  line-height:.78;
+  text-transform:uppercase;
+}
+.hc-song-page__evidence-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(1.25rem,3vw,2.5rem);
+  min-width:0;
+}
+.hc-song-page__evidence-card {
+  min-width:0;
+  margin:0;
+}
+.hc-song-page__evidence-card > a {
+  display:block;
+  background:var(--hc-paper-2);
+  border:.12rem solid var(--hc-ink);
+  padding:.55rem;
+  transform:rotate(-.5deg);
+}
+.hc-song-page__evidence-card:nth-child(even) > a { transform:rotate(.65deg); }
+.hc-song-page__evidence-card img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:38rem;
+  object-fit:contain;
+  filter:grayscale(.15) contrast(1.04);
+}
+.hc-song-page__evidence-card figcaption { padding:.9rem .15rem 0; }
+.hc-song-page__evidence-meta {
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  border-top:.12rem solid var(--hc-ink);
+  padding-top:.65rem;
+  font:700 .68rem/1.35 "Courier New",monospace;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+}
+.hc-song-page__evidence-meta span { color:var(--hc-signal); white-space:nowrap; }
+.hc-song-page__evidence-card figcaption p { margin:.55rem 0 0; line-height:1.5; }
+@media (min-width:48.01rem) and (max-width:90rem) {
+  .hc-song-page__evidence-archive { grid-template-columns:minmax(13rem,.65fr) minmax(0,1.35fr); gap:clamp(2rem,4vw,4rem); }
+  .hc-song-page__evidence-archive h2 { font-size:clamp(3.5rem,6vw,5.5rem); }
+}
+@media (max-width:48rem) {
+  .hc-song-page__evidence-archive,.hc-song-page__evidence-grid { grid-template-columns:1fr; }
+  .hc-song-page__evidence-archive h2 { max-width:none; }
+}

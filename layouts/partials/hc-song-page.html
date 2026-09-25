@@ -126,6 +126,31 @@
     </section>
     {{ end }}
 
+    {{ with $song.evidence }}
+    <section class="hc-song-page__evidence-archive" aria-labelledby="hc-archive-evidence">
+      <div class="hc-song-page__dossier-head">
+        <p class="hc-section-label">04 / The archive</p>
+        <h2 id="hc-archive-evidence">The evidence.</h2>
+      </div>
+      <div class="hc-song-page__evidence-grid">
+        {{ range . }}
+          <figure class="hc-song-page__evidence-card">
+            <a href="{{ .image }}">
+              <img src="{{ .image }}" alt="{{ $.Title }} — {{ .label }}" loading="lazy">
+            </a>
+            <figcaption>
+              <div class="hc-song-page__evidence-meta">
+                <strong>{{ .label }}</strong>
+                {{ with .era }}<span>{{ . }}</span>{{ end }}
+              </div>
+              <p>{{ .caption }}</p>
+            </figcaption>
+          </figure>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
     <nav class="hc-song-page__back" aria-label="Songbook navigation">
       <a href="/lyrics/">← Back to the Songbook</a>
       <a href="/music/">Hear what escaped early →</a>

@@ -1002,3 +1002,31 @@ body::before {
 
 .hc-preview__sleeve { display:grid; place-content:center; width:100%; aspect-ratio:1; background:var(--hc-ink); color:var(--hc-paper); box-shadow:.35rem .35rem 0 var(--hc-signal); font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:clamp(4rem,10vw,8rem); line-height:.72; text-align:center; text-transform:uppercase; transform:rotate(-1deg); }
 .hc-preview__sleeve span:last-child { color:var(--hc-signal); }
+
+
+/* Keep advance-listen cards from colliding on short landscape/tablet viewports. */
+@media (min-width: 48.01rem) and (max-width: 70rem) {
+  .hc-preview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 2.4vw, 2rem);
+  }
+
+  .hc-preview {
+    min-width: 0;
+  }
+
+  .hc-preview h3 {
+    font-size: clamp(2rem, 4.6vw, 3.5rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hc-preview audio {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hc-preview__sleeve {
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    overflow: hidden;
+  }
+}

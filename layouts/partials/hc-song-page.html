@@ -1,4 +1,6 @@
 {{ partial "hc-site-header.html" . }}
+{{ $songSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/lyrics/" .RelPermalink) }}
+{{ $song := index .Site.Data.songbook $songSlug }}
 <main class="hc-song-page">
   <article class="hc-song-page__article">
     <header class="hc-song-page__head">
@@ -17,17 +19,17 @@
     <div class="hc-song-page__body">
       <div class="hc-song-page__words">
         <p class="hc-section-label">01 / The words</p>
-        {{ if eq .RelPermalink "/lyrics/cool-jerk/" }}
+        {{ if and $song (eq $song.type "Cover") }}
           <div class="hc-song-page__rights-note">
             <strong>COVER VERSION.</strong>
-            <p>Lyrics are not reproduced here.</p>
+            <p>The words are not reproduced here.</p>
           </div>
         {{ else }}
           <div class="hc-song-page__content">{{ .Content }}</div>
           {{ if eq .RelPermalink "/lyrics/oh-yeah/" }}
             <div class="hc-song-page__rights-note">
-              <strong>LYRIC NOTE.</strong>
-              <p>Piers&rsquo; original lyrics are reproduced here. The borrowed refrain is intentionally omitted.</p>
+              <strong>TEXT NOTE.</strong>
+              <p>Piers&rsquo; original words are reproduced here. The borrowed refrain is intentionally omitted.</p>
             </div>
           {{ end }}
         {{ end }}
@@ -60,6 +62,28 @@
         {{ end }}
       </aside>
     </div>
+
+    {{ with $song }}
+    <section class="hc-song-page__dossier" aria-labelledby="hc-about-song">
+      <div class="hc-song-page__dossier-head">
+        <p class="hc-section-label">03 / The dossier</p>
+        <h2 id="hc-about-song">About this song.</h2>
+      </div>
+      <div class="hc-song-page__dossier-copy">
+        <dl class="hc-song-page__credits">
+          <div><dt>Written by</dt><dd>{{ .writer }}</dd></div>
+          <div><dt>Work</dt><dd>{{ .type }}</dd></div>
+        </dl>
+        <p class="hc-song-page__about">{{ .about }}</p>
+        {{ with .archive }}
+          <div class="hc-song-page__archive">
+            <strong>Source &amp; versions</strong>
+            <p>{{ . }}</p>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
 
     <nav class="hc-song-page__back" aria-label="Songbook navigation">
       <a href="/lyrics/">← Back to the Songbook</a>

@@ -120,7 +120,7 @@
       </div>
       <div class="hc-song-page__dossier-copy">
         <dl class="hc-song-page__credits">
-          <div><dt>Written by</dt><dd>{{ .writer }}</dd></div>
+          {{ with .credit }}<div><dt>Credit</dt><dd>{{ . }}</dd></div>{{ else }}<div><dt>Written by</dt><dd>{{ .writer }}</dd></div>{{ end }}
           <div><dt>Work</dt><dd>{{ .type }}</dd></div>
         </dl>
         <p class="hc-song-page__about">{{ .about }}</p>

@@ -30,7 +30,7 @@
         {{ else }}
           <div class="hc-song-page__content">
             {{ with $song }}
-              {{ with .writer }}<p class="hc-song-page__source-meta">Written by {{ . }}</p>{{ end }}
+              {{ with .credit }}<p class="hc-song-page__source-meta">{{ . }}</p>{{ else }}{{ with .writer }}<p class="hc-song-page__source-meta">Written by {{ . }}</p>{{ end }}{{ end }}
               {{ with .release }}
                 {{ with .album }}<p class="hc-song-page__source-meta">Current recording: <em>{{ . }}</em></p>{{ end }}
               {{ end }}
@@ -120,7 +120,7 @@
       </div>
       <div class="hc-song-page__dossier-copy">
         <dl class="hc-song-page__credits">
-          <div><dt>Written by</dt><dd>{{ .writer }}</dd></div>
+          {{ with .credit }}<div><dt>Credit</dt><dd>{{ . }}</dd></div>{{ else }}<div><dt>Written by</dt><dd>{{ .writer }}</dd></div>{{ end }}
           <div><dt>Work</dt><dd>{{ .type }}</dd></div>
         </dl>
         <p class="hc-song-page__about">{{ .about }}</p>

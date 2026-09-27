@@ -30,7 +30,7 @@
         {{ else }}
           <div class="hc-song-page__content">
             {{ with $song }}
-              {{ with .writer }}<p class="hc-song-page__source-meta">Written by {{ . }}</p>{{ end }}
+              {{ with .credit }}<p class="hc-song-page__source-meta">{{ . }}</p>{{ else }}{{ with .writer }}<p class="hc-song-page__source-meta">Written by {{ . }}</p>{{ end }}{{ end }}
               {{ with .release }}
                 {{ with .album }}<p class="hc-song-page__source-meta">Current recording: <em>{{ . }}</em></p>{{ end }}
               {{ end }}

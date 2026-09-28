@@ -1164,5 +1164,25 @@
         "href": "/lyrics/new-pine-overcoat/"
       }
     ]
+  },
+  "in-the-midnight-hour": {
+    "writer": "Wilson Pickett & Steve Cropper",
+    "type": "Cover",
+    "about": "Hovercraft's version of the soul standard survives as part of the original rehearsal-room archive. Unlike the other recovered repertoire, it was not recreated in the later Suno sessions because the service's copyright filter prevented the attempt.",
+    "archive": "Recorded live at the 33 Weelsby Road Hovercraft rehearsal room on 4-track in 1996. The surviving original is therefore the central recording evidence for this song.",
+    "release": {
+      "label": "Archive recording",
+      "visibility": "public"
+    },
+    "versions": [
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "In The Midnight Hour",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-in-the-midnight-hour-2024-10-06-08-30.m4a",
+        "visibility": "public"
+      }
+    ]
   }
 }

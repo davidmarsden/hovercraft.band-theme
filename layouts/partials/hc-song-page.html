@@ -84,9 +84,13 @@
               <div class="hc-song-page__versions">
                 <strong>Other versions</strong>
                 {{ range $visibleVersions }}
-                  <div class="hc-song-page__version">
-                    {{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }} · {{ end }}{{ .label }}{{ with .href }}</a>{{ end }}
-                    {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
+                  <div class="hc-song-page__version{{ with .artwork }} hc-song-page__version--visual{{ end }}">
+                    {{ with .artwork }}<img src="{{ . }}" alt="{{ with $.Title }}{{ . }}{{ end }} — {{ with .title }}{{ . }}{{ else }}alternate recording{{ end }} artwork" loading="lazy">{{ end }}
+                    <div class="hc-song-page__version-copy">
+                      <div class="hc-song-page__version-title">{{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }}{{ else }}{{ .label }}{{ end }}{{ with .href }}</a>{{ end }}</div>
+                      <div class="hc-song-page__version-meta">{{ with .year }}{{ . }}{{ end }}{{ with .album }} · <em>{{ . }}</em>{{ end }}{{ with .track }} · track {{ . }}{{ end }}{{ if and (not .year) (not .album) }}{{ .label }}{{ end }}</div>
+                      {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
+                    </div>
                   </div>
                 {{ end }}
               </div>

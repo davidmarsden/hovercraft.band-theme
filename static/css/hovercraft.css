@@ -1479,3 +1479,9 @@ body::before {
 @media (max-width:48rem) {
   .hc-song-page__version--visual { grid-template-columns:6.5rem minmax(0,1fr); }
 }
+
+.hc-song-page__version-note {
+  margin:.15rem 0 .75rem;
+  font-size:.82rem;
+  line-height:1.45;
+}

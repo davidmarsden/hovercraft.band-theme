@@ -43,6 +43,14 @@
         "audio": "https://hovercraft.band/uploads/2026/11.-to-the-grave.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32474-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "To The Grave",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-to-the-grave-2024-10-06-08-00.m4a",
+        "visibility": "public"
       }
     ],
     "evidence": [
@@ -86,6 +94,23 @@
         "audio": "https://hovercraft.band/uploads/2026/6.-mr-tooting-brown.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/b121d39868.png",
         "visibility": "public"
+      },
+      {
+        "label": "Early pre-drummer version",
+        "title": "Mr Tooting Brown ft. Dr. Rhythm",
+        "year": 1995,
+        "source": "Boss DR-550 Dr. Rhythm · early October 1995",
+        "audio": "https://hovercraft.band/uploads/2026/mr-tooting-brown-ft.-dr-rhythm-.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "Original studio demo",
+        "title": "Mr Tooting Brown",
+        "year": 1995,
+        "source": "Pete's Pad · 24-track studio · Cleethorpes",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-mr-tooting-brown-2024-10-06-17-24.m4a",
+        "note": "Source used for the 2026 reconstruction.",
+        "visibility": "public"
       }
     ]
   },
@@ -118,6 +143,14 @@
         "track": 10,
         "audio": "https://hovercraft.band/uploads/2026/10.-white-limousine.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19738.png",
+        "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "White Limousine",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-white-limousine-2024-10-06-07-55.m4a",
         "visibility": "public"
       }
     ]
@@ -162,6 +195,14 @@
         "audio": "https://hovercraft.band/uploads/2026/9.-crazy.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19737.png",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Crazy",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-crazy-2024-10-05-19-55.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -203,6 +244,30 @@
         "track": 13,
         "audio": "https://hovercraft.band/uploads/2026/13.-concrete-hill.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32488-web.jpg",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Concrete Hill — 4-track",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-concrete-hill-4-track-2024-10-06-17-31.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Concrete Hill — live version",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-concrete-hill-live-version-2024-10-06-17-29.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "Concrete Hill",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-concrete-hill-2024-10-06-07-51.m4a",
         "visibility": "public"
       }
     ],
@@ -257,6 +322,23 @@
         "audio": "https://hovercraft.band/uploads/2026/2.-superman.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324461-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Superman",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-superman-2024-10-06-08-23.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "1996 live segue · 4-track",
+        "title": "Superman → These Days",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/07-superman-these-days-4-track-live-remix.mp3",
+        "note": "The songs were often segued together live.",
+        "visibility": "public"
       }
     ]
   },
@@ -281,6 +363,24 @@
         "track": 3,
         "audio": "https://hovercraft.band/uploads/2026/3.-these-days.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324521-web.jpg",
+        "visibility": "public"
+      },
+      {
+        "label": "1996 live segue · 4-track",
+        "title": "Superman → These Days",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/07-superman-these-days-4-track-live-remix.mp3",
+        "note": "The songs were often segued together live.",
+        "visibility": "public"
+      },
+      {
+        "label": "Archival reconstruction source",
+        "title": "These Days — rehearsal source",
+        "year": 1996,
+        "source": "Composite rehearsal source",
+        "audio": "https://hovercraft.band/uploads/2026/these-days-rehearsal.mp3",
+        "note": "Two versions out of sync; one source was backwards at half speed. This composite was used for the later reconstruction.",
         "visibility": "public"
       }
     ]
@@ -322,6 +422,14 @@
         "audio": "https://hovercraft.band/uploads/2026/8.-killer-blues.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32465-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Killer Blues",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-killer-blues-2024-10-06-17-20.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -345,6 +453,22 @@
         "track": 5,
         "audio": "https://hovercraft.band/uploads/2026/5.-pass-the-night-nurse.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324551-web.jpg",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Pass The Night Nurse",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-pass-the-night-nurse-2024-10-06-08-08.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "Early pre-drummer version",
+        "title": "Pass The Night Nurse ft. Dr. Rhythm",
+        "year": 1995,
+        "source": "Boss DR-550 Dr. Rhythm · early October 1995",
+        "audio": "https://hovercraft.band/uploads/2026/pass-the-night-nurse-ft.-dr-rhythm-.m4a",
         "visibility": "public"
       }
     ]
@@ -394,6 +518,22 @@
         "audio": "https://hovercraft.band/uploads/2026/12.-new-pine-overcoat.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32486-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "New Pine Overcoat — alternative version",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-new-pine-overcoat-alternative-version-2024-10-06-08-21.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "New Pine Overcoat",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-new-pine-overcoat-2024-10-05-22-28.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -417,6 +557,14 @@
         "track": 1,
         "audio": "https://hovercraft.band/uploads/2026/1.-anytime.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19729.png",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "I'll Make Love To You Anytime",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-anytime-2024-10-05-21-50.m4a",
         "visibility": "public"
       }
     ]
@@ -442,6 +590,16 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Cool Jerk",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-cool-jerk-2024-10-06-08-16.m4a",
+        "visibility": "public"
+      }
     ]
   },
   "sweet-thing": {
@@ -464,6 +622,14 @@
         "track": 11,
         "audio": "https://hovercraft.band/uploads/2026/11.-sweet-thing.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19739.png",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Sweet Thing",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-sweet-thing-2024-10-05-22-17.m4a",
         "visibility": "public"
       }
     ]
@@ -489,6 +655,14 @@
         "audio": "https://hovercraft.band/uploads/2026/6.-keep-it-together.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19734.png",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Keep It Together",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-keep-it-together-2024-10-06-08-33.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -513,6 +687,14 @@
         "track": 9,
         "audio": "https://hovercraft.band/uploads/2026/9.-i-love-you-and-i-dont-want-you-to-die.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32469-web.jpg",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "I Love You (And I Don't Want You To Die)",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-i-love-you-and-i-dont-want-you-to-die-2024-10-05-19-56.m4a",
         "visibility": "public"
       }
     ]
@@ -557,6 +739,14 @@
         "audio": "https://hovercraft.band/uploads/2026/1.-indie-kid.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324361-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "Indie Kid",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-indie-kid-2024-10-05-22-24.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -581,6 +771,14 @@
         "track": 10,
         "audio": "https://hovercraft.band/uploads/2026/10.-dying-comes-so-easy.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32470-web.jpg",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Now You're God / Dying Comes So Easy",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-now-youre-god-dying-comes-so-easy-2024-10-05-21-15.m4a",
         "visibility": "public"
       }
     ]
@@ -624,6 +822,14 @@
         "track": 2,
         "audio": "https://hovercraft.band/uploads/2026/2.-love.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19730.png",
+        "visibility": "public"
+      },
+      {
+        "label": "From The Cradle demo",
+        "title": "Take It Or Leave It",
+        "year": 1996,
+        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-take-it-or-leave-it-2024-10-06-08-02.m4a",
         "visibility": "public"
       }
     ]
@@ -694,6 +900,14 @@
         "audio": "https://hovercraft.band/uploads/2026/4.-oh-yeah.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324541-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Oh Yeah",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/oh-yeah.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -728,6 +942,22 @@
         "audio": "https://hovercraft.band/uploads/2026/4.-bring-my-baby-back.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19732.png",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Bring My Baby Back",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-bring-my-baby-back-2024-10-05-21-44.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Bring My Baby Back — alternative version",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-bring-my-baby-back-alternative-version-2024-10-06-08-11.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -761,6 +991,14 @@
         "audio": "https://hovercraft.band/uploads/2026/6.-low.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/324561-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Low",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-low-2024-10-06-15-02.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -783,6 +1021,14 @@
         "track": 5,
         "audio": "https://hovercraft.band/uploads/2026/5.-my-own-little-world.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/19742.png",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "My Own Little World",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-my-own-little-world-2024-10-06-15-12.m4a",
         "visibility": "public"
       }
     ]
@@ -849,6 +1095,16 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Season Of The Witch",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-the-season-of-the-witch-2024-10-05-21-22.m4a",
+        "visibility": "public"
+      }
     ]
   },
   "angel": {
@@ -881,6 +1137,14 @@
         "audio": "https://hovercraft.band/uploads/2026/7.-angel.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/32457-web.jpg",
         "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "Angel",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-angel-2024-10-06-14-59.m4a",
+        "visibility": "public"
       }
     ]
   },
@@ -898,6 +1162,26 @@
       {
         "title": "New Pine Overcoat",
         "href": "/lyrics/new-pine-overcoat/"
+      }
+    ]
+  },
+  "in-the-midnight-hour": {
+    "writer": "Wilson Pickett & Steve Cropper",
+    "type": "Cover",
+    "about": "Hovercraft's version of the soul standard survives as part of the original rehearsal-room archive. Unlike the other recovered repertoire, it was not recreated in the later Suno sessions because the service's copyright filter prevented the attempt.",
+    "archive": "Recorded live at the 33 Weelsby Road Hovercraft rehearsal room on 4-track in 1996. The surviving original is therefore the central recording evidence for this song.",
+    "release": {
+      "label": "Archive recording",
+      "visibility": "public"
+    },
+    "versions": [
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "In The Midnight Hour",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-in-the-midnight-hour-2024-10-06-08-30.m4a",
+        "visibility": "public"
       }
     ]
   }

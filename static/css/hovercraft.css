@@ -1446,3 +1446,36 @@ body::before {
     font-size:clamp(2.35rem,3.7vw,3.8rem);
   }
 }
+
+
+/* Visual recording/version chronology */
+.hc-song-page__version--visual {
+  grid-template-columns:minmax(5.5rem,.38fr) minmax(0,1fr);
+  gap:1rem;
+  align-items:start;
+  padding:1rem 0;
+  border-top:1px solid var(--hc-rule);
+}
+.hc-song-page__version--visual > img {
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  margin:0;
+  box-shadow:.22rem .22rem 0 var(--hc-signal);
+}
+.hc-song-page__version-copy { min-width:0; }
+.hc-song-page__version-title {
+  font:900 clamp(1.25rem,2vw,1.8rem)/.95 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;
+  text-transform:uppercase;
+}
+.hc-song-page__version-meta {
+  margin:.35rem 0 .7rem;
+  font:700 .66rem/1.4 "Courier New",monospace;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--hc-muted);
+}
+.hc-song-page__version-meta em { font-style:normal; }
+@media (max-width:48rem) {
+  .hc-song-page__version--visual { grid-template-columns:6.5rem minmax(0,1fr); }
+}

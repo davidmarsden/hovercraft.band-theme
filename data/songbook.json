@@ -23,6 +23,26 @@
         "label": "Original · remixed",
         "audio": "https://hovercraft.band/uploads/2026/to-the-grave-original-remixed.m4a",
         "visibility": "release"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Baby Blue",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 12,
+        "audio": "https://hovercraft.band/uploads/2026/12.-baby-blue.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19740.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "To The Grave",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 11,
+        "audio": "https://hovercraft.band/uploads/2026/11.-to-the-grave.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32474-web.jpg",
+        "visibility": "public"
       }
     ],
     "evidence": [
@@ -55,6 +75,18 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Mr Tooting Brown",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 6,
+        "audio": "https://hovercraft.band/uploads/2026/6.-mr-tooting-brown.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/b121d39868.png",
+        "visibility": "public"
+      }
     ]
   },
   "white-limousine": {
@@ -75,6 +107,18 @@
         "caption": "Period set list naming White Limousine alongside Cool Jerk, Oh Yeah, New Pine Overcoat, Crazy and others.",
         "era": "1995–96",
         "status": "confirmed"
+      }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "White Limousine",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 10,
+        "audio": "https://hovercraft.band/uploads/2026/10.-white-limousine.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19738.png",
+        "visibility": "public"
       }
     ]
   },
@@ -97,6 +141,28 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Crazy Over You",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 1,
+        "audio": "https://hovercraft.band/uploads/2026/1.-crazy-over-you.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-000000003ea46246885b2c6b6da39300.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Crazy",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 9,
+        "audio": "https://hovercraft.band/uploads/2026/9.-crazy.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19737.png",
+        "visibility": "public"
+      }
     ]
   },
   "concrete-hill": {
@@ -118,6 +184,26 @@
         "track": 8,
         "audio": "https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a",
         "visibility": "release"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Higher Ground",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 8,
+        "audio": "https://hovercraft.band/uploads/2026/8.-higher-ground.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-00000000844c61f88d6ade08b0e6389e.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Concrete Hill",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 13,
+        "audio": "https://hovercraft.band/uploads/2026/13.-concrete-hill.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32488-web.jpg",
+        "visibility": "public"
       }
     ],
     "evidence": [
@@ -150,6 +236,28 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Superman",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 3,
+        "audio": "https://hovercraft.band/uploads/2026/3.-superman.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19731.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Superman",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 2,
+        "audio": "https://hovercraft.band/uploads/2026/2.-superman.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324461-web.jpg",
+        "visibility": "public"
+      }
     ]
   },
   "these-days": {
@@ -163,7 +271,19 @@
       "side": "B",
       "audio": "https://hovercraft.band/uploads/2026/7.-these-days.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "These Days",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 3,
+        "audio": "https://hovercraft.band/uploads/2026/3.-these-days.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324521-web.jpg",
+        "visibility": "public"
+      }
+    ]
   },
   "killer-blues": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -191,6 +311,18 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Killer Blues",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 8,
+        "audio": "https://hovercraft.band/uploads/2026/8.-killer-blues.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32465-web.jpg",
+        "visibility": "public"
+      }
     ]
   },
   "pass-the-night-nurse": {
@@ -203,7 +335,19 @@
       "side": "B",
       "audio": "https://hovercraft.band/uploads/2026/9.-pass-the-night-nurse.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Pass The Night Nurse",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 5,
+        "audio": "https://hovercraft.band/uploads/2026/5.-pass-the-night-nurse.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324551-web.jpg",
+        "visibility": "public"
+      }
+    ]
   },
   "new-pine-overcoat": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -230,6 +374,26 @@
         "title": "The Promised Land",
         "href": "/lyrics/the-promised-land/",
         "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "The Promised Land",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 9,
+        "audio": "https://hovercraft.band/uploads/2026/9.-the-promised-land.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/217dfc69b1.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "New Pine Overcoat",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 12,
+        "audio": "https://hovercraft.band/uploads/2026/12.-new-pine-overcoat.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32486-web.jpg",
+        "visibility": "public"
       }
     ]
   },
@@ -243,7 +407,19 @@
       "side": "C",
       "audio": "https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Anytime",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 1,
+        "audio": "https://hovercraft.band/uploads/2026/1.-anytime.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19729.png",
+        "visibility": "public"
+      }
+    ]
   },
   "cool-jerk": {
     "writer": "Donald Storball",
@@ -278,7 +454,19 @@
       "side": "C",
       "audio": "https://hovercraft.band/uploads/2026/13.-sweet-thing.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Sweet Thing",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 11,
+        "audio": "https://hovercraft.band/uploads/2026/11.-sweet-thing.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19739.png",
+        "visibility": "public"
+      }
+    ]
   },
   "keep-it-together": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -290,7 +478,19 @@
       "side": "C",
       "audio": "https://hovercraft.band/uploads/2026/14.-keep-it-together.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Keep It Together",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 6,
+        "audio": "https://hovercraft.band/uploads/2026/6.-keep-it-together.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19734.png",
+        "visibility": "public"
+      }
+    ]
   },
   "i-love-you-and-i": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -303,7 +503,19 @@
       "side": "C",
       "audio": "https://hovercraft.band/uploads/2026/15.-i-love-you-and-i-dont-want-you-to-die.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "I Love You (And I Don't Want You To Die)",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 9,
+        "audio": "https://hovercraft.band/uploads/2026/9.-i-love-you-and-i-dont-want-you-to-die.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32469-web.jpg",
+        "visibility": "public"
+      }
+    ]
   },
   "indie-kid": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -324,6 +536,28 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Indie Kid",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 7,
+        "audio": "https://hovercraft.band/uploads/2026/7.-indie-kid.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19735.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Indie Kid",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 1,
+        "audio": "https://hovercraft.band/uploads/2026/1.-indie-kid.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324361-web.jpg",
+        "visibility": "public"
+      }
     ]
   },
   "now-youre-god-dying-comes": {
@@ -337,7 +571,19 @@
       "side": "D",
       "audio": "https://hovercraft.band/uploads/2026/17.-dying-comes-so-easy.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Now You're God / Dying Comes So Easy",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 10,
+        "audio": "https://hovercraft.band/uploads/2026/10.-dying-comes-so-easy.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32470-web.jpg",
+        "visibility": "public"
+      }
+    ]
   },
   "take-it-or-leave-it": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -358,6 +604,28 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Revolution",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 2,
+        "audio": "https://hovercraft.band/uploads/2026/2.-revolution.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-0000000055746243a688019da99596ad.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Love",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 2,
+        "audio": "https://hovercraft.band/uploads/2026/2.-love.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19730.png",
+        "visibility": "public"
+      }
     ]
   },
   "here-now": {
@@ -371,7 +639,19 @@
       "side": "D",
       "audio": "https://hovercraft.band/uploads/2026/19.-here-now.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Here Now",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 7,
+        "audio": "https://hovercraft.band/uploads/2026/7.-here-now.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-00000000bc8061f586e766354a72bd09.png",
+        "visibility": "public"
+      }
+    ]
   },
   "oh-yeah": {
     "writer": "Piers Wildman",
@@ -393,6 +673,28 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Oh Yeah",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 3,
+        "audio": "https://hovercraft.band/uploads/2026/3.-oh-yeah.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-00000000739461f4af3e518305a43a26.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Oh Yeah",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 4,
+        "audio": "https://hovercraft.band/uploads/2026/4.-oh-yeah.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324541-web.jpg",
+        "visibility": "public"
+      }
     ]
   },
   "bring-my-baby-back": {
@@ -405,7 +707,29 @@
       "track": 2,
       "audio": "https://hovercraft.band/uploads/2026/2.-bring-my-baby-back.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Bring My Baby Back To Me",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 5,
+        "audio": "https://hovercraft.band/uploads/2026/5.-bring-my-baby-back-to-me.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-00000000966461f983466cd4d8119f5c.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Bring My Baby Back",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 4,
+        "audio": "https://hovercraft.band/uploads/2026/4.-bring-my-baby-back.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19732.png",
+        "visibility": "public"
+      }
+    ]
   },
   "low": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -426,6 +750,18 @@
         "era": "1995–96",
         "status": "confirmed"
       }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Low",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 6,
+        "audio": "https://hovercraft.band/uploads/2026/6.-low.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/324561-web.jpg",
+        "visibility": "public"
+      }
     ]
   },
   "my-own-little-world": {
@@ -437,7 +773,19 @@
       "track": 4,
       "audio": "https://hovercraft.band/uploads/2026/4.-my-own-little-world.m4a",
       "visibility": "release"
-    }
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "My Own Little World",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 5,
+        "audio": "https://hovercraft.band/uploads/2026/5.-my-own-little-world.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19742.png",
+        "visibility": "public"
+      }
+    ]
   },
   "bob-bob-bob": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -457,6 +805,28 @@
         "caption": "The title is written across the top above the chord and arrangement notes; the lower half is filled with repeated HOVERCRAFT logo sketches.",
         "era": "1995–96",
         "status": "confirmed"
+      }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "(Come On) Children",
+        "year": 2025,
+        "album": "Shaken Not Stirred",
+        "track": 4,
+        "audio": "https://hovercraft.band/uploads/2026/4.-come-on-children.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-0000000098d061f4bbff4b934d203e60.png",
+        "visibility": "public"
+      },
+      {
+        "label": "2025 recording",
+        "title": "Bob Bob Bob",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 8,
+        "audio": "https://hovercraft.band/uploads/2026/8.-bob-bob-bob.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/file-000000002ad4620aa201656b2a6f772a.png",
+        "visibility": "public"
       }
     ]
   },
@@ -499,6 +869,18 @@
         "caption": "Original Angel chord and structure sheet.",
         "era": "1995–96",
         "status": "confirmed"
+      }
+    ],
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Angel",
+        "year": 2025,
+        "album": "Blown Away",
+        "track": 7,
+        "audio": "https://hovercraft.band/uploads/2026/7.-angel.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/32457-web.jpg",
+        "visibility": "public"
       }
     ]
   },

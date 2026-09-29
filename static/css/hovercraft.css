@@ -1692,20 +1692,33 @@ body::before {
 [data-hc-deck] > audio { position:absolute; width:1px; height:1px; opacity:.001; pointer-events:none; }
 .hc-hero--release { align-items:start; }
 .hc-hero__players { display:grid; gap:1.25rem; min-width:0; }
-[data-hc-deck]--compact { margin:0; }
-[data-hc-deck]--compact .hc-deck__machine { grid-template-columns:minmax(8rem,.9fr) minmax(10rem,1.1fr); padding:.8rem; gap:.8rem; box-shadow:.35rem .35rem 0 var(--hc-ink); }
-[data-hc-deck]--compact .hc-deck__badge small { display:none; }
-[data-hc-deck]--compact .hc-deck__panel { margin-top:2.2rem; padding:.55rem; }
-[data-hc-deck]--compact .hc-deck__display { min-height:4.6rem; padding:.45rem; font-size:.58rem; }
-[data-hc-deck]--compact .hc-deck__display strong { font-size:.72rem; }
-[data-hc-deck]--compact .hc-deck__transport { gap:.3rem; margin:.45rem 0; }
-[data-hc-deck]--compact .hc-deck__transport button { padding:.55rem .35rem; font-size:.58rem; }
+.hc-deck--compact { margin:0; }
+.hc-deck--compact .hc-deck__machine { grid-template-columns:minmax(8rem,.9fr) minmax(10rem,1.1fr); padding:.8rem; gap:.8rem; box-shadow:.35rem .35rem 0 var(--hc-ink); }
+.hc-deck--compact .hc-deck__badge small { display:none; }
+.hc-deck--compact .hc-deck__panel { margin-top:2.2rem; padding:.55rem; }
+.hc-deck--compact .hc-deck__display { min-height:4.6rem; padding:.45rem; font-size:.58rem; }
+.hc-deck--compact .hc-deck__display strong { font-size:.72rem; }
+.hc-deck--compact .hc-deck__transport { gap:.3rem; margin:.45rem 0; }
+.hc-deck--compact .hc-deck__transport button { padding:.55rem .35rem; font-size:.58rem; }
 @media (max-width:62rem) { .hc-hero__players { margin-top:2rem; } }
 @media (max-width:44rem) {
-  .hc-deck__machine,[data-hc-deck]--compact .hc-deck__machine { grid-template-columns:1fr; padding:1rem; }
+  .hc-deck__machine,.hc-deck--compact .hc-deck__machine { grid-template-columns:1fr; padding:1rem; }
   .hc-deck__platter { width:min(100%,22rem); margin:2.5rem auto 0; }
-  .hc-deck__panel,[data-hc-deck]--compact .hc-deck__panel { margin-top:0; }
+  .hc-deck__panel,.hc-deck--compact .hc-deck__panel { margin-top:0; }
   .hc-deck__badge { top:.65rem; right:.8rem; }
   .hc-deck__tonearm { width:42%; left:43%; top:9%; }
 }
 @media (prefers-reduced-motion:reduce) { [data-hc-deck].is-playing .hc-deck__record { animation:none; } }
+
+/* Release hero: never force the headline and two machines into competing columns. */
+.hc-hero--release { grid-template-columns:minmax(0,1fr); }
+.hc-hero--release .hc-hero__copy { max-width:58rem; }
+.hc-hero--release .hc-hero__players { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(1rem,2vw,2rem); margin-top:clamp(1.5rem,3vw,3rem); }
+.hc-hero--release .hc-deck--compact { min-width:0; max-width:none; }
+@media (min-width:48rem) and (max-width:90rem) {
+  .hc-hero--release .hc-hero__copy h1 { font-size:clamp(5.5rem,11vw,9rem); }
+  .hc-hero--release .hc-deck--compact .hc-deck__machine { grid-template-columns:minmax(9rem,.8fr) minmax(12rem,1.2fr); }
+}
+@media (max-width:52rem) {
+  .hc-hero--release .hc-hero__players { grid-template-columns:1fr; }
+}

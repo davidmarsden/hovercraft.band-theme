@@ -298,10 +298,21 @@
         <p class="hc-section-label">04 / The artwork</p>
         <h2 id="hc-song-artwork">Visualising the song.</h2>
       </div>
-      <figure class="hc-song-page__lyric-art">
-        <a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $title }} song artwork{{ end }}" loading="lazy"></a>
-        <figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption>
-      </figure>
+      <div class="hc-song-page__art-grid">
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          <figure class="hc-song-page__lyric-art">
+            <a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a>
+            <figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption>
+          </figure>
+        {{ end }}
+      {{ else }}
+        <figure class="hc-song-page__lyric-art">
+          <a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $title }} song artwork{{ end }}" loading="lazy"></a>
+          <figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption>
+        </figure>
+      {{ end }}
+      </div>
     </section>
     {{ end }}
 

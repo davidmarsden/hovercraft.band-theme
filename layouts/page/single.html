@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ if eq .RelPermalink "/music/" }}
   {{ partial "hc-music-page.html" . }}
-{{ else if eq .RelPermalink "/lyrics/" }}
+{{ else if eq .RelPermalink "/songs/" }}
   {{ partial "hc-songbook.html" . }}
-{{ else if hasPrefix .RelPermalink "/lyrics/" }}
+{{ else if hasPrefix .RelPermalink "/songs/" }}
   {{ partial "hc-song-page.html" . }}
 {{ else }}
   {{ partial "hc-site-header.html" . }}

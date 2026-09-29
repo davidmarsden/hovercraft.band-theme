@@ -1627,3 +1627,7 @@ body::before {
 .hc-song-page__lyric-art img { display:block; width:100%; height:auto; border:.14rem solid var(--hc-ink); box-shadow:.45rem .45rem 0 var(--hc-signal); }
 .hc-song-page__lyric-art figcaption { margin-top:.9rem; font:.72rem/1.45 var(--hc-mono); letter-spacing:.05em; text-transform:uppercase; }
 @media (max-width:38rem) { .hc-album-player__head { align-items:start; flex-direction:column; } }
+
+.hc-song-page__art-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap:2rem; }
+.hc-song-page__lyric-art figcaption strong,.hc-song-page__lyric-art figcaption span { display:block; }
+.hc-song-page__lyric-art figcaption span { margin-top:.4rem; text-transform:none; letter-spacing:0; line-height:1.5; }

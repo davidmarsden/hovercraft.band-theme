@@ -1594,3 +1594,19 @@ body::before {
   .hc-song-az__item { display: block; }
   .hc-song-az__item span { display: block; max-width: none; margin-top: .35rem; text-align: left; }
 }
+
+
+.hc-album__cover {
+  display: block;
+  width: min(100%, 28rem);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: .14rem solid var(--hc-ink);
+  box-shadow: .55rem .55rem 0 var(--hc-red);
+}
+@media (min-width: 62rem) {
+  .hc-album__head {
+    grid-template-columns: minmax(15rem, 28rem) minmax(0, 1fr) auto;
+    align-items: end;
+  }
+}

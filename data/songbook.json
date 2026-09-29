@@ -61,7 +61,8 @@
         "era": "1996",
         "status": "confirmed"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000007fbc81f4b939dbc3e7062d44.png"
   },
   "mr-tooting-brown": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -120,7 +121,8 @@
         "note": "Used as the source for the 2025 Shaken Not Stirred reconstruction after direct attempts from the original Hovercraft demos and 4-tracks failed to produce a recognisable recreation.",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000adc081f49746de457bab59d9.png"
   },
   "white-limousine": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -169,7 +171,8 @@
         "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000345081f487b493542e570855.png"
   },
   "crazy": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -407,7 +410,8 @@
         "note": "Two versions out of sync; one source was backwards at half speed. This composite was used for the later reconstruction.",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000000c6081f4b618b65f4aa3dcbe4.jpg"
   },
   "killer-blues": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -455,7 +459,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-killer-blues-2024-10-06-17-20.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg"
   },
   "pass-the-night-nurse": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -495,7 +500,8 @@
         "audio": "https://hovercraft.band/uploads/2026/pass-the-night-nurse-ft.-dr-rhythm-.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000009274820aa17653054ed36d9a.png"
   },
   "new-pine-overcoat": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -520,7 +526,7 @@
       {
         "label": "2025 reworking",
         "title": "The Promised Land",
-        "href": "/songs/the-promised-land/",
+        "href": "/lyrics/the-promised-land/",
         "visibility": "public"
       },
       {
@@ -567,7 +573,8 @@
         "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/8c071e6b49.jpg"
   },
   "ill-make-love-to-you-anytime": {
     "writer": "J.J. Cale",
@@ -599,7 +606,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-anytime-2024-10-05-21-50.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg"
   },
   "cool-jerk": {
     "writer": "Donald Storball",
@@ -664,7 +672,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-sweet-thing-2024-10-05-22-17.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000494c8246953652d9503d9bcc2.jpg"
   },
   "keep-it-together": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -696,7 +705,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-keep-it-together-2024-10-06-08-33.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-0000000091c881f4bb23712c44f1f519.png"
   },
   "i-love-you-and-i": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -729,7 +739,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-i-love-you-and-i-dont-want-you-to-die-2024-10-05-19-56.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000b09c81f484f1d6663374e8bb.png"
   },
   "indie-kid": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -780,7 +791,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-indie-kid-2024-10-05-22-24.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000e98881f4ad4a17db29769e14.png"
   },
   "now-youre-god-dying-comes": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -813,7 +825,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-now-youre-god-dying-comes-so-easy-2024-10-05-21-15.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/44a1505122.jpg"
   },
   "take-it-or-leave-it": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -933,7 +946,8 @@
       "url": "https://youtu.be/l8BL6uWWT8M?t=7m51s",
       "embed": "https://www.youtube.com/embed/l8BL6uWWT8M?start=471",
       "note": "Piers performing Here Now with The Magpies in 2012. The only surviving video currently known of any of the musicians playing one of these songs."
-    }
+    },
+    "artwork": "https://hovercraft.band/uploads/2026/f546ae6a99.png"
   },
   "oh-yeah": {
     "writer": "Piers Wildman",
@@ -1035,7 +1049,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-bring-my-baby-back-alternative-version-2024-10-06-08-11.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000b7d081f4bc4fb56a0db154b6.png"
   },
   "low": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1076,7 +1091,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-low-2024-10-06-15-02.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000bf808243850db83e78c6a0a7.png"
   },
   "my-own-little-world": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1107,7 +1123,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-my-own-little-world-2024-10-06-15-12.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-0000000062d481f494b4d57c07a0735d.png"
   },
   "bob-bob-bob": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1168,7 +1185,8 @@
         "note": "A further later version preserved in Piers' Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-00000000e55c8246922d44bc89ff2b4f.png"
   },
   "season-of-the-witch": {
     "writer": "Donovan Leitch",
@@ -1199,7 +1217,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-the-season-of-the-witch-2024-10-05-21-22.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-0000000006c081f48a16f620989821d2.png"
   },
   "angel": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1240,7 +1259,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-angel-2024-10-06-14-59.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000004a5482468e88bcbb93451dc32.jpg"
   },
   "the-promised-land": {
     "writer": "Piers \"Charlie Pepper\" Wildman & David Marsden",
@@ -1255,7 +1275,7 @@
     "related": [
       {
         "title": "New Pine Overcoat",
-        "href": "/songs/new-pine-overcoat/"
+        "href": "/lyrics/new-pine-overcoat/"
       }
     ]
   },

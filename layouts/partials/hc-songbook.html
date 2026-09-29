@@ -1,183 +1,31 @@
 {{ partial "hc-site-header.html" . }}
 <main class="hc-songbook">
   <header class="hc-songbook-hero">
-    <p class="hc-kicker"><span></span> Words, noise &amp; evidence</p>
+    <p class="hc-kicker"><span></span> Words, recordings &amp; evidence</p>
     <h1>SONG<br>BOOK.</h1>
-    <p class="hc-songbook-deck">The words Charlie Pepper left behind. The recordings Hovercraft dragged back into the light.</p>
+    <p class="hc-songbook-deck">Songs, not releases. One composition can have several recordings, several lives and thirty years of evidence attached to it.</p>
   </header>
 
-  {{ if .Site.Params.hovercraft_release_live }}
-  <section class="hc-songbook-preview">
+  <section class="hc-songbook-index" aria-labelledby="hc-song-index-title">
     <div class="hc-songbook-sectionhead">
-      <div><p class="hc-section-label">01 / Released</p><h2>Two records.<br>All the songs.</h2></div>
-      <p>Doomed To Live and Oh Yeah are out now. The songbook connects the words, recordings and surviving evidence.</p>
+      <div><p class="hc-section-label">The songbook</p><h2 id="hc-song-index-title">A–Z.</h2></div>
+      <p>Open a song for its words where we can publish them, credits, the 2026 recording, earlier versions and whatever survived in the archive. For album running orders and complete players, go to Music.</p>
     </div>
-    <div class="hc-songbook-grid hc-songbook-grid--featured">
-      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Superman</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
-    </div>
-  </section>
-  {{ else }}
-  <div data-hc-public class="hc-release-state-block">
-  <section class="hc-songbook-preview">
-    <div class="hc-songbook-sectionhead">
-      <div><p class="hc-section-label">01 / Escaped early</p><h2>Three you can<br>hear now.</h2></div>
-      <p>Full tracks from the two records arriving in December. The rest stay under wraps for a little longer.</p>
-    </div>
-    <div class="hc-songbook-grid hc-songbook-grid--featured">
-      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Superman</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
-    </div>
-  </section>
-  </div>
-  <div data-hc-release class="hc-release-state-block" hidden>
-  <section class="hc-songbook-preview">
-    <div class="hc-songbook-sectionhead">
-      <div><p class="hc-section-label">01 / Released</p><h2>Two records.<br>All the songs.</h2></div>
-      <p>Doomed To Live and Oh Yeah are out now. The songbook connects the words, recordings and surviving evidence.</p>
-    </div>
-    <div class="hc-songbook-grid hc-songbook-grid--featured">
-      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Superman</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
-      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
-    </div>
-  </section>
-  </div>
-  {{ end }}
-
-  <section class="hc-songbook-index">
-    <div class="hc-songbook-sectionhead">
-      <div><p class="hc-section-label">02 / The songbook</p><h2>Everything<br>we've admitted to.</h2></div>
-      <p>Song pages are the permanent home for the words. A song can have more than one recording; the song survives the record it happens to be on.</p>
-    </div>
-    <div class="hc-songbook-links">
-      {{ if .Site.Params.hovercraft_release_live }}
-      <section class="hc-songbook-release">
-        <h3>Doomed To Live</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/to-the-grave/">To The Grave</a>
-          <a href="/lyrics/mr-tooting-brown/">Mr Tooting Brown</a>
-          <a href="/lyrics/white-limousine/">White Limousine</a>
-          <a href="/lyrics/crazy/">Crazy</a>
-          <a href="/lyrics/concrete-hill/">Concrete Hill</a>
-          <a href="/lyrics/superman/">Superman</a>
-          <a href="/lyrics/these-days/">These Days</a>
-          <a href="/lyrics/killer-blues/">Killer Blues</a>
-          <a href="/lyrics/pass-the-night-nurse/">Pass The Night Nurse</a>
-          <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat</a>
-          <a href="/lyrics/ill-make-love-to-you-anytime/">I'll Make Love To You Anytime</a>
-          <a href="/lyrics/cool-jerk/">Cool Jerk</a>
-          <a href="/lyrics/sweet-thing/">Sweet Thing</a>
-          <a href="/lyrics/keep-it-together/">Keep It Together</a>
-          <a href="/lyrics/i-love-you-and-i/">I Love You (And I Don't Want You To Die)</a>
-          <a href="/lyrics/indie-kid/">Indie Kid</a>
-          <a href="/lyrics/now-youre-god-dying-comes/">Now You're God / Dying Comes So Easy</a>
-          <a href="/lyrics/take-it-or-leave-it/">Take It Or Leave It</a>
-          <a href="/lyrics/here-now/">Here Now</a>
-        </div>
-      </section>
-
-      <section class="hc-songbook-release">
-        <h3>Oh Yeah</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/oh-yeah/">Oh Yeah</a>
-          <a href="/lyrics/bring-my-baby-back/">Bring My Baby Back</a>
-          <a href="/lyrics/low/">Low</a>
-          <a href="/lyrics/my-own-little-world/">My Own Little World</a>
-          <a href="/lyrics/bob-bob-bob/">Bob Bob Bob</a>
-          <a href="/lyrics/season-of-the-witch/">Season Of The Witch</a>
-          <a href="/lyrics/angel/">Angel</a>
-        </div>
-        <div class="hc-songbook-bonus">
-          <p class="hc-section-label">1996 originals · remixed &amp; remastered</p>
-          <div class="hc-songbook-tracklist">
-            <a href="/lyrics/concrete-hill/">Concrete Hill <em>1996 demo</em></a>
-            <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat <em>1996 demo</em></a>
-            <a href="/lyrics/to-the-grave/">To The Grave <em>1996 demo</em></a>
-          </div>
-        </div>
-      </section>
-
-
-      {{ else }}
-      <div data-hc-release class="hc-release-state-block" hidden>
-      <section class="hc-songbook-release">
-        <h3>Doomed To Live</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/to-the-grave/">To The Grave</a>
-          <a href="/lyrics/mr-tooting-brown/">Mr Tooting Brown</a>
-          <a href="/lyrics/white-limousine/">White Limousine</a>
-          <a href="/lyrics/crazy/">Crazy</a>
-          <a href="/lyrics/concrete-hill/">Concrete Hill</a>
-          <a href="/lyrics/superman/">Superman</a>
-          <a href="/lyrics/these-days/">These Days</a>
-          <a href="/lyrics/killer-blues/">Killer Blues</a>
-          <a href="/lyrics/pass-the-night-nurse/">Pass The Night Nurse</a>
-          <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat</a>
-          <a href="/lyrics/ill-make-love-to-you-anytime/">I'll Make Love To You Anytime</a>
-          <a href="/lyrics/cool-jerk/">Cool Jerk</a>
-          <a href="/lyrics/sweet-thing/">Sweet Thing</a>
-          <a href="/lyrics/keep-it-together/">Keep It Together</a>
-          <a href="/lyrics/i-love-you-and-i/">I Love You (And I Don't Want You To Die)</a>
-          <a href="/lyrics/indie-kid/">Indie Kid</a>
-          <a href="/lyrics/now-youre-god-dying-comes/">Now You're God / Dying Comes So Easy</a>
-          <a href="/lyrics/take-it-or-leave-it/">Take It Or Leave It</a>
-          <a href="/lyrics/here-now/">Here Now</a>
-        </div>
-      </section>
-
-      <section class="hc-songbook-release">
-        <h3>Oh Yeah</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/oh-yeah/">Oh Yeah</a>
-          <a href="/lyrics/bring-my-baby-back/">Bring My Baby Back</a>
-          <a href="/lyrics/low/">Low</a>
-          <a href="/lyrics/my-own-little-world/">My Own Little World</a>
-          <a href="/lyrics/bob-bob-bob/">Bob Bob Bob</a>
-          <a href="/lyrics/season-of-the-witch/">Season Of The Witch</a>
-          <a href="/lyrics/angel/">Angel</a>
-        </div>
-        <div class="hc-songbook-bonus">
-          <p class="hc-section-label">1996 originals · remixed &amp; remastered</p>
-          <div class="hc-songbook-tracklist">
-            <a href="/lyrics/concrete-hill/">Concrete Hill <em>1996 demo</em></a>
-            <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat <em>1996 demo</em></a>
-            <a href="/lyrics/to-the-grave/">To The Grave <em>1996 demo</em></a>
-          </div>
-        </div>
-      </section>
-
-
-      </div>
-      <div data-hc-public class="hc-release-state-block">
-      <section class="hc-songbook-release">
-        <h3>Available now</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/superman/">Superman</a>
-          <a href="/lyrics/cool-jerk/">Cool Jerk</a>
-          <a href="/lyrics/oh-yeah/">Oh Yeah</a>
-        </div>
-      </section>
-
-      </div>
+    <div class="hc-song-az">
+      {{ range .Site.Data.song_index }}
+      {{ $song := index $.Site.Data.songbook .slug }}
+      <a class="hc-song-az__item" href="{{ .href }}">
+        <strong>{{ .title }}</strong>
+        <span>{{ with $song.type }}{{ . }}{{ else }}Song{{ end }}{{ with $song.release.album }} · {{ . }}{{ end }}</span>
+      </a>
       {{ end }}
-
-      <section class="hc-songbook-release">
-        <h3>Singles</h3>
-        <div class="hc-songbook-tracklist">
-          <a href="/lyrics/the-promised-land/">The Promised Land <em>2025 reworking of New Pine Overcoat</em></a>
-        </div>
-      </section>
     </div>
   </section>
 
-  {{ if .Site.Params.hovercraft_release_live }}
-  <aside class="hc-songbook-note"><p class="hc-section-label">Released 5 December 2026</p><p><strong>Doomed To Live + Oh Yeah.</strong> The curtain is up. Hear the records, read the words, inspect the evidence.</p><a class="hc-button hc-button--primary" href="/music/">Hear the records</a></aside>
-  {{ else }}
-  <aside class="hc-songbook-note" data-hc-public><p class="hc-section-label">December transmission</p><p><strong>Two records are coming.</strong> Their final running orders and release artwork stay behind the curtain until launch day. For now: three songs escaped.</p><a class="hc-button hc-button--primary" href="/music/">Hear them</a></aside>
-  <aside class="hc-songbook-note" data-hc-release hidden><p class="hc-section-label">Released 5 December 2026</p><p><strong>Doomed To Live + Oh Yeah.</strong> The curtain is up. Hear the records, read the words, inspect the evidence.</p><a class="hc-button hc-button--primary" href="/music/">Hear the records</a></aside>
-  {{ end }}
+  <aside class="hc-songbook-note">
+    <p class="hc-section-label">Looking for the records?</p>
+    <p><strong>Doomed To Live + Oh Yeah</strong> belong on the Music page, with their running orders and players. The songbook follows compositions across releases instead.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear the records</a>
+  </aside>
 </main>
 {{ partial "hc-site-footer.html" . }}

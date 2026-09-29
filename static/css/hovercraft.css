@@ -1543,3 +1543,10 @@ body::before {
   .hc-preview-banner { flex-wrap: wrap; justify-content: space-between; }
   .hc-preview-banner strong { width: 100%; }
 }
+
+
+/* State wrappers should not alter the layout they gate. */
+.hc-song-page__rail-state { display: contents; }
+.hc-songbook-links > .hc-release-state-block + .hc-songbook-release,
+.hc-songbook-links > .hc-release-state-block + .hc-release-state-block,
+.hc-songbook-links > .hc-songbook-release + .hc-release-state-block { margin-top: 2rem; }

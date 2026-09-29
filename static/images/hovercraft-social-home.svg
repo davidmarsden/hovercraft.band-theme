@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#e8dfc9"/>
+<rect x="28" y="54" width="38" height="9" fill="#a72b25"/>
+<text x="78" y="64" font-family="monospace" font-weight="700" font-size="14" letter-spacing="2" fill="#181613">NEW HOVERCRAFT · COMING IN TIME FOR XMAS</text>
+<text x="25" y="220" font-family="Impact,Arial Black,sans-serif" font-weight="900" font-size="145" letter-spacing="-5" fill="#12110f">TWO</text>
+<text x="25" y="355" font-family="Impact,Arial Black,sans-serif" font-weight="900" font-size="145" letter-spacing="-5" fill="#12110f">RECORDS.</text>
+<text x="25" y="410" font-family="Arial,sans-serif" font-weight="700" font-size="24" fill="#181613">Thirty years in the making. Probably far too many songs.</text>
+<text x="25" y="472" font-family="monospace" font-weight="700" font-size="18" fill="#181613">DOOMED TO LIVE + OH YEAH</text>
+<text x="25" y="505" font-family="monospace" font-size="17" fill="#181613">RELEASED TOGETHER · 5 DECEMBER 2026</text>
+<g transform="translate(675 22)">
+ <rect x="0" y="0" width="500" height="570" fill="#151412"/>
+ <g transform="translate(18 8) rotate(-3 130 130)"><image href="https://hovercraft.band/uploads/2026/file-00000000345081f487b493542e570855.png" width="250" height="250" preserveAspectRatio="xMidYMid slice"/><rect width="250" height="250" fill="none" stroke="#e8dfc9" stroke-width="7"/></g>
+ <g transform="translate(265 12) rotate(4 105 105)"><image href="https://hovercraft.band/uploads/2026/file-00000000adc081f49746de457bab59d9.png" width="210" height="210" preserveAspectRatio="xMidYMid slice"/><rect width="210" height="210" fill="none" stroke="#e8dfc9" stroke-width="7"/></g>
+ <g transform="translate(180 185) rotate(-1 95 95)"><image href="https://hovercraft.band/uploads/2026/file-00000000e55c8246922d44bc89ff2b4f.png" width="190" height="190" preserveAspectRatio="xMidYMid slice"/><rect width="190" height="190" fill="none" stroke="#e8dfc9" stroke-width="7"/></g>
+ <g transform="translate(30 300) rotate(3 115 115)"><image href="https://hovercraft.band/uploads/2026/file-000000000c6081f4b618b65f4aa3dcbe4.jpg" width="230" height="230" preserveAspectRatio="xMidYMid slice"/><rect width="230" height="230" fill="none" stroke="#e8dfc9" stroke-width="7"/></g>
+ <g transform="translate(290 315) rotate(-4 95 110)"><image href="https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg" width="190" height="220" preserveAspectRatio="xMidYMid slice"/><rect width="190" height="220" fill="none" stroke="#e8dfc9" stroke-width="7"/></g>
+</g>
+<rect x="675" y="595" width="500" height="10" fill="#b32d26"/>
+</svg>

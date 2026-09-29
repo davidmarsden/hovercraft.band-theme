@@ -30,15 +30,46 @@
   </div>
   {{ end }}
 
+  {{ if .Site.Params.hovercraft_release_live }}
+  <section class="hc-music-section" aria-labelledby="hc-hear-now">
+    <p class="hc-section-label">01 / The records</p>
+    <h2 id="hc-hear-now">The records<br>are out.</h2>
+    <p class="hc-page-deck">Doomed To Live and Oh Yeah — released together on 5 December 2026. The complete release players and downloads belong here.</p>
+
+    <div class="hc-preview-grid">
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Superman</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Cool Jerk</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Oh Yeah</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+    </div>
+    <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads are available with the release packages.</p>
+  </section>
+  {{ else }}
+  <div data-hc-public class="hc-release-state-block">
   <section class="hc-music-section" aria-labelledby="hc-hear-now">
     <p class="hc-section-label">01 / Advance transmission</p>
     <h2 id="hc-hear-now">Three songs<br>escaped early.</h2>
-    {{ if .Site.Params.hovercraft_release_live }}
-    <p class="hc-page-deck">The December records are out. The full release players and downloads will live here as we finish the release package.</p>
-    {{ else }}
-    <p class="hc-page-deck" data-hc-public>Three short songs from the two records arriving in December. Full tracks, streaming here early — not singles, not the release masters. Consider this evidence.</p>
-    <p class="hc-page-deck" data-hc-release hidden>The December records are out. The full release players and downloads will live here as we finish the release package.</p>
-    {{ end }}
+    <p class="hc-page-deck">Three short songs from the two records arriving in December. Full tracks, streaming here early — not singles, not the release masters. Consider this evidence.</p>
 
     <div class="hc-preview-grid">
       <article class="hc-preview">
@@ -68,6 +99,43 @@
     </div>
     <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads arrive with the records on release day.</p>
   </section>
+  </div>
+  <div data-hc-release class="hc-release-state-block" hidden>
+  <section class="hc-music-section" aria-labelledby="hc-hear-now">
+    <p class="hc-section-label">01 / The records</p>
+    <h2 id="hc-hear-now">The records<br>are out.</h2>
+    <p class="hc-page-deck">Doomed To Live and Oh Yeah — released together on 5 December 2026. The complete release players and downloads belong here.</p>
+
+    <div class="hc-preview-grid">
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Superman</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Cool Jerk</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+      <article class="hc-preview">
+        <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
+        <div class="hc-preview__copy">
+          <p class="hc-record__type">From the new records · full track</p>
+          <h3>Oh Yeah</h3>
+          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
+        </div>
+      </article>
+    </div>
+    <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads are available with the release packages.</p>
+  </section>
+  </div>
+  {{ end }}
 
   <section class="hc-music-section hc-music-section--archive" aria-labelledby="hc-originals">
     <p class="hc-section-label">02 / The evidence</p>

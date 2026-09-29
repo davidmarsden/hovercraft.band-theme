@@ -123,7 +123,8 @@
           ]
         }
       ],
-      "artwork": "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png"
+      "artwork": "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png",
+      "banner": "https://hovercraft.band/uploads/2026/file-0000000008148210afc4f864b16f36fe.png"
     },
     {
       "id": "oh-yeah",
@@ -197,7 +198,12 @@
           ]
         }
       ],
-      "artwork": "https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png"
+      "artwork": "https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png",
+      "banner": "https://hovercraft.band/uploads/2026/file-0000000093b08243b348bba0cb3d732a.png"
     }
-  ]
+  ],
+  "branding": {
+    "logo_emblem": "https://hovercraft.band/uploads/2026/file-000000005bf081f69f8ec27fce232cb7.png",
+    "logo_square": "https://hovercraft.band/uploads/2026/file-000000007e9082108595ff9a683e5d3b.png"
+  }
 }

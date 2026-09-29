@@ -114,8 +114,8 @@
       },
       {
         "label": "Acoustic reconstruction source",
-        "title": "Mr Tooting Brown — David Marsden acoustic rendition",
-        "source": "David Marsden · acoustic rendition",
+        "title": "Mr Tooting Brown — Gol acoustic rendition",
+        "source": "Gol · acoustic rendition",
         "audio": "https://hovercraft.micro.blog/uploads/2025/gol-acoustic-brown.mp3",
         "note": "Used as the source for the 2025 Shaken Not Stirred reconstruction after direct attempts from the original Hovercraft demos and 4-tracks failed to produce a recognisable recreation.",
         "visibility": "public"
@@ -857,12 +857,13 @@
     "versions": [
       {
         "label": "Source rendition",
-        "title": "Here Now — David Marsden",
+        "title": "Here Now — Gol",
         "year": 2014,
-        "source": "David Marsden · originally published on SoundCloud",
+        "source": "Gol · originally published on SoundCloud",
         "audio": "https://hovercraft.band/uploads/2026/here-now.mp3",
         "note": "Based on Piers' 2009 recording and used as the source for the 2025 Shaken Not Stirred reconstruction.",
-        "visibility": "public"
+        "visibility": "public",
+        "source_url": "https://soundcloud.com/dmarsd/here-now"
       },
       {
         "label": "2025 recording",
@@ -881,7 +882,8 @@
         "source": "Boscombe Philosophical Orchestra · Bandcamp publication of Piers' earlier version",
         "audio": "https://hovercraft.band/uploads/2026/boscombe-philosophical-orchestra-here-now.mp3",
         "note": "Used as the source for the later Oh Yeah album reconstruction.",
-        "visibility": "public"
+        "visibility": "public",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/here-now"
       }
     ]
   },
@@ -1087,7 +1089,8 @@
         "source": "Boscombe Philosophical Orchestra · Bandcamp",
         "audio": "https://hovercraft.band/uploads/2026/charlie-pepper-bob-bob-bob.mp3",
         "note": "Used as the source for the Oh Yeah album reconstruction.",
-        "visibility": "public"
+        "visibility": "public",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/bob-bob-bob"
       },
       {
         "label": "2025 recording",

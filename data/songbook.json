@@ -520,7 +520,7 @@
       {
         "label": "2025 reworking",
         "title": "The Promised Land",
-        "href": "/songs/the-promised-land/",
+        "href": "/lyrics/the-promised-land/",
         "visibility": "public"
       },
       {
@@ -1255,7 +1255,7 @@
     "related": [
       {
         "title": "New Pine Overcoat",
-        "href": "/songs/new-pine-overcoat/"
+        "href": "/lyrics/new-pine-overcoat/"
       }
     ]
   },

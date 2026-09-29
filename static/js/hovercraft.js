@@ -99,7 +99,7 @@
 
     document.querySelectorAll("[data-hc-deck]").forEach((player) => {
       const audio = player.querySelector("[data-hc-audio]");
-      const payload = player.querySelector("[data-hc-playlist]");
+      const trackNodes = player.querySelectorAll("[data-hc-track]");
       const label = player.querySelector("[data-hc-now-playing]");
       const time = player.querySelector("[data-hc-time]");
       const toggle = player.querySelector("[data-hc-toggle]");
@@ -107,11 +107,13 @@
       const prev = player.querySelector("[data-hc-prev]");
       const next = player.querySelector("[data-hc-next]");
       const scrub = player.querySelector("[data-hc-scrub]");
-      if (!audio || !payload || !label || !toggle) return;
+      if (!audio || !label || !toggle || !trackNodes.length) return;
 
-      let tracks;
-      try { tracks = JSON.parse(payload.textContent); } catch (_) { return; }
-      if (!Array.isArray(tracks) || !tracks.length) return;
+      const tracks = Array.from(trackNodes, (node) => ({
+        title: node.dataset.title || "Untitled",
+        src: node.dataset.src || ""
+      })).filter((track) => track.src);
+      if (!tracks.length) return;
       let index = 0;
 
       const load = (i, autoplay = false) => {

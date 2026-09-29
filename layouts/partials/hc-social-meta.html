@@ -1,0 +1,36 @@
+{{/* Hovercraft-owned Open Graph / social card metadata. */}}
+{{ $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
+{{ $description := .Site.Params.description | default "Hovercraft — lost in 1996, broadcasting again." }}
+{{ with .Description }}{{ $description = . }}{{ end }}
+{{ $image := .Site.Data.releases.branding.logo_square }}
+{{ $imageAlt := "Hovercraft — distressed square emblem with the snarling hovercraft logo." }}
+{{ $type := "website" }}
+
+{{ if hasPrefix .RelPermalink "/lyrics/" }}
+  {{ $slug := strings.TrimSuffix "/" (strings.TrimPrefix "/lyrics/" .RelPermalink) }}
+  {{ with index .Site.Data.songbook $slug }}
+    {{ with .track_artwork }}{{ $image = . }}{{ $imageAlt = printf "%s track artwork" $.Title }}{{ end }}
+    {{ with .about }}{{ $description = . }}{{ end }}
+    {{ $type = "music.song" }}
+  {{ end }}
+{{ end }}
+
+{{ if and .Site.Params.hovercraft_release_live (or .IsHome (eq .RelPermalink "/music/")) }}
+  {{ $image = "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png" }}
+  {{ $imageAlt = "Hovercraft — Doomed To Live album artwork." }}
+  {{ $description = "Hovercraft return with Doomed To Live and Oh Yeah — released together." }}
+{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ $type }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:alt" content="{{ $imageAlt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $image }}">
+<meta name="twitter:image:alt" content="{{ $imageAlt }}">

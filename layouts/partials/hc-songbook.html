@@ -6,6 +6,20 @@
     <p class="hc-songbook-deck">The words Charlie Pepper left behind. The recordings Hovercraft dragged back into the light.</p>
   </header>
 
+  {{ if .Site.Params.hovercraft_release_live }}
+  <section class="hc-songbook-preview">
+    <div class="hc-songbook-sectionhead">
+      <div><p class="hc-section-label">01 / Released</p><h2>Two records.<br>All the songs.</h2></div>
+      <p>Doomed To Live and Oh Yeah are out now. The songbook connects the words, recordings and surviving evidence.</p>
+    </div>
+    <div class="hc-songbook-grid hc-songbook-grid--featured">
+      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Superman</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
+    </div>
+  </section>
+  {{ else }}
+  <div data-hc-public class="hc-release-state-block">
   <section class="hc-songbook-preview">
     <div class="hc-songbook-sectionhead">
       <div><p class="hc-section-label">01 / Escaped early</p><h2>Three you can<br>hear now.</h2></div>
@@ -17,6 +31,21 @@
       <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Advance listen</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
     </div>
   </section>
+  </div>
+  <div data-hc-release class="hc-release-state-block" hidden>
+  <section class="hc-songbook-preview">
+    <div class="hc-songbook-sectionhead">
+      <div><p class="hc-section-label">01 / Released</p><h2>Two records.<br>All the songs.</h2></div>
+      <p>Doomed To Live and Oh Yeah are out now. The songbook connects the words, recordings and surviving evidence.</p>
+    </div>
+    <div class="hc-songbook-grid hc-songbook-grid--featured">
+      <a class="hc-song-card" href="/lyrics/superman/"><img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Superman</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/cool-jerk/"><img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Cool Jerk</strong><em>Words + recording →</em></span></a>
+      <a class="hc-song-card" href="/lyrics/oh-yeah/"><img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork"><span class="hc-song-card__copy"><span>Released 5 December 2026</span><strong>Oh Yeah</strong><em>Words + recording →</em></span></a>
+    </div>
+  </section>
+  </div>
+  {{ end }}
 
   <section class="hc-songbook-index">
     <div class="hc-songbook-sectionhead">
@@ -73,7 +102,7 @@
 
 
       {{ else }}
-      <div data-hc-release hidden>
+      <div data-hc-release class="hc-release-state-block" hidden>
       <section class="hc-songbook-release">
         <h3>Doomed To Live</h3>
         <div class="hc-songbook-tracklist">
@@ -122,7 +151,7 @@
 
 
       </div>
-      <div data-hc-public>
+      <div data-hc-public class="hc-release-state-block">
       <section class="hc-songbook-release">
         <h3>Available now</h3>
         <div class="hc-songbook-tracklist">

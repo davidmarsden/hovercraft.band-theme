@@ -588,39 +588,6 @@
     "artwork": "https://hovercraft.band/uploads/2026/file-00000000be908243acbb26dd4b13636a.png",
     "artwork_alt": "A group of four people are gathered in a dimly lit room, playing guitars and surrounded by various music-related memorabilia and handwritten lyrics."
   },
-  "ill-make-love-to-you-anytime": {
-    "writer": "J.J. Cale",
-    "type": "Cover",
-    "about": "Hovercraft takes J.J. Cale’s laconic composition and pushes it towards something more urgent and garage-like. The interest here is arrangement and performance.",
-    "release": {
-      "album": "Doomed To Live",
-      "track": 11,
-      "side": "C",
-      "audio": "https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a",
-      "visibility": "release"
-    },
-    "versions": [
-      {
-        "label": "2025 recording",
-        "title": "Anytime",
-        "year": 2025,
-        "album": "On The Rocks",
-        "track": 1,
-        "audio": "https://hovercraft.band/uploads/2026/1.-anytime.m4a",
-        "artwork": "https://hovercraft.band/uploads/2026/19729.png",
-        "visibility": "public"
-      },
-      {
-        "label": "33 Weelsby Road · live 4-track",
-        "title": "I'll Make Love To You Anytime",
-        "year": 1996,
-        "source": "33 Weelsby Road · live 4-track",
-        "audio": "https://hovercraft.band/uploads/2026/david-marsden-anytime-2024-10-05-21-50.m4a",
-        "visibility": "public"
-      }
-    ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg"
-  },
   "cool-jerk": {
     "writer": "Donald Storball",
     "type": "Cover",
@@ -1322,5 +1289,38 @@
         "visibility": "public"
       }
     ]
+  },
+  "ill-make-love-to-you": {
+    "writer": "J.J. Cale",
+    "type": "Cover",
+    "about": "Hovercraft takes J.J. Cale’s laconic composition and pushes it towards something more urgent and garage-like. The interest here is arrangement and performance.",
+    "release": {
+      "album": "Doomed To Live",
+      "track": 11,
+      "side": "C",
+      "audio": "https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a",
+      "visibility": "release"
+    },
+    "versions": [
+      {
+        "label": "2025 recording",
+        "title": "Anytime",
+        "year": 2025,
+        "album": "On The Rocks",
+        "track": 1,
+        "audio": "https://hovercraft.band/uploads/2026/1.-anytime.m4a",
+        "artwork": "https://hovercraft.band/uploads/2026/19729.png",
+        "visibility": "public"
+      },
+      {
+        "label": "33 Weelsby Road · live 4-track",
+        "title": "I'll Make Love To You Anytime",
+        "year": 1996,
+        "source": "33 Weelsby Road · live 4-track",
+        "audio": "https://hovercraft.band/uploads/2026/david-marsden-anytime-2024-10-05-21-50.m4a",
+        "visibility": "public"
+      }
+    ],
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg"
   }
 }

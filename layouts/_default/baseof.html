@@ -6,6 +6,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ partial "microblog_head.html" . }}
+  {{ partial "hc-social-meta.html" . }}
   <link rel="stylesheet" href="/css/hovercraft.css">
 </head>
 <body class="hc-site">

@@ -141,6 +141,23 @@
     </section>
     {{ end }}
 
+    {{ with $song.video }}
+    <section class="hc-song-page__evidence-archive" aria-labelledby="hc-video-evidence">
+      <div class="hc-song-page__dossier-head">
+        <p class="hc-section-label">04 / Moving evidence</p>
+        <h2 id="hc-video-evidence">The band on film.</h2>
+      </div>
+      <div class="hc-song-page__video">
+        <iframe src="{{ .embed }}" title="{{ .label }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="hc-song-page__version-copy">
+          <strong>{{ .label }}</strong>
+          {{ with .note }}<p class="hc-song-page__version-note">{{ . }}</p>{{ end }}
+          {{ with .url }}<p class="hc-song-page__version-source"><a href="{{ . }}" rel="noopener">Watch on YouTube ↗</a></p>{{ end }}
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
     {{ with $song.evidence }}
     <section class="hc-song-page__evidence-archive" aria-labelledby="hc-archive-evidence">
       <div class="hc-song-page__dossier-head">

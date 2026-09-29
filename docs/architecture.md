@@ -85,3 +85,18 @@ The production homepage has two intentional states:
 Finished release pages, players, artwork, credits and song metadata may be developed in GitHub before launch. They should not be linked from production navigation, feeds or sitemaps until the launch state is enabled. This is a practical spoiler barrier, not a secrecy/security boundary: minor leakage is acceptable.
 
 The working target is 5 December 2026. Treat the date as a release target until the launch is confirmed; the public pre-release copy deliberately says “Coming in time for Xmas”.
+
+
+## Release-day browser preview
+
+The production build can expose its already-rendered release-day presentation to trusted reviewers without changing the public release flag.
+
+- Public production remains governed by `params.hovercraft_release_live`.
+- Before launch, release-aware templates render both the public and release variants. Release variants are hidden by default.
+- Visiting the site once with the private `?preview=<token>` query enables a browser-local preview session using `localStorage`, then removes the token from the visible URL.
+- Preview state persists while navigating the production site, so reviewers see the same Micro.blog content, uploads, pages and settings that will be used on launch day.
+- A conspicuous **Release preview · 5 December 2026** banner is displayed while previewing and includes an **Exit preview** control.
+- This is a convenience/spoiler barrier, not authentication. Do not use it for secrets or genuinely private assets.
+- When `params.hovercraft_release_live` is true, the server-rendered release state wins and the preview banner is suppressed.
+
+The preview phrase lives in the presentation JavaScript and is intentionally not a credential or security boundary. Change it if the convenience URL becomes too widely shared.

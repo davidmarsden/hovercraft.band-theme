@@ -62,8 +62,20 @@
         "status": "confirmed"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000a1fc82469c31bc48f4c34c77.png",
-    "artwork_alt": "A weathered scrapbook-style collage features the album title Hovercraft To The Grave, handwritten lyrics on open notebook pages, vintage photos, and assorted nostalgic ephemera like train tickets, a compass, and a lighter."
+    "artwork": [
+      {
+        "image": "https://hovercraft.band/uploads/2026/file-00000000a1fc82469c31bc48f4c34c77.png",
+        "alt": "A weathered scrapbook-style collage features the album title Hovercraft To The Grave, handwritten lyrics on open notebook pages, vintage photos, and assorted nostalgic ephemera like train tickets, a compass, and a lighter.",
+        "label": "Regenerated version lyric artwork",
+        "note": "Lyrics sheet for the shortened regenerated form used by the Suno-derived recordings, omitting the original final two verses and final chorus."
+      },
+      {
+        "image": "https://hovercraft.band/uploads/2026/image-20260809175134.jpg",
+        "alt": "A collage of handwritten song lyrics titled Hovercraft To The Grave, vintage photos, clocks, and various old paper scraps creating a nostalgic and melancholic atmosphere.",
+        "label": "1996 original lyric artwork",
+        "note": "Full original lyric form: the 8+ minute version including the additional final two verses and final chorus."
+      }
+    ]
   },
   "mr-tooting-brown": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -633,7 +645,6 @@
       "audio": "https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png",
     "evidence": [
       {
         "label": "Original set list",
@@ -1242,8 +1253,7 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-the-season-of-the-witch-2024-10-05-21-22.m4a",
         "visibility": "public"
       }
-    ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-0000000006c081f48a16f620989821d2.png"
+    ]
   },
   "angel": {
     "writer": "Piers \"Charlie Pepper\" Wildman",

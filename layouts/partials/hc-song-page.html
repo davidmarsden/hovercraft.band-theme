@@ -45,6 +45,81 @@
           {{ end }}
         {{ end }}
       </div>
+      {{ if .Site.Params.hovercraft_release_live }}
+      <aside class="hc-song-page__rail">
+        <p class="hc-section-label">02 / The evidence</p>
+        <p>The song is the permanent record. Recordings, artwork and versions can change around it.</p>
+        {{ if $song }}
+          {{ $visibility := "" }}
+          {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
+          {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (eq $visibility "release") }}
+          {{ if and $song.artwork $canHear }}
+            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ end }}
+          {{ if and $song.release $canHear }}
+            {{ with $song.release.audio }}
+              <p class="hc-record__type">{{ if eq $visibility "advance" }}Released 5 December 2026{{ else }}Recording{{ end }} · lightweight stream</p>
+              <audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>
+            {{ else }}
+              {{ with $song.release.label }}
+                <div class="hc-song-page__released"><strong>{{ . }}</strong></div>
+              {{ end }}
+            {{ end }}
+            {{ if $song.release.album }}
+              <p class="hc-record__meta">{{ $song.release.album }} · track {{ $song.release.track }}{{ with $song.release.side }} · side {{ . }}{{ end }}</p>
+            {{ end }}
+          {{ else if eq $visibility "release" }}
+            <div class="hc-song-page__locked">
+              <strong>RECORDING<br>UNDER WRAPS.</strong>
+              <span>More noise arrives in December.</span>
+            </div>
+          {{ end }}
+
+          {{ with $song.versions }}
+            {{ $visibleVersions := slice }}
+            {{ range . }}
+              {{ $showVersion := or (eq .visibility "public") (eq .visibility "release") }}
+              {{ if $showVersion }}{{ $visibleVersions = $visibleVersions | append . }}{{ end }}
+            {{ end }}
+            {{ if gt (len $visibleVersions) 0 }}
+              <div class="hc-song-page__versions">
+                <strong>Other versions</strong>
+                {{ range $visibleVersions }}
+                  {{ $version := . }}
+                  <div class="hc-song-page__version{{ with $version.artwork }} hc-song-page__version--visual{{ end }}">
+                    {{ with $version.artwork }}<img src="{{ . }}" alt="{{ $.Title }} — {{ with $version.title }}{{ . }}{{ else }}alternate recording{{ end }} artwork" loading="lazy">{{ end }}
+                    <div class="hc-song-page__version-copy">
+                      <div class="hc-song-page__version-title">{{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }}{{ else }}{{ .label }}{{ end }}{{ with .href }}</a>{{ end }}</div>
+                      <div class="hc-song-page__version-meta">{{ with .year }}{{ . }}{{ end }}{{ with .album }} · <em>{{ . }}</em>{{ end }}{{ with .track }} · track {{ . }}{{ end }}{{ with .source }} · {{ . }}{{ end }}{{ if and (not .year) (not .album) (not .source) }}{{ .label }}{{ end }}</div>
+                      {{ with .note }}<p class="hc-song-page__version-note">{{ . }}</p>{{ end }}
+                      {{ with .source_url }}<p class="hc-song-page__version-source"><a href="{{ . }}" rel="noopener">Original publication ↗</a></p>{{ end }}
+                      {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          {{ end }}
+
+          {{ with $song.related }}
+            <div class="hc-song-page__versions">
+              <strong>Related songs</strong>
+              {{ range . }}
+                <div class="hc-song-page__version">
+                  <a href="{{ .href }}">{{ .title }}</a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ else }}
+          <div class="hc-song-page__locked">
+            <strong>ARCHIVE<br>ENTRY.</strong>
+            <span>Recording evidence will be added as it is catalogued.</span>
+          </div>
+        {{ end }}
+      </aside>
+      {{ else }}
+      <div data-hc-public class="hc-song-page__rail-state">
       <aside class="hc-song-page__rail">
         <p class="hc-section-label">02 / The evidence</p>
         <p>The song is the permanent record. Recordings, artwork and versions can change around it.</p>
@@ -117,6 +192,82 @@
           </div>
         {{ end }}
       </aside>
+      </div>
+      <div data-hc-release class="hc-song-page__rail-state" hidden>
+      <aside class="hc-song-page__rail">
+        <p class="hc-section-label">02 / The evidence</p>
+        <p>The song is the permanent record. Recordings, artwork and versions can change around it.</p>
+        {{ if $song }}
+          {{ $visibility := "" }}
+          {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
+          {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (eq $visibility "release") }}
+          {{ if and $song.artwork $canHear }}
+            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ end }}
+          {{ if and $song.release $canHear }}
+            {{ with $song.release.audio }}
+              <p class="hc-record__type">{{ if eq $visibility "advance" }}Released 5 December 2026{{ else }}Recording{{ end }} · lightweight stream</p>
+              <audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>
+            {{ else }}
+              {{ with $song.release.label }}
+                <div class="hc-song-page__released"><strong>{{ . }}</strong></div>
+              {{ end }}
+            {{ end }}
+            {{ if $song.release.album }}
+              <p class="hc-record__meta">{{ $song.release.album }} · track {{ $song.release.track }}{{ with $song.release.side }} · side {{ . }}{{ end }}</p>
+            {{ end }}
+          {{ else if eq $visibility "release" }}
+            <div class="hc-song-page__locked">
+              <strong>RECORDING<br>UNDER WRAPS.</strong>
+              <span>More noise arrives in December.</span>
+            </div>
+          {{ end }}
+
+          {{ with $song.versions }}
+            {{ $visibleVersions := slice }}
+            {{ range . }}
+              {{ $showVersion := or (eq .visibility "public") (eq .visibility "release") }}
+              {{ if $showVersion }}{{ $visibleVersions = $visibleVersions | append . }}{{ end }}
+            {{ end }}
+            {{ if gt (len $visibleVersions) 0 }}
+              <div class="hc-song-page__versions">
+                <strong>Other versions</strong>
+                {{ range $visibleVersions }}
+                  {{ $version := . }}
+                  <div class="hc-song-page__version{{ with $version.artwork }} hc-song-page__version--visual{{ end }}">
+                    {{ with $version.artwork }}<img src="{{ . }}" alt="{{ $.Title }} — {{ with $version.title }}{{ . }}{{ else }}alternate recording{{ end }} artwork" loading="lazy">{{ end }}
+                    <div class="hc-song-page__version-copy">
+                      <div class="hc-song-page__version-title">{{ with .href }}<a href="{{ . }}">{{ end }}{{ with .title }}{{ . }}{{ else }}{{ .label }}{{ end }}{{ with .href }}</a>{{ end }}</div>
+                      <div class="hc-song-page__version-meta">{{ with .year }}{{ . }}{{ end }}{{ with .album }} · <em>{{ . }}</em>{{ end }}{{ with .track }} · track {{ . }}{{ end }}{{ with .source }} · {{ . }}{{ end }}{{ if and (not .year) (not .album) (not .source) }}{{ .label }}{{ end }}</div>
+                      {{ with .note }}<p class="hc-song-page__version-note">{{ . }}</p>{{ end }}
+                      {{ with .source_url }}<p class="hc-song-page__version-source"><a href="{{ . }}" rel="noopener">Original publication ↗</a></p>{{ end }}
+                      {{ with .audio }}<audio controls preload="none" src="{{ . }}">Your browser does not support audio playback.</audio>{{ end }}
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          {{ end }}
+
+          {{ with $song.related }}
+            <div class="hc-song-page__versions">
+              <strong>Related songs</strong>
+              {{ range . }}
+                <div class="hc-song-page__version">
+                  <a href="{{ .href }}">{{ .title }}</a>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ else }}
+          <div class="hc-song-page__locked">
+            <strong>ARCHIVE<br>ENTRY.</strong>
+            <span>Recording evidence will be added as it is catalogued.</span>
+          </div>
+        {{ end }}
+      </aside>
+      </div>
+      {{ end }}
     </div>
 
     {{ with $song }}

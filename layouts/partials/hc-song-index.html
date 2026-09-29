@@ -1,0 +1,12 @@
+<div class="hc-song-az">
+  {{ range .songs }}
+  {{ $song := index $.site.Data.songbook .slug }}
+  <a class="hc-song-az__item" href="{{ .href }}">
+    <strong>{{ .title }}</strong>
+    <span>
+      {{ with $song.type }}{{ . }}{{ else }}Song{{ end }}
+      {{ if $.release }}{{ with $song.release.album }} · {{ . }}{{ end }}{{ end }}
+    </span>
+  </a>
+  {{ end }}
+</div>

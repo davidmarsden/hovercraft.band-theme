@@ -3,156 +3,35 @@
   <header class="hc-page-head">
     <p class="hc-kicker">Records, tapes &amp; things we found in boxes</p>
     <h1>Music.</h1>
-    <p class="hc-page-deck">Hovercraft disappeared in 1996. The songs didn't. Here is what has escaped so far.</p>
+    <p class="hc-page-deck">Hovercraft disappeared in 1996. The songs didn't. The records are the records; the songbook tells you what happened to the songs.</p>
   </header>
 
   {{ if .Site.Params.hovercraft_release_live }}
-  <section class="hc-release-tease hc-release-tease--live" aria-labelledby="hc-release-title">
-    <div><p class="hc-section-label">Out now · 5 December 2026</p><h2 id="hc-release-title">Doomed To Live<br>+ Oh Yeah.</h2><p>Two records. Thirty years in the making.</p></div>
-    <div class="hc-release-tease__marks" aria-hidden="true"><span>19</span><span>7</span></div>
-  </section>
+    {{ partial "hc-release-catalogue.html" . }}
   {{ else }}
   <div data-hc-public>
     <section class="hc-release-tease" aria-labelledby="hc-coming-title">
-      <div>
-        <p class="hc-section-label">Coming in time for Xmas</p>
-        <h2 id="hc-coming-title">Two records.</h2>
-        <p>Thirty years in the making. Probably far too many songs.</p>
-      </div>
+      <div><p class="hc-section-label">Coming in time for Xmas</p><h2 id="hc-coming-title">Two records.</h2><p>Thirty years in the making. Probably far too many songs.</p></div>
       <div class="hc-release-tease__marks" aria-hidden="true"><span>?</span><span>?</span></div>
     </section>
-  </div>
-  <div data-hc-release hidden>
-    <section class="hc-release-tease hc-release-tease--live" aria-labelledby="hc-release-title">
-      <div><p class="hc-section-label">Out now · 5 December 2026</p><h2 id="hc-release-title">Doomed To Live<br>+ Oh Yeah.</h2><p>Two records. Thirty years in the making.</p></div>
-      <div class="hc-release-tease__marks" aria-hidden="true"><span>19</span><span>7</span></div>
+    <section class="hc-music-section" aria-labelledby="hc-hear-now">
+      <p class="hc-section-label">Advance transmission</p><h2 id="hc-hear-now">Three songs<br>escaped early.</h2>
+      <p class="hc-page-deck">A few full tracks before the curtain goes up. The complete records remain under wraps until 5 December.</p>
+      <div class="hc-preview-grid">
+        {{ range (slice "superman" "cool-jerk" "oh-yeah") }}{{ $song := index $.Site.Data.songbook . }}
+        <article class="hc-preview">{{ with $song.artwork }}<img src="{{ . }}" alt="">{{ end }}<div class="hc-preview__copy"><p class="hc-record__type">Advance listen · full track</p><h3>{{ if eq . "superman" }}Superman{{ else if eq . "cool-jerk" }}Cool Jerk{{ else }}Oh Yeah{{ end }}</h3><audio controls preload="metadata" src="{{ $song.release.audio }}">Your browser does not support audio playback.</audio></div></article>
+        {{ end }}
+      </div>
     </section>
   </div>
+  <div data-hc-release hidden>{{ partial "hc-release-catalogue.html" . }}</div>
   {{ end }}
-
-  {{ if .Site.Params.hovercraft_release_live }}
-  <section class="hc-music-section" aria-labelledby="hc-hear-now">
-    <p class="hc-section-label">01 / The records</p>
-    <h2 id="hc-hear-now">The records<br>are out.</h2>
-    <p class="hc-page-deck">Doomed To Live and Oh Yeah — released together on 5 December 2026. The complete release players and downloads belong here.</p>
-
-    <div class="hc-preview-grid">
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Superman</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Cool Jerk</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Oh Yeah</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-    </div>
-    <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads are available with the release packages.</p>
-  </section>
-  {{ else }}
-  <div data-hc-public class="hc-release-state-block">
-  <section class="hc-music-section" aria-labelledby="hc-hear-now">
-    <p class="hc-section-label">01 / Advance transmission</p>
-    <h2 id="hc-hear-now">Three songs<br>escaped early.</h2>
-    <p class="hc-page-deck">Three short songs from the two records arriving in December. Full tracks, streaming here early — not singles, not the release masters. Consider this evidence.</p>
-
-    <div class="hc-preview-grid">
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">Advance listen · full track</p>
-          <h3>Superman</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">Advance listen · full track</p>
-          <h3>Cool Jerk</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">Advance listen · full track</p>
-          <h3>Oh Yeah</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-    </div>
-    <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads arrive with the records on release day.</p>
-  </section>
-  </div>
-  <div data-hc-release class="hc-release-state-block" hidden>
-  <section class="hc-music-section" aria-labelledby="hc-hear-now-release">
-    <p class="hc-section-label">01 / The records</p>
-    <h2 id="hc-hear-now-release">The records<br>are out.</h2>
-    <p class="hc-page-deck">Doomed To Live and Oh Yeah — released together on 5 December 2026. The complete release players and downloads belong here.</p>
-
-    <div class="hc-preview-grid">
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg" alt="Superman artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Superman</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/6.-superman.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png" alt="Cool Jerk artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Cool Jerk</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-      <article class="hc-preview">
-        <img src="https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png" alt="Oh Yeah track artwork">
-        <div class="hc-preview__copy">
-          <p class="hc-record__type">From the new records · full track</p>
-          <h3>Oh Yeah</h3>
-          <audio controls preload="none" src="https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a">Your browser does not support audio playback.</audio>
-        </div>
-      </article>
-    </div>
-    <p class="hc-preview-note">These are lightweight streaming copies. Higher-quality downloads are available with the release packages.</p>
-  </section>
-  </div>
-  {{ end }}
-
-  <section class="hc-music-section hc-music-section--archive" aria-labelledby="hc-originals">
-    <p class="hc-section-label">02 / The evidence</p>
-    <h2 id="hc-originals">1996 originals.</h2>
-    <p class="hc-page-deck">Before the resurrection there were tapes, gigs and the original versions.</p>
-    <div class="hc-original-strip">
-      <figure><img src="https://hovercraft.band/uploads/2026/file-00000000b7d081f49e096c9027218f372.jpg" alt="Concrete Hill 1996 Original artwork"><figcaption>Concrete Hill</figcaption></figure>
-      <figure><img src="https://hovercraft.band/uploads/2026/file-0000000058a881f494664c4f57edcabe4.jpg" alt="New Pine Overcoat 1996 Original artwork"><figcaption>New Pine Overcoat</figcaption></figure>
-      <figure><img src="https://hovercraft.band/uploads/2026/file-0000000055e881f4a1d4bd7e65feb199.png" alt="To The Grave 1996 Original artwork"><figcaption>To The Grave</figcaption></figure>
-    </div>
-  </section>
 
   <section class="hc-music-next">
-    <p class="hc-section-label">03 / Words</p>
-    <h2>Know what<br>we're shouting?</h2>
-    <p>Lyrics, recordings and the stories behind the songs live in the songbook.</p>
-    <a class="hc-button hc-button--primary" href="/lyrics/">Read the songs</a>
+    <p class="hc-section-label">The songs</p>
+    <h2>One song.<br>Many lives.</h2>
+    <p>The songbook is organised by composition, not release: words where we can publish them, writing credits, recordings, surviving tapes and archive evidence.</p>
+    <a class="hc-button hc-button--primary" href="/songs/">Open the songbook</a>
   </section>
 </main>
 {{ partial "hc-site-footer.html" . }}

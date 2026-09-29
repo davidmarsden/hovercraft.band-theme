@@ -71,7 +71,58 @@
         </div>
       </section>
 
+
       {{ else }}
+      <div data-hc-release hidden>
+      <section class="hc-songbook-release">
+        <h3>Doomed To Live</h3>
+        <div class="hc-songbook-tracklist">
+          <a href="/lyrics/to-the-grave/">To The Grave</a>
+          <a href="/lyrics/mr-tooting-brown/">Mr Tooting Brown</a>
+          <a href="/lyrics/white-limousine/">White Limousine</a>
+          <a href="/lyrics/crazy/">Crazy</a>
+          <a href="/lyrics/concrete-hill/">Concrete Hill</a>
+          <a href="/lyrics/superman/">Superman</a>
+          <a href="/lyrics/these-days/">These Days</a>
+          <a href="/lyrics/killer-blues/">Killer Blues</a>
+          <a href="/lyrics/pass-the-night-nurse/">Pass The Night Nurse</a>
+          <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat</a>
+          <a href="/lyrics/ill-make-love-to-you-anytime/">I'll Make Love To You Anytime</a>
+          <a href="/lyrics/cool-jerk/">Cool Jerk</a>
+          <a href="/lyrics/sweet-thing/">Sweet Thing</a>
+          <a href="/lyrics/keep-it-together/">Keep It Together</a>
+          <a href="/lyrics/i-love-you-and-i/">I Love You (And I Don't Want You To Die)</a>
+          <a href="/lyrics/indie-kid/">Indie Kid</a>
+          <a href="/lyrics/now-youre-god-dying-comes/">Now You're God / Dying Comes So Easy</a>
+          <a href="/lyrics/take-it-or-leave-it/">Take It Or Leave It</a>
+          <a href="/lyrics/here-now/">Here Now</a>
+        </div>
+      </section>
+
+      <section class="hc-songbook-release">
+        <h3>Oh Yeah</h3>
+        <div class="hc-songbook-tracklist">
+          <a href="/lyrics/oh-yeah/">Oh Yeah</a>
+          <a href="/lyrics/bring-my-baby-back/">Bring My Baby Back</a>
+          <a href="/lyrics/low/">Low</a>
+          <a href="/lyrics/my-own-little-world/">My Own Little World</a>
+          <a href="/lyrics/bob-bob-bob/">Bob Bob Bob</a>
+          <a href="/lyrics/season-of-the-witch/">Season Of The Witch</a>
+          <a href="/lyrics/angel/">Angel</a>
+        </div>
+        <div class="hc-songbook-bonus">
+          <p class="hc-section-label">1996 originals · remixed &amp; remastered</p>
+          <div class="hc-songbook-tracklist">
+            <a href="/lyrics/concrete-hill/">Concrete Hill <em>1996 demo</em></a>
+            <a href="/lyrics/new-pine-overcoat/">New Pine Overcoat <em>1996 demo</em></a>
+            <a href="/lyrics/to-the-grave/">To The Grave <em>1996 demo</em></a>
+          </div>
+        </div>
+      </section>
+
+
+      </div>
+      <div data-hc-public>
       <section class="hc-songbook-release">
         <h3>Available now</h3>
         <div class="hc-songbook-tracklist">
@@ -80,6 +131,8 @@
           <a href="/lyrics/oh-yeah/">Oh Yeah</a>
         </div>
       </section>
+
+      </div>
       {{ end }}
 
       <section class="hc-songbook-release">
@@ -91,10 +144,11 @@
     </div>
   </section>
 
-  <aside class="hc-songbook-note">
-    <p class="hc-section-label">December transmission</p>
-    <p><strong>Two records are coming.</strong> Their final running orders and release artwork stay behind the curtain until launch day. For now: three songs escaped.</p>
-    <a class="hc-button hc-button--primary" href="/music/">Hear them</a>
-  </aside>
+  {{ if .Site.Params.hovercraft_release_live }}
+  <aside class="hc-songbook-note"><p class="hc-section-label">Released 5 December 2026</p><p><strong>Doomed To Live + Oh Yeah.</strong> The curtain is up. Hear the records, read the words, inspect the evidence.</p><a class="hc-button hc-button--primary" href="/music/">Hear the records</a></aside>
+  {{ else }}
+  <aside class="hc-songbook-note" data-hc-public><p class="hc-section-label">December transmission</p><p><strong>Two records are coming.</strong> Their final running orders and release artwork stay behind the curtain until launch day. For now: three songs escaped.</p><a class="hc-button hc-button--primary" href="/music/">Hear them</a></aside>
+  <aside class="hc-songbook-note" data-hc-release hidden><p class="hc-section-label">Released 5 December 2026</p><p><strong>Doomed To Live + Oh Yeah.</strong> The curtain is up. Hear the records, read the words, inspect the evidence.</p><a class="hc-button hc-button--primary" href="/music/">Hear the records</a></aside>
+  {{ end }}
 </main>
 {{ partial "hc-site-footer.html" . }}

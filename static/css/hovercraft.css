@@ -1610,3 +1610,20 @@ body::before {
     align-items: end;
   }
 }
+
+
+/* Release sleeves, album transport and lyric artwork -------------------- */
+.hc-release-cover { position:absolute; width:58%; aspect-ratio:1; margin:0; border:.15rem solid var(--hc-ink); box-shadow:.5rem .5rem 0 var(--hc-ink); overflow:hidden; }
+.hc-release-cover img { width:100%; height:100%; object-fit:cover; display:block; }
+.hc-release-cover--one { top:8%; left:5%; transform:rotate(-6deg); }
+.hc-release-cover--two { right:5%; bottom:8%; transform:rotate(7deg); }
+.hc-album-player { margin:0 0 2.5rem; padding:1.25rem; border:.14rem solid var(--hc-ink); background:var(--hc-paper-2); box-shadow:.3rem .3rem 0 var(--hc-ink); }
+.hc-album-player__head { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:.8rem; }
+.hc-album-player__head .hc-section-label { margin-bottom:.25rem; }
+.hc-album-player__head strong { font:900 clamp(1.2rem,2.5vw,1.8rem)/1 var(--hc-display); text-transform:uppercase; }
+.hc-album-player__controls { display:flex; gap:.5rem; }
+.hc-album-player__controls button { padding:.65rem .8rem; }
+.hc-song-page__lyric-art { max-width:46rem; margin:0; }
+.hc-song-page__lyric-art img { display:block; width:100%; height:auto; border:.14rem solid var(--hc-ink); box-shadow:.45rem .45rem 0 var(--hc-signal); }
+.hc-song-page__lyric-art figcaption { margin-top:.9rem; font:.72rem/1.45 var(--hc-mono); letter-spacing:.05em; text-transform:uppercase; }
+@media (max-width:38rem) { .hc-album-player__head { align-items:start; flex-direction:column; } }

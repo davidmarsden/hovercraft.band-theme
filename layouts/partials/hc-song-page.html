@@ -1,8 +1,8 @@
 {{ partial "hc-site-header.html" . }}
-{{ $songSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/lyrics/" .RelPermalink) }}
+{{ $songSlug := strings.TrimSuffix "/" (strings.TrimPrefix "/songs/" .RelPermalink) }}
 {{ $song := index .Site.Data.songbook $songSlug }}
 {{ $releaseLive := default false .Site.Params.hovercraft_release_live }}
-{{ $knownCover := or (eq .RelPermalink "/lyrics/cool-jerk/") (eq .RelPermalink "/lyrics/ill-make-love-to-you-anytime/") (eq .RelPermalink "/lyrics/season-of-the-witch/") }}
+{{ $knownCover := or (eq .RelPermalink "/songs/cool-jerk/") (eq .RelPermalink "/songs/ill-make-love-to-you-anytime/") (eq .RelPermalink "/songs/season-of-the-witch/") }}
 {{ $isCover := or $knownCover (and $song (eq $song.type "Cover")) }}
 <main class="hc-song-page">
   <article class="hc-song-page__article">
@@ -37,7 +37,7 @@
             {{ end }}
             <div class="hc-song-page__legacy-content">{{ .Content }}</div>
           </div>
-          {{ if eq .RelPermalink "/lyrics/oh-yeah/" }}
+          {{ if eq .RelPermalink "/songs/oh-yeah/" }}
             <div class="hc-song-page__rights-note">
               <strong>TEXT NOTE.</strong>
               <p>Piers&rsquo; original words are reproduced here. The borrowed refrain is intentionally omitted.</p>
@@ -335,7 +335,7 @@
     {{ end }}
 
     <nav class="hc-song-page__back" aria-label="Songbook navigation">
-      <a href="/lyrics/">← Back to the Songbook</a>
+      <a href="/songs/">← Back to the Songbook</a>
       <a href="/music/">Hear what escaped early →</a>
     </nav>
   </article>

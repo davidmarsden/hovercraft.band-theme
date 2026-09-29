@@ -1,4 +1,5 @@
 {{ partial "hc-site-header.html" . }}
+{{ $songIndex := index .Site.Data "song-index" }}
 <main class="hc-songbook">
   <header class="hc-songbook-hero">
     <p class="hc-kicker"><span></span> Words, recordings &amp; evidence</p>
@@ -9,23 +10,39 @@
   <section class="hc-songbook-index" aria-labelledby="hc-song-index-title">
     <div class="hc-songbook-sectionhead">
       <div><p class="hc-section-label">The songbook</p><h2 id="hc-song-index-title">A–Z.</h2></div>
+      {{ if .Site.Params.hovercraft_release_live }}
       <p>Open a song for its words where we can publish them, credits, the 2026 recording, earlier versions and whatever survived in the archive. For album running orders and complete players, go to Music.</p>
-    </div>
-    <div class="hc-song-az">
-      {{ range .Site.Data.song_index }}
-      {{ $song := index $.Site.Data.songbook .slug }}
-      <a class="hc-song-az__item" href="{{ .href }}">
-        <strong>{{ .title }}</strong>
-        <span>{{ with $song.type }}{{ . }}{{ else }}Song{{ end }}{{ with $song.release.album }} · {{ . }}{{ end }}</span>
-      </a>
+      {{ else }}
+      <p data-hc-public>Open a song for its words where we can publish them, credits, earlier versions and whatever survived in the archive. The new records stay under wraps until 5 December.</p>
+      <p data-hc-release hidden>Open a song for its words where we can publish them, credits, the 2026 recording, earlier versions and whatever survived in the archive. For album running orders and complete players, go to Music.</p>
       {{ end }}
     </div>
+
+    {{ if .Site.Params.hovercraft_release_live }}
+      {{ partial "hc-song-index.html" (dict "songs" $songIndex "site" .Site "release" true) }}
+    {{ else }}
+      <div data-hc-public>{{ partial "hc-song-index.html" (dict "songs" $songIndex "site" .Site "release" false) }}</div>
+      <div data-hc-release hidden>{{ partial "hc-song-index.html" (dict "songs" $songIndex "site" .Site "release" true) }}</div>
+    {{ end }}
   </section>
 
+  {{ if .Site.Params.hovercraft_release_live }}
   <aside class="hc-songbook-note">
     <p class="hc-section-label">Looking for the records?</p>
     <p><strong>Doomed To Live + Oh Yeah</strong> belong on the Music page, with their running orders and players. The songbook follows compositions across releases instead.</p>
     <a class="hc-button hc-button--primary" href="/music/">Hear the records</a>
   </aside>
+  {{ else }}
+  <aside class="hc-songbook-note" data-hc-public>
+    <p class="hc-section-label">New Hovercraft · 5 December 2026</p>
+    <p>The new records are still under wraps. A few songs have escaped early; the rest arrive in December.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear what escaped</a>
+  </aside>
+  <aside class="hc-songbook-note" data-hc-release hidden>
+    <p class="hc-section-label">Looking for the records?</p>
+    <p><strong>Doomed To Live + Oh Yeah</strong> belong on the Music page, with their running orders and players. The songbook follows compositions across releases instead.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear the records</a>
+  </aside>
+  {{ end }}
 </main>
 {{ partial "hc-site-footer.html" . }}

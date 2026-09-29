@@ -111,6 +111,14 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-mr-tooting-brown-2024-10-06-17-24.m4a",
         "note": "Source used for the 2026 reconstruction.",
         "visibility": "public"
+      },
+      {
+        "label": "Acoustic reconstruction source",
+        "title": "Mr Tooting Brown — David Marsden acoustic rendition",
+        "source": "David Marsden · acoustic rendition",
+        "audio": "https://hovercraft.micro.blog/uploads/2025/gol-acoustic-brown.mp3",
+        "note": "Used as the source for the 2025 Shaken Not Stirred reconstruction after direct attempts from the original Hovercraft demos and 4-tracks failed to produce a recognisable recreation.",
+        "visibility": "public"
       }
     ]
   },
@@ -848,6 +856,15 @@
     },
     "versions": [
       {
+        "label": "Source rendition",
+        "title": "Here Now — David Marsden",
+        "year": 2014,
+        "source": "David Marsden · originally published on SoundCloud",
+        "audio": "https://hovercraft.band/uploads/2026/here-now.mp3",
+        "note": "Based on Piers' 2009 recording and used as the source for the 2025 Shaken Not Stirred reconstruction.",
+        "visibility": "public"
+      },
+      {
         "label": "2025 recording",
         "title": "Here Now",
         "year": 2025,
@@ -855,6 +872,15 @@
         "track": 7,
         "audio": "https://hovercraft.band/uploads/2026/7.-here-now.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/file-00000000bc8061f586e766354a72bd09.png",
+        "visibility": "public"
+      },
+      {
+        "label": "Source recording",
+        "title": "Here Now — Piers / Boscombe Philosophical Orchestra",
+        "year": 2015,
+        "source": "Boscombe Philosophical Orchestra · Bandcamp publication of Piers' earlier version",
+        "audio": "https://hovercraft.band/uploads/2026/boscombe-philosophical-orchestra-here-now.mp3",
+        "note": "Used as the source for the later Oh Yeah album reconstruction.",
         "visibility": "public"
       }
     ]
@@ -1037,7 +1063,7 @@
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "An elegy whose force comes from tiny human detail rather than grand tragedy. Grief eventually narrows to an absurdly small unpaid debt, funny and brutal at the same time.",
-    "archive": "A genuine 1995–96 Hovercraft song for which no complete original band performance has yet surfaced. The reconstruction grew from Piers’ circa-2012 solo acoustic rendition.",
+    "archive": "A genuine 1995–96 Hovercraft song for which no complete original band performance has yet surfaced. Piers' 2015 Boscombe Philosophical Orchestra recording survives and became the source for the Oh Yeah album reconstruction.",
     "release": {
       "album": "Oh Yeah",
       "track": 5,
@@ -1054,6 +1080,15 @@
       }
     ],
     "versions": [
+      {
+        "label": "Source recording",
+        "title": "Bob Bob Bob — Piers / Boscombe Philosophical Orchestra",
+        "year": 2015,
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "audio": "https://hovercraft.band/uploads/2026/charlie-pepper-bob-bob-bob.mp3",
+        "note": "Used as the source for the Oh Yeah album reconstruction.",
+        "visibility": "public"
+      },
       {
         "label": "2025 recording",
         "title": "(Come On) Children",

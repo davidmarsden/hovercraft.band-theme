@@ -3,7 +3,7 @@
 {{ $compact := default false .compact }}
 <section class="hc-deck{{ if $compact }} hc-deck--compact{{ end }}" data-hc-deck data-album="{{ $album.id }}" aria-label="{{ $album.title }} album player">
   <div class="hc-deck__machine">
-    <div class="hc-deck__badge"><img src="{{ .Site.Data.releases.branding.logo_emblem }}" alt="Hovercraft"><small>GRAMOPHONE &amp; TAPE CO. · GRIMSBY</small></div>
+    <div class="hc-deck__badge"><img src="{{ .site.Data.releases.branding.logo_emblem }}" alt="Hovercraft"><small>GRAMOPHONE &amp; TAPE CO. · GRIMSBY</small></div>
     <button class="hc-deck__platter" type="button" data-hc-deck-sleeve aria-label="Play {{ $album.title }}">
       <span class="hc-deck__record"><img src="{{ $album.artwork }}" alt="{{ $album.title }} album cover"><i aria-hidden="true"></i></span>
     </button>

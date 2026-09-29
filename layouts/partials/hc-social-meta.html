@@ -1,7 +1,7 @@
 {{/* Hovercraft-owned Open Graph / social card metadata. */}}
 {{ $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
-{{ $description := .Site.Params.description | default "Hovercraft — lost in 1996, broadcasting again." }}
-{{ with .Description }}{{ $description = . }}{{ end }}
+{{ $description := "Hovercraft — lost in 1996, broadcasting again." }}
+{{ with .Description }}{{ $description = . | plainify }}{{ end }}
 {{ $image := .Site.Data.releases.branding.logo_square }}
 {{ $imageAlt := "Hovercraft — distressed square emblem with the snarling hovercraft logo." }}
 {{ $type := "website" }}
@@ -15,7 +15,11 @@
   {{ end }}
 {{ end }}
 
-{{ if and .Site.Params.hovercraft_release_live (or .IsHome (eq .RelPermalink "/music/")) }}
+{{ if .IsHome }}
+  {{ $image = "https://hovercraft.band/uploads/2026/file-0000000008148210afc4f864b16f36fe.png" }}
+  {{ $imageAlt = "Hovercraft — Doomed To Live release banner." }}
+  {{ $description = "Doomed To Live and Oh Yeah — two new Hovercraft records, released together 5 December 2026." }}
+{{ else if and .Site.Params.hovercraft_release_live (eq .RelPermalink "/music/") }}
   {{ $image = "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png" }}
   {{ $imageAlt = "Hovercraft — Doomed To Live album artwork." }}
   {{ $description = "Hovercraft return with Doomed To Live and Oh Yeah — released together." }}

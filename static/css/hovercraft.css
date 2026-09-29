@@ -1725,3 +1725,30 @@ body::before {
 @media (max-width:52rem) {
   .hc-hero--release .hc-hero__players { grid-template-columns:1fr; }
 }
+
+
+/* The lyric-art section is a gallery, not the two-column evidence dossier. */
+.hc-song-page__evidence-archive.hc-song-page__artwork {
+  grid-template-columns:minmax(0,1fr);
+  gap:clamp(1.25rem,3vw,2.5rem);
+}
+.hc-song-page__artwork .hc-song-page__dossier-head {
+  width:100%;
+  max-width:58rem;
+}
+.hc-song-page__artwork h2 {
+  max-width:none;
+  margin:.35rem 0 0;
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  line-height:.88;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.hc-song-page__artwork .hc-song-page__art-grid {
+  width:min(100%,58rem);
+  grid-template-columns:minmax(0,1fr);
+}
+.hc-song-page__artwork .hc-song-page__lyric-art {
+  width:100%;
+  max-width:58rem;
+}

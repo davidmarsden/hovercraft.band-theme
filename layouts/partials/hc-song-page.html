@@ -299,7 +299,7 @@
         <h2 id="hc-song-artwork">Visualising the song.</h2>
       </div>
       <figure class="hc-song-page__lyric-art">
-        <a href="{{ . }}"><img src="{{ . }}" alt="{{ $title }} song artwork" loading="lazy"></a>
+        <a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $title }} song artwork{{ end }}" loading="lazy"></a>
         <figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption>
       </figure>
     </section>

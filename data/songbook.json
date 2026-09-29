@@ -160,6 +160,14 @@
         "source": "Sounds Good · live 16-track · Grimsby · May 1996",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-white-limousine-2024-10-06-07-55.m4a",
         "visibility": "public"
+      },
+      {
+        "label": "Later Piers version",
+        "title": "White Limousine",
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/white-limousine",
+        "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
+        "visibility": "public"
       }
     ]
   },
@@ -276,6 +284,14 @@
         "year": 1996,
         "source": "Sounds Good · live 16-track · Grimsby · May 1996",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-concrete-hill-2024-10-06-07-51.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "Later Piers version",
+        "title": "Concrete Hill",
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/concrete-hill",
+        "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
     ],
@@ -541,6 +557,14 @@
         "year": 1996,
         "source": "Sounds Good · live 16-track · Grimsby · May 1996",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-new-pine-overcoat-2024-10-05-22-28.m4a",
+        "visibility": "public"
+      },
+      {
+        "label": "Later Piers version",
+        "title": "New Pine Overcoat",
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/new-pine-overcoat-4",
+        "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
     ]
@@ -839,6 +863,14 @@
         "source": "Sounds Good · live 16-track · Grimsby · May 1996",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-take-it-or-leave-it-2024-10-06-08-02.m4a",
         "visibility": "public"
+      },
+      {
+        "label": "Later Piers version",
+        "title": "Take It Or Leave It",
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/take-it-or-leave-it",
+        "note": "A later Piers version of the Hovercraft composition, preserved in the Boscombe Philosophical Orchestra catalogue.",
+        "visibility": "public"
       }
     ]
   },
@@ -884,6 +916,16 @@
         "note": "Used as the source for the later Oh Yeah album reconstruction.",
         "visibility": "public",
         "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/here-now"
+      },
+      {
+        "label": "2026 Gol version",
+        "title": "Here Now — Gol",
+        "year": 2026,
+        "source": "Gol · davidmarsden.info",
+        "source_url": "https://davidmarsden.info/music/",
+        "audio": "https://davidmarsden.info/uploads/2026/here-now-5.m4a",
+        "note": "A separate 2026 Suno version, distinct from the 2014 source rendition and the Hovercraft release recordings.",
+        "visibility": "public"
       }
     ]
   },
@@ -1110,6 +1152,14 @@
         "track": 8,
         "audio": "https://hovercraft.band/uploads/2026/8.-bob-bob-bob.m4a",
         "artwork": "https://hovercraft.band/uploads/2026/file-000000002ad4620aa201656b2a6f772a.png",
+        "visibility": "public"
+      },
+      {
+        "label": "Additional Piers version",
+        "title": "Bob Bob Bob",
+        "source": "Boscombe Philosophical Orchestra · Bandcamp",
+        "source_url": "https://boscombe-philosophical-orchestra.bandcamp.com/track/bob-bob-bob-3",
+        "note": "A further later version preserved in Piers' Boscombe Philosophical Orchestra catalogue.",
         "visibility": "public"
       }
     ]

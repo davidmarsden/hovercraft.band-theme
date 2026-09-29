@@ -89,9 +89,43 @@
     });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", ready, { once: true });
-  } else {
+  const initAlbumPlayers = () => {
+    document.querySelectorAll("[data-hc-album-player]").forEach((player) => {
+      const audio = player.querySelector("[data-hc-album-audio]");
+      const payload = player.querySelector("[data-hc-album-playlist]");
+      const label = player.querySelector("[data-hc-now-playing]");
+      const toggle = player.querySelector("[data-hc-album-toggle]");
+      const prev = player.querySelector("[data-hc-album-prev]");
+      const next = player.querySelector("[data-hc-album-next]");
+      if (!audio || !payload || !label || !toggle) return;
+      let tracks;
+      try { tracks = JSON.parse(payload.textContent); } catch (_) { return; }
+      if (!Array.isArray(tracks) || !tracks.length) return;
+      let index = 0;
+      const load = (i, autoplay = false) => {
+        index = (i + tracks.length) % tracks.length;
+        audio.src = tracks[index].src;
+        label.textContent = (index + 1) + " / " + tracks.length + " · " + tracks[index].title;
+        if (autoplay) audio.play().catch(() => {});
+      };
+      load(0);
+      toggle.addEventListener("click", () => audio.paused ? audio.play() : audio.pause());
+      prev?.addEventListener("click", () => load(index - 1, true));
+      next?.addEventListener("click", () => load(index + 1, true));
+      audio.addEventListener("ended", () => { if (index < tracks.length - 1) load(index + 1, true); });
+      audio.addEventListener("play", () => { toggle.textContent = "Pause"; });
+      audio.addEventListener("pause", () => { toggle.textContent = "Play"; });
+    });
+  };
+
+  const boot = () => {
     ready();
+    initAlbumPlayers();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
+  } else {
+    boot();
   }
 })();

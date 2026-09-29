@@ -1,0 +1,54 @@
+{{ $release := .Site.Data.releases }}
+<section class="hc-release-catalogue" aria-labelledby="hc-release-catalogue-title">
+  <header class="hc-release-catalogue__head">
+    <p class="hc-section-label">Released {{ $release.release_date }}</p>
+    <h2 id="hc-release-catalogue-title">The records<br>are out.</h2>
+    <p>Doomed To Live and Oh Yeah — complete free streaming copies. High-resolution download packages and the digital booklet are being prepared separately.</p>
+  </header>
+
+  {{ range $album := $release.albums }}
+  <article class="hc-album" id="{{ $album.id }}">
+    <header class="hc-album__head">
+      <div><p class="hc-record__type">{{ $album.format }} · 2026</p><h2>{{ $album.title }}</h2><p>{{ $album.note }}</p></div>
+      <div class="hc-album__stamp" aria-hidden="true">{{ if eq $album.id "doomed-to-live" }}19{{ else }}7{{ end }}</div>
+    </header>
+
+    {{ with $album.sides }}
+    <div class="hc-album-sides">
+      {{ range $side := . }}
+      <section class="hc-record-side">
+        <h3>{{ $side.label }}</h3>
+        <ol class="hc-record-side__tracks">
+          {{ range $track := $side.tracks }}
+          <li><div class="hc-track-row"><div class="hc-track-row__title">{{ with index $track 1 }}<a href="{{ . }}">{{ index $track 0 }}</a>{{ else }}{{ index $track 0 }}{{ end }}</div><audio controls preload="none" src="{{ index $track 2 }}">Your browser does not support audio playback.</audio></div></li>
+          {{ end }}
+        </ol>
+      </section>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $album.sequence }}
+    <section class="hc-record-side">
+      <h3>Album sequence</h3>
+      <ol class="hc-record-side__tracks">
+        {{ range $track := . }}
+        <li><div class="hc-track-row"><div class="hc-track-row__title">{{ with index $track 1 }}<a href="{{ . }}">{{ index $track 0 }}</a>{{ else }}{{ index $track 0 }}{{ end }}</div><audio controls preload="none" src="{{ index $track 2 }}">Your browser does not support audio playback.</audio></div></li>
+        {{ end }}
+      </ol>
+      <p class="hc-preview-note">The A/B side break for Oh Yeah has not yet been fixed in the canonical release metadata, so the site deliberately does not invent one.</p>
+    </section>
+    {{ end }}
+
+    {{ with $album.bonus }}
+    <section class="hc-album-bonus">
+      <p class="hc-section-label">Download edition · archival appendix</p><h3>1996 originals</h3>
+      <p>Surviving cassette recordings, remixed and remastered. These are documentary bonus tracks, not part of the seven-song mainstream sequence.</p>
+      <ol class="hc-record-side__tracks">
+        {{ range $track := . }}<li><div class="hc-track-row"><div class="hc-track-row__title"><a href="{{ index $track 3 }}">{{ index $track 0 }}</a> <em>{{ index $track 1 }}</em></div><audio controls preload="none" src="{{ index $track 2 }}">Your browser does not support audio playback.</audio></div></li>{{ end }}
+      </ol>
+    </section>
+    {{ end }}
+  </article>
+  {{ end }}
+</section>

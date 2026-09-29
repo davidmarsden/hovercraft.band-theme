@@ -16,7 +16,7 @@
       <div class="hc-album__stamp" aria-hidden="true">{{ if eq $album.id "doomed-to-live" }}19{{ else }}7{{ end }}</div>
     </header>
 
-    {{ partial "hc-player.html" (dict "album" $album) }}
+    {{ partial "hc-player.html" (dict "album" $album "site" $.Site) }}
 
     {{ with $album.sides }}
     <div class="hc-album-sides">

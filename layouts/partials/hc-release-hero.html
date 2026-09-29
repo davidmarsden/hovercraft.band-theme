@@ -14,7 +14,7 @@
   <div class="hc-hero__players">
     {{ $release := .Site.Data.releases }}
     {{ range $album := $release.albums }}
-      {{ partial "hc-player.html" (dict "album" $album "compact" true) }}
+      {{ partial "hc-player.html" (dict "album" $album "compact" true "site" $.Site) }}
     {{ end }}
   </div>
 </section>

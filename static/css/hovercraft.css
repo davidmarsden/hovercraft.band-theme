@@ -1709,3 +1709,6 @@ body::before {
   .hc-deck__tonearm { width:42%; left:43%; top:9%; }
 }
 @media (prefers-reduced-motion:reduce) { [data-hc-deck].is-playing .hc-deck__record { animation:none; } }
+
+.hc-deck__badge img { display:block; width:clamp(3.5rem,7vw,5.5rem); height:auto; margin-left:auto; filter:drop-shadow(.08rem .1rem .05rem rgba(0,0,0,.35)); }
+.hc-deck--compact .hc-deck__badge img { width:clamp(2.5rem,5vw,4rem); }

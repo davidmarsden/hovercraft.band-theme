@@ -23,7 +23,7 @@
       </div>
       <audio controls preload="metadata" data-hc-album-audio>Album playback requires audio support.</audio>
       <script type="application/json" data-hc-album-playlist>[
-        {{ $first := true }}{{ range $side := $album.sides }}{{ range $track := $side.tracks }}{{ if not $first }},{{ end }}{"title":{{ index $track 0 | jsonify }},"src":{{ index $track 2 | jsonify }}}{{ $first = false }}{{ end }}{{ end }}
+        {{ $first := true }}{{ range $side := $album.sides }}{{ range $track := $side.tracks }}{{ if not $first }},{{ end }}{"title":{{ index $track 0 | jsonify }},"src":{{ index $track 2 | jsonify }}}{{ $first = false }}{{ end }}{{ end }}{{ range $track := $album.bonus }}{{ if not $first }},{{ end }}{"title":{{ printf "%s · %s" (index $track 0) (index $track 1) | jsonify }},"src":{{ index $track 3 | jsonify }}}{{ $first = false }}{{ end }}
       ]</script>
     </section>
 

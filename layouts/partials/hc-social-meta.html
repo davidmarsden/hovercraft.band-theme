@@ -16,8 +16,8 @@
 {{ end }}
 
 {{ if .IsHome }}
-  {{ $image = "https://hovercraft.band/uploads/2026/file-0000000008148210afc4f864b16f36fe.png" }}
-  {{ $imageAlt = "Hovercraft — Doomed To Live release banner." }}
+  {{ $image = "https://hovercraft.band/images/hovercraft-social-home.svg" }}
+  {{ $imageAlt = "Hovercraft — Two Records. Doomed To Live and Oh Yeah, with original Hovercraft song artwork." }}
   {{ $description = "Doomed To Live and Oh Yeah — two new Hovercraft records, released together 5 December 2026." }}
 {{ else if and .Site.Params.hovercraft_release_live (eq .RelPermalink "/music/") }}
   {{ $image = "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png" }}

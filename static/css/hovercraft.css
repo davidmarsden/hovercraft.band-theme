@@ -1485,3 +1485,8 @@ body::before {
   font-size:.82rem;
   line-height:1.45;
 }
+
+
+.hc-song-page__video { max-width: 900px; }
+.hc-song-page__video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+.hc-song-page__video .hc-song-page__version-copy { margin-top: 1rem; }

@@ -1661,3 +1661,51 @@ body::before {
   max-height:none;
   object-fit:contain;
 }
+
+
+/* === Hovercraft Gramophone & Tape Co. player ========================== */
+.hc-deck { --deck-metal:#aaa18e; margin:2.5rem 0 4rem; max-width:58rem; }
+.hc-deck__machine { position:relative; display:grid; grid-template-columns:minmax(15rem,.9fr) minmax(16rem,1.1fr); gap:clamp(1rem,3vw,2.5rem); padding:clamp(1rem,2.5vw,2rem); border:.18rem solid var(--hc-ink); border-radius:.35rem; background:linear-gradient(115deg,#756d5f,#b7ac94 38%,#8e8370 62%,#5d574d); box-shadow:.65rem .65rem 0 var(--hc-ink),inset 0 0 0 .25rem rgba(233,224,204,.16); overflow:hidden; }
+.hc-deck__machine::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.28; background:repeating-linear-gradient(3deg,transparent 0 3px,rgba(0,0,0,.12) 3px 4px); mix-blend-mode:multiply; }
+.hc-deck__badge { position:absolute; z-index:4; top:.8rem; right:1rem; color:#211e19; text-align:right; transform:rotate(-1deg); font:900 .72rem/1 var(--hc-mono); letter-spacing:.04em; }
+.hc-deck__badge span,.hc-deck__badge strong { font-family:var(--hc-display); font-size:clamp(1.1rem,2.5vw,1.7rem); letter-spacing:-.03em; }
+.hc-deck__badge strong { color:#8d261f; }
+.hc-deck__badge small { display:block; margin-top:.2rem; font-size:.43rem; letter-spacing:.12em; }
+.hc-deck__platter { position:relative; z-index:2; display:grid; place-items:center; width:100%; aspect-ratio:1; padding:7%; border:.16rem solid #25221e; border-radius:50%; background:repeating-radial-gradient(circle,#171614 0 2px,#25231f 2px 4px); box-shadow:inset 0 0 0 .45rem #4b463d,.25rem .35rem .5rem rgba(0,0,0,.45); cursor:pointer; }
+.hc-deck__record { position:relative; display:block; width:92%; aspect-ratio:1; border-radius:50%; overflow:hidden; box-shadow:0 0 0 .25rem #171614; }
+.hc-deck__record::after { content:""; position:absolute; inset:48%; border-radius:50%; background:#171614; box-shadow:0 0 0 .16rem #d5c7aa; }
+.hc-deck__record img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.hc-deck.is-playing .hc-deck__record { animation:hc-spin 5s linear infinite; }
+@keyframes hc-spin { to { transform:rotate(360deg); } }
+.hc-deck__tonearm { position:absolute; z-index:3; width:31%; height:1.1rem; left:31%; top:10%; transform:rotate(-26deg); transform-origin:92% 50%; transition:transform .45s ease; pointer-events:none; }
+.hc-deck__tonearm span { display:block; height:.45rem; border-radius:1rem; background:linear-gradient(#ded5c3,#625b50); border:1px solid #302c27; box-shadow:.1rem .12rem .2rem rgba(0,0,0,.4); }
+.hc-deck.is-playing .hc-deck__tonearm { transform:rotate(-12deg); }
+.hc-deck__panel { position:relative; z-index:2; align-self:end; margin-top:3rem; padding:1rem; border:.12rem solid #25221e; background:#282720; box-shadow:inset .15rem .15rem .6rem #0c0c0a; color:#e6d9b8; }
+.hc-deck__display { min-height:6.5rem; padding:.75rem; border:.08rem solid #0b0b09; background:#181b14; box-shadow:inset 0 0 1rem #050504; font:700 .72rem/1.45 var(--hc-mono); color:#c7c98b; text-transform:uppercase; }
+.hc-deck__display span,.hc-deck__display strong { display:block; }
+.hc-deck__display strong { margin:.35rem 0; color:#e8dfb8; font-size:clamp(.9rem,2vw,1.15rem); }
+.hc-deck__album { color:#a9362b!important; }
+.hc-deck__transport { display:grid; grid-template-columns:1fr 1.35fr 1fr; gap:.55rem; margin:.8rem 0; }
+.hc-deck__transport button { box-shadow:none; border-color:#0c0c0a; background:#d0c2a2; }
+.hc-deck__transport .hc-deck__play { background:#a9362b; color:#f2e8d2; }
+.hc-deck__scrub { width:100%; accent-color:#a9362b; }
+.hc-deck > audio { position:absolute; width:1px; height:1px; opacity:.001; pointer-events:none; }
+.hc-hero--release { align-items:start; }
+.hc-hero__players { display:grid; gap:1.25rem; min-width:0; }
+.hc-deck--compact { margin:0; }
+.hc-deck--compact .hc-deck__machine { grid-template-columns:minmax(8rem,.9fr) minmax(10rem,1.1fr); padding:.8rem; gap:.8rem; box-shadow:.35rem .35rem 0 var(--hc-ink); }
+.hc-deck--compact .hc-deck__badge small { display:none; }
+.hc-deck--compact .hc-deck__panel { margin-top:2.2rem; padding:.55rem; }
+.hc-deck--compact .hc-deck__display { min-height:4.6rem; padding:.45rem; font-size:.58rem; }
+.hc-deck--compact .hc-deck__display strong { font-size:.72rem; }
+.hc-deck--compact .hc-deck__transport { gap:.3rem; margin:.45rem 0; }
+.hc-deck--compact .hc-deck__transport button { padding:.55rem .35rem; font-size:.58rem; }
+@media (max-width:62rem) { .hc-hero__players { margin-top:2rem; } }
+@media (max-width:44rem) {
+  .hc-deck__machine,.hc-deck--compact .hc-deck__machine { grid-template-columns:1fr; padding:1rem; }
+  .hc-deck__platter { width:min(100%,22rem); margin:2.5rem auto 0; }
+  .hc-deck__panel,.hc-deck--compact .hc-deck__panel { margin-top:0; }
+  .hc-deck__badge { top:.65rem; right:.8rem; }
+  .hc-deck__tonearm { width:42%; left:43%; top:9%; }
+}
+@media (prefers-reduced-motion:reduce) { .hc-deck.is-playing .hc-deck__record { animation:none; } }

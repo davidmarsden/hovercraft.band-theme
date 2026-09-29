@@ -19,6 +19,30 @@
     </div>
   </div>
   <audio preload="metadata" data-hc-audio>Album playback requires audio support.</audio>
+  <div data-hc-playlist hidden>
+    {{ range $side := $album.sides }}{{ range $track := $side.tracks }}<span data-hc-track data-title="{{ index $track 0 }}" data-src="{{ index $track 2 }}"></span>{{ end }}{{ end }}
+    {{ range $track := $album.bonus }}<span data-hc-track data-title="{{ index $track 0 }} · {{ index $track 1 }}" data-src="{{ index $track 3 }}"></span>{{ end }}
+  </div>e physical Hovercraft album player. Expects dict: album, compact. */}}
+{{ $album := .album }}
+{{ $compact := default false .compact }}
+<section class="hc-deck{{ if $compact }} hc-deck--compact{{ end }}" data-hc-deck data-album="{{ $album.id }}" aria-label="{{ $album.title }} album player">
+  <div class="hc-deck__machine">
+    <div class="hc-deck__badge"><img src="{{ .site.Data.releases.branding.logo_emblem }}" alt="Hovercraft"><small>GRAMOPHONE &amp; TAPE CO. · GRIMSBY</small></div>
+    <button class="hc-deck__platter" type="button" data-hc-deck-sleeve aria-label="Play {{ $album.title }}">
+      <span class="hc-deck__record"><img src="{{ $album.artwork }}" alt="{{ $album.title }} album cover"><i aria-hidden="true"></i></span>
+    </button>
+    <div class="hc-deck__tonearm" aria-hidden="true"><span></span></div>
+    <div class="hc-deck__panel">
+      <div class="hc-deck__display"><span class="hc-deck__album">{{ $album.title }}</span><strong data-hc-now-playing>Ready to play</strong><span data-hc-time>00:00 / 00:00</span></div>
+      <div class="hc-deck__transport">
+        <button type="button" data-hc-prev aria-label="Previous track">◀◀</button>
+        <button class="hc-deck__play" type="button" data-hc-toggle aria-label="Play {{ $album.title }}">PLAY</button>
+        <button type="button" data-hc-next aria-label="Next track">▶▶</button>
+      </div>
+      <input class="hc-deck__scrub" data-hc-scrub type="range" min="0" max="1000" value="0" aria-label="Playback position">
+    </div>
+  </div>
+  <audio preload="metadata" data-hc-audio>Album playback requires audio support.</audio>
   <script type="application/json" data-hc-playlist>[
     {{ $first := true }}{{ range $side := $album.sides }}{{ range $track := $side.tracks }}{{ if not $first }},{{ end }}{"title":{{ index $track 0 | jsonify }},"src":{{ index $track 2 | jsonify }}}{{ $first = false }}{{ end }}{{ end }}{{ range $track := $album.bonus }}{{ if not $first }},{{ end }}{"title":{{ printf "%s · %s" (index $track 0) (index $track 1) | jsonify }},"src":{{ index $track 3 | jsonify }}}{{ $first = false }}{{ end }}
   ]</script>

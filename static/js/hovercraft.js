@@ -140,8 +140,15 @@
         if (time) time.textContent = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);
         if (scrub && Number.isFinite(audio.duration) && audio.duration > 0) scrub.value = Math.round((audio.currentTime / audio.duration) * 1000);
       });
-      audio.addEventListener("play", () => { toggle.textContent = "PAUSE"; player.classList.add("is-playing"); });
-      audio.addEventListener("pause", () => { toggle.textContent = "PLAY"; player.classList.remove("is-playing"); });
+      const setPlaybackState = (playing) => {
+        const action = playing ? "Pause" : "Play";
+        toggle.textContent = action.toUpperCase();
+        toggle.setAttribute("aria-label", action + " " + tracks[index].title);
+        sleeve?.setAttribute("aria-label", action + " " + tracks[index].title);
+        player.classList.toggle("is-playing", playing);
+      };
+      audio.addEventListener("play", () => setPlaybackState(true));
+      audio.addEventListener("pause", () => setPlaybackState(false));
     });
   };
 

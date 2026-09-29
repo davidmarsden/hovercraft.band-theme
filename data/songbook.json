@@ -927,7 +927,13 @@
         "note": "Suno-generated from Gol's 2014 rendition; a second descendant of that source alongside the 2025 Shaken Not Stirred reconstruction.",
         "visibility": "public"
       }
-    ]
+    ],
+    "video": {
+      "label": "The Magpies · Here Now · 2012",
+      "url": "https://youtu.be/l8BL6uWWT8M?t=7m51s",
+      "embed": "https://www.youtube.com/embed/l8BL6uWWT8M?start=471",
+      "note": "Piers performing Here Now with The Magpies in 2012. The only surviving video currently known of any of the musicians playing one of these songs."
+    }
   },
   "oh-yeah": {
     "writer": "Piers Wildman",

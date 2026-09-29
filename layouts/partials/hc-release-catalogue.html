@@ -16,16 +16,7 @@
       <div class="hc-album__stamp" aria-hidden="true">{{ if eq $album.id "doomed-to-live" }}19{{ else }}7{{ end }}</div>
     </header>
 
-    <section class="hc-album-player" data-hc-album-player>
-      <div class="hc-album-player__head">
-        <div><p class="hc-section-label">Play the album</p><strong data-hc-now-playing>Ready</strong></div>
-        <div class="hc-album-player__controls"><button type="button" data-hc-album-prev aria-label="Previous track">←</button><button type="button" data-hc-album-toggle>Play</button><button type="button" data-hc-album-next aria-label="Next track">→</button></div>
-      </div>
-      <audio controls preload="metadata" data-hc-album-audio>Album playback requires audio support.</audio>
-      <script type="application/json" data-hc-album-playlist>[
-        {{ $first := true }}{{ range $side := $album.sides }}{{ range $track := $side.tracks }}{{ if not $first }},{{ end }}{"title":{{ index $track 0 | jsonify }},"src":{{ index $track 2 | jsonify }}}{{ $first = false }}{{ end }}{{ end }}{{ range $track := $album.bonus }}{{ if not $first }},{{ end }}{"title":{{ printf "%s · %s" (index $track 0) (index $track 1) | jsonify }},"src":{{ index $track 3 | jsonify }}}{{ $first = false }}{{ end }}
-      ]</script>
-    </section>
+    {{ partial "hc-player.html" (dict "album" $album) }}
 
     {{ with $album.sides }}
     <div class="hc-album-sides">

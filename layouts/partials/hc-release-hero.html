@@ -11,8 +11,10 @@
       <a class="hc-button" href="/story/">The story</a>
     </div>
   </div>
-  <div class="hc-hero__art hc-hero__art--release" aria-hidden="true">
-    <figure class="hc-release-cover hc-release-cover--one"><img src="https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png" alt="Doomed To Live album cover"></figure>
-    <figure class="hc-release-cover hc-release-cover--two"><img src="https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png" alt="Oh Yeah album cover"></figure>
+  <div class="hc-hero__players">
+    {{ $release := .Site.Data.releases }}
+    {{ range $album := $release.albums }}
+      {{ partial "hc-player.html" (dict "album" $album "compact" true) }}
+    {{ end }}
   </div>
 </section>

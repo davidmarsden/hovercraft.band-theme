@@ -122,28 +122,32 @@
             ]
           ]
         }
-      ]
+      ],
+      "artwork": "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png"
     },
     {
       "id": "oh-yeah",
       "title": "Oh Yeah",
       "format": "Companion album",
-      "note": "Seven reconstructed songs across two sides. Three surviving 1996 recordings are download-only archival bonuses.",
+      "note": "Seven reconstructed songs across two sides. Three surviving 1996 recordings are site-streamable archival bonuses, excluded from the official mainstream streaming release.",
       "bonus": [
         [
           "Concrete Hill",
           "1996 demo · remixed/remastered",
-          "/lyrics/concrete-hill/"
+          "/lyrics/concrete-hill/",
+          "https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a"
         ],
         [
           "New Pine Overcoat",
           "1996 demo · remixed/remastered",
-          "/lyrics/new-pine-overcoat/"
+          "/lyrics/new-pine-overcoat/",
+          "https://hovercraft.band/uploads/2026/9.-new-pine-overcoat-1996-demo-remastered.m4a"
         ],
         [
           "To The Grave",
           "1996 demo · remixed/remastered",
-          "/lyrics/to-the-grave/"
+          "/lyrics/to-the-grave/",
+          "https://hovercraft.band/uploads/2026/10.-to-the-grave-1996-demo-remastered.m4a"
         ]
       ],
       "sides": [
@@ -192,7 +196,8 @@
             ]
           ]
         }
-      ]
+      ],
+      "artwork": "https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png"
     }
   ]
 }

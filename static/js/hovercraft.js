@@ -90,31 +90,58 @@
   };
 
   const initAlbumPlayers = () => {
-    document.querySelectorAll("[data-hc-album-player]").forEach((player) => {
-      const audio = player.querySelector("[data-hc-album-audio]");
-      const payload = player.querySelector("[data-hc-album-playlist]");
+    const formatTime = (seconds) => {
+      if (!Number.isFinite(seconds)) return "00:00";
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    };
+
+    document.querySelectorAll("[data-hc-deck]").forEach((player) => {
+      const audio = player.querySelector("[data-hc-audio]");
+      const payload = player.querySelector("[data-hc-playlist]");
       const label = player.querySelector("[data-hc-now-playing]");
-      const toggle = player.querySelector("[data-hc-album-toggle]");
-      const prev = player.querySelector("[data-hc-album-prev]");
-      const next = player.querySelector("[data-hc-album-next]");
+      const time = player.querySelector("[data-hc-time]");
+      const toggle = player.querySelector("[data-hc-toggle]");
+      const sleeve = player.querySelector("[data-hc-deck-sleeve]");
+      const prev = player.querySelector("[data-hc-prev]");
+      const next = player.querySelector("[data-hc-next]");
+      const scrub = player.querySelector("[data-hc-scrub]");
       if (!audio || !payload || !label || !toggle) return;
+
       let tracks;
       try { tracks = JSON.parse(payload.textContent); } catch (_) { return; }
       if (!Array.isArray(tracks) || !tracks.length) return;
       let index = 0;
+
       const load = (i, autoplay = false) => {
         index = (i + tracks.length) % tracks.length;
         audio.src = tracks[index].src;
-        label.textContent = (index + 1) + " / " + tracks.length + " · " + tracks[index].title;
+        label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + tracks[index].title;
+        if (scrub) scrub.value = 0;
+        if (time) time.textContent = "00:00 / 00:00";
         if (autoplay) audio.play().catch(() => {});
       };
+      const togglePlayback = () => audio.paused ? audio.play().catch(() => {}) : audio.pause();
+
       load(0);
-      toggle.addEventListener("click", () => audio.paused ? audio.play() : audio.pause());
+      toggle.addEventListener("click", togglePlayback);
+      sleeve?.addEventListener("click", togglePlayback);
       prev?.addEventListener("click", () => load(index - 1, true));
       next?.addEventListener("click", () => load(index + 1, true));
-      audio.addEventListener("ended", () => { if (index < tracks.length - 1) load(index + 1, true); });
-      audio.addEventListener("play", () => { toggle.textContent = "Pause"; });
-      audio.addEventListener("pause", () => { toggle.textContent = "Play"; });
+      scrub?.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration) && audio.duration > 0) audio.currentTime = (Number(scrub.value) / 1000) * audio.duration;
+      });
+      audio.addEventListener("ended", () => {
+        if (index < tracks.length - 1) load(index + 1, true);
+        else { audio.pause(); audio.currentTime = 0; }
+      });
+      audio.addEventListener("timeupdate", () => {
+        if (time) time.textContent = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);
+        if (scrub && Number.isFinite(audio.duration) && audio.duration > 0) scrub.value = Math.round((audio.currentTime / audio.duration) * 1000);
+      });
+      audio.addEventListener("play", () => { toggle.textContent = "PAUSE"; player.classList.add("is-playing"); });
+      audio.addEventListener("pause", () => { toggle.textContent = "PLAY"; player.classList.remove("is-playing"); });
     });
   };
 

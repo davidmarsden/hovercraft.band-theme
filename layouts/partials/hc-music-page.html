@@ -19,7 +19,7 @@
       <p class="hc-page-deck">A few full tracks before the curtain goes up. The complete records remain under wraps until 5 December.</p>
       <div class="hc-preview-grid">
         {{ range (slice "superman" "cool-jerk" "oh-yeah") }}{{ $song := index $.Site.Data.songbook . }}
-        <article class="hc-preview">{{ with $song.artwork }}<img src="{{ . }}" alt="">{{ end }}<div class="hc-preview__copy"><p class="hc-record__type">Advance listen · full track</p><h3>{{ if eq . "superman" }}Superman{{ else if eq . "cool-jerk" }}Cool Jerk{{ else }}Oh Yeah{{ end }}</h3><audio controls preload="metadata" src="{{ $song.release.audio }}">Your browser does not support audio playback.</audio></div></article>
+        <article class="hc-preview">{{ $previewArt := $song.track_artwork | default $song.lyrics_artwork }}{{ with $previewArt }}<img src="{{ . }}" alt="">{{ end }}<div class="hc-preview__copy"><p class="hc-record__type">Advance listen · full track</p><h3>{{ if eq . "superman" }}Superman{{ else if eq . "cool-jerk" }}Cool Jerk{{ else }}Oh Yeah{{ end }}</h3><audio controls preload="metadata" src="{{ $song.release.audio }}">Your browser does not support audio playback.</audio></div></article>
         {{ end }}
       </div>
     </section>

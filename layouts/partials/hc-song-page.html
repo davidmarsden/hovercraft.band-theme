@@ -25,7 +25,7 @@
         {{ if $isCover }}
           <div class="hc-song-page__rights-note">
             <strong>COVER VERSION.</strong>
-            <p>The words are not reproduced here.</p>
+            {{ with $song }}{{ with .writer }}<p>Written by {{ . }}. The words are not reproduced here.</p>{{ end }}{{ with .about }}<p>{{ . }}</p>{{ end }}{{ else }}<p>The words are not reproduced here.</p>{{ end }}
           </div>
         {{ else }}
           <div class="hc-song-page__content">
@@ -53,8 +53,8 @@
           {{ $visibility := "" }}
           {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
           {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (eq $visibility "release") }}
-          {{ if and $song.artwork $canHear }}
-            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ if and $song.track_artwork $canHear }}
+            <img src="{{ $song.track_artwork }}" alt="{{ .Title }} artwork">
           {{ end }}
           {{ if and $song.release $canHear }}
             {{ with $song.release.audio }}
@@ -127,8 +127,8 @@
           {{ $visibility := "" }}
           {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
           {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (and $releaseLive (eq $visibility "release")) }}
-          {{ if and $song.artwork $canHear }}
-            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ if and $song.track_artwork $canHear }}
+            <img src="{{ $song.track_artwork }}" alt="{{ .Title }} artwork">
           {{ end }}
           {{ if and $song.release $canHear }}
             {{ with $song.release.audio }}
@@ -201,8 +201,8 @@
           {{ $visibility := "" }}
           {{ with $song.release }}{{ $visibility = .visibility }}{{ end }}
           {{ $canHear := or (eq $visibility "public") (eq $visibility "advance") (eq $visibility "release") }}
-          {{ if and $song.artwork $canHear }}
-            <img src="{{ $song.artwork }}" alt="{{ .Title }} artwork">
+          {{ if and $song.track_artwork $canHear }}
+            <img src="{{ $song.track_artwork }}" alt="{{ .Title }} artwork">
           {{ end }}
           {{ if and $song.release $canHear }}
             {{ with $song.release.audio }}
@@ -297,21 +297,21 @@
       {{ with $song.release }}{{ $artVisibility = .visibility }}{{ end }}
       {{ $artPublic := or (eq $artVisibility "public") (eq $artVisibility "advance") }}
       {{ if $releaseLive }}
-        {{ with $song.artwork }}
+        {{ with $song.lyrics_artwork }}
           <section class="hc-song-page__evidence-archive hc-song-page__artwork" aria-labelledby="hc-song-artwork">
             <div class="hc-song-page__dossier-head"><p class="hc-section-label">04 / The artwork</p><h2 id="hc-song-artwork">Visualising the song.</h2></div>
             <div class="hc-song-page__art-grid">
               {{ if reflect.IsSlice . }}{{ range . }}<figure class="hc-song-page__lyric-art"><a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a><figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption></figure>{{ end }}
-              {{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a><figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption></figure>{{ end }}
+              {{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.lyrics_artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a><figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption></figure>{{ end }}
             </div>
           </section>
         {{ end }}
       {{ else }}
         <div data-hc-public>
-          {{ if $artPublic }}{{ with $song.artwork }}<section class="hc-song-page__evidence-archive hc-song-page__artwork" aria-labelledby="hc-song-artwork-public"><div class="hc-song-page__dossier-head"><p class="hc-section-label">04 / The artwork</p><h2 id="hc-song-artwork-public">Visualising the song.</h2></div><div class="hc-song-page__art-grid">{{ if reflect.IsSlice . }}{{ range . }}<figure class="hc-song-page__lyric-art"><a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a><figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption></figure>{{ end }}{{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a></figure>{{ end }}</div></section>{{ end }}{{ end }}
+          {{ if $artPublic }}{{ with $song.lyrics_artwork }}<section class="hc-song-page__evidence-archive hc-song-page__artwork" aria-labelledby="hc-song-artwork-public"><div class="hc-song-page__dossier-head"><p class="hc-section-label">04 / The artwork</p><h2 id="hc-song-artwork-public">Visualising the song.</h2></div><div class="hc-song-page__art-grid">{{ if reflect.IsSlice . }}{{ range . }}<figure class="hc-song-page__lyric-art"><a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a><figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption></figure>{{ end }}{{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.lyrics_artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a></figure>{{ end }}</div></section>{{ end }}{{ end }}
         </div>
         <div data-hc-release hidden>
-          {{ with $song.artwork }}<section class="hc-song-page__evidence-archive hc-song-page__artwork" aria-labelledby="hc-song-artwork-release"><div class="hc-song-page__dossier-head"><p class="hc-section-label">04 / The artwork</p><h2 id="hc-song-artwork-release">Visualising the song.</h2></div><div class="hc-song-page__art-grid">{{ if reflect.IsSlice . }}{{ range . }}<figure class="hc-song-page__lyric-art"><a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a><figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption></figure>{{ end }}{{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a><figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption></figure>{{ end }}</div></section>{{ end }}
+          {{ with $song.lyrics_artwork }}<section class="hc-song-page__evidence-archive hc-song-page__artwork" aria-labelledby="hc-song-artwork-release"><div class="hc-song-page__dossier-head"><p class="hc-section-label">04 / The artwork</p><h2 id="hc-song-artwork-release">Visualising the song.</h2></div><div class="hc-song-page__art-grid">{{ if reflect.IsSlice . }}{{ range . }}<figure class="hc-song-page__lyric-art"><a href="{{ .image }}"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></a><figcaption><strong>{{ .label }}</strong>{{ with .note }}<span>{{ . }}</span>{{ end }}</figcaption></figure>{{ end }}{{ else }}<figure class="hc-song-page__lyric-art"><a href="{{ . }}"><img src="{{ . }}" alt="{{ with $song.lyrics_artwork_alt }}{{ . }}{{ else }}{{ $.Title }} song artwork{{ end }}" loading="lazy"></a><figcaption>2026 song artwork · part sleeve, part lyric sheet, part recovered-flyer mythology.</figcaption></figure>{{ end }}</div></section>{{ end }}
         </div>
       {{ end }}
     {{ end }}

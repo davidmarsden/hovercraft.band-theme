@@ -62,8 +62,9 @@
         "status": "confirmed"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/image-20260809175134.jpg",
-    "artwork_alt": "A collage of handwritten song lyrics titled Hovercraft To The Grave, vintage photos, clocks, and various old paper scraps creating a nostalgic and melancholic atmosphere."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/image-20260809175134.jpg",
+    "lyrics_artwork_alt": "A collage of handwritten song lyrics titled Hovercraft To The Grave, vintage photos, clocks, and various old paper scraps creating a nostalgic and melancholic atmosphere.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-000000007fbc81f4b939dbc3e7062d44.png"
   },
   "mr-tooting-brown": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -123,8 +124,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/image-20260807142925.jpg",
-    "artwork_alt": "A vintage rock 'n' roll-themed setup features a poster of Mr. Tooting Brown, a man in sunglasses and a leather jacket, alongside a crown, a vinyl record, handwritten lyrics, a bottle labeled Rock 'N' Roll, and a syringe on a rustic wooden table."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/image-20260807142925.jpg",
+    "lyrics_artwork_alt": "A vintage rock 'n' roll-themed setup features a poster of Mr. Tooting Brown, a man in sunglasses and a leather jacket, alongside a crown, a vinyl record, handwritten lyrics, a bottle labeled Rock 'N' Roll, and a syringe on a rustic wooden table.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000adc081f49746de457bab59d9.png"
   },
   "white-limousine": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -174,8 +176,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/2ad8438a7d.jpg",
-    "artwork_alt": "A vintage white limousine is parked on a dimly lit street with retro neon signs and a collage of handwritten song lyrics, photographs, and a glass of whiskey in the foreground."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/2ad8438a7d.jpg",
+    "lyrics_artwork_alt": "A vintage white limousine is parked on a dimly lit street with retro neon signs and a collage of handwritten song lyrics, photographs, and a glass of whiskey in the foreground.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000345081f487b493542e570855.png"
   },
   "crazy": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -227,8 +230,8 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/image-20260807142921.jpg",
-    "artwork_alt": "The image features a grungy, vintage-looking collage with song lyrics titled CRAZY, a black-and-white photo of a woman with tears, an ashtray with cigarette butts, pills labeled CRAZY PILLS, a lipstick, and various labeled items including a ticket and a badge with phrases like ROCK 'N' ROLL IS REAL BIZARRE and ATMOSPHERE IS EVERYTHING."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/image-20260807142921.jpg",
+    "lyrics_artwork_alt": "The image features a grungy, vintage-looking collage with song lyrics titled CRAZY, a black-and-white photo of a woman with tears, an ashtray with cigarette butts, pills labeled CRAZY PILLS, a lipstick, and various labeled items including a ticket and a badge with phrases like ROCK 'N' ROLL IS REAL BIZARRE and ATMOSPHERE IS EVERYTHING."
   },
   "concrete-hill": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -312,8 +315,8 @@
         "status": "confirmed"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/image-20260808153339.jpg",
-    "artwork_alt": "A weathered, nostalgic collage features handwritten lyrics titled Concrete Hill, a vintage bus ticket, an old photo, a can of Tennent's lager, sunglasses, and an urban outdoor scene with people in the background."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/image-20260808153339.jpg",
+    "lyrics_artwork_alt": "A weathered, nostalgic collage features handwritten lyrics titled Concrete Hill, a vintage bus ticket, an old photo, a can of Tennent's lager, sunglasses, and an urban outdoor scene with people in the background."
   },
   "superman": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -326,7 +329,6 @@
       "audio": "https://hovercraft.band/uploads/2026/6.-superman.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000045881f4af9fdfd78a910e19.png",
     "evidence": [
       {
         "label": "Handwritten song sheet",
@@ -375,7 +377,9 @@
         "visibility": "public"
       }
     ],
-    "artwork_alt": "A vintage, gritty collage features the word SUPERMAN, handwritten poetic lyrics about wanting to be a hero and fly, an old telephone booth, urban city scenes, and a glass of whiskey on the rocks."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000045881f4af9fdfd78a910e19.png",
+    "lyrics_artwork_alt": "A vintage, gritty collage features the word SUPERMAN, handwritten poetic lyrics about wanting to be a hero and fly, an old telephone booth, urban city scenes, and a glass of whiskey on the rocks.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000ff1881f4969a1cf090c57a29-web.jpg"
   },
   "these-days": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -419,8 +423,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000451081f499a621817b2b9990.png",
-    "artwork_alt": "A vintage-style collage features lyrics from the song These Days by Madness, a cityscape with a man relaxing, a classic car with keys, and various handwritten notes and quotes."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000451081f499a621817b2b9990.png",
+    "lyrics_artwork_alt": "A vintage-style collage features lyrics from the song These Days by Madness, a cityscape with a man relaxing, a classic car with keys, and various handwritten notes and quotes.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-000000000c6081f4b618b65f4aa3dcbe4.jpg"
   },
   "killer-blues": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -469,8 +474,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000001ef882309f032e838b268274.png",
-    "artwork_alt": "The image is a gritty collage featuring the title Killer Blues with handwritten lyrics or poetry, sepia-toned photos of urban scenes and a toilet, and elements like whiskey bottles, pills, and notes conveying themes of despair, addiction, and loss."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-000000001ef882309f032e838b268274.png",
+    "lyrics_artwork_alt": "The image is a gritty collage featuring the title Killer Blues with handwritten lyrics or poetry, sepia-toned photos of urban scenes and a toilet, and elements like whiskey bottles, pills, and notes conveying themes of despair, addiction, and loss.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg"
   },
   "pass-the-night-nurse": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -511,8 +517,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000aeec81f48d24c5d01911dc6f.png",
-    "artwork_alt": "A vintage-style collage featuring a bottle of Night Nurse cough medicine, handwritten notes and lyrics about coping with trauma, a prescription label, and various messages related to drug use, mental health, and social issues."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000aeec81f48d24c5d01911dc6f.png",
+    "lyrics_artwork_alt": "A vintage-style collage featuring a bottle of Night Nurse cough medicine, handwritten notes and lyrics about coping with trauma, a prescription label, and various messages related to drug use, mental health, and social issues.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-000000009274820aa17653054ed36d9a.png"
   },
   "new-pine-overcoat": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -585,8 +592,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000be908243acbb26dd4b13636a.png",
-    "artwork_alt": "A group of four people are gathered in a dimly lit room, playing guitars and surrounded by various music-related memorabilia and handwritten lyrics."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000be908243acbb26dd4b13636a.png",
+    "lyrics_artwork_alt": "A group of four people are gathered in a dimly lit room, playing guitars and surrounded by various music-related memorabilia and handwritten lyrics.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/8c071e6b49.jpg"
   },
   "cool-jerk": {
     "writer": "Donald Storball",
@@ -618,7 +626,8 @@
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-cool-jerk-2024-10-06-08-16.m4a",
         "visibility": "public"
       }
-    ]
+    ],
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png"
   },
   "sweet-thing": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -651,8 +660,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000983c81fba85b73bfb1428304.png",
-    "artwork_alt": "A vintage-style collage features a sepia-toned photo of a contemplative woman sitting by a window, surrounded by handwritten lyrics titled Sweet Thing, a pocket watch, a dried rose, and motivational phrases about time and patience."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000983c81fba85b73bfb1428304.png",
+    "lyrics_artwork_alt": "A vintage-style collage features a sepia-toned photo of a contemplative woman sitting by a window, surrounded by handwritten lyrics titled Sweet Thing, a pocket watch, a dried rose, and motivational phrases about time and patience.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000494c8246953652d9503d9bcc2.jpg"
   },
   "keep-it-together": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -685,8 +695,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000047c820a8cd83ec79f5e45a2.png",
-    "artwork_alt": "A distressed person sits alone on a bench in a dimly lit area at night, surrounded by handwritten notes expressing feelings of pain, loneliness, and self-doubt with phrases like KEEP IT TOGETHER, I'M IN PIECES, and I JUST CAN'T SEEM TO LOOK THEM IN THE EYE."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000047c820a8cd83ec79f5e45a2.png",
+    "lyrics_artwork_alt": "A distressed person sits alone on a bench in a dimly lit area at night, surrounded by handwritten notes expressing feelings of pain, loneliness, and self-doubt with phrases like KEEP IT TOGETHER, I'M IN PIECES, and I JUST CAN'T SEEM TO LOOK THEM IN THE EYE.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-0000000091c881f4bb23712c44f1f519.png"
   },
   "i-love-you-and-i": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -720,8 +731,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000ea58824691ae83ced85dc085.png",
-    "artwork_alt": "A vintage scrapbook page features heartfelt lyrics titled I LOVE YOU AND I DON'T WANT YOU TO DIE, alongside sepia-toned photos of a couple, a glass of whiskey, a pocket watch, and scattered notes with emotional phrases."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000ea58824691ae83ced85dc085.png",
+    "lyrics_artwork_alt": "A vintage scrapbook page features heartfelt lyrics titled I LOVE YOU AND I DON'T WANT YOU TO DIE, alongside sepia-toned photos of a couple, a glass of whiskey, a pocket watch, and scattered notes with emotional phrases.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000b09c81f484f1d6663374e8bb.png"
   },
   "indie-kid": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -773,8 +785,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000e1dc81f49b6513fc046231d9.png",
-    "artwork_alt": "A grungy collage features lyrics from the song Indie Kid, vintage black-and-white photos, a cigarette-filled ashtray, and references to punk culture such as Teen Beat magazine and Teenage Wasteland."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000e1dc81f49b6513fc046231d9.png",
+    "lyrics_artwork_alt": "A grungy collage features lyrics from the song Indie Kid, vintage black-and-white photos, a cigarette-filled ashtray, and references to punk culture such as Teen Beat magazine and Teenage Wasteland.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000e98881f4ad4a17db29769e14.png"
   },
   "now-youre-god-dying-comes": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -808,8 +821,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000002ab881f4b4cbe0cf2353bd9c.png",
-    "artwork_alt": "A dark-themed collage features handwritten song lyrics titled Now You're God and Dying Comes So Easy, with photos, a crown, backstage passes, a cassette tape, a dried rose, a razor blade, and a headline about a rock star's death."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-000000002ab881f4b4cbe0cf2353bd9c.png",
+    "lyrics_artwork_alt": "A dark-themed collage features handwritten song lyrics titled Now You're God and Dying Comes So Easy, with photos, a crown, backstage passes, a cassette tape, a dried rose, a razor blade, and a headline about a rock star's death.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/44a1505122.jpg"
   },
   "take-it-or-leave-it": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -869,8 +883,8 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000be0881f4b4705d4dc5adcfa5.png",
-    "artwork_alt": "A vintage-style collage features handwritten lyrics titled Take It or Leave It, a photograph of a road with a Follow the Sun sign, peace symbols, and messages promoting love, unity, and non-violence."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000be0881f4b4705d4dc5adcfa5.png",
+    "lyrics_artwork_alt": "A vintage-style collage features handwritten lyrics titled Take It or Leave It, a photograph of a road with a Follow the Sun sign, peace symbols, and messages promoting love, unity, and non-violence."
   },
   "here-now": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -932,8 +946,9 @@
       "embed": "https://www.youtube.com/embed/l8BL6uWWT8M?start=471",
       "note": "Piers performing Here Now with The Magpies in 2012. The only surviving video currently known of any of the musicians playing one of these songs."
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000ff5881f4a0ab38307193121d.png",
-    "artwork_alt": "A vintage-style collage features the handwritten lyrics to the song Here Now surrounded by notes, a coffee cup, a pen, a guitar pick, and sepia-toned photographs of a rainy window and a messy bed."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000ff5881f4a0ab38307193121d.png",
+    "lyrics_artwork_alt": "A vintage-style collage features the handwritten lyrics to the song Here Now surrounded by notes, a coffee cup, a pen, a guitar pick, and sepia-toned photographs of a rainy window and a messy bed.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/f546ae6a99.png"
   },
   "oh-yeah": {
     "writer": "Piers Wildman",
@@ -946,7 +961,6 @@
       "audio": "https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a",
       "visibility": "advance"
     },
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000c9d882438f3ec7bb54054029.png",
     "evidence": [
       {
         "label": "Original set list",
@@ -986,7 +1000,8 @@
         "visibility": "public"
       }
     ],
-    "artwork_alt": "A vintage-style scene featuring a voodoo doll, a record player with a spinning vinyl, a seductive black-and-white pin-up photo marked with lipstick kisses, and various weathered objects, all set against a graffiti-covered wall with handwritten notes."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000c9d882438f3ec7bb54054029.png",
+    "lyrics_artwork_alt": "A vintage-style scene featuring a voodoo doll, a record player with a spinning vinyl, a seductive black-and-white pin-up photo marked with lipstick kisses, and various weathered objects, all set against a graffiti-covered wall with handwritten notes."
   },
   "bring-my-baby-back": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1037,8 +1052,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000001ccc820ab4141ab5889b0dcd.png",
-    "artwork_alt": "A vintage-style collage features a distressed man walking by a No Vacancy hotel sign, a torn missing person poster asking for help to find my baby, handwritten lyrics titled BRING MY BABY BACK, a vinyl record, and a shot glass, all conveying a theme of loss and longing."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-000000001ccc820ab4141ab5889b0dcd.png",
+    "lyrics_artwork_alt": "A vintage-style collage features a distressed man walking by a No Vacancy hotel sign, a torn missing person poster asking for help to find my baby, handwritten lyrics titled BRING MY BABY BACK, a vinyl record, and a shot glass, all conveying a theme of loss and longing.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000b7d081f4bc4fb56a0db154b6.png"
   },
   "low": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1080,8 +1096,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000003f9081f4b82014b79c95fc5a.png",
-    "artwork_alt": "A notebook page with handwritten lyrics titled LOW, accompanied by photographs, guitar picks, and torn notes expressing themes of loneliness and heartbreak."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-000000003f9081f4b82014b79c95fc5a.png",
+    "lyrics_artwork_alt": "A notebook page with handwritten lyrics titled LOW, accompanied by photographs, guitar picks, and torn notes expressing themes of loneliness and heartbreak.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000bf808243850db83e78c6a0a7.png"
   },
   "my-own-little-world": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1113,8 +1130,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/image-20260809175136.jpg",
-    "artwork_alt": "A collage of handwritten lyrics, drawings, photographs, and mementos revolves around the theme My Own Little World by Hovercraft."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/image-20260809175136.jpg",
+    "lyrics_artwork_alt": "A collage of handwritten lyrics, drawings, photographs, and mementos revolves around the theme My Own Little World by Hovercraft.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-0000000062d481f494b4d57c07a0735d.png"
   },
   "bob-bob-bob": {
     "writer": "Piers \"Charlie Pepper\" Wildman",
@@ -1176,8 +1194,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-00000000af2881f4b6381ee61997024f.png",
-    "artwork_alt": "A handwritten note featuring lyrics or a poem titled Bob Bob Bob, surrounded by nostalgic items including a worn photo, a David Bowie LP cover, a bottle of Old Crow whiskey, and a sketched portrait."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-00000000af2881f4b6381ee61997024f.png",
+    "lyrics_artwork_alt": "A handwritten note featuring lyrics or a poem titled Bob Bob Bob, surrounded by nostalgic items including a worn photo, a David Bowie LP cover, a bottle of Old Crow whiskey, and a sketched portrait.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000e55c8246922d44bc89ff2b4f.png"
   },
   "season-of-the-witch": {
     "writer": "Donovan Leitch",
@@ -1250,8 +1269,9 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-0000000081a881f482f3bf285a55bd1d.png",
-    "artwork_alt": "A vintage-style collage features handwritten lyrics titled ANGEL, a teddy bear with a tag, a black-and-white photograph of a person in a rainy street, an electric guitar, matches, a lighter, a dried flower, an access pass, and a journal labeled Kurt Cobain Journals."
+    "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-0000000081a881f482f3bf285a55bd1d.png",
+    "lyrics_artwork_alt": "A vintage-style collage features handwritten lyrics titled ANGEL, a teddy bear with a tag, a black-and-white photograph of a person in a rainy street, an electric guitar, matches, a lighter, a dried flower, an access pass, and a journal labeled Kurt Cobain Journals.",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-000000004a5482468e88bcbb93451dc32.jpg"
   },
   "the-promised-land": {
     "writer": "Piers \"Charlie Pepper\" Wildman & David Marsden",
@@ -1321,6 +1341,7 @@
         "visibility": "public"
       }
     ],
-    "artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg"
+    "artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg",
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-000000007b5c81f4b501e82630a6ecd93.jpg"
   }
 }

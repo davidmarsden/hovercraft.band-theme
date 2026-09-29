@@ -1631,3 +1631,33 @@ body::before {
 .hc-song-page__art-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap:2rem; }
 .hc-song-page__lyric-art figcaption strong,.hc-song-page__lyric-art figcaption span { display:block; }
 .hc-song-page__lyric-art figcaption span { margin-top:.4rem; text-transform:none; letter-spacing:0; line-height:1.5; }
+
+
+/* Song artwork hierarchy: sleeve in the rail, lyric collage in the archive. */
+.hc-song-page__artwork {
+  align-items:start;
+}
+.hc-song-page__artwork .hc-song-page__dossier-head {
+  min-width:0;
+  max-width:100%;
+}
+.hc-song-page__artwork h2 {
+  max-width:100%;
+  font-size:clamp(3rem,5vw,5.5rem);
+  overflow-wrap:anywhere;
+}
+.hc-song-page__art-grid {
+  min-width:0;
+  align-self:start;
+}
+.hc-song-page__lyric-art {
+  width:100%;
+  max-width:none;
+  margin:0;
+}
+.hc-song-page__lyric-art img {
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+}

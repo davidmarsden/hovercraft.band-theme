@@ -6,19 +6,39 @@
     <p class="hc-page-deck">Hovercraft disappeared in 1996. The songs didn't. Here is what has escaped so far.</p>
   </header>
 
-  <section class="hc-release-tease" aria-labelledby="hc-coming-title">
-    <div>
-      <p class="hc-section-label">Coming in time for Xmas</p>
-      <h2 id="hc-coming-title">Two records.</h2>
-      <p>Thirty years in the making. Probably far too many songs.</p>
-    </div>
-    <div class="hc-release-tease__marks" aria-hidden="true"><span>?</span><span>?</span></div>
+  {{ if .Site.Params.hovercraft_release_live }}
+  <section class="hc-release-tease hc-release-tease--live" aria-labelledby="hc-release-title">
+    <div><p class="hc-section-label">Out now · 5 December 2026</p><h2 id="hc-release-title">Doomed To Live<br>+ Oh Yeah.</h2><p>Two records. Thirty years in the making.</p></div>
+    <div class="hc-release-tease__marks" aria-hidden="true"><span>19</span><span>7</span></div>
   </section>
+  {{ else }}
+  <div data-hc-public>
+    <section class="hc-release-tease" aria-labelledby="hc-coming-title">
+      <div>
+        <p class="hc-section-label">Coming in time for Xmas</p>
+        <h2 id="hc-coming-title">Two records.</h2>
+        <p>Thirty years in the making. Probably far too many songs.</p>
+      </div>
+      <div class="hc-release-tease__marks" aria-hidden="true"><span>?</span><span>?</span></div>
+    </section>
+  </div>
+  <div data-hc-release hidden>
+    <section class="hc-release-tease hc-release-tease--live" aria-labelledby="hc-release-title">
+      <div><p class="hc-section-label">Out now · 5 December 2026</p><h2 id="hc-release-title">Doomed To Live<br>+ Oh Yeah.</h2><p>Two records. Thirty years in the making.</p></div>
+      <div class="hc-release-tease__marks" aria-hidden="true"><span>19</span><span>7</span></div>
+    </section>
+  </div>
+  {{ end }}
 
   <section class="hc-music-section" aria-labelledby="hc-hear-now">
     <p class="hc-section-label">01 / Advance transmission</p>
     <h2 id="hc-hear-now">Three songs<br>escaped early.</h2>
-    <p class="hc-page-deck">Three short songs from the two records arriving in December. Full tracks, streaming here early — not singles, not the release masters. Consider this evidence.</p>
+    {{ if .Site.Params.hovercraft_release_live }}
+    <p class="hc-page-deck">The December records are out. The full release players and downloads will live here as we finish the release package.</p>
+    {{ else }}
+    <p class="hc-page-deck" data-hc-public>Three short songs from the two records arriving in December. Full tracks, streaming here early — not singles, not the release masters. Consider this evidence.</p>
+    <p class="hc-page-deck" data-hc-release hidden>The December records are out. The full release players and downloads will live here as we finish the release package.</p>
+    {{ end }}
 
     <div class="hc-preview-grid">
       <article class="hc-preview">

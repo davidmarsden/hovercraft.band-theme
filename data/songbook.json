@@ -878,7 +878,7 @@
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original · written 2009",
     "about": "The emotional ending of Doomed To Live. After an album full of roads and escape, it turns towards presence and repair instead.",
-    "archive": "Piers wrote the song in 2009 as an act of amends. It was revisited in 2013–14 before returning to Hovercraft in 2026.",
+    "archive": "Piers wrote the song in 2009 and sent Gol the original recording on CD. Gol's 2014 rendition was based on that recording and later became the source for both the 2025 Shaken Not Stirred reconstruction and Gol's 2026 Suno rendition. Piers later published his version through the Boscombe Philosophical Orchestra in 2015; that recording became the source for the Oh Yeah reconstruction.",
     "release": {
       "album": "Doomed To Live",
       "track": 19,
@@ -893,7 +893,7 @@
         "year": 2014,
         "source": "Gol · originally published on SoundCloud",
         "audio": "https://hovercraft.band/uploads/2026/here-now.mp3",
-        "note": "Based on Piers' 2009 recording and used as the source for the 2025 Shaken Not Stirred reconstruction.",
+        "note": "Based on Piers' 2009 recording. This 2014 rendition became the source for both the 2025 Shaken Not Stirred reconstruction and Gol's 2026 Suno rendition.",
         "visibility": "public",
         "source_url": "https://soundcloud.com/dmarsd/here-now"
       },
@@ -924,10 +924,16 @@
         "source": "Gol · davidmarsden.info",
         "source_url": "https://davidmarsden.info/music/",
         "audio": "https://davidmarsden.info/uploads/2026/here-now-5.m4a",
-        "note": "A separate 2026 Suno version, distinct from the 2014 source rendition and the Hovercraft release recordings.",
+        "note": "Suno-generated from Gol's 2014 rendition; a second descendant of that source alongside the 2025 Shaken Not Stirred reconstruction.",
         "visibility": "public"
       }
-    ]
+    ],
+    "video": {
+      "label": "The Magpies · Here Now · 2012",
+      "url": "https://youtu.be/l8BL6uWWT8M?t=7m51s",
+      "embed": "https://www.youtube.com/embed/l8BL6uWWT8M?start=471",
+      "note": "Piers performing Here Now with The Magpies in 2012. The only surviving video currently known of any of the musicians playing one of these songs."
+    }
   },
   "oh-yeah": {
     "writer": "Piers Wildman",

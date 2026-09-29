@@ -9,6 +9,9 @@
   {{ range $album := $release.albums }}
   <article class="hc-album" id="{{ $album.id }}">
     <header class="hc-album__head">
+      <div>
+        {{ with $album.artwork }}<img class="hc-album__cover" src="{{ . }}" alt="{{ $album.title }} album cover" loading="lazy">{{ end }}
+      </div>
       <div><p class="hc-record__type">{{ $album.format }} · 2026</p><h2>{{ $album.title }}</h2><p>{{ $album.note }}</p></div>
       <div class="hc-album__stamp" aria-hidden="true">{{ if eq $album.id "doomed-to-live" }}19{{ else }}7{{ end }}</div>
     </header>
@@ -30,10 +33,10 @@
 
     {{ with $album.bonus }}
     <section class="hc-album-bonus">
-      <p class="hc-section-label">Download-only · archival appendix</p><h3>1996 originals</h3>
-      <p>Three surviving cassette recordings, remixed and remastered. They are documentary bonus tracks in the download edition only — not part of the seven-song album and not streamed here.</p>
+      <p class="hc-section-label">Website bonus tracks · archival appendix</p><h3>1996 originals</h3>
+      <p>Three surviving cassette recordings, remixed and remastered. Stream them here and include them in the download edition; they are not part of the official seven-track mainstream streaming release.</p>
       <ol class="hc-record-side__tracks">
-        {{ range $track := . }}<li><div class="hc-track-row"><div class="hc-track-row__title"><a href="{{ index $track 2 }}">{{ index $track 0 }}</a> <em>{{ index $track 1 }} · download only</em></div></div></li>{{ end }}
+        {{ range $track := . }}<li><div class="hc-track-row"><div class="hc-track-row__title"><a href="{{ index $track 2 }}">{{ index $track 0 }}</a> <em>{{ index $track 1 }} · site/download bonus</em></div><audio controls preload="none" src="{{ index $track 3 }}">Your browser does not support audio playback.</audio></div></li>{{ end }}
       </ol>
     </section>
     {{ end }}

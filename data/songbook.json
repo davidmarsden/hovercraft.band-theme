@@ -62,20 +62,8 @@
         "status": "confirmed"
       }
     ],
-    "artwork": [
-      {
-        "image": "https://hovercraft.band/uploads/2026/file-00000000a1fc82469c31bc48f4c34c77.png",
-        "alt": "A weathered scrapbook-style collage features the album title Hovercraft To The Grave, handwritten lyrics on open notebook pages, vintage photos, and assorted nostalgic ephemera like train tickets, a compass, and a lighter.",
-        "label": "Regenerated version lyric artwork",
-        "note": "Lyrics sheet for the shortened regenerated form used by the Suno-derived recordings, omitting the original final two verses and final chorus."
-      },
-      {
-        "image": "https://hovercraft.band/uploads/2026/image-20260809175134.jpg",
-        "alt": "A collage of handwritten song lyrics titled Hovercraft To The Grave, vintage photos, clocks, and various old paper scraps creating a nostalgic and melancholic atmosphere.",
-        "label": "1996 original lyric artwork",
-        "note": "Full original lyric form: the 8+ minute version including the additional final two verses and final chorus."
-      }
-    ]
+    "artwork": "https://hovercraft.band/uploads/2026/image-20260809175134.jpg",
+    "artwork_alt": "A collage of handwritten song lyrics titled Hovercraft To The Grave, vintage photos, clocks, and various old paper scraps creating a nostalgic and melancholic atmosphere."
   },
   "mr-tooting-brown": {
     "writer": "Piers \"Charlie Pepper\" Wildman",

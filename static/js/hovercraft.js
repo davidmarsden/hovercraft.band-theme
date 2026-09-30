@@ -3,6 +3,8 @@
   const PREVIEW_PARAM = "preview";
   const PREVIEW_PHRASE = "ron-and-david-december-preview";
   const PREVIEW_KEY = "hovercraftReleasePreview";
+  const NEEDLE_DOWN_SRC = "https://hovercraft.band/uploads/2026/kamhunt-vinyl-noise-amp-needle-on-record-144154.mp3";
+  const NEEDLE_UP_SRC = "https://hovercraft.band/uploads/2026/freesound-community-record-deck-needle-up-46220.mp3";
 
   const releaseIsLive = () =>
     document.documentElement.dataset.hovercraftReleaseLive === "true";
@@ -28,7 +30,6 @@
     const url = new URL(window.location.href);
     const supplied = url.searchParams.get(PREVIEW_PARAM);
     if (!supplied) return;
-
     if (supplied === PREVIEW_PHRASE) setPreview(true);
     url.searchParams.delete(PREVIEW_PARAM);
     window.history.replaceState({}, "", url.pathname + url.search + url.hash);
@@ -37,25 +38,16 @@
   const applyReleaseState = () => {
     const preview = previewIsActive() && !releaseIsLive();
     const release = releaseIsLive() || preview;
-
     document.documentElement.classList.toggle("hc-release-state", release);
     document.documentElement.classList.toggle("hc-release-preview", preview);
-
-    document.querySelectorAll("[data-hc-public]").forEach((el) => {
-      el.hidden = release;
-    });
-    document.querySelectorAll("[data-hc-release]").forEach((el) => {
-      el.hidden = !release;
-    });
-
+    document.querySelectorAll("[data-hc-public]").forEach((el) => { el.hidden = release; });
+    document.querySelectorAll("[data-hc-release]").forEach((el) => { el.hidden = !release; });
     document.querySelector(".hc-preview-banner")?.remove();
     if (!preview) return;
-
     const banner = document.createElement("aside");
     banner.className = "hc-preview-banner";
     banner.setAttribute("role", "status");
-    banner.innerHTML =
-      '<strong>Release preview</strong><span>5 December 2026</span><button type="button">Exit preview</button>';
+    banner.innerHTML = '<strong>Release preview</strong><span>5 December 2026</span><button type="button">Exit preview</button>';
     banner.querySelector("button").addEventListener("click", () => {
       setPreview(false);
       window.location.reload();
@@ -67,7 +59,6 @@
     consumePreviewToken();
     applyReleaseState();
     document.body.classList.add("hc-ready");
-
     const legacyHeader = document.querySelector("body > header, .site-header");
     const legacyNav = document.querySelector("body > nav.site-nav, body > nav");
     const legacyFooter = document.querySelector("body > footer, .site-footer");
@@ -76,15 +67,12 @@
     if (hcHeader && legacyHeader && legacyHeader !== hcHeader) legacyHeader.hidden = true;
     if (hcHeader && legacyNav && !hcHeader.contains(legacyNav)) legacyNav.hidden = true;
     if (hcFooter && legacyFooter && legacyFooter !== hcFooter) legacyFooter.hidden = true;
-
     const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
     document.querySelectorAll("nav a[href]").forEach((link) => {
       try {
         const url = new URL(link.href, window.location.origin);
         const path = url.pathname.replace(/\/$/, "") || "/";
-        if (url.origin === window.location.origin && path === currentPath) {
-          link.setAttribute("aria-current", "page");
-        }
+        if (url.origin === window.location.origin && path === currentPath) link.setAttribute("aria-current", "page");
       } catch (_) {}
     });
   };
@@ -117,9 +105,66 @@
         artworkAlt: node.dataset.artworkAlt || ""
       })).filter((track) => track.src);
       if (!tracks.length) return;
+
       let index = 0;
+      let transitionToken = 0;
+      let pendingStart = false;
+      const effectGeneration = new WeakMap();
+      const needleDown = new Audio(NEEDLE_DOWN_SRC);
+      const needleUp = new Audio(NEEDLE_UP_SRC);
+      needleDown.preload = "auto";
+      needleUp.preload = "auto";
+      needleDown.volume = 0.32;
+      needleUp.volume = 0.28;
+
+      const stopEffect = (effect) => {
+        effectGeneration.set(effect, (effectGeneration.get(effect) || 0) + 1);
+        effect.pause();
+        try { effect.currentTime = 0; } catch (_) {}
+      };
+
+      const playEffect = (effect, maxMs = 850) => {
+        stopEffect(effect);
+        const generation = effectGeneration.get(effect) || 0;
+        effect.play().catch(() => {});
+        return new Promise((resolve) => window.setTimeout(() => {
+          if ((effectGeneration.get(effect) || 0) === generation) stopEffect(effect);
+          resolve();
+        }, maxMs));
+      };
+
+      const cancelPendingStart = () => {
+        transitionToken++;
+        pendingStart = false;
+        player.classList.remove("is-needle-moving");
+        stopEffect(needleDown);
+        if (audio.muted) {
+          audio.pause();
+          audio.currentTime = 0;
+          audio.muted = false;
+        }
+      };
+
+      const startWithNeedle = async () => {
+        const token = ++transitionToken;
+        pendingStart = true;
+        player.classList.add("is-needle-moving");
+        // Start the real track while click/tap activation is still available (iOS Safari).
+        audio.muted = true;
+        const started = audio.play().then(() => true).catch(() => false);
+        await playEffect(needleDown, 700);
+        if (token !== transitionToken) return;
+        const didStart = await started;
+        if (token !== transitionToken) return;
+        pendingStart = false;
+        player.classList.remove("is-needle-moving");
+        audio.currentTime = 0;
+        audio.muted = false;
+        if (!didStart) audio.play().catch(() => {});
+      };
 
       const load = (i, autoplay = false) => {
+        cancelPendingStart();
         index = (i + tracks.length) % tracks.length;
         const track = tracks[index];
         audio.src = track.src;
@@ -130,9 +175,23 @@
         }
         if (scrub) scrub.value = 0;
         if (time) time.textContent = "00:00 / 00:00";
-        if (autoplay) audio.play().catch(() => {});
+        if (autoplay) startWithNeedle();
       };
-      const togglePlayback = () => audio.paused ? audio.play().catch(() => {}) : audio.pause();
+
+      const togglePlayback = () => {
+        if (pendingStart) {
+          cancelPendingStart();
+          return;
+        }
+        if (!audio.paused) {
+          transitionToken++;
+          audio.pause();
+          playEffect(needleUp, 450);
+          return;
+        }
+        if (audio.currentTime < 0.15) startWithNeedle();
+        else audio.play().catch(() => {});
+      };
 
       load(0);
       toggle.addEventListener("click", togglePlayback);
@@ -144,7 +203,12 @@
       });
       audio.addEventListener("ended", () => {
         if (index < tracks.length - 1) load(index + 1, true);
-        else { audio.pause(); audio.currentTime = 0; }
+        else {
+          cancelPendingStart();
+          audio.pause();
+          audio.currentTime = 0;
+          playEffect(needleUp, 450);
+        }
       });
       audio.addEventListener("timeupdate", () => {
         if (time) time.textContent = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);

@@ -1,0 +1,35 @@
+/* Responsive typography fixes from Ron's desktop QA. */
+
+/* Keep the two-line release slogan punchy without letting Impact glyphs collide. */
+.hc-hero--release .hc-hero__copy h1 {
+  line-height: .82;
+  letter-spacing: -.045em;
+}
+
+/* Advance-listen titles need their own vertical box; don't let large display
+   type visually intrude into the next card/title at intermediate widths. */
+.hc-preview {
+  min-width: 0;
+}
+.hc-preview h3 {
+  line-height: .96;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+@media (min-width: 48.01rem) and (max-width: 90rem) {
+  .hc-hero--release .hc-hero__copy h1 {
+    font-size: clamp(5rem, 10vw, 8.25rem);
+    line-height: .84;
+  }
+  .hc-preview h3 {
+    font-size: clamp(2rem, 3.6vw, 3.5rem);
+    line-height: 1;
+  }
+}
+
+@media (max-width: 48rem) {
+  .hc-hero--release .hc-hero__copy h1 {
+    line-height: .82;
+  }
+}

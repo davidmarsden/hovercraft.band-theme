@@ -1,11 +1,12 @@
 {{/* Reusable physical Hovercraft album player. Expects dict: album, compact, site. */}}
 {{ $album := .album }}
+{{ $site := .site }}
 {{ $compact := default false .compact }}
 <section class="hc-deck{{ if $compact }} hc-deck--compact{{ end }}" data-hc-deck data-album="{{ $album.id }}" aria-label="{{ $album.title }} album player">
   <div class="hc-deck__machine">
-    <div class="hc-deck__badge"><img src="{{ .site.Data.releases.branding.logo_emblem }}" alt="Hovercraft"><small>GRAMOPHONE &amp; TAPE CO. · GRIMSBY</small></div>
+    <div class="hc-deck__badge"><img src="{{ $site.Data.releases.branding.logo_emblem }}" alt="Hovercraft"><small>GRAMOPHONE &amp; TAPE CO. · GRIMSBY</small></div>
     <button class="hc-deck__platter" type="button" data-hc-deck-sleeve aria-label="Play {{ $album.title }}">
-      <span class="hc-deck__record"><img src="{{ $album.artwork }}" alt="{{ $album.title }} album cover"><i aria-hidden="true"></i></span>
+      <span class="hc-deck__record"><img src="{{ $album.artwork }}" alt="{{ $album.title }} album cover" data-hc-disc-art><i aria-hidden="true"></i></span>
     </button>
     <div class="hc-deck__tonearm" aria-hidden="true"><span></span></div>
     <div class="hc-deck__panel">
@@ -20,7 +21,7 @@
   </div>
   <audio preload="metadata" data-hc-audio>Album playback requires audio support.</audio>
   <div data-hc-playlist hidden>
-    {{ range $side := $album.sides }}{{ range $track := $side.tracks }}<span data-hc-track data-title="{{ index $track 0 }}" data-src="{{ index $track 2 }}"></span>{{ end }}{{ end }}
-    {{ range $track := $album.bonus }}<span data-hc-track data-title="{{ index $track 0 }} · {{ index $track 1 }}" data-src="{{ index $track 3 }}"></span>{{ end }}
+    {{ range $side := $album.sides }}{{ range $track := $side.tracks }}{{ $slug := path.Base (strings.TrimSuffix "/" (index $track 1)) }}{{ $song := index $site.Data.songbook $slug }}{{ $registered := index $site.Data.release_track_artwork $slug }}{{ $art := $album.artwork }}{{ $artAlt := printf "%s album cover" $album.title }}{{ with $song.track_artwork }}{{ $art = . }}{{ $artAlt = printf "%s track artwork" (index $track 0) }}{{ end }}{{ with $registered }}{{ $art = .url }}{{ $artAlt = .alt }}{{ end }}<span data-hc-track data-title="{{ index $track 0 }}" data-src="{{ index $track 2 }}" data-artwork="{{ $art }}" data-artwork-alt="{{ $artAlt }}"></span>{{ end }}{{ end }}
+    {{ range $track := $album.bonus }}{{ $slug := path.Base (strings.TrimSuffix "/" (index $track 2)) }}{{ $song := index $site.Data.songbook $slug }}{{ $registered := index $site.Data.release_track_artwork $slug }}{{ $art := $album.artwork }}{{ $artAlt := printf "%s album cover" $album.title }}{{ with $song.track_artwork }}{{ $art = . }}{{ $artAlt = printf "%s track artwork" (index $track 0) }}{{ end }}{{ with $registered }}{{ $art = .url }}{{ $artAlt = .alt }}{{ end }}<span data-hc-track data-title="{{ index $track 0 }} · {{ index $track 1 }}" data-src="{{ index $track 3 }}" data-artwork="{{ $art }}" data-artwork-alt="{{ $artAlt }}"></span>{{ end }}
   </div>
 </section>

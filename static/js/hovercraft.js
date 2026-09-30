@@ -104,6 +104,7 @@
       const time = player.querySelector("[data-hc-time]");
       const toggle = player.querySelector("[data-hc-toggle]");
       const sleeve = player.querySelector("[data-hc-deck-sleeve]");
+      const discArt = player.querySelector("[data-hc-disc-art]");
       const prev = player.querySelector("[data-hc-prev]");
       const next = player.querySelector("[data-hc-next]");
       const scrub = player.querySelector("[data-hc-scrub]");
@@ -111,15 +112,22 @@
 
       const tracks = Array.from(trackNodes, (node) => ({
         title: node.dataset.title || "Untitled",
-        src: node.dataset.src || ""
+        src: node.dataset.src || "",
+        artwork: node.dataset.artwork || "",
+        artworkAlt: node.dataset.artworkAlt || ""
       })).filter((track) => track.src);
       if (!tracks.length) return;
       let index = 0;
 
       const load = (i, autoplay = false) => {
         index = (i + tracks.length) % tracks.length;
-        audio.src = tracks[index].src;
-        label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + tracks[index].title;
+        const track = tracks[index];
+        audio.src = track.src;
+        label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + track.title;
+        if (discArt && track.artwork) {
+          discArt.src = track.artwork;
+          discArt.alt = track.artworkAlt || track.title + " track artwork";
+        }
         if (scrub) scrub.value = 0;
         if (time) time.textContent = "00:00 / 00:00";
         if (autoplay) audio.play().catch(() => {});

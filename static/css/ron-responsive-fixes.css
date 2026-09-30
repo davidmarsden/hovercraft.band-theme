@@ -10,7 +10,6 @@
    type visually intrude into the next card/title at intermediate widths. */
 .hc-preview {
   min-width: 0;
-  overflow: hidden;
 }
 .hc-preview h3 {
   line-height: .96;
@@ -32,8 +31,5 @@
 @media (max-width: 48rem) {
   .hc-hero--release .hc-hero__copy h1 {
     line-height: .82;
-  }
-  .hc-preview {
-    overflow: visible;
   }
 }

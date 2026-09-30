@@ -19,16 +19,13 @@
     try {
       if (enabled) window.localStorage.setItem(PREVIEW_KEY, "true");
       else window.localStorage.removeItem(PREVIEW_KEY);
-    } catch (_) {
-      // localStorage can be unavailable in restrictive/private contexts.
-    }
+    } catch (_) {}
   };
 
   const consumePreviewToken = () => {
     const url = new URL(window.location.href);
     const supplied = url.searchParams.get(PREVIEW_PARAM);
     if (!supplied) return;
-
     if (supplied === PREVIEW_PHRASE) setPreview(true);
     url.searchParams.delete(PREVIEW_PARAM);
     window.history.replaceState({}, "", url.pathname + url.search + url.hash);
@@ -37,29 +34,17 @@
   const applyReleaseState = () => {
     const preview = previewIsActive() && !releaseIsLive();
     const release = releaseIsLive() || preview;
-
     document.documentElement.classList.toggle("hc-release-state", release);
     document.documentElement.classList.toggle("hc-release-preview", preview);
-
-    document.querySelectorAll("[data-hc-public]").forEach((el) => {
-      el.hidden = release;
-    });
-    document.querySelectorAll("[data-hc-release]").forEach((el) => {
-      el.hidden = !release;
-    });
-
+    document.querySelectorAll("[data-hc-public]").forEach((el) => { el.hidden = release; });
+    document.querySelectorAll("[data-hc-release]").forEach((el) => { el.hidden = !release; });
     document.querySelector(".hc-preview-banner")?.remove();
     if (!preview) return;
-
     const banner = document.createElement("aside");
     banner.className = "hc-preview-banner";
     banner.setAttribute("role", "status");
-    banner.innerHTML =
-      '<strong>Release preview</strong><span>5 December 2026</span><button type="button">Exit preview</button>';
-    banner.querySelector("button").addEventListener("click", () => {
-      setPreview(false);
-      window.location.reload();
-    });
+    banner.innerHTML = '<strong>Release preview</strong><span>5 December 2026</span><button type="button">Exit preview</button>';
+    banner.querySelector("button").addEventListener("click", () => { setPreview(false); window.location.reload(); });
     document.body.prepend(banner);
   };
 
@@ -67,7 +52,6 @@
     consumePreviewToken();
     applyReleaseState();
     document.body.classList.add("hc-ready");
-
     const legacyHeader = document.querySelector("body > header, .site-header");
     const legacyNav = document.querySelector("body > nav.site-nav, body > nav");
     const legacyFooter = document.querySelector("body > footer, .site-footer");
@@ -76,15 +60,12 @@
     if (hcHeader && legacyHeader && legacyHeader !== hcHeader) legacyHeader.hidden = true;
     if (hcHeader && legacyNav && !hcHeader.contains(legacyNav)) legacyNav.hidden = true;
     if (hcFooter && legacyFooter && legacyFooter !== hcFooter) legacyFooter.hidden = true;
-
     const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
     document.querySelectorAll("nav a[href]").forEach((link) => {
       try {
         const url = new URL(link.href, window.location.origin);
         const path = url.pathname.replace(/\/$/, "") || "/";
-        if (url.origin === window.location.origin && path === currentPath) {
-          link.setAttribute("aria-current", "page");
-        }
+        if (url.origin === window.location.origin && path === currentPath) link.setAttribute("aria-current", "page");
       } catch (_) {}
     });
   };
@@ -104,6 +85,7 @@
       const time = player.querySelector("[data-hc-time]");
       const toggle = player.querySelector("[data-hc-toggle]");
       const sleeve = player.querySelector("[data-hc-deck-sleeve]");
+      const discArt = player.querySelector("[data-hc-disc-art]");
       const prev = player.querySelector("[data-hc-prev]");
       const next = player.querySelector("[data-hc-next]");
       const scrub = player.querySelector("[data-hc-scrub]");
@@ -111,15 +93,21 @@
 
       const tracks = Array.from(trackNodes, (node) => ({
         title: node.dataset.title || "Untitled",
-        src: node.dataset.src || ""
+        src: node.dataset.src || "",
+        artwork: node.dataset.artwork || ""
       })).filter((track) => track.src);
       if (!tracks.length) return;
       let index = 0;
 
       const load = (i, autoplay = false) => {
         index = (i + tracks.length) % tracks.length;
-        audio.src = tracks[index].src;
-        label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + tracks[index].title;
+        const track = tracks[index];
+        audio.src = track.src;
+        label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + track.title;
+        if (discArt && track.artwork) {
+          discArt.src = track.artwork;
+          discArt.alt = track.title + " track artwork";
+        }
         if (scrub) scrub.value = 0;
         if (time) time.textContent = "00:00 / 00:00";
         if (autoplay) audio.play().catch(() => {});
@@ -154,14 +142,7 @@
     });
   };
 
-  const boot = () => {
-    ready();
-    initAlbumPlayers();
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot, { once: true });
-  } else {
-    boot();
-  }
+  const boot = () => { ready(); initAlbumPlayers(); };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot, { once: true });
+  else boot();
 })();

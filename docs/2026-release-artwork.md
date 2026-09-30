@@ -12,6 +12,22 @@ This file records the canonical visual assets used by the Hovercraft 2026 releas
 - Archival bonuses use explicit `-1996` artwork registrations, preventing the 1996 New Pine Overcoat, To The Grave and Concrete Hill recordings from inheriting their 2026 song covers.
 - Lyrics collage artwork is separate from track/sleeve artwork and is not used as a player substitute unless explicitly registered as track artwork.
 
+## Confirmed album sleeves — 30 September 2026
+
+### Doomed To Live
+
+Canonical URL: `https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png`
+
+Description: musician singing into a microphone while playing electric guitar, with bold Doomed To Live / Hovercraft typography.
+
+### Oh Yeah
+
+Canonical URL: `https://hovercraft.band/uploads/2026/de642fc16e.png`
+
+Description: five figures in marching-band uniforms looking down toward the camera, with Hovercraft at the top and Oh Yeah at the bottom.
+
+This is the **Oh Yeah companion-album sleeve**. It is distinct from the Oh Yeah song/track cover below.
+
 ## Confirmed 2026 track covers — 30 September 2026
 
 ### Crazy
@@ -56,4 +72,4 @@ Needle effects model an album side rather than individual digital files. Needle-
 
 ## Related branding assets
 
-The central release register (`data/releases.json`) contains the canonical Hovercraft circular and square logos and the release banners. Album sleeves belong there; track and archival artwork belongs in the track-artwork register.
+The central release register (`data/releases.json`) contains the canonical album sleeves, Hovercraft circular and square logos and release banners. Track and archival artwork belongs in the track-artwork register.

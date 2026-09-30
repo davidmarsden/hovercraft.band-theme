@@ -10,18 +10,17 @@
     document.documentElement.dataset.hovercraftReleaseLive === "true";
 
   const previewIsActive = () => {
-    try {
-      return window.localStorage.getItem(PREVIEW_KEY) === "true";
-    } catch (_) {
-      return false;
-    }
+    try { return window.localStorage.getItem(PREVIEW_KEY) === "true"; }
+    catch (_) { return false; }
   };
 
   const setPreview = (enabled) => {
     try {
       if (enabled) window.localStorage.setItem(PREVIEW_KEY, "true");
       else window.localStorage.removeItem(PREVIEW_KEY);
-    } catch (_) {}
+    } catch (_) {
+      // localStorage can be unavailable in restrictive/private contexts.
+    }
   };
 
   const consumePreviewToken = () => {
@@ -96,11 +95,14 @@
       const tracks = Array.from(trackNodes, (node) => ({
         title: node.dataset.title || "Untitled",
         src: node.dataset.src || "",
-        artwork: node.dataset.artwork || ""
+        artwork: node.dataset.artwork || "",
+        artworkAlt: node.dataset.artworkAlt || ""
       })).filter((track) => track.src);
       if (!tracks.length) return;
+
       let index = 0;
       let transitionToken = 0;
+      let pendingStart = false;
       const needleDown = new Audio(NEEDLE_DOWN_SRC);
       const needleUp = new Audio(NEEDLE_UP_SRC);
       needleDown.preload = "auto";
@@ -108,31 +110,47 @@
       needleDown.volume = 0.32;
       needleUp.volume = 0.28;
 
-      const playEffect = (effect, maxMs = 850) => {
+      const stopEffect = (effect) => {
         effect.pause();
-        effect.currentTime = 0;
+        try { effect.currentTime = 0; } catch (_) {}
+      };
+
+      const playEffect = (effect, maxMs = 850) => {
+        stopEffect(effect);
         effect.play().catch(() => {});
-        return new Promise((resolve) => window.setTimeout(resolve, maxMs));
+        return new Promise((resolve) => window.setTimeout(() => {
+          stopEffect(effect);
+          resolve();
+        }, maxMs));
+      };
+
+      const cancelPendingStart = () => {
+        transitionToken++;
+        pendingStart = false;
+        player.classList.remove("is-needle-moving");
+        stopEffect(needleDown);
       };
 
       const startWithNeedle = async () => {
         const token = ++transitionToken;
+        pendingStart = true;
         player.classList.add("is-needle-moving");
         await playEffect(needleDown, 700);
         if (token !== transitionToken) return;
+        pendingStart = false;
         player.classList.remove("is-needle-moving");
         audio.play().catch(() => {});
       };
 
       const load = (i, autoplay = false) => {
-        transitionToken++;
+        cancelPendingStart();
         index = (i + tracks.length) % tracks.length;
         const track = tracks[index];
         audio.src = track.src;
         label.textContent = String(index + 1).padStart(2, "0") + " / " + tracks.length + " · " + track.title;
         if (discArt && track.artwork) {
           discArt.src = track.artwork;
-          discArt.alt = track.title + " track artwork";
+          discArt.alt = track.artworkAlt || track.title + " track artwork";
         }
         if (scrub) scrub.value = 0;
         if (time) time.textContent = "00:00 / 00:00";
@@ -140,6 +158,10 @@
       };
 
       const togglePlayback = () => {
+        if (pendingStart) {
+          cancelPendingStart();
+          return;
+        }
         if (!audio.paused) {
           transitionToken++;
           audio.pause();
@@ -161,7 +183,7 @@
       audio.addEventListener("ended", () => {
         if (index < tracks.length - 1) load(index + 1, true);
         else {
-          transitionToken++;
+          cancelPendingStart();
           audio.pause();
           audio.currentTime = 0;
           playEffect(needleUp, 450);

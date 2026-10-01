@@ -10,59 +10,70 @@
     <h2 id="photos-intro-title">Not a gallery.<br>A box of photographs.</h2>
     <div class="hc-prose">
       <p>Hovercraft existed before everybody carried a camera. What survives is uneven: rehearsal rooms, live shots, scans, rediscovered prints and newer photographs from the return.</p>
-      <p>Dates and captions are included where we know them. Gaps are part of the story.</p>
+      <p>The archive is curated rather than scraped from every post: people, live photographs, press cuttings, drawings, handwritten song sheets, set lists and the other debris that survived.</p>
     </div>
   </section>
 
-  <section class="hc-photo-source" aria-labelledby="photo-source-title">
-    <div class="hc-photo-source__head">
-      <p class="hc-section-label">Photographs</p>
-      <h2 id="photo-source-title">From the archive</h2>
-    </div>
+  {{/* Micro.blog exposes photo collections to Hugo at .Site.Data.collections.
+       Collection names are normalised to filename-style keys, so the existing
+       “Pierss drawings” collection is pierssdrawings while its public label can
+       correctly read “Piers’s drawings”. */}}
+  {{ $groups := slice
+    (dict "label" "People" "collections" (slice
+      (dict "key" "ron" "title" "Ron")
+      (dict "key" "dan" "title" "Dan")
+      (dict "key" "gol" "title" "Gol")
+      (dict "key" "piers" "title" "Piers")
+    ))
+    (dict "label" "Band & history" "collections" (slice
+      (dict "key" "liveband" "title" "Live band")
+      (dict "key" "newspaperclips" "title" "Newspaper clips")
+      (dict "key" "miscellaneous" "title" "Miscellaneous")
+    ))
+    (dict "label" "Paper trail" "collections" (slice
+      (dict "key" "songsheets" "title" "Song sheets")
+      (dict "key" "pierssdrawings" "title" "Piers’s drawings")
+      (dict "key" "pressreleases" "title" "Press releases")
+      (dict "key" "setlists" "title" "Set lists")
+      (dict "key" "lyrics" "title" "Lyrics")
+    ))
+  }}
 
-    {{/* Micro.blog's /photos/ output is a synthetic list page: its own .Content is
-         normally empty. Build the contact sheet from genuine posts that contain
-         images instead, keeping each photograph tied to its original permalink. */}}
-    {{ $posts := where .Site.RegularPages "Type" "post" }}
-    {{ $photos := slice }}
-    {{ range $posts.ByDate.Reverse }}
-      {{ if findRE `<img[[:space:]][^>]*src=` .Content 1 }}
-        {{ $photos = $photos | append . }}
-      {{ end }}
-    {{ end }}
+  <div class="hc-photo-collections">
+    {{ range $groups }}
+      {{ $group := . }}
+      <section class="hc-photo-group" aria-labelledby="photos-{{ $group.label | anchorize }}">
+        <div class="hc-photo-group__head">
+          <p class="hc-section-label">Visual archive</p>
+          <h2 id="photos-{{ $group.label | anchorize }}">{{ $group.label }}</h2>
+        </div>
 
-    <div class="hc-photo-grid h-feed">
-      {{ range $photos }}
-        {{ $post := . }}
-        {{ $images := findRE `<img[[:space:]][^>]*>` $post.Content }}
-        {{ range $images }}
-          {{ $img := . }}
-          {{ $srcMatches := findRESubmatch `src=["']([^"']+)["']` $img 1 }}
-          {{ if $srcMatches }}
-            {{/* These values come from rendered HTML. Decode entities once before
-                 Hugo escapes them into the new attributes, avoiding &amp;amp; URLs
-                 and corrupted alt text. */}}
-            {{ $src := index (index $srcMatches 0) 1 | htmlUnescape }}
-            {{ $alt := "" }}
-            {{ $altMatches := findRESubmatch `alt=["']([^"']*)["']` $img 1 }}
-            {{ if $altMatches }}{{ $alt = index (index $altMatches 0) 1 | htmlUnescape }}{{ end }}
-            <figure class="hc-photo-card h-entry">
-              <a class="hc-photo-card__image u-url" href="{{ $post.RelPermalink }}">
-                <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
-              </a>
-              <figcaption>
-                <time class="dt-published" datetime="{{ $post.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $post.Date.Format "2 Jan 2006" }}</time>
-                {{ with $post.Title }}<span class="p-name">{{ . }}</span>{{ end }}
-                <a class="hc-photo-card__open" href="{{ $post.RelPermalink }}">Open transmission →</a>
-              </figcaption>
-            </figure>
+        <div class="hc-photo-group__collections">
+          {{ range $group.collections }}
+            {{ $collection := index $.Site.Data.collections .key }}
+            {{ if $collection }}
+              <section class="hc-photo-collection" aria-labelledby="collection-{{ .key }}">
+                <header class="hc-photo-collection__head">
+                  <h3 id="collection-{{ .key }}">{{ .title }}</h3>
+                  <p>{{ len $collection }} {{ if eq (len $collection) 1 }}image{{ else }}images{{ end }}</p>
+                </header>
+                <div class="hc-photo-grid microblog_collection" data-collection="{{ .key }}">
+                  {{ range $collection }}
+                    {{ $url := .url }}
+                    {{ with $url }}
+                      <a class="hc-photo-card__image" href="{{ . | safeURL }}" data-microblog-lightbox="{{ . | safeURL }}">
+                        <img src="{{ . | safeURL }}" alt="" loading="lazy" decoding="async">
+                      </a>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </section>
+            {{ end }}
           {{ end }}
-        {{ end }}
-      {{ else }}
-        <p class="hc-photo-empty">No photographs found yet.</p>
-      {{ end }}
-    </div>
-  </section>
+        </div>
+      </section>
+    {{ end }}
+  </div>
 
   <aside class="hc-photos-note">
     <p class="hc-kicker">Have something we have lost?</p>

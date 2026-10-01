@@ -19,8 +19,44 @@
       <p class="hc-section-label">Photographs</p>
       <h2 id="photo-source-title">From the archive</h2>
     </div>
-    <div class="hc-photo-source__content hc-prose">
-      {{ .Content }}
+
+    {{/* Micro.blog's /photos/ output is a synthetic list page: its own .Content is
+         normally empty. Build the contact sheet from genuine posts that contain
+         images instead, keeping each photograph tied to its original permalink. */}}
+    {{ $posts := where .Site.RegularPages "Type" "post" }}
+    {{ $photos := slice }}
+    {{ range $posts.ByDate.Reverse }}
+      {{ if findRE `<img[[:space:]][^>]*src=` .Content 1 }}
+        {{ $photos = $photos | append . }}
+      {{ end }}
+    {{ end }}
+
+    <div class="hc-photo-grid h-feed">
+      {{ range $photos }}
+        {{ $images := findRE `<img[[:space:]][^>]*>` .Content }}
+        {{ range $images }}
+          {{ $srcMatches := findRESubmatch `src=["']([^"']+)["']` . 1 }}
+          {{ if $srcMatches }}
+            {{ $src := index (index $srcMatches 0) 1 }}
+            {{ $alt := "" }}
+            {{ $altMatches := findRESubmatch `alt=["']([^"']*)["']` . 1 }}
+            {{ if $altMatches }}{{ $alt = index (index $altMatches 0) 1 }}{{ end }}
+            <figure class="hc-photo-card h-entry">
+              <a class="u-url" href="{{ $.Site.BaseURL | default "/" }}{{ strings.TrimPrefix "/" .Page.RelPermalink }}" hidden></a>
+              <a class="hc-photo-card__image" href="{{ .Page.RelPermalink }}">
+                <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+              </a>
+              <figcaption>
+                <time class="dt-published" datetime="{{ .Page.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Page.Date.Format "2 Jan 2006" }}</time>
+                {{ with .Page.Title }}<span class="p-name">{{ . }}</span>{{ end }}
+                <a class="hc-photo-card__open" href="{{ .Page.RelPermalink }}">Open transmission →</a>
+              </figcaption>
+            </figure>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        <p class="hc-photo-empty">No photographs found yet.</p>
+      {{ end }}
     </div>
   </section>
 

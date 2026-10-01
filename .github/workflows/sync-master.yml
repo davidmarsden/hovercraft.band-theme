@@ -1,0 +1,42 @@
+name: Sync main to master
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-main-to-master
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fast-forward master to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main master
+
+          # Never overwrite independent work on master. If master is not an
+          # ancestor of main, fail loudly and require a manual reconciliation.
+          if ! git merge-base --is-ancestor origin/master origin/main; then
+            echo "::error::master has diverged from main; refusing to force-update it."
+            exit 1
+          fi
+
+          if [ "$(git rev-parse origin/master)" = "$(git rev-parse origin/main)" ]; then
+            echo "master is already in sync with main."
+            exit 0
+          fi
+
+          git push origin origin/main:refs/heads/master

@@ -9,7 +9,7 @@
     <p class="hc-section-label">The short bio</p>
     <h2 id="press-bio-title">Grimsby. 1995.<br>Gone. Back.</h2>
     <div class="hc-prose">
-      <p>Hovercraft formed in Grimsby in the mid-1990s around songs written by Piers “Charlie Pepper” Wildman and played by David Marsden and friends. The band left behind tapes, songs and unfinished business rather than a conventional career.</p>
+      <p>Hovercraft formed in Grimsby in the mid-1990s around songs written by Piers “Charlie Pepper” Wildman and played by David “Golly God” Marsden, Aaron “Ron Nasty” Downing, and Daniel “Mr Shimble” Downing. The band left behind tapes, songs and unfinished business rather than a conventional career.</p>
       {{ if .Site.Params.hovercraft_release_live }}
         <p>In 2025 those songs returned in radically reworked recordings. In 2026 Hovercraft went further: back to the surviving tapes, demos and original performances for <em>Doomed To Live</em> and <em>Oh Yeah</em>.</p>
       {{ else }}
@@ -42,8 +42,18 @@
       <h2 id="press-coverage-title">What they said.</h2>
       <p>The original Press page is preserved below as the coverage record. The chronological trail of every clipping lives in the <a href="/archive/">Transmission Archive</a>.</p>
     </div>
+
     <div class="hc-press-source hc-prose">
-      {{ .Content }}
+      <h2>Blown Away — Reviews</h2>
+      <blockquote>“Hovercraft proves with Blown Away that time only sharpens real music, it never dulls it.”</blockquote>
+      <p>— <a href="https://www.cageriot.com/post/a-fire-lit-time-capsule-erupts-as-hovercraft-s-blown-away-proves-real-energy-never-fades">The Cage</a> (USA 🇺🇸)</p>
+      <blockquote>“Hovercraft doesn’t chase moments on Blown Away, they create them.”</blockquote>
+      <p>— <a href="https://www.cageriot.com/post/a-fire-lit-time-capsule-erupts-as-hovercraft-s-blown-away-proves-real-energy-never-fades">The Cage</a> (USA 🇺🇸)</p>
+      <blockquote>“Dynamic, fun, fast, and sharp as ever.”</blockquote>
+      <p>— <a href="https://thewhistlingtraveller.com/2025/12/16/this-weeks-riffs-roads-gives-us-an-alt-rock-best/">The Whistling Traveller</a> on <em>Indie Kid</em></p>
+
+      {{ $pressContent := replace .Content "Hovercraft are a resurrected 1990s indie-punk band" "Hovercraft are a resurrected 1990s indie-punk British rhythm and blues band" }}
+      {{ $pressContent | safeHTML }}
     </div>
   </section>
 

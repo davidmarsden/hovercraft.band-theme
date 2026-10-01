@@ -1,0 +1,58 @@
+<main class="hc-press">
+  <header class="hc-press-hero">
+    <p class="hc-section-label">Press room · Hovercraft</p>
+    <h1>Noise,<br>in print.</h1>
+    <p class="hc-deck">The short version, the useful facts and selected coverage of a band that disappeared for nearly thirty years and then started making records again.</p>
+  </header>
+
+  <section class="hc-press-lead" aria-labelledby="press-bio-title">
+    <p class="hc-section-label">The short bio</p>
+    <h2 id="press-bio-title">Grimsby. 1995.<br>Gone. Back.</h2>
+    <div class="hc-prose">
+      <p>Hovercraft formed in Grimsby in the mid-1990s around songs written by Piers “Charlie Pepper” Wildman and played by David Marsden and friends. The band left behind tapes, songs and unfinished business rather than a conventional career.</p>
+      {{ if .Site.Params.hovercraft_release_live }}
+        <p>In 2025 those songs returned in radically reworked recordings. In 2026 Hovercraft went further: back to the surviving tapes, demos and original performances for <em>Doomed To Live</em> and <em>Oh Yeah</em>.</p>
+      {{ else }}
+        <p>In 2025 those songs returned in radically reworked recordings. Now Hovercraft is back at the surviving tapes, demos and original performances, with two new records coming in time for Xmas.</p>
+      {{ end }}
+      <p><a class="hc-text-link" href="/story/">Read the full story →</a></p>
+    </div>
+  </section>
+
+  <section class="hc-press-current" aria-labelledby="press-current-title">
+    <p class="hc-section-label">Current release</p>
+    {{ if .Site.Params.hovercraft_release_live }}
+      <h2 id="press-current-title">Doomed To Live<br>+ Oh Yeah</h2>
+      <div class="hc-prose">
+        <p>Two records built from the same stubborn body of songs: restored 1996 recordings beside new interpretations, mutations and afterlives.</p>
+        <p><a class="hc-text-link" href="/music/">Listen / release details →</a></p>
+      </div>
+    {{ else }}
+      <h2 id="press-current-title">New Hovercraft.<br>Coming in time for Xmas.</h2>
+      <div class="hc-prose">
+        <p>Two records. Thirty years in the making. Restored recordings, surviving tapes and new afterlives — without giving the game away before release day.</p>
+        <p><a class="hc-text-link" href="/music/">Listen to Hovercraft →</a></p>
+      </div>
+    {{ end }}
+  </section>
+
+  <section class="hc-press-coverage" aria-labelledby="press-coverage-title">
+    <div class="hc-press-coverage__head">
+      <p class="hc-section-label">Reviews · interviews · features</p>
+      <h2 id="press-coverage-title">What they said.</h2>
+      <p>The original Press page is preserved below as the coverage record. The chronological trail of every clipping lives in the <a href="/archive/">Transmission Archive</a>.</p>
+    </div>
+    <div class="hc-press-source hc-prose">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <section class="hc-press-assets" aria-labelledby="press-assets-title">
+    <p class="hc-section-label">Press use</p>
+    <h2 id="press-assets-title">Need the useful bits?</h2>
+    <div class="hc-prose">
+      <p>For photographs, use the visual archive. For song histories, credits and version archaeology, use the Songbook. For anything else — interview requests, higher-resolution material or questions about the releases — get in touch.</p>
+      <p><a class="hc-text-link" href="/photos/">Press photographs →</a> &nbsp; <a class="hc-text-link" href="/lyrics/">Songbook →</a> &nbsp; <a class="hc-text-link" href="/contact/">Contact →</a></p>
+    </div>
+  </section>
+</main>

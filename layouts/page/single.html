@@ -7,15 +7,21 @@
   {{ partial "hc-song-page.html" . }}
 {{ else }}
   {{ partial "hc-site-header.html" . }}
+  {{ if eq .RelPermalink "/story/" }}
+    {{ partial "hc-story-page.html" . }}
+  {{ else if eq .RelPermalink "/archive/" }}
+    {{ partial "hc-archive-page.html" . }}
+  {{ else }}
   <main class="hc-content">
-    <article class="hc-prose">
+    <article class="hc-page">
       <header class="hc-content-head">
-        <p class="hc-section-label">{{ with .Type }}{{ . }}{{ else }}Hovercraft{{ end }}</p>
+        <p class="hc-section-label">Hovercraft</p>
         <h1>{{ .Title }}</h1>
       </header>
-      <div class="hc-entry">{{ .Content }}</div>
+      <div class="hc-prose">{{ .Content }}</div>
     </article>
   </main>
+  {{ end }}
   {{ partial "hc-site-footer.html" . }}
 {{ end }}
 {{ end }}

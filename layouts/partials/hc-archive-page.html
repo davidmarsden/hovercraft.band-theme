@@ -1,0 +1,42 @@
+<main class="hc-archive">
+  <header class="hc-archive-hero">
+    <p class="hc-kicker">Transmission archive · 2025—now</p>
+    <h1>As it<br>happened.</h1>
+    <p class="hc-deck">The public return of Hovercraft in real time: releases, dispatches, reviews and the occasional piece of evidence that somebody out there was actually listening.</p>
+  </header>
+
+  <section class="hc-archive-intro" aria-label="About the archive">
+    <p class="hc-section-label">Archive / Evidence</p>
+    <p class="hc-archive-intro__big">Story is memory.<br>Archive is evidence.</p>
+    <div>
+      <p>These are the original Hovercraft posts, kept in chronological context and linked to their permanent pages. For the songs themselves — recordings, versions, lyrics and provenance — head for the Songbook.</p>
+      <a class="hc-text-link" href="/lyrics/">Enter the Songbook →</a>
+    </div>
+  </section>
+
+  {{ $posts := where .Site.RegularPages "Type" "post" }}
+  {{ range ($posts.GroupByDate "2006") }}
+  <section class="hc-archive-year" aria-labelledby="hc-year-{{ .Key }}">
+    <div class="hc-archive-year__head">
+      <p class="hc-section-label">Transmission log</p>
+      <h2 id="hc-year-{{ .Key }}">{{ .Key }}</h2>
+    </div>
+    <div class="hc-archive-stream">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="hc-archive-entry">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        <div class="hc-archive-entry__body">
+          {{ if .Title }}
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ else }}
+          <h3><a href="{{ .RelPermalink }}">Transmission · {{ .Date.Format "02 Jan" }}</a></h3>
+          {{ end }}
+          {{ with .Summary }}<div class="hc-archive-entry__summary">{{ . | plainify | truncate 240 }}</div>{{ end }}
+          <a class="hc-text-link" href="{{ .RelPermalink }}">Open transmission →</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</main>

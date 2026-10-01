@@ -1,0 +1,1 @@
+This branch intentionally keeps the first archive implementation data-light: it renders Micro.blog posts directly. Review/interview classification should be added only after the post inventory is explicit and reliable.

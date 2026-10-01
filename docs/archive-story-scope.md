@@ -1,0 +1,1 @@
+Scope: Story foundation, Transmission Archive, and homepage archive doorway. Press and Photos redesigns are intentionally deferred.

@@ -50,22 +50,20 @@
     </a>
   </section>
 
-  <section class="hc-news" aria-labelledby="hc-news-title">
-    <div class="hc-section-heading">
-      <p class="hc-section-label">05 / Transmission</p>
-      <h2 id="hc-news-title">Latest</h2>
+  {{ with index (where .Site.RegularPages "Type" "post") 0 }}
+  <section class="hc-archive-door" aria-labelledby="hc-archive-door-title">
+    <div>
+      <p class="hc-section-label">05 / From the archive</p>
+      <h2 id="hc-archive-door-title">As it<br>happened.</h2>
     </div>
-    <div class="hc-news__list">
-      {{ range first 3 (where .Site.RegularPages "Type" "post") }}
-      <article class="hc-news-card">
-        <p class="hc-news-card__date">{{ .Date.Format "02 Jan 2006" }}</p>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ with .Summary }}<div class="hc-news-card__summary">{{ . | plainify | truncate 170 }}</div>{{ end }}
-        <a class="hc-text-link" href="{{ .RelPermalink }}">Read →</a>
-      </article>
-      {{ end }}
-    </div>
+    <article class="hc-archive-door__latest">
+      <p class="hc-news-card__date">{{ .Date.Format "02 Jan 2006" }}</p>
+      {{ if .Title }}<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ end }}
+      {{ with .Summary }}<div class="hc-news-card__summary">{{ . | plainify | truncate 190 }}</div>{{ end }}
+      <a class="hc-text-link" href="/archive/">Enter the transmission archive →</a>
+    </article>
   </section>
+  {{ end }}
 </main>
 {{ partial "hc-site-footer.html" . }}
 {{ end }}

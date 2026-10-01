@@ -1,21 +1,19 @@
 {{ define "main" }}
-{{ if eq .RelPermalink "/music/" }}
-  {{ partial "hc-music-page.html" . }}
-{{ else if eq .RelPermalink "/lyrics/" }}
-  {{ partial "hc-songbook.html" . }}
-{{ else if hasPrefix .RelPermalink "/lyrics/" }}
-  {{ partial "hc-song-page.html" . }}
+{{ partial "hc-site-header.html" . }}
+{{ if eq .RelPermalink "/story/" }}
+  {{ partial "hc-story-page.html" . }}
+{{ else if eq .RelPermalink "/archive/" }}
+  {{ partial "hc-archive-page.html" . }}
 {{ else }}
-  {{ partial "hc-site-header.html" . }}
-  <main class="hc-content">
-    <article class="hc-prose">
-      <header class="hc-content-head">
-        <p class="hc-section-label">{{ with .Type }}{{ . }}{{ else }}Hovercraft{{ end }}</p>
-        <h1>{{ .Title }}</h1>
-      </header>
-      <div class="hc-entry">{{ .Content }}</div>
-    </article>
-  </main>
-  {{ partial "hc-site-footer.html" . }}
+<main class="hc-content">
+  <article class="hc-page">
+    <header class="hc-content-head">
+      <p class="hc-section-label">Hovercraft</p>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="hc-prose">{{ .Content }}</div>
+  </article>
+</main>
 {{ end }}
+{{ partial "hc-site-footer.html" . }}
 {{ end }}

@@ -25,7 +25,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin main master
+          git fetch origin main
+
+          # master may briefly be absent during a one-time branch realignment.
+          # Fetch it only if the remote ref exists; otherwise create it from main.
+          if ! git ls-remote --exit-code --heads origin master >/dev/null 2>&1; then
+            echo "master does not exist; creating it from main."
+            git push origin origin/main:refs/heads/master
+            exit 0
+          fi
+
+          git fetch origin master
 
           # Never overwrite independent work on master. If master is not an
           # ancestor of main, fail loudly and require a manual reconciliation.

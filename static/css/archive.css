@@ -57,6 +57,7 @@
 }
 
 .hc-archive-year__head {
+  display: block;
   position: sticky;
   top: 1rem;
   align-self: start;

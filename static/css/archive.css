@@ -1,0 +1,156 @@
+/* Transmission Archive — chronological clipping-file treatment. */
+.hc-archive {
+  width: min(calc(100% - 2rem), var(--hc-max));
+  max-width: none;
+  margin-inline: auto;
+  padding-block: clamp(1.5rem, 4vw, 4rem) clamp(4rem, 8vw, 8rem);
+}
+
+.hc-archive > * { max-width: none; }
+
+.hc-archive-hero {
+  width: 100%;
+  margin: 0;
+  padding: clamp(3rem, 8vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
+  border-bottom: .28rem solid var(--hc-ink);
+}
+
+.hc-archive-hero h1 {
+  max-width: 11ch;
+  margin: 0;
+  font-family: var(--hc-display);
+  font-size: clamp(5rem, 16vw, 12rem);
+  font-weight: 900;
+  line-height: .72;
+  letter-spacing: -.06em;
+  text-transform: uppercase;
+}
+
+.hc-archive-hero .hc-deck { max-width: 44rem; }
+
+.hc-archive-intro {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr 1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  border-bottom: .12rem solid var(--hc-ink);
+}
+
+.hc-archive-intro__big {
+  margin: 0;
+  font-family: var(--hc-display);
+  font-size: clamp(2.7rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: .88;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+
+.hc-archive-intro > div p:first-child { margin-top: 0; }
+
+.hc-archive-year {
+  display: grid;
+  grid-template-columns: minmax(9rem, .35fr) minmax(0, 1.65fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(3rem, 7vw, 6rem) 0 0;
+}
+
+.hc-archive-year__head {
+  display: block;
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+}
+
+.hc-archive-year__head h2 {
+  margin: 0;
+  font-size: clamp(4.2rem, 9vw, 8rem);
+  line-height: .75;
+  letter-spacing: -.05em;
+}
+
+.hc-archive-stream {
+  position: relative;
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+  border-left: .22rem solid var(--hc-ink);
+}
+
+.hc-archive-entry {
+  position: relative;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 0 clamp(2.8rem, 6vw, 5rem);
+}
+
+.hc-archive-entry + .hc-archive-entry {
+  padding-top: clamp(2.2rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--hc-rule);
+}
+
+.hc-archive-entry::before {
+  content: "";
+  position: absolute;
+  left: calc(clamp(1.5rem, 3vw, 3rem) * -1 - .42rem);
+  top: .2rem;
+  width: .62rem;
+  height: .62rem;
+  border: .16rem solid var(--hc-ink);
+  background: var(--hc-signal);
+  transform: rotate(45deg);
+}
+
+.hc-archive-entry + .hc-archive-entry::before { top: calc(clamp(2.2rem, 4vw, 3.5rem) + .2rem); }
+
+.hc-archive-entry time {
+  margin-bottom: .7rem;
+  color: var(--hc-muted);
+}
+
+.hc-archive-entry h3 {
+  max-width: 18ch;
+  margin: 0 0 1rem;
+  font-family: var(--hc-display);
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.hc-archive-entry h3 a { text-decoration: none; }
+
+.hc-archive-entry__summary {
+  max-width: 46rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.55;
+}
+
+.hc-archive .hc-text-link {
+  display: inline-block;
+  margin-top: .45rem;
+  font: 800 .75rem/1.3 var(--hc-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 62rem) {
+  .hc-archive-intro { grid-template-columns: 1fr 1.5fr; }
+  .hc-archive-intro > .hc-section-label { grid-column: 1 / -1; }
+  .hc-archive-year { grid-template-columns: 8rem minmax(0, 1fr); gap: 1.5rem; }
+}
+
+@media (max-width: 44rem) {
+  .hc-archive { width: min(calc(100% - 1.3rem), var(--hc-max)); padding-top: .75rem; }
+  .hc-archive-hero { padding-top: 2.5rem; }
+  .hc-archive-hero h1 { font-size: clamp(4.2rem, 24vw, 7rem); }
+  .hc-archive-intro { display: block; }
+  .hc-archive-intro__big { margin: 1.2rem 0 1.5rem; }
+  .hc-archive-year { display: block; padding-top: 3.5rem; }
+  .hc-archive-year__head { position: static; margin-bottom: 2rem; }
+  .hc-archive-year__head h2 { font-size: 4.5rem; }
+  .hc-archive-stream { padding-left: 1.2rem; }
+  .hc-archive-entry::before { left: -1.58rem; }
+  .hc-archive-entry h3 { font-size: clamp(2rem, 11vw, 3.4rem); }
+}

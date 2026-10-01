@@ -14,7 +14,11 @@
     </div>
   </section>
 
-  {{ $posts := where .Site.RegularPages "Type" "post" }}
+  {{/* Micro.blog exposes taxonomy/list pages in RegularPages on some builds.
+       Filtering the Pages collection directly keeps GroupByDate available while
+       the dated permalink prefix excludes those non-post pages. */}}
+  {{ $posts := where .Site.RegularPages "RelPermalink" "like" `^/[0-9]{4}/[0-9]{2}/[0-9]{2}/` }}
+
   {{ range ($posts.GroupByDate "2006") }}
   <section class="hc-archive-year" aria-labelledby="hc-year-{{ .Key }}">
     <div class="hc-archive-year__head">

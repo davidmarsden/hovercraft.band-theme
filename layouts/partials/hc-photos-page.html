@@ -33,23 +33,24 @@
 
     <div class="hc-photo-grid h-feed">
       {{ range $photos }}
-        {{ $images := findRE `<img[[:space:]][^>]*>` .Content }}
+        {{ $post := . }}
+        {{ $images := findRE `<img[[:space:]][^>]*>` $post.Content }}
         {{ range $images }}
-          {{ $srcMatches := findRESubmatch `src=["']([^"']+)["']` . 1 }}
+          {{ $img := . }}
+          {{ $srcMatches := findRESubmatch `src=["']([^"']+)["']` $img 1 }}
           {{ if $srcMatches }}
             {{ $src := index (index $srcMatches 0) 1 }}
             {{ $alt := "" }}
-            {{ $altMatches := findRESubmatch `alt=["']([^"']*)["']` . 1 }}
+            {{ $altMatches := findRESubmatch `alt=["']([^"']*)["']` $img 1 }}
             {{ if $altMatches }}{{ $alt = index (index $altMatches 0) 1 }}{{ end }}
             <figure class="hc-photo-card h-entry">
-              <a class="u-url" href="{{ $.Site.BaseURL | default "/" }}{{ strings.TrimPrefix "/" .Page.RelPermalink }}" hidden></a>
-              <a class="hc-photo-card__image" href="{{ .Page.RelPermalink }}">
+              <a class="hc-photo-card__image u-url" href="{{ $post.RelPermalink }}">
                 <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
               </a>
               <figcaption>
-                <time class="dt-published" datetime="{{ .Page.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Page.Date.Format "2 Jan 2006" }}</time>
-                {{ with .Page.Title }}<span class="p-name">{{ . }}</span>{{ end }}
-                <a class="hc-photo-card__open" href="{{ .Page.RelPermalink }}">Open transmission →</a>
+                <time class="dt-published" datetime="{{ $post.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $post.Date.Format "2 Jan 2006" }}</time>
+                {{ with $post.Title }}<span class="p-name">{{ . }}</span>{{ end }}
+                <a class="hc-photo-card__open" href="{{ $post.RelPermalink }}">Open transmission →</a>
               </figcaption>
             </figure>
           {{ end }}

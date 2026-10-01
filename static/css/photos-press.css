@@ -8,11 +8,31 @@
 .hc-photos-intro h2,.hc-press-lead h2,.hc-press-current h2,.hc-press-assets h2,.hc-photo-source h2,.hc-press-coverage h2{margin:0;font-family:var(--hc-display);font-size:clamp(2.7rem,6vw,5.5rem);font-weight:900;line-height:.88;letter-spacing:-.035em;text-transform:uppercase}
 .hc-photo-source,.hc-press-coverage{padding:clamp(3rem,7vw,6rem) 0;border-bottom:.12rem solid var(--hc-ink)}
 .hc-photo-source__head,.hc-press-coverage__head{display:grid;grid-template-columns:.55fr 1.15fr 1fr;gap:clamp(1.5rem,4vw,4rem);align-items:start;margin-bottom:clamp(2rem,5vw,4rem)}
-.hc-photo-source__content{columns:3 18rem;column-gap:1rem}
-.hc-photo-source__content p{break-inside:avoid;margin:0 0 1rem}
-.hc-photo-source__content img{display:block;width:100%;height:auto;margin:0 0 .45rem;filter:grayscale(.15);transition:filter .2s ease,transform .2s ease}
-.hc-photo-source__content a:hover img{filter:grayscale(0);transform:rotate(-.4deg)}
-.hc-photo-source__content br{display:none}
+
+/* Curated Micro.blog photo collections. */
+.hc-photo-group{padding:clamp(3rem,7vw,6rem) 0;border-bottom:.12rem solid var(--hc-ink)}
+.hc-photo-group__head{display:grid;grid-template-columns:.55fr 2.15fr;gap:clamp(1.5rem,4vw,4rem);align-items:end;margin-bottom:clamp(2rem,5vw,4rem)}
+.hc-photo-group__head h2{margin:0;font-family:var(--hc-display);font-size:clamp(3rem,8vw,7rem);font-weight:900;line-height:.8;letter-spacing:-.045em;text-transform:uppercase}
+.hc-photo-collection{padding:clamp(1.75rem,4vw,3rem) 0;border-top:1px solid var(--hc-rule)}
+.hc-photo-collection__head{display:flex;gap:1rem;justify-content:space-between;align-items:baseline;margin-bottom:1.25rem}
+.hc-photo-collection__head h3{margin:0;font-family:var(--hc-display);font-size:clamp(1.8rem,4vw,3.4rem);font-weight:900;line-height:.9;letter-spacing:-.025em;text-transform:uppercase}
+.hc-photo-collection__head p{margin:0;color:var(--hc-muted);font:700 .68rem/1.35 var(--hc-mono);letter-spacing:.05em;text-transform:uppercase}
+.hc-photo-grid.microblog_collection{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;columns:auto}
+.hc-photo-grid.microblog_collection .hc-photo-card__image{display:block;overflow:hidden;aspect-ratio:1/1;background:var(--hc-rule);text-decoration:none}
+.hc-photo-grid.microblog_collection img{display:block;width:100%!important;height:100%!important;margin:0!important;border-radius:0!important;object-fit:cover;filter:grayscale(.12);transition:filter .2s ease,transform .25s ease}
+.hc-photo-grid.microblog_collection .hc-photo-card__image:hover img{filter:grayscale(0);transform:scale(1.025)}
+
+/* Legacy contact-card rules retained for ordinary photo-bearing posts. */
+.hc-photo-grid:not(.microblog_collection){columns:3 18rem;column-gap:1rem}
+.hc-photo-card{break-inside:avoid;margin:0 0 1rem;padding:0 0 .8rem;border-bottom:1px solid var(--hc-rule)}
+.hc-photo-card__image{display:block;text-decoration:none}
+.hc-photo-card img{display:block;width:100%;height:auto;margin:0 0 .55rem;filter:grayscale(.15);transition:filter .2s ease,transform .2s ease}
+.hc-photo-card__image:hover img{filter:grayscale(0);transform:rotate(-.4deg)}
+.hc-photo-card figcaption{display:grid;grid-template-columns:1fr auto;gap:.25rem .75rem;align-items:start;font:700 .68rem/1.35 var(--hc-mono);letter-spacing:.035em;text-transform:uppercase}
+.hc-photo-card time{color:var(--hc-muted)}
+.hc-photo-card .p-name{grid-column:1/-1;font-family:var(--hc-display);font-size:1rem;line-height:1.05;letter-spacing:0;text-transform:none}
+.hc-photo-card__open{grid-column:1/-1;width:max-content;text-decoration:none}
+.hc-photo-empty{font-family:var(--hc-mono);text-transform:uppercase}
 .hc-photos-note{max-width:44rem;margin:clamp(3rem,7vw,6rem) 0 0 auto;padding:1.5rem;border:.14rem solid var(--hc-ink);transform:rotate(-.5deg)}
 .hc-press-current{background:var(--hc-ink);color:var(--hc-paper);padding-inline:clamp(1rem,3vw,3rem)}
 .hc-press-current a{color:inherit}
@@ -28,5 +48,5 @@
 .hc-press-source img[alt*="pre-release announcement for the album Blown Away"]{display:none}
 .hc-post-page .hc-entry img{display:block;max-width:100%;height:auto;margin:1.5rem auto}
 .hc-post-page .hc-entry iframe,.hc-post-page .hc-entry video{max-width:100%}
-@media(max-width:62rem){.hc-photos-intro,.hc-press-lead,.hc-press-current,.hc-press-assets,.hc-photo-source__head,.hc-press-coverage__head{grid-template-columns:1fr 1.5fr}.hc-photos-intro>.hc-section-label,.hc-press-lead>.hc-section-label,.hc-press-current>.hc-section-label,.hc-press-assets>.hc-section-label,.hc-photo-source__head>.hc-section-label,.hc-press-coverage__head>.hc-section-label{grid-column:1/-1}.hc-photo-source__content{columns:2 16rem}}
-@media(max-width:44rem){.hc-photos,.hc-press{width:min(calc(100% - 1.3rem),var(--hc-max));padding-top:.75rem}.hc-photos-hero,.hc-press-hero{padding-top:2.5rem}.hc-photos-hero h1,.hc-press-hero h1{font-size:clamp(4.2rem,24vw,7rem)}.hc-photos-intro,.hc-press-lead,.hc-press-current,.hc-press-assets,.hc-photo-source__head,.hc-press-coverage__head{display:block}.hc-photos-intro h2,.hc-press-lead h2,.hc-press-current h2,.hc-press-assets h2,.hc-photo-source h2,.hc-press-coverage h2{margin:1.2rem 0 1.5rem}.hc-photo-source__content{columns:1}.hc-press-current{margin-inline:-.65rem}.hc-photos-note{transform:none}}
+@media(max-width:62rem){.hc-photos-intro,.hc-press-lead,.hc-press-current,.hc-press-assets,.hc-photo-source__head,.hc-press-coverage__head{grid-template-columns:1fr 1.5fr}.hc-photos-intro>.hc-section-label,.hc-press-lead>.hc-section-label,.hc-press-current>.hc-section-label,.hc-press-assets>.hc-section-label,.hc-photo-source__head>.hc-section-label,.hc-press-coverage__head>.hc-section-label{grid-column:1/-1}.hc-photo-grid:not(.microblog_collection){columns:2 16rem}.hc-photo-grid.microblog_collection{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:44rem){.hc-photos,.hc-press{width:min(calc(100% - 1.3rem),var(--hc-max));padding-top:.75rem}.hc-photos-hero,.hc-press-hero{padding-top:2.5rem}.hc-photos-hero h1,.hc-press-hero h1{font-size:clamp(4.2rem,24vw,7rem)}.hc-photos-intro,.hc-press-lead,.hc-press-current,.hc-press-assets,.hc-photo-source__head,.hc-press-coverage__head,.hc-photo-group__head{display:block}.hc-photos-intro h2,.hc-press-lead h2,.hc-press-current h2,.hc-press-assets h2,.hc-photo-source h2,.hc-press-coverage h2{margin:1.2rem 0 1.5rem}.hc-photo-group__head h2{margin-top:1rem}.hc-photo-grid:not(.microblog_collection){columns:1}.hc-photo-grid.microblog_collection{grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}.hc-photo-collection__head{align-items:flex-end}.hc-press-current{margin-inline:-.65rem}.hc-photos-note{transform:none}}

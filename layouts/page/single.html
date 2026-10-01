@@ -15,6 +15,8 @@
     {{ partial "hc-photos-page.html" . }}
   {{ else if eq .RelPermalink "/press/" }}
     {{ partial "hc-press-page.html" . }}
+  {{ else if eq .RelPermalink "/contact/" }}
+    {{ partial "hc-contact-page.html" . }}
   {{ else }}
   <main class="hc-content">
     <article class="hc-page">

@@ -10,20 +10,30 @@
     <h2 id="press-bio-title">Grimsby. 1995.<br>Gone. Back.</h2>
     <div class="hc-prose">
       <p>Hovercraft formed in Grimsby in the mid-1990s around songs written by Piers “Charlie Pepper” Wildman and played by David Marsden and friends. The band left behind tapes, songs and unfinished business rather than a conventional career.</p>
-      <p>In 2025 those songs returned in radically reworked recordings. In 2026 Hovercraft went further: back to the surviving tapes, demos and original performances for <em>Doomed To Live</em> and <em>Oh Yeah</em>.</p>
+      {{ if .Site.Params.hovercraft_release_live }}
+        <p>In 2025 those songs returned in radically reworked recordings. In 2026 Hovercraft went further: back to the surviving tapes, demos and original performances for <em>Doomed To Live</em> and <em>Oh Yeah</em>.</p>
+      {{ else }}
+        <p>In 2025 those songs returned in radically reworked recordings. Now Hovercraft is back at the surviving tapes, demos and original performances, with two new records coming in time for Xmas.</p>
+      {{ end }}
       <p><a class="hc-text-link" href="/story/">Read the full story →</a></p>
     </div>
   </section>
 
   <section class="hc-press-current" aria-labelledby="press-current-title">
-    <div>
-      <p class="hc-section-label">Current release</p>
+    <p class="hc-section-label">Current release</p>
+    {{ if .Site.Params.hovercraft_release_live }}
       <h2 id="press-current-title">Doomed To Live<br>+ Oh Yeah</h2>
-    </div>
-    <div class="hc-prose">
-      <p>Two records built from the same stubborn body of songs: restored 1996 recordings beside new interpretations, mutations and afterlives.</p>
-      <p><a class="hc-text-link" href="/music/">Listen / release details →</a></p>
-    </div>
+      <div class="hc-prose">
+        <p>Two records built from the same stubborn body of songs: restored 1996 recordings beside new interpretations, mutations and afterlives.</p>
+        <p><a class="hc-text-link" href="/music/">Listen / release details →</a></p>
+      </div>
+    {{ else }}
+      <h2 id="press-current-title">New Hovercraft.<br>Coming in time for Xmas.</h2>
+      <div class="hc-prose">
+        <p>Two records. Thirty years in the making. Restored recordings, surviving tapes and new afterlives — without giving the game away before release day.</p>
+        <p><a class="hc-text-link" href="/music/">Listen to Hovercraft →</a></p>
+      </div>
+    {{ end }}
   </section>
 
   <section class="hc-press-coverage" aria-labelledby="press-coverage-title">

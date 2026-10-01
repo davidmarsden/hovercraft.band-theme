@@ -11,6 +11,10 @@
     {{ partial "hc-story-page.html" . }}
   {{ else if eq .RelPermalink "/archive/" }}
     {{ partial "hc-archive-page.html" . }}
+  {{ else if eq .RelPermalink "/photos/" }}
+    {{ partial "hc-photos-page.html" . }}
+  {{ else if eq .RelPermalink "/press/" }}
+    {{ partial "hc-press-page.html" . }}
   {{ else }}
   <main class="hc-content">
     <article class="hc-page">

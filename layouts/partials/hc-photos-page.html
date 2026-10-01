@@ -39,10 +39,13 @@
           {{ $img := . }}
           {{ $srcMatches := findRESubmatch `src=["']([^"']+)["']` $img 1 }}
           {{ if $srcMatches }}
-            {{ $src := index (index $srcMatches 0) 1 }}
+            {{/* These values come from rendered HTML. Decode entities once before
+                 Hugo escapes them into the new attributes, avoiding &amp;amp; URLs
+                 and corrupted alt text. */}}
+            {{ $src := index (index $srcMatches 0) 1 | htmlUnescape }}
             {{ $alt := "" }}
             {{ $altMatches := findRESubmatch `alt=["']([^"']*)["']` $img 1 }}
-            {{ if $altMatches }}{{ $alt = index (index $altMatches 0) 1 }}{{ end }}
+            {{ if $altMatches }}{{ $alt = index (index $altMatches 0) 1 | htmlUnescape }}{{ end }}
             <figure class="hc-photo-card h-entry">
               <a class="hc-photo-card__image u-url" href="{{ $post.RelPermalink }}">
                 <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">

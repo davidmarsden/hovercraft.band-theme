@@ -93,6 +93,7 @@ The production build can expose its already-rendered release-day presentation to
 
 - Public production remains governed by `params.hovercraft_release_live`.
 - Before launch, release-aware templates render both the public and release variants. Release variants are hidden by default.
+- Share `https://hovercraft.band/?preview=escaped-early` for pre-release viewing. The previous `ron-and-david-december-preview` phrase remains a compatibility alias.
 - Visiting the site once with the private `?preview=<token>` query enables a browser-local preview session using `localStorage`, then removes the token from the visible URL.
 - Preview state persists while navigating the production site, so reviewers see the same Micro.blog content, uploads, pages and settings that will be used on launch day.
 - A conspicuous **Release preview · 5 December 2026** banner is displayed while previewing and includes an **Exit preview** control.

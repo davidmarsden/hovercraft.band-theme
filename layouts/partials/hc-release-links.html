@@ -11,7 +11,7 @@
   <div class="hc-release-links__group">
     <p class="hc-section-label">Listen elsewhere</p>
     <div class="hc-platform-links">
-      {{ range $platforms.streaming }}{{ $url := index $album.streaming .id }}{{ with $url }}<a class="hc-platform-link" href="{{ . }}" rel="external">{{ $.label }}</a>{{ end }}{{ end }}
+      {{ range $platform := $platforms.streaming }}{{ $url := index $album.streaming $platform.id }}{{ with $url }}<a class="hc-platform-link" href="{{ . }}" rel="external">{{ $platform.label }}</a>{{ end }}{{ end }}
     </div>
   </div>
   {{ end }}

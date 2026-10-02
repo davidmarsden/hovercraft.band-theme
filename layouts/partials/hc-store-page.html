@@ -1,6 +1,7 @@
 {{ $release := .Site.Data.releases }}
 {{ $platforms := .Site.Data.platforms }}
 <main class="hc-store">
+  {{ if .Site.Params.hovercraft_release_live }}
   <header class="hc-store-hero">
     <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
     <h1>Buy the<br>records.</h1>
@@ -41,4 +42,17 @@
     <p>Spotify, Apple Music, YouTube Music and other platform links will appear release by release when the recordings are live there. Until then we will not send you to dead buttons.</p>
     <a class="hc-text-link" href="/music/">Hear Hovercraft on this site →</a>
   </section>
+  {{ else }}
+  <header class="hc-store-hero">
+    <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
+    <h1>Shop<br>opening soon.</h1>
+    <p class="hc-deck">The new Hovercraft records arrive on 5 December. High-resolution download editions will be available here when the curtain goes up.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear the advance transmissions</a>
+  </header>
+  <section class="hc-store-note" aria-labelledby="hc-store-coming-title">
+    <p class="hc-section-label">Coming in time for Xmas</p>
+    <h2 id="hc-store-coming-title">Two records.<br>Still under wraps.</h2>
+    <p>No artwork, track lists or purchase links until release day. We have managed thirty years. Another few weeks will probably not kill us.</p>
+  </section>
+  {{ end }}
 </main>

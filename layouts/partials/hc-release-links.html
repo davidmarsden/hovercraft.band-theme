@@ -1,0 +1,18 @@
+{{ $album := .album }}
+{{ $platforms := .site.Data.platforms }}
+{{ $hasStreaming := false }}
+{{ with $album.streaming }}{{ range $platforms.streaming }}{{ if index $album.streaming .id }}{{ $hasStreaming = true }}{{ end }}{{ end }}{{ end }}
+<div class="hc-release-links" aria-label="{{ $album.title }} listening and download links">
+  <div class="hc-release-links__group">
+    <p class="hc-section-label">Own it</p>
+    <a class="hc-button hc-button--primary" href="{{ with $album.store_url }}{{ . }}{{ else }}{{ $platforms.store.url }}{{ end }}" rel="external">{{ $platforms.store.label }}</a>
+  </div>
+  {{ if $hasStreaming }}
+  <div class="hc-release-links__group">
+    <p class="hc-section-label">Listen elsewhere</p>
+    <div class="hc-platform-links">
+      {{ range $platform := $platforms.streaming }}{{ $url := index $album.streaming $platform.id }}{{ with $url }}<a class="hc-platform-link" href="{{ . }}" rel="external">{{ $platform.label }}</a>{{ end }}{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>

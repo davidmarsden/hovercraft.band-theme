@@ -1,0 +1,58 @@
+{{ $release := .Site.Data.releases }}
+{{ $platforms := .Site.Data.platforms }}
+<main class="hc-store">
+  {{ if .Site.Params.hovercraft_release_live }}
+  <header class="hc-store-hero">
+    <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
+    <h1>Buy the<br>records.</h1>
+    <p class="hc-deck">High-resolution Hovercraft downloads. No subscription, no algorithm, no pretending an M4A is a piece of vinyl.</p>
+    <a class="hc-button hc-button--primary" href="{{ $platforms.store.url }}" rel="external">Visit the Payhip store</a>
+  </header>
+
+  <section class="hc-store-releases" aria-labelledby="hc-store-releases-title">
+    <header class="hc-store-sectionhead">
+      <p class="hc-section-label">2026 release</p>
+      <h2 id="hc-store-releases-title">Two records.<br>Yours to keep.</h2>
+      <p>The download editions are sold through Payhip. Individual product links can replace the storefront link here as soon as each album listing is ready.</p>
+    </header>
+    <div class="hc-store-grid">
+      {{ range $album := $release.albums }}
+      <article class="hc-store-card">
+        {{ with $album.artwork }}<img src="{{ . }}" alt="{{ $album.title }} album cover" loading="lazy">{{ end }}
+        <div class="hc-store-card__copy">
+          <p class="hc-record__type">{{ $album.format }} · 2026</p>
+          <h3>{{ $album.title }}</h3>
+          <p>{{ $album.note }}</p>
+          <a class="hc-button hc-button--primary" href="{{ with $album.store_url }}{{ . }}{{ else }}{{ $platforms.store.url }}{{ end }}" rel="external">Buy hi-res download</a>
+          {{ with $album.streaming }}
+          <div class="hc-store-card__streaming">
+            <p class="hc-section-label">Also streaming</p>
+            <div class="hc-platform-links">{{ range $platform := $platforms.streaming }}{{ $url := index $album.streaming $platform.id }}{{ with $url }}<a class="hc-platform-link" href="{{ . }}" rel="external">{{ $platform.label }}</a>{{ end }}{{ end }}</div>
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="hc-store-note">
+    <p class="hc-section-label">Streaming</p>
+    <h2>Listen wherever<br>you listen.</h2>
+    <p>Spotify, Apple Music, YouTube Music and other platform links will appear release by release when the recordings are live there. Until then we will not send you to dead buttons.</p>
+    <a class="hc-text-link" href="/music/">Hear Hovercraft on this site →</a>
+  </section>
+  {{ else }}
+  <header class="hc-store-hero">
+    <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
+    <h1>Shop<br>opening soon.</h1>
+    <p class="hc-deck">The new Hovercraft records arrive on 5 December. High-resolution download editions will be available here when the curtain goes up.</p>
+    <a class="hc-button hc-button--primary" href="/music/">Hear the advance transmissions</a>
+  </header>
+  <section class="hc-store-note" aria-labelledby="hc-store-coming-title">
+    <p class="hc-section-label">Coming in time for Xmas</p>
+    <h2 id="hc-store-coming-title">Two records.<br>Still under wraps.</h2>
+    <p>No artwork, track lists or purchase links until release day. We have managed thirty years. Another few weeks will probably not kill us.</p>
+  </section>
+  {{ end }}
+</main>

@@ -1,0 +1,13 @@
+{
+  "store": {
+    "name": "Payhip",
+    "url": "https://payhip.com/Hovercraft",
+    "label": "Buy hi-res downloads"
+  },
+  "streaming": [
+    {"id":"spotify","label":"Spotify"},
+    {"id":"apple-music","label":"Apple Music"},
+    {"id":"youtube-music","label":"YouTube Music"},
+    {"id":"bandcamp","label":"Bandcamp"}
+  ]
+}

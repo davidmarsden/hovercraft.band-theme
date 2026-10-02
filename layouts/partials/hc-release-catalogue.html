@@ -3,7 +3,7 @@
   <header class="hc-release-catalogue__head">
     <p class="hc-section-label">Released {{ $release.release_date }}</p>
     <h2 id="hc-release-catalogue-title">The records<br>are out.</h2>
-    <p>Doomed To Live and Oh Yeah — complete free streaming copies. High-resolution download packages and the digital booklet are being prepared separately.</p>
+    <p>Doomed To Live and Oh Yeah — complete free streaming copies here, with high-resolution download editions available from the Hovercraft store and mainstream streaming links added as each release lands.</p>
   </header>
 
   {{ range $album := $release.albums }}
@@ -16,6 +16,7 @@
       <div class="hc-album__stamp" aria-hidden="true">{{ if eq $album.id "doomed-to-live" }}19{{ else }}7{{ end }}</div>
     </header>
 
+    {{ partial "hc-release-links.html" (dict "album" $album "site" $.Site) }}
     {{ partial "hc-player.html" (dict "album" $album "site" $.Site) }}
 
     {{ with $album.sides }}

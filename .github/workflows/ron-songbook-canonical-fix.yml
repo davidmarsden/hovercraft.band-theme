@@ -1,0 +1,39 @@
+name: Ron songbook canonical fix
+
+on:
+  push:
+    branches:
+      - fix/ron-songbook-responsive-qa
+    paths:
+      - .github/workflows/ron-songbook-canonical-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-songbook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/ron-songbook-responsive-qa
+      - name: Correct canonical Songbook copy
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('data/songbook.json')
+          text = path.read_text()
+          old = 'mournful, accusatory and affectionate at once.'
+          new = 'mournful, accusatory and affectionate all at once.'
+          if old not in text:
+              raise SystemExit('Expected To The Grave copy not found')
+          path.write_text(text.replace(old, new, 1))
+          PY
+          rm .github/workflows/ron-songbook-canonical-fix.yml
+      - name: Commit canonical correction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/songbook.json .github/workflows/ron-songbook-canonical-fix.yml
+          git commit -m "Correct To The Grave songbook copy"
+          git push

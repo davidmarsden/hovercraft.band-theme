@@ -1,4 +1,4 @@
-/* SR.N4 hovercraft masthead experiment.
+/* SR.N4 hovercraft masthead.
  * Source photograph: "SRN4 Hovercraft The Princess Margaret", Wikimedia Commons.
  * The original hovercraft.band upload is left untouched; the treatment below
  * is applied in-browser. See the site footer for source/licence attribution.
@@ -7,7 +7,7 @@
 .hc-header__bar {
   position: relative;
   isolation: isolate;
-  min-height: clamp(9.5rem, 21vw, 15rem);
+  min-height: clamp(10.5rem, 22vw, 16.5rem);
   align-items: flex-end;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   overflow: hidden;
@@ -21,14 +21,15 @@
   content: "";
   position: absolute;
   z-index: -2;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 64%;
   background-image: url("https://hovercraft.band/uploads/2026/9bca743b00.jpg");
-  /* Make the source wider than the masthead so right alignment creates a real crop. */
-  background-position: 100% 52%;
-  background-size: 125% auto;
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  filter: grayscale(.58) saturate(.68) contrast(1.06) brightness(.88);
-  transform: scale(1.01);
+  filter: saturate(.82) contrast(1.04) brightness(.92);
 }
 
 .hc-header__bar::after {
@@ -36,21 +37,35 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  /* A dark left-hand field protects the wordmark while the craft stays visible. */
+  /* Match the approved mock-up: a true dark wordmark field feathering into the photograph. */
   background:
-    linear-gradient(90deg, rgba(17,16,14,.88) 0%, rgba(17,16,14,.76) 34%, rgba(17,16,14,.36) 53%, rgba(17,16,14,.08) 70%, rgba(17,16,14,.08) 100%),
-    linear-gradient(0deg, rgba(17,16,14,.26) 0%, transparent 55%);
+    linear-gradient(90deg,
+      rgba(17,16,14,.98) 0%,
+      rgba(17,16,14,.96) 35%,
+      rgba(17,16,14,.82) 44%,
+      rgba(17,16,14,.42) 53%,
+      rgba(17,16,14,.10) 63%,
+      rgba(17,16,14,0) 72%),
+    linear-gradient(0deg, rgba(17,16,14,.18) 0%, transparent 48%);
+  pointer-events: none;
 }
 
 .hc-wordmark,
 .hc-wordmark:hover,
 .hc-wordmark:focus-visible {
+  position: relative;
+  z-index: 1;
   color: var(--hc-paper);
   text-shadow: .045em .045em 0 rgba(17,16,14,.72);
 }
 
 .hc-header__signal {
+  position: absolute;
+  z-index: 1;
+  left: clamp(1.25rem, 3vw, 2.25rem);
+  bottom: clamp(.9rem, 2vw, 1.5rem);
   color: var(--hc-paper);
+  text-align: left;
   text-shadow: 0 1px 3px var(--hc-ink);
 }
 
@@ -60,28 +75,46 @@
 
 @media (max-width: 50rem) {
   .hc-header__bar {
-    min-height: 9.5rem;
+    min-height: 10rem;
     padding: 1rem;
   }
 
   .hc-header__bar::before {
-    background-position: 92% 52%;
-    background-size: 135% auto;
+    width: 68%;
+    background-position: 58% center;
   }
 
   .hc-header__bar::after {
-    background: linear-gradient(90deg, rgba(17,16,14,.80) 0%, rgba(17,16,14,.58) 46%, rgba(17,16,14,.12) 78%, rgba(17,16,14,.08) 100%);
+    background: linear-gradient(90deg,
+      rgba(17,16,14,.98) 0%,
+      rgba(17,16,14,.92) 40%,
+      rgba(17,16,14,.58) 55%,
+      rgba(17,16,14,.12) 74%,
+      rgba(17,16,14,0) 86%);
+  }
+
+  .hc-header__signal {
+    left: 1rem;
+    bottom: .8rem;
   }
 }
 
 @media (max-width: 32rem) {
   .hc-header__bar {
-    min-height: 8.5rem;
+    min-height: 9rem;
   }
 
   .hc-header__bar::before {
-    /* Narrow screens still favour the craft rather than empty apron. */
-    background-position: 88% 52%;
-    background-size: 150% auto;
+    width: 72%;
+    background-position: 60% center;
+  }
+
+  .hc-header__bar::after {
+    background: linear-gradient(90deg,
+      rgba(17,16,14,.98) 0%,
+      rgba(17,16,14,.90) 43%,
+      rgba(17,16,14,.48) 62%,
+      rgba(17,16,14,.08) 82%,
+      rgba(17,16,14,0) 100%);
   }
 }

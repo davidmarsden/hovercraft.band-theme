@@ -1,13 +1,13 @@
 /* SR.N4 hovercraft masthead experiment.
- * Source photograph: Christopher Kern (Albion), "Hovercraft in Calais",
- * Wikimedia Commons, CC BY-SA 3.0. The original upload is left untouched;
- * the treatment below is applied in-browser.
+ * Source photograph: "SRN4 Hovercraft The Princess Margaret", Wikimedia Commons.
+ * The original hovercraft.band upload is left untouched; the treatment below
+ * is applied in-browser. See the site footer for source/licence attribution.
  */
 
 .hc-header__bar {
   position: relative;
   isolation: isolate;
-  min-height: clamp(8.5rem, 19vw, 13.5rem);
+  min-height: clamp(9.5rem, 21vw, 15rem);
   align-items: flex-end;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   overflow: hidden;
@@ -22,11 +22,12 @@
   position: absolute;
   z-index: -2;
   inset: 0;
-  background-image: url("https://hovercraft.band/uploads/2026/d56222a0e4.jpg");
-  background-position: 50% 55%;
+  background-image: url("https://hovercraft.band/uploads/2026/9bca743b00.jpg");
+  /* Keep Princess Margaret and, crucially, both propellers recognisable. */
+  background-position: 63% 53%;
   background-size: cover;
-  filter: grayscale(1) contrast(1.28) brightness(.58);
-  transform: scale(1.015);
+  filter: grayscale(.72) saturate(.55) contrast(1.08) brightness(.78);
+  transform: scale(1.01);
 }
 
 .hc-header__bar::after {
@@ -34,21 +35,22 @@
   position: absolute;
   z-index: -1;
   inset: 0;
+  /* Protect the wordmark without turning the photograph into a black strip. */
   background:
-    linear-gradient(90deg, rgba(17,16,14,.76) 0%, rgba(17,16,14,.35) 54%, rgba(17,16,14,.64) 100%),
-    linear-gradient(0deg, rgba(17,16,14,.66) 0%, transparent 70%);
+    linear-gradient(90deg, rgba(17,16,14,.67) 0%, rgba(17,16,14,.42) 31%, rgba(17,16,14,.12) 60%, rgba(17,16,14,.24) 100%),
+    linear-gradient(0deg, rgba(17,16,14,.42) 0%, transparent 62%);
 }
 
 .hc-wordmark,
 .hc-wordmark:hover,
 .hc-wordmark:focus-visible {
   color: var(--hc-paper);
-  text-shadow: .06em .06em 0 rgba(17,16,14,.72);
+  text-shadow: .045em .045em 0 rgba(17,16,14,.72);
 }
 
 .hc-header__signal {
   color: var(--hc-paper);
-  text-shadow: 0 1px 2px var(--hc-ink);
+  text-shadow: 0 1px 3px var(--hc-ink);
 }
 
 .hc-nav {
@@ -57,21 +59,26 @@
 
 @media (max-width: 50rem) {
   .hc-header__bar {
-    min-height: 8.75rem;
+    min-height: 9.5rem;
     padding: 1rem;
   }
 
   .hc-header__bar::before {
-    background-position: 47% 55%;
+    background-position: 66% 52%;
+  }
+
+  .hc-header__bar::after {
+    background: linear-gradient(90deg, rgba(17,16,14,.66) 0%, rgba(17,16,14,.34) 48%, rgba(17,16,14,.12) 100%);
   }
 }
 
 @media (max-width: 32rem) {
   .hc-header__bar {
-    min-height: 7.75rem;
+    min-height: 8.5rem;
   }
 
   .hc-header__bar::before {
-    background-position: 42% 55%;
+    /* On narrow screens favour the craft/propellers over empty apron. */
+    background-position: 69% 52%;
   }
 }

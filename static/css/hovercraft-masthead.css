@@ -23,10 +23,10 @@
   z-index: -2;
   inset: 0;
   background-image: url("https://hovercraft.band/uploads/2026/9bca743b00.jpg");
-  /* Keep Princess Margaret and, crucially, both propellers recognisable. */
-  background-position: 63% 53%;
+  /* Give the wordmark the left half and let Princess Margaret emerge on the right. */
+  background-position: 100% 52%;
   background-size: cover;
-  filter: grayscale(.72) saturate(.55) contrast(1.08) brightness(.78);
+  filter: grayscale(.58) saturate(.68) contrast(1.06) brightness(.88);
   transform: scale(1.01);
 }
 
@@ -35,10 +35,10 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  /* Protect the wordmark without turning the photograph into a black strip. */
+  /* A dark left-hand field protects the wordmark while the craft stays visible. */
   background:
-    linear-gradient(90deg, rgba(17,16,14,.67) 0%, rgba(17,16,14,.42) 31%, rgba(17,16,14,.12) 60%, rgba(17,16,14,.24) 100%),
-    linear-gradient(0deg, rgba(17,16,14,.42) 0%, transparent 62%);
+    linear-gradient(90deg, rgba(17,16,14,.88) 0%, rgba(17,16,14,.76) 34%, rgba(17,16,14,.36) 53%, rgba(17,16,14,.08) 70%, rgba(17,16,14,.08) 100%),
+    linear-gradient(0deg, rgba(17,16,14,.26) 0%, transparent 55%);
 }
 
 .hc-wordmark,
@@ -64,11 +64,11 @@
   }
 
   .hc-header__bar::before {
-    background-position: 66% 52%;
+    background-position: 88% 52%;
   }
 
   .hc-header__bar::after {
-    background: linear-gradient(90deg, rgba(17,16,14,.66) 0%, rgba(17,16,14,.34) 48%, rgba(17,16,14,.12) 100%);
+    background: linear-gradient(90deg, rgba(17,16,14,.80) 0%, rgba(17,16,14,.58) 46%, rgba(17,16,14,.12) 78%, rgba(17,16,14,.08) 100%);
   }
 }
 
@@ -78,7 +78,7 @@
   }
 
   .hc-header__bar::before {
-    /* On narrow screens favour the craft/propellers over empty apron. */
-    background-position: 69% 52%;
+    /* Narrow screens still favour the craft rather than empty apron. */
+    background-position: 82% 52%;
   }
 }

@@ -17,6 +17,52 @@
   word-break: normal;
 }
 
+/* Songbook evidence rails contain long labels and archival material. Give the
+   label and the following evidence their own vertical space at every width. */
+.hc-song-page__rail,
+.hc-song-page__rail-state {
+  min-width: 0;
+}
+.hc-song-page__rail > .hc-section-label {
+  display: block;
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+}
+.hc-song-page__rail > .hc-section-label + p {
+  margin-top: 0;
+}
+.hc-song-page__released strong,
+.hc-song-page__locked strong,
+.hc-song-page__version-title,
+.hc-record__type {
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.hc-song-page__released {
+  padding-bottom: .12em;
+  overflow: visible;
+}
+
+/* The large page/chapter display faces are intentionally tight, but Impact's
+   ascenders and descenders collide when a title wraps. Keep the same visual
+   weight while giving wrapped headings a safe line box everywhere. */
+.hc-story-hero h1,
+.hc-story-chapter h2,
+.hc-story-coda h2,
+.hc-archive-hero h1,
+.hc-photos-hero h1,
+.hc-press-hero h1,
+.hc-photos-intro h2,
+.hc-press-lead h2,
+.hc-press-current h2,
+.hc-press-assets h2,
+.hc-photo-source h2,
+.hc-press-coverage h2,
+.hc-photo-group__head h2 {
+  line-height: .9;
+  letter-spacing: -.04em;
+}
+
 @media (min-width: 48.01rem) and (max-width: 90rem) {
   .hc-hero--release .hc-hero__copy h1 {
     font-size: clamp(5rem, 10vw, 8.25rem);
@@ -31,5 +77,22 @@
 @media (max-width: 48rem) {
   .hc-hero--release .hc-hero__copy h1 {
     line-height: .82;
+  }
+
+  .hc-story-hero h1,
+  .hc-story-chapter h2,
+  .hc-story-coda h2,
+  .hc-archive-hero h1,
+  .hc-photos-hero h1,
+  .hc-press-hero h1,
+  .hc-photos-intro h2,
+  .hc-press-lead h2,
+  .hc-press-current h2,
+  .hc-press-assets h2,
+  .hc-photo-source h2,
+  .hc-press-coverage h2,
+  .hc-photo-group__head h2 {
+    line-height: .94;
+    letter-spacing: -.03em;
   }
 }

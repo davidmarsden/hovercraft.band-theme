@@ -29,7 +29,7 @@ Canonical media remains hosted by Micro.blog at `hovercraft.band/uploads/`. This
 | Cool Jerk | https://hovercraft.band/uploads/2026/file-00000000629481f4b56d419d3d1420df.png |
 | Keep It Together | https://hovercraft.band/uploads/2026/file-0000000091c881f4bb23712c44f1f519.png |
 | Sweet Thing | https://hovercraft.band/uploads/2026/file-00000000494c8246953652d9503d9bcc2.jpg |
-| (I Love You And) I Don't Want You To Die | https://hovercraft.band/uploads/2026/file-00000000b09c81f484f1d6663374e8bb.png |
+| I Love You And I Don't Want You To Die | https://hovercraft.band/uploads/2026/file-00000000b09c81f484f1d6663374e8bb.png |
 | Indie Kid | https://hovercraft.band/uploads/2026/file-00000000e98881f4ad4a17db29769e14.png |
 | Here Now | https://hovercraft.band/uploads/2026/f546ae6a99.png |
 | Now You're God / Dying Comes So Easy | https://hovercraft.band/uploads/2026/44a1505122.jpg |

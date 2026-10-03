@@ -1,0 +1,77 @@
+/* SR.N4 hovercraft masthead experiment.
+ * Source photograph: Christopher Kern (Albion), "Hovercraft in Calais",
+ * Wikimedia Commons, CC BY-SA 3.0. The original upload is left untouched;
+ * the treatment below is applied in-browser.
+ */
+
+.hc-header__bar {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(8.5rem, 19vw, 13.5rem);
+  align-items: flex-end;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  overflow: hidden;
+  border: .16rem solid var(--hc-ink);
+  border-bottom-width: .28rem;
+  background: var(--hc-night);
+  color: var(--hc-paper);
+}
+
+.hc-header__bar::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image: url("https://hovercraft.band/uploads/2026/d56222a0e4.jpg");
+  background-position: 50% 55%;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.28) brightness(.58);
+  transform: scale(1.015);
+}
+
+.hc-header__bar::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(17,16,14,.76) 0%, rgba(17,16,14,.35) 54%, rgba(17,16,14,.64) 100%),
+    linear-gradient(0deg, rgba(17,16,14,.66) 0%, transparent 70%);
+}
+
+.hc-wordmark,
+.hc-wordmark:hover,
+.hc-wordmark:focus-visible {
+  color: var(--hc-paper);
+  text-shadow: .06em .06em 0 rgba(17,16,14,.72);
+}
+
+.hc-header__signal {
+  color: var(--hc-paper);
+  text-shadow: 0 1px 2px var(--hc-ink);
+}
+
+.hc-nav {
+  margin-top: 0;
+}
+
+@media (max-width: 50rem) {
+  .hc-header__bar {
+    min-height: 8.75rem;
+    padding: 1rem;
+  }
+
+  .hc-header__bar::before {
+    background-position: 47% 55%;
+  }
+}
+
+@media (max-width: 32rem) {
+  .hc-header__bar {
+    min-height: 7.75rem;
+  }
+
+  .hc-header__bar::before {
+    background-position: 42% 55%;
+  }
+}

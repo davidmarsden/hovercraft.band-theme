@@ -23,9 +23,10 @@
   z-index: -2;
   inset: 0;
   background-image: url("https://hovercraft.band/uploads/2026/9bca743b00.jpg");
-  /* Give the wordmark the left half and let Princess Margaret emerge on the right. */
+  /* Make the source wider than the masthead so right alignment creates a real crop. */
   background-position: 100% 52%;
-  background-size: cover;
+  background-size: 125% auto;
+  background-repeat: no-repeat;
   filter: grayscale(.58) saturate(.68) contrast(1.06) brightness(.88);
   transform: scale(1.01);
 }
@@ -64,7 +65,8 @@
   }
 
   .hc-header__bar::before {
-    background-position: 88% 52%;
+    background-position: 92% 52%;
+    background-size: 135% auto;
   }
 
   .hc-header__bar::after {
@@ -79,6 +81,7 @@
 
   .hc-header__bar::before {
     /* Narrow screens still favour the craft rather than empty apron. */
-    background-position: 82% 52%;
+    background-position: 88% 52%;
+    background-size: 150% auto;
   }
 }

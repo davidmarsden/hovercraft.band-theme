@@ -12,7 +12,7 @@ This file records the canonical visual assets used by the Hovercraft 2026 releas
 - Archival bonuses use explicit `-1996` artwork registrations, preventing the 1996 New Pine Overcoat, To The Grave and Concrete Hill recordings from inheriting their 2026 song covers.
 - Lyrics collage artwork is separate from track/sleeve artwork and is not used as a player substitute unless explicitly registered as track artwork.
 
-## Confirmed album sleeves — 30 September 2026
+## Confirmed album sleeves — updated 4 October 2026
 
 ### Doomed To Live
 
@@ -22,9 +22,11 @@ Description: musician singing into a microphone while playing electric guitar, w
 
 ### Oh Yeah
 
-Canonical URL: `https://hovercraft.band/uploads/2026/de642fc16e.png`
+Canonical URL: `https://hovercraft.band/uploads/2026/97815.jpg`
 
-Description: five figures in marching-band uniforms looking down toward the camera, with Hovercraft at the top and Oh Yeah at the bottom.
+Description: sepia portrait of Piers, with cream Hovercraft at the top and Oh Yeah at the bottom; Yeah is red.
+
+Piers approved this replacement on 4 October 2026, confirmed by David. It replaces the marching-band cover rejected by Ditto for copyright/trademark permission. The former sleeve and matching banner are retired. Ditto acceptance of the replacement is not yet confirmed.
 
 This is the **Oh Yeah companion-album sleeve**. It is distinct from the Oh Yeah song/track cover below.
 

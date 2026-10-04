@@ -8,7 +8,8 @@ Canonical media remains hosted by Micro.blog at `hovercraft.band/uploads/`. This
 | --- | --- | --- |
 | Doomed To Live | https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png | album artwork; monochrome performance photo / bold title |
 | Doomed To Live | https://hovercraft.band/uploads/2026/578b618cd2.jpg | alternate/export |
-| Oh Yeah | https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png | album artwork; circular uniformed-band composition |
+| Oh Yeah | https://hovercraft.band/uploads/2026/97815.jpg | canonical album artwork from 4 October 2026; Piers portrait with cream Hovercraft / Oh and red Yeah typography; Piers approved its use |
+| Oh Yeah (retired) | https://hovercraft.band/uploads/2026/file-000000006d0481f4913c1406cde1975f.png | former circular uniformed-band composition; rejected by Ditto for copyright/trademark permissions; do not use |
 | Oh Yeah | https://hovercraft.band/uploads/2026/file-0000000029a0824694b36d1744fd95b5.png | live-performance treatment |
 | Oh Yeah | https://hovercraft.band/uploads/2026/file-00000000555481f4a592ca62bb38edee.png | guitarist/poster treatment |
 
@@ -49,3 +50,7 @@ Canonical media remains hosted by Micro.blog at `hovercraft.band/uploads/`. This
 The records define the site, not vice versa: aged cream/off-white paper, black, battered/faded red, sepia/tobacco and restrained incidental colour. Use photocopy grain, halftone, drawings, stamps, torn-paper/collage cues, imperfect alignment and condensed/typewriter typography. Avoid clean orange/yellow retro-futurism and heavy-metal styling.
 
 The public pre-release homepage may use already-known song artwork in a collage. The two canonical album covers are reserved for the launch-state reveal.
+
+## Oh Yeah replacement — 4 October 2026
+
+The portrait cover replaces `de642fc16e.png` and the former release banner `file-0000000093b08243b348bba0cb3d732a.png`. Both website release-art slots now use `97815.jpg`. Piers approved the replacement in the band conversation, confirmed by David. Source portrait: https://hovercraft.micro.blog/uploads/2025/piers5.jpg. This records Piers's approval; photographer ownership/permission is not established by the supplied conversation. Ditto replacement submission and acceptance have not yet been confirmed. Use the new album cover for download packaging and embedded album art; existing song and archival track covers retain their separate identities.

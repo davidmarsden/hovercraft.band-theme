@@ -48,7 +48,7 @@
         "label": "From The Cradle demo",
         "title": "To The Grave",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-to-the-grave-2024-10-06-08-00.m4a",
         "visibility": "public"
       }
@@ -70,7 +70,7 @@
     "writer": "Piers \"Charlie Pepper\" Wildman",
     "type": "Original",
     "about": "An affectionate and grotesque portrait of a faded rock ’n’ roll fantasist: absurd, self-mythologising and still somehow loved.",
-    "archive": "The 2026 recording was reconstructed from the original 1995 studio demo. A later solo acoustic performance by Gol led to a separate 2025 reconstruction.",
+    "archive": "The 2026 recording was reconstructed from the original 1995 studio demo. A later solo acoustic performance by Gol led to a separate 2025 reconstruction. Recorded at Pete’s Pad, Cleethorpes, in October 1995 with teenage drummer “Dave”, who had replaced Dr Rhythm that month. His full name is unknown. Vince Weaver later deputised briefly before Daniel Downing joined in March 1996.",
     "release": {
       "album": "Doomed To Live",
       "track": 2,
@@ -110,7 +110,7 @@
         "label": "Original studio demo",
         "title": "Mr Tooting Brown",
         "year": 1995,
-        "source": "Pete's Pad · 24-track studio · Cleethorpes",
+        "source": "Pete’s Pad · Cleethorpes · October 1995 · drums: “Dave”",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-mr-tooting-brown-2024-10-06-17-24.m4a",
         "note": "Source used for the 2026 reconstruction.",
         "visibility": "public"
@@ -163,7 +163,7 @@
         "label": "From The Cradle demo",
         "title": "White Limousine",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-white-limousine-2024-10-06-07-55.m4a",
         "visibility": "public"
       },
@@ -293,7 +293,7 @@
         "label": "From The Cradle demo",
         "title": "Concrete Hill",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-concrete-hill-2024-10-06-07-51.m4a",
         "visibility": "public"
       },
@@ -579,7 +579,7 @@
         "label": "From The Cradle demo",
         "title": "New Pine Overcoat",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-new-pine-overcoat-2024-10-05-22-28.m4a",
         "visibility": "public"
       },
@@ -780,7 +780,7 @@
         "label": "From The Cradle demo",
         "title": "Indie Kid",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-indie-kid-2024-10-05-22-24.m4a",
         "visibility": "public"
       }
@@ -870,9 +870,10 @@
         "label": "From The Cradle demo",
         "title": "Take It Or Leave It",
         "year": 1996,
-        "source": "Sounds Good · live 16-track · Grimsby · May 1996",
+        "source": "From The Cradle · Sounds Good (Chris McRae), Grimsby · May 1996 · six-song session recorded live in one take, no overdubs",
         "audio": "https://hovercraft.band/uploads/2026/david-marsden-take-it-or-leave-it-2024-10-06-08-02.m4a",
-        "visibility": "public"
+        "visibility": "public",
+        "note": "Part of the six-song recording; may have been omitted from some circulated demo copies."
       },
       {
         "label": "Later Piers version",

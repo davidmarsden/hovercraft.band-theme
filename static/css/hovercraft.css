@@ -1752,3 +1752,13 @@ body::before {
   width:100%;
   max-width:58rem;
 }
+
+/* Store: swipeable physical CD booklet previews. */
+.hc-store-card__booklet { margin-top:1.5rem; }
+.hc-store-card__booklet > p { margin:.45rem 0 .8rem; }
+.hc-booklet-gallery { display:flex; gap:.8rem; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x mandatory; padding:.35rem .2rem 1rem; margin:0 0 .7rem; -webkit-overflow-scrolling:touch; }
+.hc-booklet-gallery__page { flex:0 0 min(76%, 19rem); scroll-snap-align:start; display:block; color:inherit; text-decoration:none; }
+.hc-booklet-gallery__page img { display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:contain; background:#e8ddc7; }
+.hc-booklet-gallery__page span { display:block; margin-top:.35rem; font-size:.8rem; }
+.hc-booklet-gallery__page:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
+@media (min-width: 800px) { .hc-booklet-gallery__page { flex-basis:min(52%, 18rem); } }

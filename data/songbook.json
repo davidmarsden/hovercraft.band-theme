@@ -476,7 +476,12 @@
     ],
     "lyrics_artwork": "https://hovercraft.band/uploads/2026/file-000000001ef882309f032e838b268274.png",
     "lyrics_artwork_alt": "The image is a gritty collage featuring the title Killer Blues with handwritten lyrics or poetry, sepia-toned photos of urban scenes and a toilet, and elements like whiskey bottles, pills, and notes conveying themes of despair, addiction, and loss.",
-    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg"
+    "track_artwork": "https://hovercraft.band/uploads/2026/file-00000000406082439b6ca1052d02d0542.jpg",
+    "video": {
+      "label": "Killer Blues · Video",
+      "url": "https://youtu.be/l6BneH1iq6Y",
+      "embed": "https://www.youtube.com/embed/l6BneH1iq6Y"
+    }
   },
   "pass-the-night-nurse": {
     "writer": "Piers \"Charlie Pepper\" Wildman",

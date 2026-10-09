@@ -7,13 +7,135 @@
       "format": "Double album",
       "note": "Nineteen recovered songs across four sides. The main 2026 Hovercraft record.",
       "sides": [
-        {"label":"Side A","tracks":[["To The Grave","/lyrics/to-the-grave/","https://hovercraft.band/uploads/2026/1.-to-the-grave.m4a"],["Mr Tooting Brown","/lyrics/mr-tooting-brown/","https://hovercraft.band/uploads/2026/2.-mr-tooting-brown.m4a"],["White Limousine","/lyrics/white-limousine/","https://hovercraft.band/uploads/2026/3.-white-limousine.m4a"],["Crazy","/lyrics/crazy/","https://hovercraft.band/uploads/2026/4.-crazy.m4a"]]},
-        {"label":"Side B","tracks":[["Concrete Hill","/lyrics/concrete-hill/","https://hovercraft.band/uploads/2026/5.-concrete-hill.m4a"],["Superman","/lyrics/superman/","https://hovercraft.band/uploads/2026/6.-superman.m4a"],["These Days","/lyrics/these-days/","https://hovercraft.band/uploads/2026/7.-these-days.m4a"],["Killer Blues","/lyrics/killer-blues/","https://hovercraft.band/uploads/2026/8.-killer-blues.m4a"],["Pass The Night Nurse","/lyrics/pass-the-night-nurse/","https://hovercraft.band/uploads/2026/9.-pass-the-night-nurse.m4a"],["New Pine Overcoat","/lyrics/new-pine-overcoat/","https://hovercraft.band/uploads/2026/10.-new-pine-overcoat.m4a"]]},
-        {"label":"Side C","tracks":[["I'll Make Love To You Anytime","/lyrics/ill-make-love-to-you/","https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a"],["Cool Jerk","/lyrics/cool-jerk/","https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a"],["Sweet Thing","/lyrics/sweet-thing/","https://hovercraft.band/uploads/2026/13.-sweet-thing.m4a"],["Keep It Together","/lyrics/keep-it-together/","https://hovercraft.band/uploads/2026/14.-keep-it-together.m4a"],["I Love You And I Don't Want You To Die","/lyrics/i-love-you-and-i/","https://hovercraft.band/uploads/2026/15.-i-love-you-and-i-dont-want-you-to-die.m4a"]]},
-        {"label":"Side D","tracks":[["Indie Kid","/lyrics/indie-kid/","https://hovercraft.band/uploads/2026/16.-indie-kid.m4a"],["Now You're God / Dying Comes So Easy","/lyrics/now-youre-god-dying-comes/","https://hovercraft.band/uploads/2026/17.-dying-comes-so-easy.m4a"],["Take It Or Leave It","/lyrics/take-it-or-leave-it/","https://hovercraft.band/uploads/2026/18.-take-it-or-leave-it.m4a"],["Here Now","/lyrics/here-now/","https://hovercraft.band/uploads/2026/19.-here-now.m4a"]]}
+        {
+          "label": "Side A",
+          "tracks": [
+            [
+              "To The Grave",
+              "/lyrics/to-the-grave/",
+              "https://hovercraft.band/uploads/2026/1.-to-the-grave.m4a"
+            ],
+            [
+              "Mr Tooting Brown",
+              "/lyrics/mr-tooting-brown/",
+              "https://hovercraft.band/uploads/2026/2.-mr-tooting-brown.m4a"
+            ],
+            [
+              "White Limousine",
+              "/lyrics/white-limousine/",
+              "https://hovercraft.band/uploads/2026/3.-white-limousine.m4a"
+            ],
+            [
+              "Crazy",
+              "/lyrics/crazy/",
+              "https://hovercraft.band/uploads/2026/4.-crazy.m4a"
+            ]
+          ]
+        },
+        {
+          "label": "Side B",
+          "tracks": [
+            [
+              "Concrete Hill",
+              "/lyrics/concrete-hill/",
+              "https://hovercraft.band/uploads/2026/5.-concrete-hill.m4a"
+            ],
+            [
+              "Superman",
+              "/lyrics/superman/",
+              "https://hovercraft.band/uploads/2026/6.-superman.m4a"
+            ],
+            [
+              "These Days",
+              "/lyrics/these-days/",
+              "https://hovercraft.band/uploads/2026/7.-these-days.m4a"
+            ],
+            [
+              "Killer Blues",
+              "/lyrics/killer-blues/",
+              "https://hovercraft.band/uploads/2026/8.-killer-blues.m4a"
+            ],
+            [
+              "Pass The Night Nurse",
+              "/lyrics/pass-the-night-nurse/",
+              "https://hovercraft.band/uploads/2026/9.-pass-the-night-nurse.m4a"
+            ],
+            [
+              "New Pine Overcoat",
+              "/lyrics/new-pine-overcoat/",
+              "https://hovercraft.band/uploads/2026/10.-new-pine-overcoat.m4a"
+            ]
+          ]
+        },
+        {
+          "label": "Side C",
+          "tracks": [
+            [
+              "I'll Make Love To You Anytime",
+              "/lyrics/ill-make-love-to-you/",
+              "https://hovercraft.band/uploads/2026/11.-ill-make-love-to-you-anytime.m4a"
+            ],
+            [
+              "Cool Jerk",
+              "/lyrics/cool-jerk/",
+              "https://hovercraft.band/uploads/2026/12.-cool-jerk.m4a"
+            ],
+            [
+              "Sweet Thing",
+              "/lyrics/sweet-thing/",
+              "https://hovercraft.band/uploads/2026/13.-sweet-thing.m4a"
+            ],
+            [
+              "Keep It Together",
+              "/lyrics/keep-it-together/",
+              "https://hovercraft.band/uploads/2026/14.-keep-it-together.m4a"
+            ],
+            [
+              "I Love You And I Don't Want You To Die",
+              "/lyrics/i-love-you-and-i/",
+              "https://hovercraft.band/uploads/2026/15.-i-love-you-and-i-dont-want-you-to-die.m4a"
+            ]
+          ]
+        },
+        {
+          "label": "Side D",
+          "tracks": [
+            [
+              "Indie Kid",
+              "/lyrics/indie-kid/",
+              "https://hovercraft.band/uploads/2026/16.-indie-kid.m4a"
+            ],
+            [
+              "Now You're God / Dying Comes So Easy",
+              "/lyrics/now-youre-god-dying-comes/",
+              "https://hovercraft.band/uploads/2026/17.-dying-comes-so-easy.m4a"
+            ],
+            [
+              "Take It Or Leave It",
+              "/lyrics/take-it-or-leave-it/",
+              "https://hovercraft.band/uploads/2026/18.-take-it-or-leave-it.m4a"
+            ],
+            [
+              "Here Now",
+              "/lyrics/here-now/",
+              "https://hovercraft.band/uploads/2026/19.-here-now.m4a"
+            ]
+          ]
+        }
       ],
       "artwork": "https://hovercraft.band/uploads/2026/file-00000000e8a081f48fc132f4b2f4671e.png",
-      "banner": "https://hovercraft.band/uploads/2026/file-0000000008148210afc4f864b16f36fe.png"
+      "banner": "https://hovercraft.band/uploads/2026/file-0000000008148210afc4f864b16f36fe.png",
+      "booklet_url": "https://hovercraft.band/uploads/2026/doomed-to-live-final-typography-reader.pdf",
+      "booklet_pages": [
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0001.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0002.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0003.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0004.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0005.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0006.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0007.png",
+        "https://southallstories.uk/uploads/2026/doomed-to-live-final-typography-reader-page-0008.png"
+      ]
     },
     {
       "id": "oh-yeah",
@@ -21,13 +143,86 @@
       "title": "Oh Yeah",
       "format": "Companion album",
       "note": "Seven reconstructed songs across two sides. Three surviving 1996 recordings are site-streamable archival bonuses, excluded from the official mainstream streaming release.",
-      "bonus": [["Concrete Hill","1996 demo · remixed/remastered","/lyrics/concrete-hill/","https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a"],["New Pine Overcoat","1996 demo · remixed/remastered","/lyrics/new-pine-overcoat/","https://hovercraft.band/uploads/2026/9.-new-pine-overcoat-1996-demo-remastered.m4a"],["To The Grave","1996 demo · remixed/remastered","/lyrics/to-the-grave/","https://hovercraft.band/uploads/2026/10.-to-the-grave-1996-demo-remastered.m4a"]],
+      "bonus": [
+        [
+          "Concrete Hill",
+          "1996 demo · remixed/remastered",
+          "/lyrics/concrete-hill/",
+          "https://hovercraft.band/uploads/2026/8.-concrete-hill-1996-demo-remastered.m4a"
+        ],
+        [
+          "New Pine Overcoat",
+          "1996 demo · remixed/remastered",
+          "/lyrics/new-pine-overcoat/",
+          "https://hovercraft.band/uploads/2026/9.-new-pine-overcoat-1996-demo-remastered.m4a"
+        ],
+        [
+          "To The Grave",
+          "1996 demo · remixed/remastered",
+          "/lyrics/to-the-grave/",
+          "https://hovercraft.band/uploads/2026/10.-to-the-grave-1996-demo-remastered.m4a"
+        ]
+      ],
       "sides": [
-        {"label":"Side 1","tracks":[["Oh Yeah","/lyrics/oh-yeah/","https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a"],["Bring My Baby Back","/lyrics/bring-my-baby-back/","https://hovercraft.band/uploads/2026/2.-bring-my-baby-back.m4a"],["Low","/lyrics/low/","https://hovercraft.band/uploads/2026/3.-low.m4a"],["My Own Little World","/lyrics/my-own-little-world/","https://hovercraft.band/uploads/2026/4.-my-own-little-world.m4a"]]},
-        {"label":"Side 2","tracks":[["Bob Bob Bob","/lyrics/bob-bob-bob/","https://hovercraft.band/uploads/2026/5.-bob-bob-bob.m4a"],["Season Of The Witch","/lyrics/season-of-the-witch/","https://hovercraft.band/uploads/2026/6.-season-of-the-witch.m4a"],["Angel","/lyrics/angel/","https://hovercraft.band/uploads/2026/7.-angel.m4a"]]}
+        {
+          "label": "Side 1",
+          "tracks": [
+            [
+              "Oh Yeah",
+              "/lyrics/oh-yeah/",
+              "https://hovercraft.band/uploads/2026/1.-oh-yeah.m4a"
+            ],
+            [
+              "Bring My Baby Back",
+              "/lyrics/bring-my-baby-back/",
+              "https://hovercraft.band/uploads/2026/2.-bring-my-baby-back.m4a"
+            ],
+            [
+              "Low",
+              "/lyrics/low/",
+              "https://hovercraft.band/uploads/2026/3.-low.m4a"
+            ],
+            [
+              "My Own Little World",
+              "/lyrics/my-own-little-world/",
+              "https://hovercraft.band/uploads/2026/4.-my-own-little-world.m4a"
+            ]
+          ]
+        },
+        {
+          "label": "Side 2",
+          "tracks": [
+            [
+              "Bob Bob Bob",
+              "/lyrics/bob-bob-bob/",
+              "https://hovercraft.band/uploads/2026/5.-bob-bob-bob.m4a"
+            ],
+            [
+              "Season Of The Witch",
+              "/lyrics/season-of-the-witch/",
+              "https://hovercraft.band/uploads/2026/6.-season-of-the-witch.m4a"
+            ],
+            [
+              "Angel",
+              "/lyrics/angel/",
+              "https://hovercraft.band/uploads/2026/7.-angel.m4a"
+            ]
+          ]
+        }
       ],
       "artwork": "https://hovercraft.band/uploads/2026/97815.jpg",
-      "banner": "https://hovercraft.band/uploads/2026/97815.jpg"
+      "banner": "https://hovercraft.band/uploads/2026/97815.jpg",
+      "booklet_url": "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader.pdf",
+      "booklet_pages": [
+        "https://southallstories.uk/uploads/2026/oh-yeah-clean-reader-page-0001.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0002.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0003.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0004.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0005.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0006.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0007.png",
+        "https://hovercraft.band/uploads/2026/oh-yeah-clean-reader-page-0008.png"
+      ]
     }
   ],
   "branding": {

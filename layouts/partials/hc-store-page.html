@@ -1,7 +1,10 @@
 {{ $release := .Site.Data.releases }}
 {{ $platforms := .Site.Data.platforms }}
 <main class="hc-store">
-  {{ if .Site.Params.hovercraft_release_live }}
+  {{ if not .Site.Params.hovercraft_release_live }}
+  <div data-hc-release hidden>
+  {{ end }}
+  {{ if true }}
   <header class="hc-store-hero">
     <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
     <h1>Buy the<br>records.</h1>
@@ -24,6 +27,23 @@
           <h3>{{ $album.title }}</h3>
           <p>{{ $album.note }}</p>
           <a class="hc-button hc-button--primary" href="{{ with $album.store_url }}{{ . }}{{ else }}{{ $platforms.store.url }}{{ end }}" rel="external">Buy hi-res download</a>
+          {{ with $album.booklet_url }}
+          <div class="hc-store-card__booklet">
+            <p class="hc-section-label">Inside the CD</p>
+            <p>Browse the eight-page physical CD booklet. An expanded digital booklet is in preparation.</p>
+            {{ with $album.booklet_pages }}
+            <div class="hc-booklet-gallery" aria-label="{{ $album.title }} booklet pages">
+              {{ range $i, $page := . }}
+              <a class="hc-booklet-gallery__page" href="{{ $page }}" target="_blank" rel="noopener" aria-label="Open {{ $album.title }} booklet page {{ add $i 1 }}">
+                <img src="{{ $page }}" alt="{{ $album.title }} CD booklet page {{ add $i 1 }} of 8" loading="lazy" decoding="async">
+                <span>Page {{ add $i 1 }} / 8</span>
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
+            <a class="hc-button" href="{{ . }}" target="_blank" rel="noopener">View complete CD booklet (PDF)</a>
+          </div>
+          {{ end }}
           {{ with $album.streaming }}
           <div class="hc-store-card__streaming">
             <p class="hc-section-label">Also streaming</p>
@@ -49,7 +69,10 @@
     <p>Spotify, Apple Music, YouTube Music and other platform links will appear release by release when the recordings are live there. Until then we will not send you to dead buttons.</p>
     <a class="hc-text-link" href="/music/">Hear Hovercraft on this site →</a>
   </section>
-  {{ else }}
+  {{ end }}
+  {{ if not .Site.Params.hovercraft_release_live }}
+  </div>
+  <div data-hc-public>
   <header class="hc-store-hero">
     <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
     <h1>Shop<br>opening soon.</h1>
@@ -67,5 +90,6 @@
     <p>The records are still under wraps. The T-shirts, apparently, refused to wait.</p>
     <a class="hc-button hc-button--primary" href="https://tonethreads.com/hovercraft" rel="external noopener">Shop Hover Clobber</a>
   </section>
+  </div>
   {{ end }}
 </main>

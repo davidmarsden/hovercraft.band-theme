@@ -31,7 +31,17 @@
           <div class="hc-store-card__booklet">
             <p class="hc-section-label">Inside the CD</p>
             <p>Browse the eight-page physical CD booklet. An expanded digital booklet is in preparation.</p>
-            <a class="hc-button" href="{{ . }}" target="_blank" rel="noopener">Preview the CD booklet (PDF)</a>
+            {{ with $album.booklet_pages }}
+            <div class="hc-booklet-gallery" aria-label="{{ $album.title }} booklet pages">
+              {{ range $i, $page := . }}
+              <a class="hc-booklet-gallery__page" href="{{ $page }}" target="_blank" rel="noopener" aria-label="Open {{ $album.title }} booklet page {{ add $i 1 }}">
+                <img src="{{ $page }}" alt="{{ $album.title }} CD booklet page {{ add $i 1 }} of 8" loading="lazy" decoding="async">
+                <span>Page {{ add $i 1 }} / 8</span>
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
+            <a class="hc-button" href="{{ . }}" target="_blank" rel="noopener">View complete CD booklet (PDF)</a>
           </div>
           {{ end }}
           {{ with $album.streaming }}

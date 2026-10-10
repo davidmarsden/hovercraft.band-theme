@@ -1770,3 +1770,9 @@ body::before {
 .hc-interest__form select { width: 100%; min-height: 3rem; padding: .65rem .8rem; font: inherit; color: var(--hc-ink); background: #fffaf0; border: 2px solid var(--hc-ink); border-radius: var(--hc-radius); }
 .hc-interest__form button { justify-self: start; cursor: pointer; margin-top: .5rem; }
 .hc-interest__small { font-size: .85rem; line-height: 1.5; }
+
+/* Official album cover reveal — public pre-release Store */
+.hc-public-covers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 3vw, 2rem); margin: 1.5rem 0 .5rem; max-width: 52rem; }
+.hc-public-covers__item { margin: 0; min-width: 0; }
+.hc-public-covers__item img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border: 2px solid var(--hc-ink); box-shadow: var(--hc-shadow); }
+.hc-public-covers__item figcaption { margin-top: .75rem; font-family: var(--hc-display); font-size: clamp(1.2rem, 3.2vw, 2rem); line-height: 1.1; text-transform: uppercase; }

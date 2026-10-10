@@ -75,19 +75,27 @@
   <div data-hc-public>
   <header class="hc-store-hero">
     <p class="hc-section-label">Hovercraft Gramophone &amp; Tape Co.</p>
-    <h1>Shop<br>opening soon.</h1>
-    <p class="hc-deck">The new Hovercraft records arrive on 5 December. High-resolution download editions will be available here when the curtain goes up.</p>
+    <h1>Two records.<br>One return.</h1>
+    <p class="hc-deck"><em>Doomed To Live</em> and <em>Oh Yeah</em> arrive on 5 December 2026. Meet the covers now; the complete records and download editions follow on release day.</p>
     <a class="hc-button hc-button--primary" href="/music/">Hear the advance transmissions</a>
   </header>
   <section class="hc-store-note" aria-labelledby="hc-store-coming-title">
     <p class="hc-section-label">Coming in time for Xmas</p>
-    <h2 id="hc-store-coming-title">Two records.<br>Still under wraps.</h2>
-    <p>No artwork, track lists or purchase links until release day. We have managed thirty years. Another few weeks will probably not kill us.</p>
+    <h2 id="hc-store-coming-title">Meet the<br>new records.</h2>
+    <p>Two albums, thirty years in the making. The covers are out in the open; the complete track listings, booklets and downloads arrive on 5 December.</p>
+    <div class="hc-public-covers">
+      {{ range $album := $release.albums }}
+      <figure class="hc-public-covers__item">
+        {{ with $album.artwork }}<img src="{{ . }}" alt="{{ $album.title }} album cover" loading="lazy" decoding="async">{{ end }}
+        <figcaption>{{ $album.title }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
   </section>
   <section class="hc-store-note hc-interest" aria-labelledby="hc-interest-title">
-    <p class="hc-section-label">A possible second pressing</p>
+    <p class="hc-section-label">Physical CDs · register interest</p>
     <h2 id="hc-interest-title">Would you buy<br>the CDs?</h2>
-    <p>We're considering a small physical run of our two forthcoming records together: two CDs with printed booklets, provisionally around £20 for the pair, plus postage.</p>
+    <p>We're considering a small physical run of <em>Doomed To Live</em> and <em>Oh Yeah</em> together: two CDs with printed booklets, provisionally around £20 for the pair, plus postage.</p>
     <p>Curious what we sound like? <a class="hc-text-link" href="/music/">Hear the advance transmissions →</a> There’s more to come on 5 December.</p>
     <p>Interested? Tell us how many bundles you might want. This is just a show of hands: <strong>no payment, no commitment, and no guarantee of a pressing.</strong> We'll only contact you about the possible CD run.</p>
     <form class="hc-interest__form" action="mailto:god@hovercraft.band" method="post" enctype="text/plain">
@@ -106,7 +114,7 @@
   <section class="hc-store-note" aria-labelledby="hc-clobber-preview-title">
     <p class="hc-section-label">Hover Clobber</p>
     <h2 id="hc-clobber-preview-title">The shirts<br>escaped early.</h2>
-    <p>The records are still under wraps. The T-shirts, apparently, refused to wait.</p>
+    <p>The new album covers have arrived. The T-shirts, naturally, got here first.</p>
     <a class="hc-button hc-button--primary" href="https://tonethreads.com/hovercraft" rel="external noopener">Shop Hover Clobber</a>
   </section>
   </div>

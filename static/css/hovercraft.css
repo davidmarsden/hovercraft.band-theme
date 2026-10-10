@@ -1784,3 +1784,34 @@ body::before {
 .hc-public-covers--home { margin:0; }
 .hc-public-covers--music { margin:0; align-self:center; }
 @media (max-width:760px) { .hc-home-albums { grid-template-columns:1fr; } .hc-public-covers--music { margin-top:1rem; } }
+
+/* Music reveal: full-width covers instead of squeezing into the old '?' slot. */
+.hc-music .hc-release-tease:has(.hc-public-covers--music) {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: stretch;
+}
+.hc-music .hc-release-tease:has(.hc-public-covers--music) > div:first-child { min-width:0; }
+.hc-music .hc-public-covers--music {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  max-width: none;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin: 0;
+  align-self: stretch;
+}
+.hc-music .hc-public-covers--music .hc-public-covers__item { min-width:0; }
+.hc-music .hc-public-covers--music img { width:100%; height:auto; aspect-ratio:1; object-fit:cover; }
+.hc-music .hc-public-covers--music figcaption {
+  font-family: var(--hc-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  margin-top: 1rem;
+}
+@media (max-width: 36rem) {
+  .hc-music .hc-release-tease:has(.hc-public-covers--music) { padding:clamp(1rem,4vw,2rem); }
+  .hc-music .hc-public-covers--music { gap:.8rem; }
+  .hc-music .hc-public-covers--music figcaption { font-size:clamp(1.05rem,4vw,1.6rem); }
+}

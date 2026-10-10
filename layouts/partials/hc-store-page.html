@@ -98,32 +98,44 @@
     <p>We're considering a small physical run of <em>Doomed To Live</em> and <em>Oh Yeah</em> together: two CDs with printed booklets, provisionally around £20 for the pair, plus postage.</p>
     <p>Curious what we sound like? <a class="hc-text-link" href="/music/">Hear the advance transmissions →</a> There’s more to come on 5 December.</p>
     <p>Interested? Tell us how many bundles you might want. This is just a show of hands: <strong>no payment, no commitment, and no guarantee of a pressing.</strong> We'll only contact you about the possible CD run.</p>
-    <form class="hc-interest__form" action="https://formsubmit.cloud/f/afffded4-4b8d-4cd7-9360-14ff1fd8528f/" method="POST">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-      <input type="hidden" name="name" value="Hovercraft CD interest">
-      <input type="hidden" name="message" id="hc-interest-message" value="Hovercraft CD interest: bundle quantity not captured; confirm quantity with sender.">
+    <form id="hc-cd-interest-form" class="hc-interest__form" action="https://forminit.com/f/q83aic4ipus" method="POST">
       <label for="hc-interest-email">Your email address</label>
-      <input id="hc-interest-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <input id="hc-interest-email" name="fi-sender-email" type="email" autocomplete="email" required placeholder="you@example.com">
       <label for="hc-interest-quantity">How many two-CD bundles might you want?</label>
-      <select id="hc-interest-quantity" name="bundles" required>
+      <select id="hc-interest-quantity" name="fi-select-bundles" required>
         <option value="1">One bundle</option>
         <option value="2">Two bundles</option>
         <option value="3 or more">Three or more</option>
       </select>
-      <script>
-        (function () {
-          var form = document.currentScript.closest('form');
-          var quantity = form.querySelector('#hc-interest-quantity');
-          var message = form.querySelector('#hc-interest-message');
-          form.addEventListener('submit', function () {
-            var count = quantity.value;
-            message.value = 'Hovercraft CD interest: ' + (count === '1' ? '1 two-CD bundle' : count === '2' ? '2 two-CD bundles' : '3 or more two-CD bundles') + '.';
-          });
-        }());
-      </script>
       <button class="hc-button hc-button--primary" type="submit">Register interest</button>
-      <p class="hc-interest__small">Submitting sends your details to Hovercraft through FormSubmit.cloud, a third-party form delivery service. We will only use them to contact you about the possible CD run, not add you to a general mailing list.</p>
+      <p id="hc-cd-interest-status" role="status" aria-live="polite"></p>
+      <p class="hc-interest__small">Submitting sends your email and bundle quantity to Hovercraft through Forminit, a third-party form delivery service. We'll only use them to contact you about the possible CD run, not add you to a general mailing list.</p>
     </form>
+    <script src="https://forminit.com/sdk/v1/forminit.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('hc-cd-interest-form');
+        if (!form || typeof Forminit === 'undefined') return;
+        var status = document.getElementById('hc-cd-interest-status');
+        var button = form.querySelector('button[type="submit"]');
+        var client = new Forminit();
+        form.addEventListener('submit', async function (event) {
+          event.preventDefault();
+          button.disabled = true;
+          status.textContent = 'Registering your interest…';
+          try {
+            var result = await client.submit('q83aic4ipus', new FormData(form));
+            if (result.error) throw new Error(result.error.message || 'Submission failed.');
+            form.reset();
+            status.textContent = 'Thanks! Your CD interest has been registered. We’ll be in touch if the pressing goes ahead.';
+          } catch (error) {
+            status.textContent = 'Could not register your interest: ' + (error.message || 'Please try again.');
+          } finally {
+            button.disabled = false;
+          }
+        });
+      });
+    </script>
   </section>
   <section class="hc-store-note" aria-labelledby="hc-clobber-preview-title">
     <p class="hc-section-label">Hover Clobber</p>

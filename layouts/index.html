@@ -23,6 +23,19 @@
         <figure class="hc-art hc-art--five"><img src="https://hovercraft.band/uploads/2026/file-00000000e55c8246922d44bc89ff2b4f.png" alt=""></figure>
       </div>
     </section>
+    <section class="hc-home-albums" aria-labelledby="hc-home-albums-title">
+      <div class="hc-home-albums__copy">
+        <p class="hc-section-label">5 December 2026 · The new records</p>
+        <h2 id="hc-home-albums-title">Meet the<br>albums.</h2>
+        <p><em>Doomed To Live</em> and <em>Oh Yeah</em>. Two records, thirty years in the making. The artwork is here; the complete albums arrive on release day.</p>
+        <a class="hc-button hc-button--primary" href="/store/">See the CDs · register interest</a>
+      </div>
+      <div class="hc-public-covers hc-public-covers--home">
+        {{ range $album := .Site.Data.releases.albums }}
+        <figure class="hc-public-covers__item">{{ with $album.artwork }}<img src="{{ . }}" alt="{{ $album.title }} album cover" loading="lazy" decoding="async">{{ end }}<figcaption>{{ $album.title }}</figcaption></figure>
+        {{ end }}
+      </div>
+    </section>
   </div>
   <div data-hc-release hidden>
     {{ partial "hc-release-hero.html" . }}

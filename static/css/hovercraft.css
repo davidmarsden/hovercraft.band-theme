@@ -1762,3 +1762,11 @@ body::before {
 .hc-booklet-gallery__page span { display:block; margin-top:.35rem; font-size:.8rem; }
 .hc-booklet-gallery__page:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
 @media (min-width: 800px) { .hc-booklet-gallery__page { flex-basis:min(52%, 18rem); } }
+
+/* Physical CD expression of interest (public pre-release store) */
+.hc-interest__form { display: grid; gap: .65rem; max-width: 30rem; margin-top: 1.5rem; }
+.hc-interest__form label { font-weight: 750; margin-top: .35rem; }
+.hc-interest__form input,
+.hc-interest__form select { width: 100%; min-height: 3rem; padding: .65rem .8rem; font: inherit; color: var(--hc-ink); background: #fffaf0; border: 2px solid var(--hc-ink); border-radius: var(--hc-radius); }
+.hc-interest__form button { justify-self: start; cursor: pointer; margin-top: .5rem; }
+.hc-interest__small { font-size: .85rem; line-height: 1.5; }

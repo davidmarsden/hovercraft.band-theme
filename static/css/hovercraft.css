@@ -1776,3 +1776,11 @@ body::before {
 .hc-public-covers__item { margin: 0; min-width: 0; }
 .hc-public-covers__item img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border: 2px solid var(--hc-ink); box-shadow: var(--hc-shadow); }
 .hc-public-covers__item figcaption { margin-top: .75rem; font-family: var(--hc-display); font-size: clamp(1.2rem, 3.2vw, 2rem); line-height: 1.1; text-transform: uppercase; }
+
+/* Public album reveal: preserve the original homepage song-art collage */
+.hc-home-albums { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.15fr); gap:clamp(1.5rem,4vw,4rem); align-items:center; padding:clamp(2rem,5vw,4rem) max(1rem, calc((100% - var(--hc-max)) / 2)); border-top:1px solid var(--hc-rule); }
+.hc-home-albums__copy h2 { font-family:var(--hc-display); font-size:clamp(2.8rem,6vw,5.5rem); line-height:1.05; text-transform:uppercase; margin:.4rem 0 1rem; }
+.hc-home-albums__copy p { max-width:32rem; }
+.hc-public-covers--home { margin:0; }
+.hc-public-covers--music { margin:0; align-self:center; }
+@media (max-width:760px) { .hc-home-albums { grid-template-columns:1fr; } .hc-public-covers--music { margin-top:1rem; } }

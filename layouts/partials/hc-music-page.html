@@ -11,8 +11,12 @@
   {{ else }}
   <div data-hc-public>
     <section class="hc-release-tease" aria-labelledby="hc-coming-title">
-      <div><p class="hc-section-label">Coming in time for Xmas</p><h2 id="hc-coming-title">Two records.</h2><p>Thirty years in the making. Probably far too many songs.</p></div>
-      <div class="hc-release-tease__marks" aria-hidden="true"><span>?</span><span>?</span></div>
+      <div><p class="hc-section-label">Coming 5 December 2026</p><h2 id="hc-coming-title">Two records.</h2><p><em>Doomed To Live</em> and <em>Oh Yeah</em>. Thirty years in the making. Probably far too many songs.</p><a class="hc-text-link" href="/store/">Interested in the CDs? →</a></div>
+      <div class="hc-public-covers hc-public-covers--music" aria-label="2026 album covers">
+        {{ range $album := .Site.Data.releases.albums }}
+        <figure class="hc-public-covers__item">{{ with $album.artwork }}<img src="{{ . }}" alt="{{ $album.title }} album cover" loading="lazy" decoding="async">{{ end }}<figcaption>{{ $album.title }}</figcaption></figure>
+        {{ end }}
+      </div>
     </section>
     <section class="hc-music-section" aria-labelledby="hc-hear-now">
       <p class="hc-section-label">Advance transmission</p><h2 id="hc-hear-now">Three songs<br>escaped early.</h2>

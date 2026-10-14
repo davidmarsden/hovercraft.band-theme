@@ -27,10 +27,10 @@
           <h3>{{ $album.title }}</h3>
           <p>{{ $album.note }}</p>
           <a class="hc-button hc-button--primary" href="{{ with $album.store_url }}{{ . }}{{ else }}{{ $platforms.store.url }}{{ end }}" rel="external">Buy hi-res download</a>
-          {{ with $album.booklet_url }}
+          {{ if or $album.booklet_pages $album.booklet_url }}
           <div class="hc-store-card__booklet">
             <p class="hc-section-label">Inside the CD</p>
-            <p>Browse the eight-page physical CD booklet. An expanded digital booklet is in preparation.</p>
+            <p>Browse the revised eight-page physical CD booklet previews.</p>
             {{ with $album.booklet_pages }}
             <div class="hc-booklet-gallery" aria-label="{{ $album.title }} booklet pages">
               {{ range $i, $page := . }}
@@ -41,7 +41,7 @@
               {{ end }}
             </div>
             {{ end }}
-            <a class="hc-button" href="{{ . }}" target="_blank" rel="noopener">View complete CD booklet (PDF)</a>
+            {{ with $album.booklet_url }}<a class="hc-button" href="{{ . }}" target="_blank" rel="noopener">View complete CD booklet (PDF)</a>{{ end }}
           </div>
           {{ end }}
           {{ with $album.streaming }}

@@ -6,8 +6,7 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ partial "microblog_head.html" . }}
-  {{/* This site's Micro.blog head doesn't run plugin partials, so call SocialSpec directly to publish /.well-known/about.md and contact.vcf. */}}
-  {{ if templates.Exists "partials/socialspec-plugin.html" }}{{ partial "socialspec-plugin.html" . }}{{ end }}
+  {{ partialCached "socialspec-generate.html" . }}
   {{ partial "hc-social-meta.html" . }}
   <link rel="stylesheet" href="/css/hovercraft.css">
   <link rel="stylesheet" href="/css/archive-story.css">

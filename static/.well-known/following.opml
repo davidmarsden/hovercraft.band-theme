@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Hovercraft is following</title>
+    <ownerName>Hovercraft</ownerName>
+    <ownerId>https://hovercraft.band/</ownerId>
+  </head>
+  <body>
+    <outline type="rss" text="David Marsden" title="David Marsden" xmlUrl="https://davidmarsden.info/feed.xml" htmlUrl="https://davidmarsden.info/"/>
+  </body>
+</opml>

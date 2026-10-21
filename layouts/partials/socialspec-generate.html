@@ -1,0 +1,15 @@
+{{- /*
+  Publishes the SocialSpec files under /.well-known/ with this site's own
+  name rather than the Micro.blog account name. Same file name as the
+  SocialSpec plugin's partial, so only one version ever writes these files.
+*/ -}}
+{{- $name := "Hovercraft" -}}
+{{- $email := .Site.Params.socialspec_email | default "god@hovercraft.band" -}}
+{{- $card := printf "BEGIN:VCARD\r\nVERSION:3.0\r\nN:;;;;\r\nFN:%s\r\nORG:%s\r\nURL:%s\r\nEMAIL:%s\r\nEND:VCARD\r\n" $name $name .Site.BaseURL $email -}}
+{{- $contact := resources.FromString ".well-known/contact.vcf" $card -}}
+{{- $contactPublished := $contact.RelPermalink -}}
+
+{{- with .Site.GetPage "/about" -}}
+  {{- $about := resources.FromString ".well-known/about.md" .RawContent -}}
+  {{- $aboutPublished := $about.RelPermalink -}}
+{{- end -}}

@@ -1831,3 +1831,10 @@ body::before {
 @media (min-width: 62rem) and (max-width: 80rem) {
   .hc-album__head { grid-template-columns: minmax(12rem, 20rem) minmax(16rem, 1fr) auto; }
 }
+/* Music page: one left edge for the page head, release catalogue and sections.
+   The legacy `main > *` reading width (47rem) squeezed the catalogue, and the
+   legacy `header` rule centred the page head on its own. */
+.hc-music > .hc-page-head { width: auto; max-width: none; margin-left: 0; margin-right: 0; }
+.hc-music > [data-hc-release],
+.hc-music > .hc-release-catalogue { max-width: none; }
+.hc-music .hc-release-catalogue { padding-left: 0; padding-right: 0; }

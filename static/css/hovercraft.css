@@ -1815,3 +1815,19 @@ body::before {
   .hc-music .hc-public-covers--music { gap:.8rem; }
   .hc-music .hc-public-covers--music figcaption { font-size:clamp(1.05rem,4vw,1.6rem); }
 }
+
+/* Release catalogue: the legacy site-wide `header` rule (width, padding, bottom
+   border) also hit the catalogue and album <header>s, drawing a second rule
+   above each album. Reset it here. */
+.hc-release-catalogue header {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+/* Tablet widths: keep the album title column wide enough not to wrap
+   "Double album" letter by letter. */
+@media (min-width: 62rem) and (max-width: 80rem) {
+  .hc-album__head { grid-template-columns: minmax(12rem, 20rem) minmax(16rem, 1fr) auto; }
+}

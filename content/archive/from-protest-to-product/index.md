@@ -42,6 +42,14 @@ He ends with a footnote, written at the tail end of Britpop:
 
 > As a cursory note I always find it amusing in attempting to identify old Teds, Mods, Rockers, Skins and Punks in public places. They are still all out there and are no doubt still consumers of music products and styles that they believe suit and express their particular belief systems. This may be why we have resurgences of music, styles, fashions and attitudes. Something that marketing men [sic] are not slow to package and sell, e.g. Britpop and Girlpower. *(p43)*
 
+### Afterlife
+
+The title had at least one reader outside the university. In 2011 Gol rewrote Billy Bragg's *Waiting For The Great Leap Forwards* for the year of Tahrir Square, WikiLeaks and the phone-hacking scandal. Where Bragg's original has *"Mixing pop and politics he asks me what the use is"*, Gol's version borrows from Ron:
+
+> From folk protest to popular product, I wonder what my use is
+
+[Listen to Waiting For The Great Leap Forwards (alternative version) on SoundCloud ↗](https://soundcloud.com/dmarsd/waiting-for-the-great-leap)
+
 ### About this edition
 
 This is a scan of Ron's original bound copy, presented as written in 1999. That includes the period terminology and the 1999 web addresses in the references, most of which no longer exist. The pictures and four appendices reproduce other people's copyright material (photographs, the lyrics of *Strange Fruit* and *God Save The Queen*, the Bill Grundy transcript and EMI's 1976 AGM statement), so they are left out of this web edition. A note at the front lists them. Everything else appears as submitted.

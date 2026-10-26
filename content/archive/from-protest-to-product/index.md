@@ -18,7 +18,7 @@ In March 1999 he submitted *From Protest To Product?* as his independent study f
 
 Twenty-seven years later, with Hovercraft back in circulation, the questions haven't gone away.
 
-[Read the dissertation (PDF, 56 pages) →](/archive/from-protest-to-product/aaron-downing-from-protest-to-product-1999.pdf)
+[Read the dissertation (PDF, 56 pages) →](/uploads/2026/aaron-downing-from-protest-to-product-1999.pdf)
 
 ### From the text
 
@@ -41,6 +41,14 @@ And the passage that matters most, written three years after the band split:
 He ends with a footnote, written at the tail end of Britpop:
 
 > As a cursory note I always find it amusing in attempting to identify old Teds, Mods, Rockers, Skins and Punks in public places. They are still all out there and are no doubt still consumers of music products and styles that they believe suit and express their particular belief systems. This may be why we have resurgences of music, styles, fashions and attitudes. Something that marketing men [sic] are not slow to package and sell, e.g. Britpop and Girlpower. *(p43)*
+
+### Afterlife
+
+The title had at least one reader outside the university. In 2011 Gol rewrote Billy Bragg's *Waiting For The Great Leap Forwards* for the year of Tahrir Square, WikiLeaks and the phone-hacking scandal. Where Bragg's original has *"Mixing pop and politics he asks me what the use is"*, Gol's version borrows from Ron:
+
+> From folk protest to popular product, I wonder what my use is
+
+[Listen to Waiting For The Great Leap Forwards (alternative version) on SoundCloud ↗](https://soundcloud.com/dmarsd/waiting-for-the-great-leap)
 
 ### About this edition
 

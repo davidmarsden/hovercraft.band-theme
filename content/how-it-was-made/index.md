@@ -30,7 +30,7 @@ Nor was there a single definitive Hovercraft waiting to be rediscovered. Gol ima
 
 The machine was trained on music made by countless other people. The band can account for its own source material, but not for everything the machine learned before it met these songs. There's no tidy resolution to that. What Hovercraft can do is say how the records were made, credit the people who wrote and played the songs, and keep the historical recordings separate from the new interpretations.
 
-AI helped tell the story as well as rebuild the music, and that taught the same lesson. Asked why the band split, a machine supplied a neat explanation: jobs, distance, rehearsals gradually drying up. It was plausible, economical and wrong. The truth involved a departing singer, a rented vicarage, a European football championship and four young men whose ambitions didn't quite line up. Nothing could recover that without someone who remembered it.
+AI helped tell the story as well as rebuild the music, and that taught the same lesson. Asked why the band split, a machine supplied a neat explanation: jobs, distance, rehearsals gradually drying up. It was plausible, economical and wrong. The truth involved a departing singer, a house rented from a vicar, a European football championship and four young men whose ambitions didn't quite line up. Nothing could recover that without someone who remembered it.
 
 The technology can widen the possibilities. It can't relieve anyone of the obligation to tell the truth.
 

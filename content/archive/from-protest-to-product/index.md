@@ -18,7 +18,7 @@ In March 1999 he submitted *From Protest To Product?* as his independent study f
 
 Twenty-seven years later, with Hovercraft back in circulation, the questions haven't gone away.
 
-[Read the dissertation (PDF, 56 pages) →](/archive/from-protest-to-product/aaron-downing-from-protest-to-product-1999.pdf)
+[Read the dissertation (PDF, 56 pages) →](/uploads/2026/aaron-downing-from-protest-to-product-1999.pdf)
 
 ### From the text
 

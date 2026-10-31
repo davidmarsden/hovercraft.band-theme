@@ -62,6 +62,9 @@
        Filtering the Pages collection directly keeps GroupByDate available while
        the dated permalink prefix excludes those non-post pages. */}}
   {{ $posts := where .Site.RegularPages "RelPermalink" "like" `^/[0-9]{4}/[0-9]{2}/[0-9]{2}/` }}
+  {{/* Untitled duplicates that can't be deleted in Micro.blog's editor. */}}
+  {{ $hidden := slice "/2025/10/13/shaken-not-stirred-is-more/" }}
+  {{ $posts = where $posts "RelPermalink" "not in" $hidden }}
 
   {{ range ($posts.GroupByDate "2006") }}
   <section class="hc-archive-year" aria-labelledby="hc-year-{{ .Key }}">

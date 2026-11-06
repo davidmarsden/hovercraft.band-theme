@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ if eq .RelPermalink "/listen/" }}
   {{ partial "hc-listen-redirect.html" . }}
+{{ else if eq .RelPermalink "/epk/" }}
+  {{ partial "hc-epk-redirect.html" . }}
 {{ else if eq .RelPermalink "/music/" }}
   {{ partial "hc-music-page.html" . }}
 {{ else if eq .RelPermalink "/lyrics/" }}

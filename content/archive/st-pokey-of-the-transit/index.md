@@ -28,7 +28,7 @@ He would not. He has no CD player and no address. He has gone back to living in 
 
 He admits he cheats: showers at work, and the facilities at the big Morrisons down the road. The van does have a CD player, but after nearly two years he still doesn't have the radio code. He thought about sorting it out, then chose silence instead, and found his true insanity on long journeys.
 
-The merchandise has finally arrived, and the man who claimed it in 1996 is the one person who has turned it down. That saves Gol £3.90 in postage, and Pokey is the happiest man in the story.
+The merchandise has finally arrived, and the man who claimed it in 1996 is the one person who has turned it down. That saves Gol £4.50 in postage, and Pokey is the happiest man in the story. He won't get his four pound fifty either. Ask [Bob](/lyrics/bob-bob-bob/).
 
 [See the 1996 management agreement ↗](https://hovercraft.band/uploads/2026/pxl-20260101-131418089.jpg)
 

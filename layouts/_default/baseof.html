@@ -8,6 +8,7 @@
   {{ partial "microblog_head.html" . }}
   {{ partialCached "socialspec-generate.html" . }}
   {{ partial "hc-social-meta.html" . }}
+  {{ with .Params.robots }}<meta name="robots" content="{{ . }}">{{ end }}
   <link rel="stylesheet" href="/css/hovercraft.css">
   <link rel="stylesheet" href="/css/archive-story.css">
   <link rel="stylesheet" href="/css/archive.css">

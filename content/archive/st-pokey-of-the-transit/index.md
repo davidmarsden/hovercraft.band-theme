@@ -6,7 +6,7 @@ url: "/archive/st-pokey-of-the-transit/"
 
 **Hovercraft folklore · November 2026**
 
-In 1996 Shaun K. Stokes, alias Sean Belvoir-Hunter, known to the band as Pokey, drew up a contract making himself Hovercraft's manager. It assigned him the gigs, the record deals and the merchandising, for 20% of band earnings excluding royalties. Nobody signed it. The gigs mostly happened, and the record deals never did.
+In 1996 Shaun K. Stokes, alias Sean Belvoir-Hunter, known to the band as Pokey, drew up a [contract](/archive/a-short-tale/) making himself Hovercraft's manager. It assigned him the gigs, the record deals and the merchandising, for 20% of band earnings excluding royalties. Nobody signed it. The gigs mostly happened, and the record deals never did.
 
 Thirty years later, the merchandise finally arrived.
 

@@ -320,7 +320,7 @@ The resultant six-track demo EP, initially mixed by Nasty, Pepper and Arlington 
 
 The demo found its way to the local press and the resultant article “New Band Hovers In” reads:
 
-> Look out for new Grimchester band Hovercraft who play UnLimited in Riverthorpe on Wednesday, and also have a date at Grimechester’s Country Hotel on Sunday, August 4th.
+> Look out for new Grimechester band Hovercraft who play UnLimited in Riverthorpe on Wednesday, and also have a date at Grimechester’s Country Hotel on Sunday, August 4th.
 >
 > I have to say the band’s six-track demo tape is a real scorcher… the music mixes elements of sound from the last three decades with an added pinch of the blues…
 

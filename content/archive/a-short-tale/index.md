@@ -228,38 +228,9 @@ He reached for God’s semi-acoustic guitar and strummed a beautifully melodic e
 “It’s called ‘New Pine Overcoat’,” he said, breaking into the vocals:
 
 When we hit the road\
-We’ll be on our way\
-We’ll be on our way\
-When the Sun explodes\
-And the love light grows\
-You know we’ll be ok\
-We wander through the city\
-Forever flying so high\
-It’s a celebration\
-Of my generation\
-And we feel like this\
-And we feel like that\
-And we don’t know what we’re looking at\
-Baby understand\
-That the Promised land\
-Is just a mile away\
-There’ll be hills to climb\
-There’ll be strength to find\
-But it’s a new day\
-There’s a life around the corner\
-Better than the one that you know\
-Seems like creation\
-Of my generation\
-And we run around\
-And we have our fun\
-And we make a mess of everyone\
-And if you don’t make it\
-Then I won’t too\
-Cos I just couldn’t take it\
-Without you\
-So if you kill yourself\
-Please send me a note\
-I’ll read it in my new pine overcoat
+We’ll be on our way…
+
+*[Read the full lyric of New Pine Overcoat →](/lyrics/new-pine-overcoat/)*
 
 ### The Special Brew Session
 

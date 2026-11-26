@@ -121,40 +121,9 @@ God gently, but firmly, ushered Bill away from the prized tape player - consciou
 A low hum of crackling white noise and static foreshadowed a cataclysmic explosion of guitars, drums and bass, sculpted via Malcolm Malcolm’s studio’s Marshall JCM 900 stack, 1972 Fender Twin Reverb and Fender Bassman. Pepper’s rasping, sneering, nasal vox cutting through the slow rock tempo wall of sound like a grater through cheese:
 
 “Mr Tooting-Brown\
-You’d better not look down\
-You paid the price to come this far\
-Believe me\
-Mr Tooting-Brown\
-Everyone’s a clown\
-But you believe in rock ‘n’ roll and getting deep down when you lose control\
-Since you turned on there’s a world outside your window\
-It’s getting better all the time\
-And if I see you I will probably give you diamonds\
-Mr Tooting-Brown\
-Mr Tooting-Brown\
-The King has lost his crown\
-He took the first train out of town this morning\
-Mr Tooting-Brown\
-The funds ain’t looking sound\
-But you believe in rock ‘n’ roll and sign it in blood when you sell your soul\
-Since I turned on there’s a method in my madness\
-The madness is the method in me\
-And if I take my shots and lie down like I’m s’posed to\
-It won’t be\
-And when you’re facing the end\
-Might as well do it again\
-Might as well work it on out\
-Cos there ain’t nothing else to think about\
-And when you’re facing the end\
-I might as well do it again\
-I might as well work it on out\
-Cos there ain’t nothing else, no there ain’t nothing else\
-Since you turned on there’s a world outside your window\
-It’s getting better all the time\
-And if I see you I will probably give you diamonds\
-Mr Tooting-Brown\
-Mr Tooting-Brown\
-Mr Tooting-Brown”
+You’d better not look down…”
+
+*[Read the full lyric of Mr Tooting Brown →](/lyrics/mr-tooting-brown/)*
 
 Pepper, God and Nasty nodded in appreciation as the minor work of genius created by Malcolm Malcolm’s team of production engineers rocked the foundations of the urbane semi-detached residence.
 
@@ -259,38 +228,9 @@ He reached for God’s semi-acoustic guitar and strummed a beautifully melodic e
 “It’s called ‘New Pine Overcoat’,” he said, breaking into the vocals:
 
 When we hit the road\
-We’ll be on our way\
-We’ll be on our way\
-When the Sun explodes\
-And the love light grows\
-You know we’ll be ok\
-We wander through the city\
-Forever flying so high\
-It’s a celebration\
-Of my generation\
-And we feel like this\
-And we feel like that\
-And we don’t know what we’re looking at\
-Baby understand\
-That the Promised land\
-Is just a mile away\
-There’ll be hills to climb\
-There’ll be strength to find\
-But it’s a new day\
-There’s a life around the corner\
-Better than the one that you know\
-Seems like creation\
-Of my generation\
-And we run around\
-And we have our fun\
-And we make a mess of everyone\
-And if you don’t make it\
-Then I won’t too\
-Cos I just couldn’t take it\
-Without you\
-So if you kill yourself\
-Please send me a note\
-I’ll read it in my new pine overcoat
+We’ll be on our way…
+
+*[Read the full lyric of New Pine Overcoat →](/lyrics/new-pine-overcoat/)*
 
 ### The Special Brew Session
 

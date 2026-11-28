@@ -61,7 +61,7 @@ robots: "noindex, nofollow"
 
 **Pepper:** Right.
 
-**Nasty:** Gnome, Gnome, the shit metronome.
+**Nasty:** The Gnome, The Gnome, the shit metronome.
 
 **Shimble:** See you all at band practice 🥁
 

@@ -269,3 +269,5 @@ Weeks later Hovercraft ceased to exist.
 ---
 
 *The clipping is real: [Steve Jackson's South Bank Show, "New band hovers in"](/uploads/2025/review.1.jpg). So is the band's handwritten obituary, [Hover Bovver](/uploads/2025/hoverbovver.jpg). For the version that sticks to the facts, see [the Story](/story/).*
+
+*[Sequel: The Nine-Month Time Warp →](/archive/the-nine-month-time-warp/)*
